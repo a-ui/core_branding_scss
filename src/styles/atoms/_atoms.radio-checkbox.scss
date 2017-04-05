@@ -106,3 +106,29 @@
     border-radius: 50%;
   }
 }
+
+/**
+ * FLYOUT MODIFIERS
+ * -------------------------------------------------------------------
+ */
+
+.a-input__checkbox--small,
+.a-input__radio-small {
+
+  input:checked + label:after {
+    font-size: $spacer / 2;
+  }
+  
+
+  label {
+    line-height: $spacer / 1.5;
+    min-height: $spacer / 1.5;
+
+    &:before,
+    &:after {
+      height: $spacer / 1.5;
+      margin-left: -$spacer / 1.5;
+      width: $spacer / 1.5;
+    }
+  }
+}
