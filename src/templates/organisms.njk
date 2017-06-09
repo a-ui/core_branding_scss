@@ -46,6 +46,35 @@
             </div>
         </div>
 
+        <div class="d">
+            <div>
+                <div class="m-alert d-alert u-margin-bottom">
+                    <p class="u-margin-bottom-xs">You might want a logo inside the header, this can be achieved through the <code>.o-header__inner-logo</code> class</p>
+
+                    <button class="a-button" onclick="toggleInnerLogo()"/>Toggle the logo</button>
+
+                    <script>
+                        var toggleInnerLogo = function() {
+                            $logo = document.querySelector('.js-inner-logo');
+
+                            if ($logo.style.display !== 'block') {
+                                $logo.style.display = 'block'
+                            } else {
+                                $logo.style.display = 'none'
+                            }
+                        };
+                    </script>
+                </div>
+            </div>
+            <div>
+                <pre class="a-pre a-pre--scrollable"><code>&lt;div class=&quot;o-header&quot;&gt;
+  &lt;a href=&quot;#&quot; class=&quot;o-header__inner-logo&quot;&gt;
+    &lt;img src=&quot;images/a-logo.svg&quot; alt=&quot;Digipolis&quot;&gt;
+  &lt;/a&gt;
+&lt;/div&gt;</code></pre>
+            </div>
+        </div>
+
         <a name="organisms-slideshow"></a>
         <h3 class="d-h3">Slideshow</h3>
         <h4 class="d-h4">Regular slideshow</h4>

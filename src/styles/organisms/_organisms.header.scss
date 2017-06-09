@@ -28,6 +28,21 @@
   }
 }
 
+.o-header__inner-logo {
+  float: left;
+  height: 2.5rem;
+  margin: 0.25rem $spacer-xs;
+  transition: opacity 0.15s ease-in-out;
+
+  img {
+    max-height: 90%;
+  }
+
+  &:hover {
+    opacity: 0.8;
+  }
+}
+
 
 /**
  * HEADER MODIFIERS
