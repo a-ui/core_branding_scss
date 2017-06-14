@@ -83,6 +83,7 @@
   @include a-button($btn-default-color, $btn-default-bg);
 }
 
+
 /**
  * SOCIAL BUTTON COLORS
  * -------------------------------------------------------------------
@@ -297,7 +298,8 @@
 
 .a-button,
 .a-button-negative,
-.a-button-outline {
+.a-button-outline,
+.a-button-transparent {
 
   &.has-icon-left,
   &.has-icon-right {
