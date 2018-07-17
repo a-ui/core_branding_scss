@@ -1,5 +1,6 @@
 # OSX System files
 .DS_Store
+.idea
 
 # Dependency directory
 node_modules

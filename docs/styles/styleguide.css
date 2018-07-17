@@ -453,8 +453,8 @@ footer {
 }
 
 .d > div {
-	-ms-flex: 1 1 0px;
-	    flex: 1 1 0;
+	-ms-flex: 1 1 auto;
+	    flex: 1 1 auto;
 	padding: 0.375rem 1.5rem 0;
 }
 

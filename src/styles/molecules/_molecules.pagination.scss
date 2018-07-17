@@ -71,25 +71,25 @@
     box-shadow: 0 0 0 1px $pagination-outline-border inset;
     color: $pagination-outline-color;
 
-      > a,
-      > a:hover,
-      > a:active {
-        background-color: inherit;
-        box-shadow: inherit;
-        color: inherit;
+    > a,
+    > a:hover,
+    > a:active {
+      background-color: inherit;
+      box-shadow: inherit;
+      color: inherit;
 
-        &.is-active {
-          background-color: $pagination-bg;
-          color: $pagination-color;
-        }
-
-        &.is-disabled {
-          background-color: transparent;
-          box-shadow: 0 0 0 1px $pagination-bg-disabled inset;
-          color: $pagination-bg-disabled;
-          cursor: not-allowed;
-        }
+      &.is-active {
+        background-color: $pagination-bg;
+        color: $pagination-color;
       }
+
+      &.is-disabled {
+        background-color: transparent;
+        box-shadow: 0 0 0 1px $pagination-bg-disabled inset;
+        color: $pagination-bg-disabled;
+        cursor: not-allowed;
+      }
+    }
 
     > a:hover,
     > a:active {
@@ -105,5 +105,41 @@
   .m-pagination__prev,
   .m-pagination__next {
     border: none;
+  }
+}
+
+
+/**
+ * PAGINATION SIZES
+ * -------------------------------------------------------------------
+ */
+
+.m-pagination {
+  &.m-pagination--small {
+    > li {
+      height: $pagination-size-sm;
+      line-height: $pagination-size-sm;
+      width: $pagination-size-sm;
+    }
+
+    .m-pagination__label {
+      padding: 0 $spacer-xs;
+      width: auto;
+    }
+  }
+}
+
+.m-pagination {
+  &.m-pagination--large {
+    > li {
+      height: $pagination-size-lg;
+      line-height: $pagination-size-lg;
+      width: $pagination-size-lg;
+    }
+
+    .m-pagination__label {
+      padding: 0 $spacer-md;
+      width: auto;
+    }
   }
 }

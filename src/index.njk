@@ -61,9 +61,9 @@
     <meta name="format-detection" content="telephone=no" />
 
 </head>
-<body class="has-header">
-    <header class="o-header o-header--fixed">
-        <a href="javascript:void(0);" class="o-header__logo">
+<body>
+    <header class="o-header">
+        <a href="/" class="o-header__logo">
             <img src="images/a-logo.svg" alt="Officieel Logo Antwerpen">
         </a>
     </header>
@@ -71,21 +71,42 @@
     <main>
         <div class="u-wrapper d-h1">
             <div class="u-container">
-                <h1>Core Branding Styleguide <small>v{{ VERSION_INFO.version }}</small></h1>
+                <h1>Antwerp branding styleguide <small>v{{ VERSION_INFO.version }}</small></h1>
+                <p class="u-margin-top">A collection of building blocks for your next Antwerp-based application.</p>
             </div>
         </div>
 
-        {% include "templates/quarks.njk" %}
+        <div class="d-intro">
+            {% include "templates/intro.njk" %}
+        </div>
 
-        {% include "templates/base.njk" %}
+        <div class="line u-bg-light">
+            {% include "templates/toc.njk" %}
+        </div>
 
-        {% include "templates/utilities.njk" %}
+        <div class="line">
+            {% include "templates/quarks.njk" %}
+        </div>
 
-        {% include "templates/atoms.njk" %}
+        <div class="line">
+            {% include "templates/base.njk" %}
+        </div>
 
-        {% include "templates/molecules.njk" %}
+        <div class="line">
+            {% include "templates/utilities.njk" %}
+        </div>
 
-        {% include "templates/organisms.njk" %}
+        <div class="line">
+            {% include "templates/atoms.njk" %}
+        </div>
+
+        <div class="line">
+            {% include "templates/molecules.njk" %}
+        </div>
+
+        <div class="line">
+            {% include "templates/organisms.njk" %}
+        </div>
 
         <footer class="o-footer">
             <span class="o-footer__label">© 2017 Stad Antwerpen</span>

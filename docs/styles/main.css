@@ -834,6 +834,7 @@ html {
 	-webkit-font-smoothing: antialiased;
 	-webkit-tap-highlight-color: transparent;
 	box-sizing: border-box;
+	font-smooth: antialiased;
 	font-smoothing: antialiased;
 	-webkit-text-size-adjust: 100%;
 	    -ms-text-size-adjust: 100%;
@@ -1594,6 +1595,41 @@ a .a-avatar:active:before {
 
 .a-badge.a-badge--danger {
 	background-color: #da291c;
+	color: white;
+}
+
+/**
+ * BADGES DISABLED COLORS
+ * -------------------------------------------------------------------
+ */
+
+.is-disabled .a-badge {
+	background-color: #c4c4c4;
+	color: white;
+}
+
+.is-disabled .a-badge.a-badge--primary {
+	background-color: #6c9ec6;
+	color: white;
+}
+
+.is-disabled .a-badge.a-badge--secondary {
+	background-color: #d46c89;
+	color: white;
+}
+
+.is-disabled .a-badge.a-badge--success {
+	background-color: #91be82;
+	color: white;
+}
+
+.is-disabled .a-badge.a-badge--warning {
+	background-color: #e9c47b;
+	color: white;
+}
+
+.is-disabled .a-badge.a-badge--danger {
+	background-color: #d9817a;
 	color: white;
 }
 
@@ -3772,6 +3808,10 @@ dl {
 .a-table th,
 .a-table td {
 	padding: 0.75rem;
+}
+
+.a-table th:not(.u-text-center):not(.u-text-right):not(.u-text-justify),
+.a-table td:not(.u-text-center):not(.u-text-right):not(.u-text-justify) {
 	text-align: left;
 }
 
@@ -4929,23 +4969,6 @@ dl {
 	text-align: center;
 }
 
-.m-nav-list > li.is-active > a,
-.m-nav-tabs > li.is-active > a,
-.m-nav-list > li.is-active > a:hover,
-.m-nav-tabs > li.is-active > a:hover,
-.m-nav-list > li.is-active > a:active,
-.m-nav-tabs > li.is-active > a:active,
-.m-nav-list > li.is-active > button,
-.m-nav-tabs > li.is-active > button,
-.m-nav-list > li.is-active > button:hover,
-.m-nav-tabs > li.is-active > button:hover,
-.m-nav-list > li.is-active > button:active,
-.m-nav-tabs > li.is-active > button:active {
-	background-color: transparent;
-	color: #0064b4;
-	text-decoration: underline;
-}
-
 .m-nav-list > li > a,
 .m-nav-tabs > li > a,
 .m-nav-list > li > button,
@@ -4953,7 +4976,7 @@ dl {
 	background-color: transparent;
 	border: none;
 	border-bottom: 1px solid #b0b0b0;
-	color: #081f2c;
+	color: inherit;
 	display: block;
 	padding: 1rem 1.5rem;
 	text-decoration: none;
@@ -4972,6 +4995,41 @@ dl {
 .m-nav-tabs > li > button:active {
 	background-color: #f3f3f3;
 	color: #0064b4;
+}
+
+.m-nav-list > li > a.is-active,
+.m-nav-tabs > li > a.is-active,
+.m-nav-list > li > a.is-active:hover,
+.m-nav-tabs > li > a.is-active:hover,
+.m-nav-list > li > a.is-active:active,
+.m-nav-tabs > li > a.is-active:active,
+.m-nav-list > li > button.is-active,
+.m-nav-tabs > li > button.is-active,
+.m-nav-list > li > button.is-active:hover,
+.m-nav-tabs > li > button.is-active:hover,
+.m-nav-list > li > button.is-active:active,
+.m-nav-tabs > li > button.is-active:active {
+	background-color: transparent;
+	color: #0064b4;
+	text-decoration: underline;
+}
+
+.m-nav-list > li > a.is-disabled,
+.m-nav-tabs > li > a.is-disabled,
+.m-nav-list > li > a.is-disabled:hover,
+.m-nav-tabs > li > a.is-disabled:hover,
+.m-nav-list > li > a.is-disabled:active,
+.m-nav-tabs > li > a.is-disabled:active,
+.m-nav-list > li > button.is-disabled,
+.m-nav-tabs > li > button.is-disabled,
+.m-nav-list > li > button.is-disabled:hover,
+.m-nav-tabs > li > button.is-disabled:hover,
+.m-nav-list > li > button.is-disabled:active,
+.m-nav-tabs > li > button.is-disabled:active {
+	background-color: #d8d8d8;
+	color: white;
+	cursor: not-allowed;
+	text-decoration: none;
 }
 
 .m-nav-list > li > a > .fa,
@@ -5104,33 +5162,11 @@ dl {
 	position: relative;
 	text-align: center;
 	width: 3rem;
-}
-
-.m-pagination > li.is-active {
-	background-color: #005599;
-	font-weight: 700;
-}
-
-.m-pagination > li.is-active > a:hover,
-.m-pagination > li.is-active > a:active {
-	background-color: inherit;
-}
-
-.m-pagination > li.is-disabled {
-	background-color: #d8d8d8;
-	color: white;
-	cursor: not-allowed;
-}
-
-.m-pagination > li.is-disabled > a,
-.m-pagination > li.is-disabled > a:hover,
-.m-pagination > li.is-disabled > a:active {
-	background-color: inherit;
-	cursor: inherit;
+	z-index: 1;
 }
 
 .m-pagination > li > a {
-	color: inherit;
+	color: white;
 	display: block;
 	text-decoration: none;
 	transition-duration: 250ms;
@@ -5141,6 +5177,17 @@ dl {
 .m-pagination > li > a:hover,
 .m-pagination > li > a:active {
 	background-color: #005599;
+}
+
+.m-pagination > li > a.is-active {
+	background-color: #005599;
+	font-weight: 700;
+}
+
+.m-pagination > li > a.is-disabled {
+	background-color: #d8d8d8;
+	color: white;
+	cursor: not-allowed;
 }
 
 .m-pagination .m-pagination__label {
@@ -5158,6 +5205,7 @@ dl {
 
 .m-pagination .m-pagination__next {
 	border-left: 1px solid #005599;
+	z-index: 0;
 }
 
 .m-pagination--outline > li {
@@ -5166,24 +5214,28 @@ dl {
 	color: #0064b4;
 }
 
-.m-pagination--outline > li.is-active {
+.m-pagination--outline > li > a,
+.m-pagination--outline > li > a:hover,
+.m-pagination--outline > li > a:active {
+	background-color: inherit;
+	box-shadow: inherit;
+	color: inherit;
+}
+
+.m-pagination--outline > li > a.is-active,
+.m-pagination--outline > li > a:hover.is-active,
+.m-pagination--outline > li > a:active.is-active {
 	background-color: #0064b4;
 	color: white;
 }
 
-.m-pagination--outline > li.is-disabled {
+.m-pagination--outline > li > a.is-disabled,
+.m-pagination--outline > li > a:hover.is-disabled,
+.m-pagination--outline > li > a:active.is-disabled {
 	background-color: transparent;
 	box-shadow: 0 0 0 1px #d8d8d8 inset;
 	color: #d8d8d8;
 	cursor: not-allowed;
-}
-
-.m-pagination--outline > li.is-disabled > a,
-.m-pagination--outline > li.is-disabled > a:hover,
-.m-pagination--outline > li.is-disabled > a:active {
-	background-color: inherit;
-	box-shadow: inherit;
-	cursor: inherit;
 }
 
 .m-pagination--outline > li > a:hover,
@@ -5199,6 +5251,33 @@ dl {
 .m-pagination--outline .m-pagination__prev,
 .m-pagination--outline .m-pagination__next {
 	border: none;
+}
+
+/**
+ * PAGINATION SIZES
+ * -------------------------------------------------------------------
+ */
+
+.m-pagination.m-pagination--small > li {
+	height: 2.25rem;
+	line-height: 2.25rem;
+	width: 2.25rem;
+}
+
+.m-pagination.m-pagination--small .m-pagination__label {
+	padding: 0 0.75rem;
+	width: auto;
+}
+
+.m-pagination.m-pagination--large > li {
+	height: 3.75rem;
+	line-height: 3.75rem;
+	width: 3.75rem;
+}
+
+.m-pagination.m-pagination--large .m-pagination__label {
+	padding: 0 2.25rem;
+	width: auto;
 }
 
 /**
@@ -5524,13 +5603,16 @@ dl {
 	background: #f3f3f3;
 	box-shadow: 0 0 0 1px #b0b0b0 inset;
 	color: #081f2c;
-	display: inline-block;
+	display: -ms-inline-flexbox;
+	display: inline-flex;
 	height: 2.25rem;
 	line-height: 2.25rem;
+	max-width: 100%;
 }
 
-.m-tag > * {
-	float: left;
+.m-tag > *:not(.m-tag__label):not(.m-tag__input) {
+	-ms-flex-negative: 0;
+	    flex-shrink: 0;
 }
 
 .m-tag__label {
@@ -5544,6 +5626,7 @@ dl {
 	background-color: transparent;
 	border: none;
 	border-radius: 0;
+	max-width: 15rem;
 	min-height: 2.25rem;
 	padding: 0 0.75rem;
 }
@@ -6011,25 +6094,44 @@ figcaption {
 	    justify-content: center;
 }
 
-.m-nav-tabs > li.is-active > a,
-.m-nav-tabs > li.is-active > a:hover,
-.m-nav-tabs > li.is-active > a:active {
+.m-nav-tabs > li > a,
+.m-nav-tabs > li > button {
+	border-bottom: 3px solid transparent;
+	text-decoration: none;
+	transition-property: border, color;
+}
+
+.m-nav-tabs > li > a:hover,
+.m-nav-tabs > li > a:active,
+.m-nav-tabs > li > button:hover,
+.m-nav-tabs > li > button:active {
+	background-color: transparent;
+	border-color: #0064b4;
+	color: #081f2c;
+	text-decoration: none;
+}
+
+.m-nav-tabs > li > a.is-active,
+.m-nav-tabs > li > a.is-active:hover,
+.m-nav-tabs > li > a.is-active:active,
+.m-nav-tabs > li > button.is-active,
+.m-nav-tabs > li > button.is-active:hover,
+.m-nav-tabs > li > button.is-active:active {
 	background-color: transparent;
 	border-color: #0064b4;
 	color: #0064b4;
 	text-decoration: none;
 }
 
-.m-nav-tabs > li > a {
-	border-bottom: 3px solid transparent;
-	transition-property: border, color;
-}
-
-.m-nav-tabs > li > a:hover,
-.m-nav-tabs > li > a:active {
+.m-nav-tabs > li > a.is-disabled,
+.m-nav-tabs > li > a.is-disabled:hover,
+.m-nav-tabs > li > a.is-disabled:active,
+.m-nav-tabs > li > button.is-disabled,
+.m-nav-tabs > li > button.is-disabled:hover,
+.m-nav-tabs > li > button.is-disabled:active {
 	background-color: transparent;
-	border-color: #0064b4;
-	color: #081f2c;
+	border-color: transparent;
+	color: #d8d8d8;
 }
 
 .m-nav-tabs--left {

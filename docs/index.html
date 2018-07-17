@@ -71,7 +71,7 @@
     <main>
         <div class="u-wrapper d-h1">
             <div class="u-container">
-                <h1>Core Branding Styleguide <small>v1.3.1</small></h1>
+                <h1>Core Branding Styleguide <small>v2.1.1</small></h1>
             </div>
         </div>
 
@@ -1833,6 +1833,14 @@
                             <code>$pagination-outline-border-hover</code>: mix($pagination-outline-border, $black, 85%)
                         </li>
                     
+                        <li class="d-pagination-size-sm">
+                            <code>$pagination-size-sm</code>: $spacer-md
+                        </li>
+                    
+                        <li class="d-pagination-size-lg">
+                            <code>$pagination-size-lg</code>: $spacer-xl
+                        </li>
+                    
                         <li class="d-step-indicator-color">
                             <code>$step-indicator-color</code>: $text-color
                         </li>
@@ -3564,6 +3572,18 @@
             </div>
             <div>
                 <pre class="a-pre a-pre--scrollable"><code>&lt;button class="a-button a-button--tiny"&gt;Tiny button&lt;/button&gt;</code></pre>
+            </div>
+        </div>
+
+        <h4 class="d-h4">Full width buttons</h4>
+        <div class="d">
+            <div>
+                <button class="a-button d-button a-button--block">
+                    Block button
+                </button>
+            </div>
+            <div>
+                <pre class="a-pre a-pre--scrollable"><code>&lt;button class="a-button a-button--block"&gt;Block button&lt;/button&gt;</code></pre>
             </div>
         </div>
 
@@ -5357,30 +5377,28 @@
                 </table>
             </div>
             <div>
-                <pre class="a-pre a-pre--scrollable"><code>&lt;div class="a-table__wrapper-responsive"&gt;
-  &lt;table class="a-table"&gt;
-    &lt;thead&gt;
-      &lt;tr&gt;
-        &lt;th class="is-condensed"&gt;Condensed table cells&lt;/th&gt;
-        &lt;th class="is-condensed"&gt;...&lt;/th&gt;
-      &lt;/tr&gt;
-    &lt;/thead&gt;
-    &lt;tbody&gt;
-      &lt;tr&gt;
-        &lt;td class="is-condensed"&gt;...&lt;/td&gt;
-        &lt;td class="is-condensed"&gt;...&lt;/td&gt;
-      &lt;/tr&gt;
-      &lt;tr&gt;
-        &lt;td class="is-condensed"&gt;...&lt;/td&gt;
-        &lt;td class="is-condensed"&gt;...&lt;/td&gt;
-      &lt;/tr&gt;
-      &lt;tr&gt;
-        &lt;td class="is-condensed"&gt;...&lt;/td&gt;
-        &lt;td class="is-condensed"&gt;...&lt;/td&gt;
-      &lt;/tr&gt;
-    &lt;/tbody&gt;
-  &lt;/table&gt;
-&lt;/div&gt;</code></pre>
+                <pre class="a-pre a-pre--scrollable"><code>&lt;table class="a-table"&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th class="is-condensed"&gt;Condensed table cells&lt;/th&gt;
+      &lt;th class="is-condensed"&gt;...&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td class="is-condensed"&gt;...&lt;/td&gt;
+      &lt;td class="is-condensed"&gt;...&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td class="is-condensed"&gt;...&lt;/td&gt;
+      &lt;td class="is-condensed"&gt;...&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td class="is-condensed"&gt;...&lt;/td&gt;
+      &lt;td class="is-condensed"&gt;...&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;</code></pre>
             </div>
         </div>
         <div class="d">
@@ -5409,30 +5427,28 @@
                 </table>
             </div>
             <div>
-                <pre class="a-pre a-pre--scrollable"><code>&lt;div class="a-table__wrapper-responsive"&gt;
-  &lt;table class="a-table"&gt;
-    &lt;thead&gt;
-      &lt;tr&gt;
-        &lt;th class="has-no-padding"&gt;Table cells without padding&lt;/th&gt;
-        &lt;th class="has-no-padding"&gt;...&lt;/th&gt;
-      &lt;/tr&gt;
-    &lt;/thead&gt;
-    &lt;tbody&gt;
-      &lt;tr&gt;
-        &lt;td class="has-no-padding"&gt;...&lt;/td&gt;
-        &lt;td class="has-no-padding"&gt;...&lt;/td&gt;
-      &lt;/tr&gt;
-      &lt;tr&gt;
-        &lt;td class="has-no-padding"&gt;...&lt;/td&gt;
-        &lt;td class="has-no-padding"&gt;...&lt;/td&gt;
-      &lt;/tr&gt;
-      &lt;tr&gt;
-        &lt;td class="has-no-padding"&gt;...&lt;/td&gt;
-        &lt;td class="has-no-padding"&gt;...&lt;/td&gt;
-      &lt;/tr&gt;
-    &lt;/tbody&gt;
-  &lt;/table&gt;
-&lt;/div&gt;</code></pre>
+                <pre class="a-pre a-pre--scrollable"><code>&lt;table class="a-table"&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th class="has-no-padding"&gt;Table cells without padding&lt;/th&gt;
+      &lt;th class="has-no-padding"&gt;...&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td class="has-no-padding"&gt;...&lt;/td&gt;
+      &lt;td class="has-no-padding"&gt;...&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td class="has-no-padding"&gt;...&lt;/td&gt;
+      &lt;td class="has-no-padding"&gt;...&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td class="has-no-padding"&gt;...&lt;/td&gt;
+      &lt;td class="has-no-padding"&gt;...&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;</code></pre>
             </div>
         </div>
 
@@ -6181,7 +6197,7 @@
                         </div>
                     </div>
                     <div class="m-card__image">
-                        <img src="http://lorempixel.com/1000/500/fashion/5" alt="card image">
+                        <img src="https://placeimg.com/1000/500/tech" alt="card image">
                     </div>
                     <div class="m-card__body">
                         <h5 class="u-margin-bottom-xs">Aeneis</h5>
@@ -6208,7 +6224,7 @@
     &lt;/div&gt;
   &lt;/div&gt;
   &lt;div class="m-card__image"&gt;
-    &lt;img src="http://lorempixel.com/1000/500/fashion/5" alt="card image"&gt;
+    &lt;img src="https://placeimg.com/1000/500/tech" alt="card image"&gt;
   &lt;/div&gt;
   &lt;div class="m-card__body"&gt;
     &lt;h5 class="u-margin-bottom-xs"&gt;Aeneis&lt;/h5&gt;
@@ -7016,53 +7032,53 @@
             <div>
                 <ul class="m-gallery">
                     <li class="m-gallery__item m-gallery__item--preview">
-                        <a rel="gallery" href="http://lorempixel.com/1000/600/fashion/5" title="Item 1">
-                            <img src="http://lorempixel.com/1000/600/fashion/5" alt="gallery image">
+                        <a rel="gallery" href="https://placeimg.com/1000/600/tech" title="Item 1">
+                            <img src="https://placeimg.com/1000/600/tech" alt="gallery image">
                         </a>
                     </li>
                     <li class="m-gallery__item">
-                        <a rel="gallery" href="http://lorempixel.com/320/320/fashion/5" title="Item 2">
-                            <img src="http://lorempixel.com/320/320/fashion/5" alt="gallery image">
+                        <a rel="gallery" href="https://placeimg.com/320/320/tech" title="Item 2">
+                            <img src="https://placeimg.com/320/320/tech" alt="gallery image">
                         </a>
                     </li>
                     <li class="m-gallery__item">
-                        <a rel="gallery" href="http://lorempixel.com/320/320/fashion/5" title="Item 3">
-                            <img src="http://lorempixel.com/320/320/fashion/5" alt="gallery image">
+                        <a rel="gallery" href="https://placeimg.com/320/320/tech" title="Item 3">
+                            <img src="https://placeimg.com/320/320/tech" alt="gallery image">
                         </a>
                     </li>
                     <li class="m-gallery__item">
-                        <a rel="gallery" href="http://lorempixel.com/320/320/fashion/5" title="Item 4">
-                            <img src="http://lorempixel.com/320/320/fashion/5" alt="gallery image">
+                        <a rel="gallery" href="https://placeimg.com/320/320/tech" title="Item 4">
+                            <img src="https://placeimg.com/320/320/tech" alt="gallery image">
                         </a>
                     </li>
                     <li class="m-gallery__item">
-                        <a rel="gallery" href="http://lorempixel.com/320/320/fashion/5" title="Item 5">
-                            <img src="http://lorempixel.com/320/320/fashion/5" alt="gallery image">
+                        <a rel="gallery" href="https://placeimg.com/320/320/tech" title="Item 5">
+                            <img src="https://placeimg.com/320/320/tech" alt="gallery image">
                         </a>
                     </li>
                     <li class="m-gallery__item">
-                        <a rel="gallery" href="http://lorempixel.com/320/320/fashion/5" title="Item 6">
-                            <img src="http://lorempixel.com/320/320/fashion/5" alt="gallery image">
+                        <a rel="gallery" href="https://placeimg.com/320/320/tech" title="Item 6">
+                            <img src="https://placeimg.com/320/320/tech" alt="gallery image">
                         </a>
                     </li>
                     <li class="m-gallery__item">
-                        <a rel="gallery" href="http://lorempixel.com/320/320/fashion/5" title="Item 7">
-                            <img src="http://lorempixel.com/320/320/fashion/5" alt="gallery image">
+                        <a rel="gallery" href="https://placeimg.com/320/320/tech" title="Item 7">
+                            <img src="https://placeimg.com/320/320/tech" alt="gallery image">
                         </a>
                     </li>
                     <li class="m-gallery__item">
-                        <a rel="gallery" href="http://lorempixel.com/320/320/fashion/5" title="Item 8">
-                            <img src="http://lorempixel.com/320/320/fashion/5" alt="gallery image">
+                        <a rel="gallery" href="https://placeimg.com/320/320/tech" title="Item 8">
+                            <img src="https://placeimg.com/320/320/tech" alt="gallery image">
                         </a>
                     </li>
                     <li class="m-gallery__item">
-                        <a rel="gallery" href="http://lorempixel.com/320/320/fashion/5" title="Item 9">
-                            <img src="http://lorempixel.com/320/320/fashion/5" alt="gallery image">
+                        <a rel="gallery" href="https://placeimg.com/320/320/tech" title="Item 9">
+                            <img src="https://placeimg.com/320/320/tech" alt="gallery image">
                         </a>
                     </li>
                     <li class="m-gallery__item">
-                        <a rel="gallery" href="http://lorempixel.com/320/320/fashion/5" title="Item 10">
-                            <img src="http://lorempixel.com/320/320/fashion/5" alt="gallery image">
+                        <a rel="gallery" href="https://placeimg.com/320/320/tech" title="Item 10">
+                            <img src="https://placeimg.com/320/320/tech" alt="gallery image">
                         </a>
                     </li>
                 </ul>
@@ -7070,53 +7086,53 @@
             <div>
                 <pre class="a-pre a-pre--scrollable"><code>&lt;ul class="m-gallery"&gt;
   &lt;li class="m-gallery__item m-gallery__item--preview"&gt;
-    &lt;a rel="gallery" href="http://lorempixel.com/1000/600/fashion/5" title="Item 1"&gt;
-      &lt;img src="http://lorempixel.com/1000/600/fashion/5" alt="gallery image"&gt;
+    &lt;a rel="gallery" href="https://placeimg.com/1000/600/tech" title="Item 1"&gt;
+      &lt;img src="https://placeimg.com/1000/600/tech" alt="gallery image"&gt;
     &lt;/a&gt;
   &lt;/li&gt;
   &lt;li class="m-gallery__item"&gt;
-    &lt;a rel="gallery" href="http://lorempixel.com/320/320/fashion/5" title="Item 2"&gt;
-      &lt;img src="http://lorempixel.com/320/320/fashion/5" alt="gallery image"&gt;
+    &lt;a rel="gallery" href="https://placeimg.com/320/320/tech" title="Item 2"&gt;
+      &lt;img src="https://placeimg.com/320/320/tech" alt="gallery image"&gt;
     &lt;/a&gt;
   &lt;/li&gt;
   &lt;li class="m-gallery__item"&gt;
-    &lt;a rel="gallery" href="http://lorempixel.com/320/320/fashion/5" title="Item 3"&gt;
-      &lt;img src="http://lorempixel.com/320/320/fashion/5" alt="gallery image"&gt;
+    &lt;a rel="gallery" href="https://placeimg.com/320/320/tech" title="Item 3"&gt;
+      &lt;img src="https://placeimg.com/320/320/tech" alt="gallery image"&gt;
     &lt;/a&gt;
   &lt;/li&gt;
   &lt;li class="m-gallery__item"&gt;
-    &lt;a rel="gallery" href="http://lorempixel.com/320/320/fashion/5" title="Item 4"&gt;
-      &lt;img src="http://lorempixel.com/320/320/fashion/5" alt="gallery image"&gt;
+    &lt;a rel="gallery" href="https://placeimg.com/320/320/tech" title="Item 4"&gt;
+      &lt;img src="https://placeimg.com/320/320/tech" alt="gallery image"&gt;
     &lt;/a&gt;
   &lt;/li&gt;
   &lt;li class="m-gallery__item"&gt;
-    &lt;a rel="gallery" href="http://lorempixel.com/320/320/fashion/5" title="Item 5"&gt;
-      &lt;img src="http://lorempixel.com/320/320/fashion/5" alt="gallery image"&gt;
+    &lt;a rel="gallery" href="https://placeimg.com/320/320/tech" title="Item 5"&gt;
+      &lt;img src="https://placeimg.com/320/320/tech" alt="gallery image"&gt;
     &lt;/a&gt;
   &lt;/li&gt;
   &lt;li class="m-gallery__item"&gt;
-    &lt;a rel="gallery" href="http://lorempixel.com/320/320/fashion/5" title="Item 6"&gt;
-      &lt;img src="http://lorempixel.com/320/320/fashion/5" alt="gallery image"&gt;
+    &lt;a rel="gallery" href="https://placeimg.com/320/320/tech" title="Item 6"&gt;
+      &lt;img src="https://placeimg.com/320/320/tech" alt="gallery image"&gt;
     &lt;/a&gt;
   &lt;/li&gt;
   &lt;li class="m-gallery__item"&gt;
-    &lt;a rel="gallery" href="http://lorempixel.com/320/320/fashion/5" title="Item 7"&gt;
-      &lt;img src="http://lorempixel.com/320/320/fashion/5" alt="gallery image"&gt;
+    &lt;a rel="gallery" href="https://placeimg.com/320/320/tech" title="Item 7"&gt;
+      &lt;img src="https://placeimg.com/320/320/tech" alt="gallery image"&gt;
     &lt;/a&gt;
   &lt;/li&gt;
   &lt;li class="m-gallery__item"&gt;
-    &lt;a rel="gallery" href="http://lorempixel.com/320/320/fashion/5" title="Item 8"&gt;
-      &lt;img src="http://lorempixel.com/320/320/fashion/5" alt="gallery image"&gt;
+    &lt;a rel="gallery" href="https://placeimg.com/320/320/tech" title="Item 8"&gt;
+      &lt;img src="https://placeimg.com/320/320/tech" alt="gallery image"&gt;
     &lt;/a&gt;
   &lt;/li&gt;
   &lt;li class="m-gallery__item"&gt;
-    &lt;a rel="gallery" href="http://lorempixel.com/320/320/fashion/5" title="Item 9"&gt;
-      &lt;img src="http://lorempixel.com/320/320/fashion/5" alt="gallery image"&gt;
+    &lt;a rel="gallery" href="https://placeimg.com/320/320/tech" title="Item 9"&gt;
+      &lt;img src="https://placeimg.com/320/320/tech" alt="gallery image"&gt;
     &lt;/a&gt;
   &lt;/li&gt;
   &lt;li class="m-gallery__item"&gt;
-    &lt;a rel="gallery" href="http://lorempixel.com/320/320/fashion/5" title="Item 10"&gt;
-      &lt;img src="http://lorempixel.com/320/320/fashion/5" alt="gallery image"&gt;
+    &lt;a rel="gallery" href="https://placeimg.com/320/320/tech" title="Item 10"&gt;
+      &lt;img src="https://placeimg.com/320/320/tech" alt="gallery image"&gt;
     &lt;/a&gt;
   &lt;/li&gt;
 &lt;/ul&gt;</code></pre>
@@ -7231,19 +7247,19 @@
         <div class="d">
             <div>
                 <figure class="m-image">
-                    <img src="http://lorempixel.com/1000/500/fashion/5" alt="figure image">
+                    <img src="https://placeimg.com/1000/500/tech" alt="figure image">
                 </figure>
             </div>
             <div>
                 <pre class="a-pre a-pre--scrollable"><code>&lt;figure class="m-image"&gt;
-  &lt;img src="http://lorempixel.com/1000/500/fashion/5" alt="figure image"&gt;
+  &lt;img src="https://placeimg.com/1000/500/tech" alt="figure image"&gt;
 &lt;/figure&gt;</code></pre>
             </div>
         </div>
         <div class="d">
             <div>
                 <figure class="m-image">
-                    <img src="http://lorempixel.com/1000/500/fashion/5" alt="figure image">
+                    <img src="https://placeimg.com/1000/500/tech" alt="figure image">
                     <a href="javascript:void(0);" class="m-image__copyright a-copyright" aria-haspopup="true">
                         <div class="a-copyright__sign">
                             <span class="fa fa-copyright"></span>
@@ -7254,7 +7270,7 @@
             </div>
             <div>
                 <pre class="a-pre a-pre--scrollable"><code>&lt;figure class="m-image"&gt;
-  &lt;img src="http://lorempixel.com/1000/500/fashion/5" alt="figure image"&gt;
+  &lt;img src="https://placeimg.com/1000/500/tech" alt="figure image"&gt;
   &lt;a href="#" class="m-image__copyright a-copyright" aria-haspopup="true"&gt;
     &lt;div class="a-copyright__sign"&gt;
       &lt;span class="fa fa-copyright"&gt;&lt;/span&gt;
@@ -7268,7 +7284,7 @@
             <div>
                 <figure>
                     <div class="m-image">
-                        <img src="http://lorempixel.com/1000/500/fashion/5" alt="figure image">
+                        <img src="https://placeimg.com/1000/500/tech" alt="figure image">
                         <div class="m-image__copyright a-copyright" aria-haspopup="true">
                             <div class="a-copyright__sign">
                                 <span class="fa fa-copyright"></span>
@@ -7282,7 +7298,7 @@
             <div>
                 <pre class="a-pre a-pre--scrollable"><code>&lt;figure&gt;
   &lt;div class="m-image"&gt;
-    &lt;img src="http://lorempixel.com/1000/500/fashion/5" alt="figure image"&gt;
+    &lt;img src="https://placeimg.com/1000/500/tech" alt="figure image"&gt;
     &lt;div class="m-image__copyright a-copyright" aria-haspopup="true"&gt;
       &lt;div class="a-copyright__sign"&gt;
         &lt;span class="fa fa-copyright"&gt;&lt;/span&gt;
@@ -7466,6 +7482,13 @@
                     <li><a class="is-active" href="javascript:void(0);">Leonardo da Vinci <span class="a-badge">67</span></a></li>
                     <li><a class="is-disabled" href="javascript:void(0);">Albert Einstein</a></li>
                 </ul>
+
+
+                <ul class="m-nav-tabs m-nav-tabs--left d-nav-list">
+                    <li><button><span class="fa fa-lightbulb-o"></span>Thomas Edison</button></li>
+                    <li><button class="is-active">Leonardo da Vinci <span class="a-badge">67</span></button></li>
+                    <li><button class="is-disabled">Albert Einstein</button></li>
+                </ul>
             </div>
             <div>
                 <pre class="a-pre a-pre--scrollable"><code>&lt;ul class="m-nav-tabs"&gt;
@@ -7482,6 +7505,11 @@
   &lt;li&gt;&lt;a href="#"&gt;&lt;span class="fa fa-lightbulb-o"&gt;&lt;/span&gt;Thomas Edison&lt;/a&gt;&lt;/li&gt;
   &lt;li&gt;&lt;a class="is-active" href="#"&gt;Leonardo da Vinci &lt;span class="a-badge"&gt;67&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
   &lt;li&gt;&lt;a class="is-disabled" href="#"&gt;Albert Einstein&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</code></pre>
+                <pre class="a-pre a-pre--scrollable"><code>&lt;ul class="m-nav-tabs m-nav-tabs--left"&gt;
+  &lt;li&gt;&lt;button&gt;&lt;span class="fa fa-lightbulb-o"&gt;&lt;/span&gt;Thomas Edison&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;button class="is-active"&gt;Leonardo da Vinci &lt;span class="a-badge"&gt;67&lt;/span&gt;&lt;/button&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;button class="is-disabled"&gt;Albert Einstein&lt;/button&gt;&lt;/li&gt;
 &lt;/ul&gt;</code></pre>
             </div>
         </div>
@@ -7541,6 +7569,7 @@
         <a name="molecules-pagination"></a>
         <h3 class="d-h3">Pagination</h3>
         <span class="d-file">molecules/molecules.pagination</span>
+        <h4 class="d-h4">Regular pagination</h4>
         <div class="d">
             <div>
                 <ul class="m-pagination d-pagination">
@@ -7583,6 +7612,7 @@
 &lt;/ul&gt;</code></pre>
             </div>
         </div>
+        <h4 class="d-h4">Outline pagination</h4>
         <div class="d">
             <div>
                 <ul class="m-pagination m-pagination--outline d-pagination">
@@ -7625,7 +7655,67 @@
 &lt;/ul&gt;</code></pre>
             </div>
         </div>
-
+        <h4 class="d-h4">Pagination sizes</h4>
+        <div class="d">
+            <div>
+                <ul class="m-pagination m-pagination--small d-pagination">
+                    <li class="m-pagination__prev"><a class="is-disabled" href="javascript:void(0);"><i class="fa fa-angle-left"></i></a></li>
+                    <li class="m-pagination__label">1 van de 6</li>
+                    <li class="m-pagination__next"><a href="javascript:void(0);"><i class="fa fa-angle-right"></i></a></li>
+                </ul>
+                <ul class="m-pagination m-pagination--large d-pagination">
+                    <li class="m-pagination__prev"><a href="javascript:void(0);"><i class="fa fa-angle-left"></i></a></li>
+                    <li>...</li>
+                    <li><a href="javascript:void(0);">3</a></li>
+                    <li><a href="javascript:void(0);">4</a></li>
+                    <li><a href="javascript:void(0);">5</a></li>
+                    <li><a class="is-active" href="javascript:void(0);">6</a></li>
+                    <li class="m-pagination__next"><a class="is-disabled" href="javascript:void(0);"><i class="fa fa-angle-right"></i></a></li>
+                </ul>
+                <ul class="m-pagination m-pagination--outline m-pagination--large d-pagination">
+                    <li class="m-pagination__prev"><a href="javascript:void(0);"><i class="fa fa-angle-left"></i></a></li>
+                    <li class="m-pagination__next"><a href="javascript:void(0);"><i class="fa fa-angle-right"></i></a></li>
+                </ul>
+                <ul class="m-pagination m-pagination--outline m-pagination--small d-pagination">
+                    <li class="m-pagination__prev"><a href="javascript:void(0);"><i class="fa fa-angle-left"></i></a></li>
+                    <li>...</li>
+                    <li><a href="javascript:void(0);">3</a></li>
+                    <li><a href="javascript:void(0);">4</a></li>
+                    <li><a href="javascript:void(0);">5</a></li>
+                    <li><a class="is-active" href="javascript:void(0);">6</a></li>
+                    <li class="m-pagination__next"><a class="is-disabled" href="javascript:void(0);"><i class="fa fa-angle-right"></i></a></li>
+                </ul>
+            </div>
+            <div>
+                <pre class="a-pre a-pre--scrollable"><code>&lt;ul class="m-pagination m-pagination--small"&gt;
+  &lt;li class="m-pagination__prev"&gt;&lt;a class="is-disabled" href="#"&gt;&lt;i class="fa fa-angle-left"&gt;&lt;/i&gt;&lt;/a&gt;&lt;/li&gt;
+  &lt;li class="m-pagination__label"&gt;1 van de 6&lt;/li&gt;
+  &lt;li class="m-pagination__next"&gt;&lt;a href="#"&gt;&lt;i class="fa fa-angle-right"&gt;&lt;/i&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</code></pre>
+                <pre class="a-pre a-pre--scrollable"><code>&lt;ul class="m-pagination m-pagination--large"&gt;
+  &lt;li class="m-pagination__prev"&gt;&lt;a href="#"&gt;&lt;i class="fa fa-angle-left"&gt;&lt;/i&gt;&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;...&lt;/li&gt;
+  &lt;li&gt;&lt;a href="#"&gt;3&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href="#"&gt;4&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href="#"&gt;5&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a class="is-active" href="#"&gt;6&lt;/a&gt;&lt;/li&gt;
+  &lt;li class="m-pagination__next"&gt;&lt;a class="is-disabled" href="#"&gt;&lt;i class="fa fa-angle-right"&gt;&lt;/i&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</code></pre>
+                <pre class="a-pre a-pre--scrollable"><code>&lt;ul class="m-pagination m-pagination--outline m-pagination--large"&gt;
+  &lt;li class="m-pagination__prev"&gt;&lt;a href="#"&gt;&lt;i class="fa fa-angle-left"&gt;&lt;/i&gt;&lt;/a&gt;&lt;/li&gt;
+  &lt;li class="m-pagination__next"&gt;&lt;a href="#"&gt;&lt;i class="fa fa-angle-right"&gt;&lt;/i&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</code></pre>
+                <pre class="a-pre a-pre--scrollable"><code>&lt;ul class="m-pagination m-pagination--outline m-pagination--small"&gt;
+  &lt;li class="m-pagination__prev"&gt;&lt;a href="#"&gt;&lt;i class="fa fa-angle-left"&gt;&lt;/i&gt;&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;...&lt;/li&gt;
+  &lt;li&gt;&lt;a href="#"&gt;3&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href="#"&gt;4&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href="#"&gt;5&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a class="is-active" href="#"&gt;6&lt;/a&gt;&lt;/li&gt;
+  &lt;li class="m-pagination__next"&gt;&lt;a class="is-disabled" href="#"&gt;&lt;i class="fa fa-angle-right"&gt;&lt;/i&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</code></pre>
+            </div>
+        </div>
         <a name="molecules-progress"></a>
         <h3 class="d-h3">Progress</h3>
         <span class="d-file">molecules/molecules.progress</span>
@@ -8145,7 +8235,7 @@
                             <figure class="o-slideshow__slide is-active">
                                 <div class="o-slideshow__image">
                                     <div class="m-image">
-                                        <img src="http://lorempixel.com/1000/500/fashion/5" alt="slideshow image 1">
+                                        <img src="https://placeimg.com/1000/500/tech" alt="slideshow image 1">
                                         <div class="m-image__copyright a-copyright" aria-haspopup="true">
                                             <div class="a-copyright__sign"><span class="fa fa-copyright"></span></div>
                                             <span class="a-copyright__label">Lorem Pixel</span>
@@ -8156,7 +8246,7 @@
                             <figure class="o-slideshow__slide">
                                 <div class="o-slideshow__image">
                                     <div class="m-image">
-                                        <img src="http://lorempixel.com/1000/500/fashion/7" alt="slideshow image 2">
+                                        <img src="https://placeimg.com/1000/500/tech" alt="slideshow image 2">
                                         <div class="m-image__copyright a-copyright" aria-haspopup="true">
                                             <div class="a-copyright__sign"><span class="fa fa-copyright"></span></div>
                                             <span class="a-copyright__label">Lorem Pixel</span>
@@ -8167,7 +8257,7 @@
                             <figure class="o-slideshow__slide">
                                 <div class="o-slideshow__image">
                                     <div class="m-image">
-                                        <img src="http://lorempixel.com/1000/500/fashion/10" alt="slideshow image 3">
+                                        <img src="https://placeimg.com/1000/500/tech" alt="slideshow image 3">
                                         <div class="m-image__copyright a-copyright" aria-haspopup="true">
                                             <div class="a-copyright__sign"><span class="fa fa-copyright"></span></div>
                                             <span class="a-copyright__label">Lorem Pixel</span>
@@ -8192,7 +8282,7 @@
       &lt;figure class="o-slideshow__slide is-active"&gt;
         &lt;div class="o-slideshow__image"&gt;
           &lt;div class="m-image"&gt;
-            &lt;img src="http://lorempixel.com/1000/500/fashion/5" alt="slideshow image 1"&gt;
+            &lt;img src="https://placeimg.com/1000/500/tech" alt="slideshow image 1"&gt;
             &lt;div class="m-image__copyright a-copyright" aria-haspopup="true"&gt;
               &lt;div class="a-copyright__sign"&gt;&lt;span class="fa fa-copyright"&gt;&lt;/span&gt;&lt;/div&gt;
               &lt;span class="a-copyright__label"&gt;Lorem Pixel&lt;/span&gt;
@@ -8203,7 +8293,7 @@
       &lt;figure class="o-slideshow__slide"&gt;
         &lt;div class="o-slideshow__image"&gt;
           &lt;div class="m-image"&gt;
-            &lt;img src="http://lorempixel.com/1000/500/fashion/7" alt="slideshow image 2"&gt;
+            &lt;img src="https://placeimg.com/1000/500/tech" alt="slideshow image 2"&gt;
             &lt;div class="m-image__copyright a-copyright" aria-haspopup="true"&gt;
               &lt;div class="a-copyright__sign"&gt;&lt;span class="fa fa-copyright"&gt;&lt;/span&gt;&lt;/div&gt;
               &lt;span class="a-copyright__label"&gt;Lorem Pixel&lt;/span&gt;
@@ -8214,7 +8304,7 @@
       &lt;figure class="o-slideshow__slide"&gt;
         &lt;div class="o-slideshow__image"&gt;
           &lt;div class="m-image"&gt;
-            &lt;img src="http://lorempixel.com/1000/500/fashion/10" alt="slideshow image 3"&gt;
+            &lt;img src="https://placeimg.com/1000/500/tech" alt="slideshow image 3"&gt;
             &lt;div class="m-image__copyright a-copyright" aria-haspopup="true"&gt;
               &lt;div class="a-copyright__sign"&gt;&lt;span class="fa fa-copyright"&gt;&lt;/span&gt;&lt;/div&gt;
               &lt;span class="a-copyright__label"&gt;Lorem Pixel&lt;/span&gt;
@@ -8251,7 +8341,7 @@
                                             <figure class="o-slideshow__slide is-active">
                                                 <div class="o-slideshow__image">
                                                     <div class="m-image">
-                                                        <img src="http://lorempixel.com/1900/950/fashion/5" alt="slideshow image 1">
+                                                        <img src="https://placeimg.com/1900/950/tech" alt="slideshow image 1">
                                                         <div class="m-image__copyright a-copyright" aria-haspopup="true">
                                                             <div class="a-copyright__sign"><span class="fa fa-copyright"></span></div>
                                                             <span class="a-copyright__label">Lorem Pixel</span>
@@ -8262,7 +8352,7 @@
                                             <figure class="o-slideshow__slide">
                                                 <div class="o-slideshow__image">
                                                     <div class="m-image">
-                                                        <img src="http://lorempixel.com/1000/500/fashion/7" alt="slideshow image 2">
+                                                        <img src="https://placeimg.com/1000/500/tech" alt="slideshow image 2">
                                                         <div class="m-image__copyright a-copyright" aria-haspopup="true">
                                                             <div class="a-copyright__sign"><span class="fa fa-copyright"></span></div>
                                                             <span class="a-copyright__label">Lorem Pixel</span>
@@ -8273,7 +8363,7 @@
                                             <figure class="o-slideshow__slide">
                                                 <div class="o-slideshow__image">
                                                     <div class="m-image">
-                                                        <img src="http://lorempixel.com/1000/500/fashion/10" alt="slideshow image 3">
+                                                        <img src="https://placeimg.com/1000/500/tech" alt="slideshow image 3">
                                                         <div class="m-image__copyright a-copyright" aria-haspopup="true">
                                                             <div class="a-copyright__sign"><span class="fa fa-copyright"></span></div>
                                                             <span class="a-copyright__label">Lorem Pixel</span>
@@ -8307,7 +8397,7 @@
         &lt;figure class="o-slideshow__slide is-active"&gt;
           &lt;div class="o-slideshow__image"&gt;
             &lt;div class="m-image"&gt;
-              &lt;img src="http://lorempixel.com/1000/500/fashion/5" alt="slideshow image 1"&gt;
+              &lt;img src="https://placeimg.com/1000/500/tech" alt="slideshow image 1"&gt;
               &lt;div class="m-image__copyright a-copyright" aria-haspopup="true"&gt;
                 &lt;div class="a-copyright__sign"&gt;&lt;span class="fa fa-copyright"&gt;&lt;/span&gt;&lt;/div&gt;
                 &lt;span class="a-copyright__label"&gt;Lorem Pixel&lt;/span&gt;
@@ -8318,7 +8408,7 @@
         &lt;figure class="o-slideshow__slide"&gt;
           &lt;div class="o-slideshow__image"&gt;
             &lt;div class="m-image"&gt;
-              &lt;img src="http://lorempixel.com/1000/500/fashion/7" alt="slideshow image 2"&gt;
+              &lt;img src="https://placeimg.com/1000/500/tech" alt="slideshow image 2"&gt;
               &lt;div class="m-image__copyright a-copyright" aria-haspopup="true"&gt;
                 &lt;div class="a-copyright__sign"&gt;&lt;span class="fa fa-copyright"&gt;&lt;/span&gt;&lt;/div&gt;
                 &lt;span class="a-copyright__label"&gt;Lorem Pixel&lt;/span&gt;
@@ -8329,7 +8419,7 @@
         &lt;figure class="o-slideshow__slide"&gt;
           &lt;div class="o-slideshow__image"&gt;
             &lt;div class="m-image"&gt;
-              &lt;img src="http://lorempixel.com/1000/500/fashion/10" alt="slideshow image 3"&gt;
+              &lt;img src="https://placeimg.com/1000/500/tech" alt="slideshow image 3"&gt;
               &lt;div class="m-image__copyright a-copyright" aria-haspopup="true"&gt;
                 &lt;div class="a-copyright__sign"&gt;&lt;span class="fa fa-copyright"&gt;&lt;/span&gt;&lt;/div&gt;
                 &lt;span class="a-copyright__label"&gt;Lorem Pixel&lt;/span&gt;

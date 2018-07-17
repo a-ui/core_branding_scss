@@ -1,6 +1,45 @@
 # Changelog
 
+
 ## Unreleased
+### Changed
+- Changed the appearance of the disabled button
+
+### Added
+- Added a getting started guide in the documentation
+- Added an easy TOC in the documentation
+
+
+## [2.1.1] - 2018-04-26
+### Fixed
+- Fixed an issue where the `:not` selector wasn't rendered correctly
+
+
+## [2.1.0] - 2018-04-26
+### Fixed
+- Added a missing part of the Antwerp font EULA
+
+### Added
+- Added small and large size variants for pagination
+
+
+## [2.0.4] - 2018-04-17
+### Fixed
+- Fixed an issue where tags would display incorrectly in smaller containers
+- Fixed an issue in Firefox where the responsive table wrapper would break out the flexbox setup
+
+### Added
+- Added full width buttons to the docs
+
+
+## [2.0.3] - 2018-03-30
+### Added
+- Added option to also use buttons in navigation tabs instead of only anchors
+
+
+## [2.0.2] - 2018-03-16
+### Fixed
+- Fixed an issue where alignment classes weren't working in table headings and table cells
 
 
 ## [2.0.1] - 2018-01-22
@@ -78,6 +117,12 @@
 - Initial release.
 
 
+[2.1.1]: https://github.com/a-ui/core_branding_scss/tree/v2.1.1
+[2.1.0]: https://github.com/a-ui/core_branding_scss/tree/v2.1.0
+[2.0.4]: https://github.com/a-ui/core_branding_scss/tree/v2.0.4
+[2.0.3]: https://github.com/a-ui/core_branding_scss/tree/v2.0.3
+[2.0.2]: https://github.com/a-ui/core_branding_scss/tree/v2.0.2
+[2.0.1]: https://github.com/a-ui/core_branding_scss/tree/v2.0.1
 [2.0.0]: https://github.com/a-ui/core_branding_scss/tree/v2.0.0
 [1.3.1]: https://github.com/a-ui/core_branding_scss/tree/v1.3.1
 [1.3.0]: https://github.com/a-ui/core_branding_scss/tree/v1.3.0

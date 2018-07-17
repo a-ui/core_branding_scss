@@ -47,7 +47,7 @@
           text-decoration: underline;
         }
       }
-      
+
       &.is-disabled {
         &,
         &:hover,
@@ -108,7 +108,8 @@
 
     > li {
 
-      > a {
+      > a,
+      > button {
         border-bottom: 3px solid transparent;
         text-decoration: none;
         transition-property: border, color;

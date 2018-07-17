@@ -1,0 +1,34 @@
+<div class="u-wrapper d-h2">
+	<div class="u-container u-margin-top">
+		<h2>Getting started</h2>
+	</div>
+</div>
+<div class="u-wrapper">
+    <div class="u-container u-margin-top d-intro">
+        <div class="u-margin-bottom-lg">
+            <p>In this styleguide you'll find all the necessary info you will need in order to start building digital layouts or apps for the city of Antwerp.</p>
+
+            <h3 class="h5 has-base-font u-text-bold u-margin-top-lg">Basic implementation</h3>
+            <p class="u-margin-top u-margin-bottom-xs">In its simplest form you can just include the following line in the <code>&lt;head&gt;</code> section of your app.</p>
+            <pre class="a-pre a-pre--scrollable"><code>&lt;link rel="stylesheet" href="https://cdn.antwerpen.be/core_branding_scss/{{ VERSION_INFO.version }}/main.min.css"&gt;</code></pre>
+            <p class="u-margin-top u-margin-bottom-xs">You can even import it directly in your (S)CSS:</p>
+            <pre class="a-pre a-pre--scrollable"><code>@import url("https://cdn.antwerpen.be/core_branding_scss/{{ VERSION_INFO.version }}/main.min.css");</code></pre>
+            <div class="m-alert d-alert u-margin-top">
+                <p>We adopt semantic versioning. If you want to use another version of the Core Branding you can do so by adjusting the version in the URL address. See the changelog for all available versions.</p>
+            </div>
+            <h3 class="h5 has-base-font u-text-bold u-margin-top-lg">Advanced usage</h3>
+            <p class="u-margin-top u-margin-bottom-xs">Sometimes you want to add functionality which requires more styling as defined in our kit. In order to help with this we provide some simple tools and the ability to import all the kit's Sass variables. See the <a href="#quarks">Quarks</a> section for more info.</p>
+            <p class="u-margin-top u-margin-bottom-xs">It's also possible to only load the Antwerp fonts. Just like you would implement a font from Google. These are the links you can use:</p>
+            <h4 class="h6 has-base-font u-text-bold u-margin-top">Antwerpen</h3>
+            <p class="u-margin-top-xs u-margin-bottom-xs">Available in Small, Regular and Tall.</p>
+            <pre class="a-pre a-pre--scrollable"><code>&lt;link rel="stylesheet" href="https://cdn.antwerpen.be/core_branding_scss/{{ VERSION_INFO.version }}/antwerpen.min.css"&gt;</code></pre>
+            <p class="u-margin-bottom-top-xxs">or</p>
+            <pre class="a-pre a-pre--scrollable"><code>@import url("https://cdn.antwerpen.be/core_branding_scss/{{ VERSION_INFO.version }}/antwerpen.min.css");</code></pre>
+            <h4 class="h6 has-base-font u-text-bold u-margin-top">Sun Antwerpen</h3>
+            <p class="u-margin-top-xs u-margin-bottom-xs">Available in Light, Regular, Bold and Extra Bold.</p>
+            <pre class="a-pre a-pre--scrollable"><code>&lt;link rel="stylesheet" href="https://cdn.antwerpen.be/core_branding_scss/{{ VERSION_INFO.version }}/sun-antwerpen.min.css"&gt;</code></pre>
+            <p class="u-margin-bottom-top-xxs">or</p>
+            <pre class="a-pre a-pre--scrollable"><code>@import url("https://cdn.antwerpen.be/core_branding_scss/{{ VERSION_INFO.version }}/sun-antwerpen.min.css");</code></pre>
+        </div>
+    </div>
+</div>

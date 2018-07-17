@@ -36,7 +36,10 @@
   th,
   td {
     padding: $table-padding;
-    text-align: left;
+
+    &:not(.u-text-center):not(.u-text-right):not(.u-text-justify) {
+      text-align: left;
+    }
 
     &.is-condensed {
       padding: $table-padding / 2;

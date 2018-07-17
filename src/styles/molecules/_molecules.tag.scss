@@ -7,12 +7,13 @@
   background: $tag-bg;
   box-shadow: 0 0 0 1px $tag-border inset;
   color: $tag-color;
-  display: inline-block;
+  display: inline-flex;
   height: $tag-height;
   line-height: $tag-height;
+  max-width: 100%;
 
-  > * {
-    float: left;
+  > *:not(.m-tag__label):not(.m-tag__input) {
+    flex-shrink: 0;
   }
 }
 
@@ -32,6 +33,7 @@
   background-color: transparent;
   border: none;
   border-radius: 0;
+  max-width: $spacer * 10;
   min-height: $tag-height;
   padding: 0 $spacer-xs;
 

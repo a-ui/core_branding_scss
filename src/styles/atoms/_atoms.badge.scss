@@ -51,23 +51,23 @@
 .is-disabled {
   .a-badge {
     @include a-badge($badge-disabled-color, mix($badge-disabled-bg, $nav-bg-disabled, 50%));
-  
+
     &.a-badge--primary {
       @include a-badge($badge-primary-color, mix($badge-primary-bg, $nav-bg-disabled, 50%));
     }
-  
+
     &.a-badge--secondary {
       @include a-badge($badge-secondary-color, mix($badge-secondary-bg, $nav-bg-disabled, 50%));
     }
-  
+
     &.a-badge--success {
       @include a-badge($badge-success-color, mix($badge-success-bg, $nav-bg-disabled, 50%));
     }
-  
+
     &.a-badge--warning {
       @include a-badge($badge-warning-color, mix($badge-warning-bg, $nav-bg-disabled, 50%));
     }
-  
+
     &.a-badge--danger {
       @include a-badge($badge-danger-color, mix($badge-danger-bg, $nav-bg-disabled, 50%));
     }

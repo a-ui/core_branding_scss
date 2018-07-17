@@ -332,7 +332,7 @@ $btn-warning-bg:          $state-warning !default;
 $btn-danger-color:        $btn-default-color !default;
 $btn-danger-bg:           $state-danger !default;
 
-$btn-disabled-color:      $white !default;
+$btn-disabled-color:      $grey-dark !default;
 $btn-disabled-bg:         $state-disabled !default;
 
 $btn-transparent-color:   $brand-primary !default;
@@ -801,6 +801,9 @@ $pagination-outline-bg:               $btn-transparent-bg !default;
 $pagination-outline-bg-hover:         mix($pagination-outline-color, $white, 15%) !default;
 $pagination-outline-border:           $pagination-outline-color !default;
 $pagination-outline-border-hover:     mix($pagination-outline-border, $black, 85%) !default;
+
+$pagination-size-sm: $spacer-md !default;
+$pagination-size-lg: $spacer-xl !default;
 
 
 /**
