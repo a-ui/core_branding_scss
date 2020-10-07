@@ -110,4 +110,17 @@
   .a-list .m-search-filter__results-item {
     padding: 0;
   }
+
+
+  &--small {
+    > .m-search-filter__label {
+      height: $input-height-sm;
+      line-height: $input-height-sm;
+
+      > .fa {
+        height: $input-height-sm;
+        line-height: $input-height-sm;
+      }
+    }
+  }
 }
