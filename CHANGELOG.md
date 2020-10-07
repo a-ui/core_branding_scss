@@ -1,4 +1,8 @@
 # Changelog
+## Unreleased
+
+### Added
+- .m-search-filter--small option
 
 ## [4.2.2] - 2020-09-22
 
