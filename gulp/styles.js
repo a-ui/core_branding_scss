@@ -87,6 +87,52 @@ gulp.task('sass:dist', function () {
         .pipe(gulp.dest('dist'));
 });
 
+gulp.task('sass:aws:version', function () {
+    // Get package version to generate correct font url
+    var nodePackageFile = JSON.parse(fs.readFileSync(__dirname + '/../package.json'));
+    var nodePackageVersion = nodePackageFile.version;
+    var nodePackageDescription = nodePackageFile.description;
+
+    return gulp.src(['src/styles/**/*.scss', '!src/styles/**/styleguide.scss'])
+        .pipe(sass(sassOptions).on('error', sass.logError))
+        .pipe(postcss(autoPrefixer))
+        .pipe(license('/*\n' + fs.readFileSync('LICENSE.md', 'utf8') + '*/'))
+        .pipe(cssUrlAdjuster({
+            replace: ['../../fonts', 'assets/fonts'],
+            prepend: `https:///cdn.antwerpen.be/${nodePackageDescription}/${nodePackageVersion}/`
+        }))
+        .pipe(gulp.dest(`aws/${nodePackageVersion}`))
+        .pipe(sourcemaps.init())
+        .pipe(gulp.dest(`./aws/${nodePackageVersion}/`))
+        .pipe(rename({ extname: '.min.css' }))
+        .pipe(postcss(cssNano))
+        .pipe(license('/*\n' + fs.readFileSync('LICENSE.md', 'utf8') + '*/'))
+        .pipe(sourcemaps.write("./", sourcemapOptions))
+        .pipe(gulp.dest(`aws/${nodePackageVersion}`));
+});
+
+gulp.task('sass:aws:latest', function () {
+    var nodePackageFile = JSON.parse(fs.readFileSync(__dirname + '/../package.json'));
+    var nodePackageDescription = nodePackageFile.description;
+
+    return gulp.src(['src/styles/**/*.scss', '!src/styles/**/styleguide.scss'])
+        .pipe(sass(sassOptions).on('error', sass.logError))
+        .pipe(postcss(autoPrefixer))
+        .pipe(license('/*\n' + fs.readFileSync('LICENSE.md', 'utf8') + '*/'))
+        .pipe(cssUrlAdjuster({
+            replace: ['../../fonts', 'assets/fonts'],
+            prepend: 'https:///cdn.antwerpen.be/' + nodePackageDescription + '/latest/'
+        }))
+        .pipe(gulp.dest('aws/latest'))
+        .pipe(sourcemaps.init())
+        .pipe(gulp.dest('./aws/latest/'))
+        .pipe(rename({ extname: '.min.css' }))
+        .pipe(postcss(cssNano))
+        .pipe(license('/*\n' + fs.readFileSync('LICENSE.md', 'utf8') + '*/'))
+        .pipe(sourcemaps.write("./", sourcemapOptions))
+        .pipe(gulp.dest('aws/latest'));
+});
+
 gulp.task('stylelint', function () {
     return gulp
         .src('src/styles/**/*.scss')

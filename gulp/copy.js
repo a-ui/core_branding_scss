@@ -6,6 +6,7 @@
 
 var gulp = require('gulp');
 var merge = require('merge-stream');
+var fs = require('fs');
 
 gulp.task('copy', function() {
 
@@ -25,7 +26,7 @@ gulp.task('copy', function() {
 
 });
 
-gulp.task('copy:docs', function() {
+gulp.task('copy:docs', function () {
 
     var tmpStream = gulp.src('.tmp/**/*.html')
         .pipe(gulp.dest('docs'));
@@ -43,7 +44,38 @@ gulp.task('copy:docs', function() {
 
 });
 
-gulp.task('copy:aws', function() {
-    return gulp.src('dist/**/*')
-        .pipe(gulp.dest('dist/aws'));
+gulp.task('copy:aws:version', function () {
+    // Get package version to generate correct font url
+    var nodePackageFile = JSON.parse(fs.readFileSync(__dirname + '/../package.json'));
+    var nodePackageVersion = nodePackageFile.version;
+
+    var fontsStream = gulp.src('src/fonts/**/*')
+        .pipe(gulp.dest(`aws/${nodePackageVersion}/assets/fonts`));
+
+    var iconsStream = gulp.src('src/icons/**/*')
+        .pipe(gulp.dest(`aws/${nodePackageVersion}/assets/icons`));
+
+    var stylesStream = gulp.src(['src/styles/**/*', '!src/styles/**/styleguide.scss'])
+        .pipe(gulp.dest(`aws/${nodePackageVersion}/assets/styles`));
+
+    var imagesStream = gulp.src('src/images/**/*')
+        .pipe(gulp.dest(`aws/${nodePackageVersion}/assets/images`));
+
+    return merge(fontsStream, iconsStream, stylesStream, imagesStream);
+});
+
+gulp.task('copy:aws:latest', function () {
+    var fontsStream = gulp.src('src/fonts/**/*')
+        .pipe(gulp.dest('aws/latest/assets/fonts'));
+
+    var iconsStream = gulp.src('src/icons/**/*')
+        .pipe(gulp.dest('aws/latest/assets/icons'));
+
+    var stylesStream = gulp.src(['src/styles/**/*', '!src/styles/**/styleguide.scss'])
+        .pipe(gulp.dest('aws/latest/assets/styles'));
+
+    var imagesStream = gulp.src('src/images/**/*')
+        .pipe(gulp.dest('aws/latest/assets/images'));
+
+    return merge(fontsStream, iconsStream, stylesStream, imagesStream);
 });
