@@ -8,23 +8,31 @@ var gulp = require('gulp');
 var merge = require('merge-stream');
 var fs = require('fs');
 
-gulp.task('copy', function() {
-
+const copyStylesAndAssets = (dest) => {
     var fontsStream = gulp.src('src/fonts/**/*')
-        .pipe(gulp.dest('dist/assets/fonts'));
+        .pipe(gulp.dest(`${dest}/fonts`));
 
     var iconsStream = gulp.src('src/icons/**/*')
-        .pipe(gulp.dest('dist/assets/icons'));
+        .pipe(gulp.dest(`${dest}/icons`));
 
     var stylesStream = gulp.src(['src/styles/**/*', '!src/styles/**/styleguide.scss'])
-        .pipe(gulp.dest('dist/assets/styles'));
+        .pipe(gulp.dest(`${dest}/styles`));
 
     var imagesStream = gulp.src('src/images/**/*')
-        .pipe(gulp.dest('dist/assets/images'));
+        .pipe(gulp.dest(`${dest}/images`));
 
     return merge(fontsStream, iconsStream, stylesStream, imagesStream);
+}
 
+gulp.task('copy', () => copyStylesAndAssets('dist/assets'));
+
+gulp.task('copy:aws:version', () => {
+    const { version } = JSON.parse(fs.readFileSync(__dirname + '/../package.json'));
+
+    return copyStylesAndAssets(`aws/${version}/assets`);
 });
+
+gulp.task('copy:aws:latest', () => copyStylesAndAssets('aws/latest/assets'));
 
 gulp.task('copy:docs', function () {
 
@@ -42,40 +50,4 @@ gulp.task('copy:docs', function () {
 
     return merge(tmpStream, imagesStream, fontsStream, scriptsStream);
 
-});
-
-gulp.task('copy:aws:version', function () {
-    // Get package version to generate correct font url
-    var nodePackageFile = JSON.parse(fs.readFileSync(__dirname + '/../package.json'));
-    var nodePackageVersion = nodePackageFile.version;
-
-    var fontsStream = gulp.src('src/fonts/**/*')
-        .pipe(gulp.dest(`aws/${nodePackageVersion}/assets/fonts`));
-
-    var iconsStream = gulp.src('src/icons/**/*')
-        .pipe(gulp.dest(`aws/${nodePackageVersion}/assets/icons`));
-
-    var stylesStream = gulp.src(['src/styles/**/*', '!src/styles/**/styleguide.scss'])
-        .pipe(gulp.dest(`aws/${nodePackageVersion}/assets/styles`));
-
-    var imagesStream = gulp.src('src/images/**/*')
-        .pipe(gulp.dest(`aws/${nodePackageVersion}/assets/images`));
-
-    return merge(fontsStream, iconsStream, stylesStream, imagesStream);
-});
-
-gulp.task('copy:aws:latest', function () {
-    var fontsStream = gulp.src('src/fonts/**/*')
-        .pipe(gulp.dest('aws/latest/assets/fonts'));
-
-    var iconsStream = gulp.src('src/icons/**/*')
-        .pipe(gulp.dest('aws/latest/assets/icons'));
-
-    var stylesStream = gulp.src(['src/styles/**/*', '!src/styles/**/styleguide.scss'])
-        .pipe(gulp.dest('aws/latest/assets/styles'));
-
-    var imagesStream = gulp.src('src/images/**/*')
-        .pipe(gulp.dest('aws/latest/assets/images'));
-
-    return merge(fontsStream, iconsStream, stylesStream, imagesStream);
 });
