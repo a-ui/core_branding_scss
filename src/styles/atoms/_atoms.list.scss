@@ -70,8 +70,10 @@
     display: flex;
   }
 
-  a.a-list__content {
+  a.a-list__content,
+  .a-list__content.is-clickable {
     color: var(--list-item-color);
+    cursor: pointer;
     text-decoration: none;
     transition-duration: var(--animation-duration);
     transition-property: background-color, color;
