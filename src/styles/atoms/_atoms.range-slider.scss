@@ -1,0 +1,82 @@
+/**
+ * RANGE SLIDER VARIABLES
+ * -------------------------------------------------------------------
+ */
+
+.a-range-slider {
+  --range-slider-bg-color:            var(--theme1-050);
+  --range-slider-bar-bg-color:        var(--theme1-400);
+  --range-slider-handle-bg-color:     var(--theme1-400);
+  --range-slider-tickmark-bg-color:   var(--theme1-100);
+}
+
+/**
+ * RANGE SLIDER
+ * -------------------------------------------------------------------
+ */
+
+/**
+ * RANGE SLIDER ELEMENTS
+ * -------------------------------------------------------------------
+ */
+
+.a-range-slider__labels,
+.a-range-slider__descriptions {
+  display: flex;
+  justify-content: space-between;
+}
+
+.a-range-slider__labels {
+  margin-bottom: var(--spacer-xs);
+}
+
+.a-range-slider__descriptions {
+  margin-top: var(--spacer-3xs);
+}
+
+.a-range-slider__inner {
+  background-color: var(--range-slider-bg-color);
+  height: var(--spacer-3xs);
+  position: relative;
+  width: 100%;
+}
+
+.a-range-slider__bar {
+  background-color: var(--range-slider-bar-bg-color);
+  height: 100%;
+  position: absolute;
+}
+
+.a-range-slider__handle {
+  border-radius: 50%;
+  cursor: grab;
+  padding: var(--spacer-s);
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%);
+
+  &:before {
+    background-color: var(--range-slider-handle-bg-color);
+    border-radius: var(--spacer-xs);
+    content: '';
+    display: block;
+    height: var(--spacer-xs);
+    width: var(--spacer-xs);
+  }
+}
+
+.a-range-slider__tickmarks {
+  bottom: 0;
+  display: flex;
+  justify-content: space-between;
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 100%;
+}
+
+.a-range-slider__tickmark {
+  background-color: var(--range-slider-tickmark-bg-color);
+  width: calc(var(--border-width) * 2);
+}

@@ -1,12 +1,4 @@
 /**
- * CARD VARIABLES
- * -------------------------------------------------------------------
- */
-
-$card-header-padding:    var(--spacer-xs) !default;
-$card-content-padding:   var(--spacer) !default;
-
-/**
  * CARD
  * -------------------------------------------------------------------
  */
@@ -22,7 +14,7 @@ $card-content-padding:   var(--spacer) !default;
  */
 
 .m-card__header {
-  padding: $card-header-padding;
+  padding: var(--spacer-xs);
 }
 
 .m-card__image img {
@@ -31,5 +23,5 @@ $card-content-padding:   var(--spacer) !default;
 }
 
 .m-card__body {
-  padding: $card-content-padding;
+  padding: var(--spacer);
 }

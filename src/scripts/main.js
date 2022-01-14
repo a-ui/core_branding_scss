@@ -2,7 +2,7 @@
 
 document.addEventListener('DOMContentLoaded', () => {
     // Set indeterminate state of some checkboxes
-    const checkboxes = document.querySelectorAll("#checkbox2, #checkbox5");
+    const checkboxes = document.querySelectorAll("#checkbox-indeterminate");
 
     for (let index = 0; index < checkboxes.length; index++) {
         checkboxes[index].indeterminate = true;
@@ -22,6 +22,34 @@ document.addEventListener('DOMContentLoaded', () => {
 
             if (checkbox) {
                 checkbox.checked = !checkbox.checked;
+            }
+        }
+    }
+
+    const switches = document.querySelectorAll(".a-switch");
+
+    for (let index = 0; index < switches.length; index++) {
+        const switchEl = switches[index];
+
+        switchEl.onclick = () => {
+            if (switchEl.getAttribute("aria-checked") == "true") {
+                switchEl.setAttribute("aria-checked", "false");
+            } else {
+                switchEl.setAttribute("aria-checked", "true");
+            }
+        }
+    }
+
+    const tags = document.querySelectorAll("button.m-tag");
+
+    for (let index = 0; index < tags.length; index++) {
+        const tagEl = tags[index];
+
+        tagEl.onclick = () => {
+            if (tagEl.getAttribute("aria-checked") == "true") {
+                tagEl.setAttribute("aria-checked", "false");
+            } else {
+                tagEl.setAttribute("aria-checked", "true");
             }
         }
     }

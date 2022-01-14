@@ -8,9 +8,10 @@
   --avatar-bg-color:                 #{$white};
   --avatar-hover-bg-color:           #{$gray-100};
 
-  --avatar-primary-color:            #{$white};
-  --avatar-primary-bg-color:         var(--theme1-400);
-  --avatar-primary-hover-bg-color:   var(--theme1-500);
+  --avatar-primary-color:            var(--theme1-400);
+  --avatar-primary-hover-color:      var(--theme1-500);
+  --avatar-primary-bg-color:         var(--theme1-050);
+  --avatar-primary-hover-bg-color:   var(--theme1-100);
 
   --avatar-size-s:                   var(--shared-avatar-size-s); // 36px
   --avatar-icon-size-s:              1rem;
@@ -28,17 +29,16 @@
  */
 
 .a-avatar {
-  align-items: center;
   background-color: var(--avatar-bg-color);
   color: var(--avatar-color);
-  display: inline-flex;
+  display: inline-block;
   font-family: var(--font-family-headings);
   font-size: var(--avatar-icon-size);
   height: var(--avatar-size);
-  justify-content: center;
   overflow: hidden;
   position: relative;
   text-align: center;
+  text-decoration: none;
   transition: background-color var(--animation-normal);
   width: var(--avatar-size);
 
@@ -48,7 +48,8 @@
     transition: transform var(--animation-normal);
   }
 
-  &__icon .ai {
+  &__icon .ai,
+  &__letter {
     left: 50%;
     position: absolute;
     top: 50%;
@@ -117,6 +118,7 @@ a,
       background-color: var(--avatar-hover-bg-color);
 
       &.a-avatar--primary {
+        color: var(--avatar-primary-hover-color);
         background-color: var(--avatar-primary-hover-bg-color);
       }
     }
@@ -129,5 +131,7 @@ a,
  */
 
 .a-avatar--rounded {
+  // Fix image from breaking out of rounded parent element when hovering avatar on Safari
+  -webkit-mask-image: -webkit-radial-gradient(white, black);
   border-radius: 50%;
 }

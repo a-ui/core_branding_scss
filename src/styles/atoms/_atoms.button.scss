@@ -7,7 +7,7 @@
 .a-button-official {
   --btn-height:                                 var(--spacer-xl);
   --btn-padding:                                0 var(--spacer);
-  --btn-font-weight:                            #{var(--font-weight-bold)};
+  --btn-font-weight:                            var(--font-weight-bold);
   --btn-font-size:                              1rem;
   --btn-icon-size:                              1.25rem;
 }
@@ -15,116 +15,135 @@
 .a-button {
   // Contained button
   --btn-color:                                  #{$white};
+  --btn-hover-color:                            var(--btn-color);
   --btn-bg-color:                               var(--theme1-400);
   --btn-hover-bg-color:                         var(--theme1-500);
   --btn-border-color:                           var(--btn-bg-color);
   --btn-hover-border-color:                     var(--btn-hover-bg-color);
 
   --btn-neutral-color:                          #{$white};
+  --btn-neutral-hover-color:                    var(--btn-neutral-color);
   --btn-neutral-bg-color:                       #{$gray-400};
   --btn-neutral-hover-bg-color:                 #{$gray-500};
   --btn-neutral-border-color:                   var(--btn-neutral-bg-color);
   --btn-neutral-hover-border-color:             var(--btn-neutral-hover-bg-color);
 
   --btn-secondary-color:                        #{$white};
+  --btn-secondary-hover-color:                  var(--btn-secondary-color);
   --btn-secondary-bg-color:                     var(--theme2-400);
   --btn-secondary-hover-bg-color:               var(--theme2-500);
   --btn-secondary-border-color:                 var(--btn-secondary-bg-color);
   --btn-secondary-hover-border-color:           var(--btn-secondary-hover-bg-color);
 
   --btn-success-color:                          #{$white};
+  --btn-success-hover-color:                    var(--btn-success-color);
   --btn-success-bg-color:                       var(--success-600);
-  --btn-success-hover-bg-color:                 var(--success-500); // TODO: Implement correct hover color
+  --btn-success-hover-bg-color:                 var(--success-700);
   --btn-success-border-color:                   var(--btn-success-bg-color);
   --btn-success-hover-border-color:             var(--btn-success-hover-bg-color);
 
-  --btn-warning-color:                          #{$gray-600};
-  --btn-warning-bg-color:                       var(--warning-500);
-  --btn-warning-hover-bg-color:                 var(--warning-600);
+  --btn-warning-color:                          #{$white};
+  --btn-warning-hover-color:                    var(--btn-warning-color);
+  --btn-warning-bg-color:                       var(--warning-400);
+  --btn-warning-hover-bg-color:                 var(--warning-500);
   --btn-warning-border-color:                   var(--btn-warning-bg-color);
   --btn-warning-hover-border-color:             var(--btn-warning-hover-bg-color);
 
   --btn-danger-color:                           #{$white};
+  --btn-danger-hover-color:                     var(--btn-danger-color);
   --btn-danger-bg-color:                        var(--danger-500);
   --btn-danger-hover-bg-color:                  var(--danger-600);
   --btn-danger-border-color:                    var(--btn-danger-bg-color);
   --btn-danger-hover-border-color:              var(--btn-danger-hover-bg-color);
 
   --btn-disabled-color:                         #{$gray-400};
+  --btn-disabled-hover-color:                   var(--btn-disabled-color);
   --btn-disabled-bg-color:                      #{$gray-100};
   --btn-disabled-hover-bg-color:                var(--btn-disabled-bg-color);
   --btn-disabled-border-color:                  var(--btn-disabled-bg-color);
   --btn-disabled-hover-border-color:            var(--btn-disabled-bg-color);
 
   // Outlined button
-  --btn-outline-color:                          var(--theme1-400);
-  --btn-outline-bg-color:                       transparent;
-  --btn-outline-hover-bg-color:                 var(--theme1-050);
-  --btn-outline-border-color:                   var(--btn-outline-color);
-  --btn-outline-hover-border-color:             var(--btn-outline-color);
+  --btn-outlined-color:                         var(--theme1-400);
+  --btn-outlined-hover-color:                   var(--btn-outlined-color);
+  --btn-outlined-bg-color:                      transparent;
+  --btn-outlined-hover-bg-color:                var(--theme1-050);
+  --btn-outlined-border-color:                  var(--btn-outlined-color);
+  --btn-outlined-hover-border-color:            var(--btn-outlined-color);
 
-  --btn-outline-neutral-color:                  #{$gray-400};
-  --btn-outline-neutral-bg-color:               transparent;
-  --btn-outline-neutral-hover-bg-color:         #{$gray-100};
-  --btn-outline-neutral-border-color:           var(--btn-outline-neutral-color);
-  --btn-outline-neutral-hover-border-color:     var(--btn-outline-neutral-color);
+  --btn-outlined-neutral-color:                 #{$gray-400};
+  --btn-outlined-neutral-hover-color:           var(--btn-outlined-neutral-color);
+  --btn-outlined-neutral-bg-color:              transparent;
+  --btn-outlined-neutral-hover-bg-color:        #{$gray-100};
+  --btn-outlined-neutral-border-color:          var(--btn-outlined-neutral-color);
+  --btn-outlined-neutral-hover-border-color:    var(--btn-outlined-neutral-color);
 
-  --btn-outline-success-color:                  var(--success-600);
-  --btn-outline-success-bg-color:               transparent;
-  --btn-outline-success-hover-bg-color:         var(--success-050);
-  --btn-outline-success-border-color:           var(--btn-outline-success-color);
-  --btn-outline-success-hover-border-color:     var(--btn-outline-success-color);
+  --btn-outlined-success-color:                 var(--success-600);
+  --btn-outlined-success-hover-color:           var(--btn-outlined-success-color);
+  --btn-outlined-success-bg-color:              transparent;
+  --btn-outlined-success-hover-bg-color:        var(--success-050);
+  --btn-outlined-success-border-color:          var(--btn-outlined-success-color);
+  --btn-outlined-success-hover-border-color:    var(--btn-outlined-success-color);
 
-  --btn-outline-warning-color:                  #{$gray-600};
-  --btn-outline-warning-bg-color:               transparent;
-  --btn-outline-warning-hover-bg-color:         var(--warning-050);
-  --btn-outline-warning-border-color:           var(--warning-500);
-  --btn-outline-warning-hover-border-color:     var(--btn-outline-warning-border-color);
+  --btn-outlined-warning-color:                 var(--warning-400);
+  --btn-outlined-warning-hover-color:           var(--btn-outlined-warning-color);
+  --btn-outlined-warning-bg-color:              transparent;
+  --btn-outlined-warning-hover-bg-color:        var(--warning-050);
+  --btn-outlined-warning-border-color:          var(--btn-outlined-warning-color);
+  --btn-outlined-warning-hover-border-color:    var(--btn-outlined-warning-border-color);
 
-  --btn-outline-danger-color:                   var(--danger-500);
-  --btn-outline-danger-bg-color:                transparent;
-  --btn-outline-danger-hover-bg-color:          var(--danger-050);
-  --btn-outline-danger-border-color:            var(--btn-outline-danger-color);
-  --btn-outline-danger-hover-border-color:      var(--btn-outline-danger-color);
+  --btn-outlined-danger-color:                  var(--danger-500);
+  --btn-outlined-danger-hover-color:            var(--btn-outlined-danger-color);
+  --btn-outlined-danger-bg-color:               transparent;
+  --btn-outlined-danger-hover-bg-color:         var(--danger-050);
+  --btn-outlined-danger-border-color:           var(--btn-outlined-danger-color);
+  --btn-outlined-danger-hover-border-color:     var(--btn-outlined-danger-color);
 
-  --btn-outline-disabled-color:                 #{$gray-400};
-  --btn-outline-disabled-bg-color:              #{$gray-100};
-  --btn-outline-disabled-hover-bg-color:        var(--btn-outline-disabled-bg-color);
-  --btn-outline-disabled-border-color:          #{$gray-200};
-  --btn-outline-disabled-hover-border-color:    var(--btn-outline-disabled-border-color);
+  --btn-outlined-disabled-color:                #{$gray-400};
+  --btn-outlined-disabled-hover-color:          var(--btn-outlined-disabled-color);
+  --btn-outlined-disabled-bg-color:             #{$gray-100};
+  --btn-outlined-disabled-hover-bg-color:       var(--btn-outlined-disabled-bg-color);
+  --btn-outlined-disabled-border-color:         #{$gray-200};
+  --btn-outlined-disabled-hover-border-color:   var(--btn-outlined-disabled-border-color);
 
   // Text buttons
   --btn-text-color:                             var(--theme1-400);
+  --btn-text-hover-color:                       var(--btn-text-color);
   --btn-text-bg-color:                          transparent;
   --btn-text-hover-bg-color:                    var(--theme1-050);
   --btn-text-border-color:                      transparent;
   --btn-text-hover-border-color:                transparent;
 
   --btn-text-neutral-color:                     #{$gray-400};
+  --btn-text-neutral-hover-color:               var(--btn-text-neutral-color);
   --btn-text-neutral-bg-color:                  transparent;
   --btn-text-neutral-hover-bg-color:            #{$gray-100};
   --btn-text-neutral-border-color:              transparent;
   --btn-text-neutral-hover-border-color:        transparent;
 
   --btn-text-success-color:                     var(--success-600);
+  --btn-text-success-hover-color:               var(--btn-text-success-color);
   --btn-text-success-bg-color:                  transparent;
   --btn-text-success-hover-bg-color:            var(--success-050);
   --btn-text-success-border-color:              transparent;
   --btn-text-success-hover-border-color:        transparent;
 
-  --btn-text-warning-color:                     #{$gray-600};
+  --btn-text-warning-color:                     var(--warning-400);
+  --btn-text-warning-hover-color:               var(--btn-text-warning-color);
   --btn-text-warning-bg-color:                  transparent;
   --btn-text-warning-hover-bg-color:            var(--warning-050);
   --btn-text-warning-border-color:              transparent;
   --btn-text-warning-hover-border-color:        transparent;
 
   --btn-text-danger-color:                      var(--danger-500);
+  --btn-text-danger-hover-color:                var(--btn-text-danger-color);
   --btn-text-danger-bg-color:                   transparent;
   --btn-text-danger-hover-bg-color:             var(--danger-050);
   --btn-text-danger-border-color:               transparent;
   --btn-text-danger-hover-border-color:         transparent;
 
   --btn-text-disabled-color:                    #{$gray-400};
+  --btn-text-disabled-hover-color:              var(--btn-text-disabled-color);
   --btn-text-disabled-bg-color:                 #{$gray-100};
   --btn-text-disabled-hover-bg-color:           var(--btn-text-disabled-bg-color);
   --btn-text-disabled-border-color:             var(--btn-text-disabled-bg-color);
@@ -132,42 +151,62 @@
 
   // Social buttons
   --btn-twitter-color:                          #{$white};
+  --btn-twitter-hover-color:                    var(--btn-twitter-color);
   --btn-twitter-bg-color:                       #{$twitter};
-  --btn-twitter-hover-bg-color:                 #{mix($twitter, $black, 90%)};
+  --btn-twitter-hover-bg-color:                 #{$twitter-hover};
   --btn-twitter-border-color:                   #{$twitter};
-  --btn-twitter-hover-border-color:             #{mix($twitter, $black, 90%)};
+  --btn-twitter-hover-border-color:             #{$twitter-hover};
 
   --btn-linkedin-color:                         #{$white};
+  --btn-linkedin-hover-color:                   var(--btn-linkedin-color);
   --btn-linkedin-bg-color:                      #{$linkedin};
-  --btn-linkedin-hover-bg-color:                #{mix($linkedin, $black, 90%)};
+  --btn-linkedin-hover-bg-color:                #{$linkedin-hover};
   --btn-linkedin-border-color:                  #{$linkedin};
-  --btn-linkedin-hover-border-color:            #{mix($linkedin, $black, 90%)};
+  --btn-linkedin-hover-border-color:            #{$linkedin-hover};
 
   --btn-facebook-color:                         #{$white};
+  --btn-facebook-hover-color:                   var(--btn-facebook-color);
   --btn-facebook-bg-color:                      #{$facebook};
-  --btn-facebook-hover-bg-color:                #{mix($facebook, $black, 90%)};
+  --btn-facebook-hover-bg-color:                #{$facebook-hover};
   --btn-facebook-border-color:                  #{$facebook};
-  --btn-facebook-hover-border-color:            #{mix($facebook, $black, 90%)};
+  --btn-facebook-hover-border-color:            #{$facebook-hover};
 
   --btn-snapchat-color:                         #{$black};
+  --btn-snapchat-hover-color:                   var(--btn-snapchat-color);
   --btn-snapchat-bg-color:                      #{$snapchat};
-  --btn-snapchat-hover-bg-color:                #{mix($snapchat, $black, 90%)};
+  --btn-snapchat-hover-bg-color:                #{$snapchat-hover};
   --btn-snapchat-border-color:                  #{$snapchat};
-  --btn-snapchat-hover-border-color:            #{mix($snapchat, $black, 90%)};
+  --btn-snapchat-hover-border-color:            #{$snapchat-hover};
 
   --btn-instagram-color:                        #{$white};
+  --btn-instagram-hover-color:                  var(--btn-instagram-color);
   --btn-instagram-bg-color:                     #{$instagram};
   --btn-instagram-hover-bg-color:               #{$instagram};
   --btn-instagram-border-color:                 transparent;
   --btn-instagram-hover-border-color:           transparent;
+
+  --btn-social-color:                           #{$black};
+  --btn-social-hover-color:                     var(--theme1-400);
+  --btn-social-bg-color:                        transparent;
+  --btn-social-hover-bg-color:                  transparent;
+  --btn-social-border-color:                    transparent;
+  --btn-social-hover-border-color:              transparent;
+
+  --btn-social-negative-color:                  #{$white};
+  --btn-social-negative-hover-color:            var(--theme1-050);
+  --btn-social-negative-bg-color:               transparent;
+  --btn-social-negative-hover-bg-color:         transparent;
+  --btn-social-negative-border-color:           transparent;
+  --btn-social-negative-hover-border-color:     transparent;
 }
 
 .a-button-official {
   --btn-official-color:                          #{$white};
-  --btn-official-bg-color:                       #{$monza-400};
-  --btn-official-hover-bg-color:                 #{mix($monza-400, $black, 90%)};
+  --btn-official-hover-color:                    var(--btn-official-color);
+  --btn-official-bg-color:                       #{$official-antwerp};
+  --btn-official-hover-bg-color:                 #{$official-antwerp-hover};
   --btn-official-border-color:                   #{$monza-400};
-  --btn-official-hover-border-color:             #{mix($monza-400, $black, 90%)};
+  --btn-official-hover-border-color:             #{$official-antwerp-hover};
 }
 
 /**
@@ -227,12 +266,13 @@
   &:focus {
     background: var(--btn-hover-bg-color);
     box-shadow: 0 0 0 var(--border-width) var(--btn-hover-border-color) inset;
-    color: var(--btn-color);
+    color: var(--btn-hover-color);
     text-decoration: none;
   }
 
   &.a-button--neutral {
     --btn-color: var(--btn-neutral-color);
+    --btn-hover-color: var(--btn-neutral-hover-color);
     --btn-bg-color: var(--btn-neutral-bg-color);
     --btn-hover-bg-color: var(--btn-neutral-hover-bg-color);
     --btn-border-color: var(--btn-neutral-border-color);
@@ -241,6 +281,7 @@
 
   &.a-button--secondary {
     --btn-color: var(--btn-secondary-color);
+    --btn-hover-color: var(--btn-secondary-hover-color);
     --btn-bg-color: var(--btn-secondary-bg-color);
     --btn-hover-bg-color: var(--btn-secondary-hover-bg-color);
     --btn-border-color: var(--btn-secondary-border-color);
@@ -249,6 +290,7 @@
 
   &.a-button--success {
     --btn-color: var(--btn-success-color);
+    --btn-hover-color: var(--btn-success-hover-color);
     --btn-bg-color: var(--btn-success-bg-color);
     --btn-hover-bg-color: var(--btn-success-hover-bg-color);
     --btn-border-color: var(--btn-success-border-color);
@@ -257,6 +299,7 @@
 
   &.a-button--warning {
     --btn-color: var(--btn-warning-color);
+    --btn-hover-color: var(--btn-warning-hover-color);
     --btn-bg-color: var(--btn-warning-bg-color);
     --btn-hover-bg-color: var(--btn-warning-hover-bg-color);
     --btn-border-color: var(--btn-warning-border-color);
@@ -265,6 +308,7 @@
 
   &.a-button--danger {
     --btn-color: var(--btn-danger-color);
+    --btn-hover-color: var(--btn-danger-hover-color);
     --btn-bg-color: var(--btn-danger-bg-color);
     --btn-hover-bg-color: var(--btn-danger-hover-bg-color);
     --btn-border-color: var(--btn-danger-border-color);
@@ -273,6 +317,7 @@
 
   &:disabled {
     --btn-color: var(--btn-disabled-color);
+    --btn-hover-color: var(--btn-disabled-hover-color);
     --btn-bg-color: var(--btn-disabled-bg-color);
     --btn-hover-bg-color: var(--btn-disabled-hover-bg-color);
     --btn-border-color: var(--btn-disabled-border-color);
@@ -290,6 +335,7 @@
 .a-button.has-icon {
   &.a-button--twitter {
     --btn-color: var(--btn-twitter-color);
+    --btn-hover-color: var(--btn-twitter-hover-color);
     --btn-bg-color: var(--btn-twitter-bg-color);
     --btn-hover-bg-color: var(--btn-twitter-hover-bg-color);
     --btn-border-color: var(--btn-twitter-border-color);
@@ -298,6 +344,7 @@
 
   &.a-button--linkedin {
     --btn-color: var(--btn-linkedin-color);
+    --btn-hover-color: var(--btn-linkedin-hover-color);
     --btn-bg-color: var(--btn-linkedin-bg-color);
     --btn-hover-bg-color: var(--btn-linkedin-hover-bg-color);
     --btn-border-color: var(--btn-linkedin-border-color);
@@ -306,6 +353,7 @@
 
   &.a-button--facebook {
     --btn-color: var(--btn-facebook-color);
+    --btn-hover-color: var(--btn-facebook-hover-color);
     --btn-bg-color: var(--btn-facebook-bg-color);
     --btn-hover-bg-color: var(--btn-facebook-hover-bg-color);
     --btn-border-color: var(--btn-facebook-border-color);
@@ -314,6 +362,7 @@
 
   &.a-button--snapchat {
     --btn-color: var(--btn-snapchat-color);
+    --btn-hover-color: var(--btn-snapchat-hover-color);
     --btn-bg-color: var(--btn-snapchat-bg-color);
     --btn-hover-bg-color: var(--btn-snapchat-hover-bg-color);
     --btn-border-color: var(--btn-snapchat-border-color);
@@ -322,6 +371,7 @@
 
   &.a-button--instagram {
     --btn-color: var(--btn-instagram-color);
+    --btn-hover-color: var(--btn-instagram-hover-color);
     --btn-bg-color: var(--btn-instagram-bg-color);
     --btn-hover-bg-color: var(--btn-instagram-hover-bg-color);
     --btn-border-color: var(--btn-instagram-border-color);
@@ -346,8 +396,26 @@
     &:active,
     &:focus {
       &:before {
-        opacity: .15;
+        opacity: .2;
       }
+    }
+  }
+
+  &.a-button--social {
+    --btn-color: var(--btn-social-color);
+    --btn-hover-color: var(--btn-social-hover-color);
+    --btn-bg-color: var(--btn-social-bg-color);
+    --btn-hover-bg-color: var(--btn-social-hover-bg-color);
+    --btn-border-color: var(--btn-social-border-color);
+    --btn-hover-border-color: var(--btn-social-hover-border-color);
+
+    &.a-button--negative {
+      --btn-color: var(--btn-social-negative-color);
+      --btn-hover-color: var(--btn-social-negative-hover-color);
+      --btn-bg-color: var(--btn-social-negative-bg-color);
+      --btn-hover-bg-color: var(--btn-social-negative-hover-bg-color);
+      --btn-border-color: var(--btn-social-negative-border-color);
+      --btn-hover-border-color: var(--btn-social-negative-hover-border-color);
     }
   }
 }
@@ -370,7 +438,7 @@
   &:focus {
     background: var(--btn-official-hover-bg-color);
     box-shadow: 0 0 0 var(--border-width) var(--btn-official-hover-border-color) inset;
-    color: var(--btn-official-color);
+    color: var(--btn-official-hover-color);
     text-decoration: none;
   }
 
@@ -394,50 +462,56 @@
  */
 
 .a-button.a-button--outlined {
-  --btn-color: var(--btn-outline-color);
-  --btn-bg-color: var(--btn-outline-bg-color);
-  --btn-hover-bg-color: var(--btn-outline-hover-bg-color);
-  --btn-border-color: var(--btn-outline-border-color);
-  --btn-hover-border-color: var(--btn-outline-hover-border-color);
+  --btn-color: var(--btn-outlined-color);
+  --btn-hover-color: var(--btn-outlined-hover-color);
+  --btn-bg-color: var(--btn-outlined-bg-color);
+  --btn-hover-bg-color: var(--btn-outlined-hover-bg-color);
+  --btn-border-color: var(--btn-outlined-border-color);
+  --btn-hover-border-color: var(--btn-outlined-hover-border-color);
 
   &.a-button--neutral {
-    --btn-color: var(--btn-outline-neutral-color);
-    --btn-bg-color: var(--btn-outline-neutral-bg-color);
-    --btn-hover-bg-color: var(--btn-outline-neutral-hover-bg-color);
-    --btn-border-color: var(--btn-outline-neutral-border-color);
-    --btn-hover-border-color: var(--btn-outline-neutral-hover-border-color);
+    --btn-color: var(--btn-outlined-neutral-color);
+    --btn-hover-color: var(--btn-outlined-neutral-hover-color);
+    --btn-bg-color: var(--btn-outlined-neutral-bg-color);
+    --btn-hover-bg-color: var(--btn-outlined-neutral-hover-bg-color);
+    --btn-border-color: var(--btn-outlined-neutral-border-color);
+    --btn-hover-border-color: var(--btn-outlined-neutral-hover-border-color);
   }
 
   &.a-button--success {
-    --btn-color: var(--btn-outline-success-color);
-    --btn-bg-color: var(--btn-outline-success-bg-color);
-    --btn-hover-bg-color: var(--btn-outline-success-hover-bg-color);
-    --btn-border-color: var(--btn-outline-success-border-color);
-    --btn-hover-border-color: var(--btn-outline-success-hover-border-color);
+    --btn-color: var(--btn-outlined-success-color);
+    --btn-hover-color: var(--btn-outlined-success-hover-color);
+    --btn-bg-color: var(--btn-outlined-success-bg-color);
+    --btn-hover-bg-color: var(--btn-outlined-success-hover-bg-color);
+    --btn-border-color: var(--btn-outlined-success-border-color);
+    --btn-hover-border-color: var(--btn-outlined-success-hover-border-color);
   }
 
   &.a-button--warning {
-    --btn-color: var(--btn-outline-warning-color);
-    --btn-bg-color: var(--btn-outline-warning-bg-color);
-    --btn-hover-bg-color: var(--btn-outline-warning-hover-bg-color);
-    --btn-border-color: var(--btn-outline-warning-border-color);
-    --btn-hover-border-color: var(--btn-outline-warning-hover-border-color);
+    --btn-color: var(--btn-outlined-warning-color);
+    --btn-hover-color: var(--btn-outlined-warning-hover-color);
+    --btn-bg-color: var(--btn-outlined-warning-bg-color);
+    --btn-hover-bg-color: var(--btn-outlined-warning-hover-bg-color);
+    --btn-border-color: var(--btn-outlined-warning-border-color);
+    --btn-hover-border-color: var(--btn-outlined-warning-hover-border-color);
   }
 
   &.a-button--danger {
-    --btn-color: var(--btn-outline-danger-color);
-    --btn-bg-color: var(--btn-outline-danger-bg-color);
-    --btn-hover-bg-color: var(--btn-outline-danger-hover-bg-color);
-    --btn-border-color: var(--btn-outline-danger-border-color);
-    --btn-hover-border-color: var(--btn-outline-danger-hover-border-color);
+    --btn-color: var(--btn-outlined-danger-color);
+    --btn-hover-color: var(--btn-outlined-danger-hover-color);
+    --btn-bg-color: var(--btn-outlined-danger-bg-color);
+    --btn-hover-bg-color: var(--btn-outlined-danger-hover-bg-color);
+    --btn-border-color: var(--btn-outlined-danger-border-color);
+    --btn-hover-border-color: var(--btn-outlined-danger-hover-border-color);
   }
 
   &:disabled {
-    --btn-color: var(--btn-outline-disabled-color);
-    --btn-bg-color: var(--btn-outline-disabled-bg-color);
-    --btn-hover-bg-color: var(--btn-outline-disabled-hover-bg-color);
-    --btn-border-color: var(--btn-outline-disabled-border-color);
-    --btn-hover-border-color: var(--btn-outline-disabled-hover-border-color);
+    --btn-color: var(--btn-outlined-disabled-color);
+    --btn-hover-color: var(--btn-outlined-disabled-hover-color);
+    --btn-bg-color: var(--btn-outlined-disabled-bg-color);
+    --btn-hover-bg-color: var(--btn-outlined-disabled-hover-bg-color);
+    --btn-border-color: var(--btn-outlined-disabled-border-color);
+    --btn-hover-border-color: var(--btn-outlined-disabled-hover-border-color);
   }
 }
 
@@ -448,6 +522,7 @@
 
 .a-button.a-button--text {
   --btn-color: var(--btn-text-color);
+  --btn-hover-color: var(--btn-text-hover-color);
   --btn-bg-color: var(--btn-text-bg-color);
   --btn-hover-bg-color: var(--btn-text-hover-bg-color);
   --btn-border-color: var(--btn-text-border-color);
@@ -455,6 +530,7 @@
 
   &.a-button--neutral {
     --btn-color: var(--btn-text-neutral-color);
+    --btn-hover-color: var(--btn-text-neutral-hover-color);
     --btn-bg-color: var(--btn-text-neutral-bg-color);
     --btn-hover-bg-color: var(--btn-text-neutral-hover-bg-color);
     --btn-border-color: var(--btn-text-neutral-border-color);
@@ -463,6 +539,7 @@
 
   &.a-button--success {
     --btn-color: var(--btn-text-success-color);
+    --btn-hover-color: var(--btn-text-success-hover-color);
     --btn-bg-color: var(--btn-text-success-bg-color);
     --btn-hover-bg-color: var(--btn-text-success-hover-bg-color);
     --btn-border-color: var(--btn-text-success-border-color);
@@ -471,6 +548,7 @@
 
   &.a-button--warning {
     --btn-color: var(--btn-text-warning-color);
+    --btn-hover-color: var(--btn-text-warning-hover-color);
     --btn-bg-color: var(--btn-text-warning-bg-color);
     --btn-hover-bg-color: var(--btn-text-warning-hover-bg-color);
     --btn-border-color: var(--btn-text-warning-border-color);
@@ -479,6 +557,7 @@
 
   &.a-button--danger {
     --btn-color: var(--btn-text-danger-color);
+    --btn-hover-color: var(--btn-text-danger-hover-color);
     --btn-bg-color: var(--btn-text-danger-bg-color);
     --btn-hover-bg-color: var(--btn-text-danger-hover-bg-color);
     --btn-border-color: var(--btn-text-danger-border-color);
@@ -487,6 +566,7 @@
 
   &:disabled {
     --btn-color: var(--btn-text-disabled-color);
+    --btn-hover-color: var(--btn-text-disabled-hover-color);
     --btn-bg-color: var(--btn-text-disabled-bg-color);
     --btn-hover-bg-color: var(--btn-text-disabled-hover-bg-color);
     --btn-border-color: var(--btn-text-disabled-border-color);
@@ -634,7 +714,7 @@
 
 .a-button {
   &.has-avatar,
-  &.has-avatar-with-image {
+  &.has-avatar-with-inset {
     overflow: hidden;
     position: relative;
 
@@ -649,7 +729,7 @@
     padding-left: var(--shared-avatar-size);
   }
 
-  &.has-avatar-with-image {
+  &.has-avatar-with-inset {
     padding-left: calc(var(--shared-avatar-size) + var(--spacer));
   }
 }
@@ -659,7 +739,7 @@
     padding-left: var(--shared-avatar-size-s);
   }
 
-  &.has-avatar-with-image {
+  &.has-avatar-with-inset {
     padding-left: calc(var(--shared-avatar-size-s) + var(--spacer-s));
   }
 }
@@ -669,7 +749,7 @@
     padding-left: var(--shared-avatar-size-l);
   }
 
-  &.has-avatar-with-image {
+  &.has-avatar-with-inset {
     padding-left: calc(var(--shared-avatar-size-l) + var(--spacer));
   }
 }

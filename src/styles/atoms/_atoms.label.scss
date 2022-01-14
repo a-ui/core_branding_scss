@@ -4,35 +4,31 @@
  */
 
 .a-label {
-  --label-height:                   #{$spacer-sm}; // TODO: Remove deprecated SASS variable when revising label component
-  --label-padding:                  0 calc(var(--spacer) / 4);
-  --label-font-size:                #{rem($font-size-sm)};
+  --label-height:                   1.125rem;
+  --label-padding:                  0 var(--spacer-xxs);
+  --label-font-size:                .875rem;
   --label-line-height:              var(--label-height);
   --label-font-weight:              var(--font-weight-bold);
 
   --label-color:                    var(--text-color);
   --label-bg-color:                 transparent;
-  --label-border-color:             var(--border-color);
+  --label-border-color:             #{$gray-400};
 
-  --label-primary-color:            var(--label-color);
+  --label-primary-color:            var(--theme1-400);
   --label-primary-bg-color:         var(--label-bg-color);
-  --label-primary-border-color:     var(--theme1-400);
+  --label-primary-border-color:     var(--label-primary-color);
 
-  --label-secondary-color:          var(--label-color);
-  --label-secondary-bg-color:       var(--label-bg-color);
-  --label-secondary-border-color:   var(--theme2-400);
-
-  --label-success-color:            var(--label-color);
+  --label-success-color:            var(--success-600);
   --label-success-bg-color:         var(--label-bg-color);
-  --label-success-border-color:     var(--state-success);
+  --label-success-border-color:     var(--label-success-color);
 
-  --label-warning-color:            var(--label-color);
+  --label-warning-color:            #{$burnt-orange-400};
   --label-warning-bg-color:         var(--label-bg-color);
-  --label-warning-border-color:     var(--state-warning);
+  --label-warning-border-color:     var(--label-warning-color);
 
-  --label-danger-color:             var(--label-color);
-  --label-danger-bg-color:          var(--label-bg-color);
-  --label-danger-border-color:      var(--state-danger);
+  --label-danger-color:            var(--danger-500);
+  --label-danger-bg-color:         var(--label-bg-color);
+  --label-danger-border-color:     var(--label-danger-color);
 }
 
 /**
@@ -51,7 +47,6 @@
   line-height: var(--label-line-height);
   min-height: var(--label-height);
   padding: var(--label-padding);
-  text-transform: uppercase;
 }
 
 /**
@@ -64,12 +59,6 @@
     --label-color: var(--label-primary-color);
     --label-bg-color: var(--label-primary-bg-color);
     --label-border-color: var(--label-primary-border-color);
-  }
-
-  &.a-label--secondary {
-    --label-color: var(--label-secondary-color);
-    --label-bg-color: var(--label-secondary-bg-color);
-    --label-border-color: var(--label-secondary-border-color);
   }
 
   &.a-label--success {

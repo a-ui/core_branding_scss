@@ -33,6 +33,10 @@ $tangerine-300:              #eca154 !default;
 $tangerine-200:              #ffc27b !default;
 $tangerine-100:              #efdbb2 !default;
 
+$burnt-orange-500:           #8f3400 !default;
+$burnt-orange-400:           #ce4c00 !default;
+$burnt-orange-050:           #ffe4d6 !default;
+
 $supernova-600:              #b47e00 !default;
 $supernova-500:              #f2a900 !default;
 $supernova-400:              #ffcd00 !default;
@@ -41,6 +45,7 @@ $supernova-200:              #f0e87b !default;
 $supernova-100:              #f1eb9c !default;
 $supernova-050:              #fff9e0 !default;
 
+$mantis-700:                 #004721 !default;
 $mantis-600:                 #006e33 !default;
 $mantis-500:                 #4c8d2b !default;
 $mantis-400:                 #6cc24a !default;
@@ -134,16 +139,26 @@ $white:                      #fff !default;
  * Collection of social branding colors
  */
 
-$twitter:                      rgb(0, 172, 237) !default;
-$linkedin:                     rgb(0, 119, 181) !default;
-$facebook:                     rgb(24, 119, 242) !default;
-$snapchat:                     rgb(255, 252, 0) !default;
+$official-antwerp:           $monza-400 !default;
+$official-antwerp-hover:     #8c0020 !default;
 
-$instagram-yellow-light:       rgb(255, 225, 125);
-$instagram-yellow-dark:        rgb(255, 205, 105);
-$instagram-orange:             rgb(250, 145, 55);
-$instagram-red:                rgb(235, 65, 65);
-$instagram-blue:               rgb(35, 75, 215);
-$instagram-purple:             rgb(195, 60, 190);
+$twitter:                    #00aced !default;
+$twitter-hover:              #007fad !default;
 
-$instagram:                    radial-gradient(circle farthest-corner at 32% 106%, $instagram-yellow-light 0%, $instagram-yellow-dark 10%, $instagram-orange 28%, $instagram-red 42%, transparent 82%), linear-gradient(135deg, $instagram-blue 12%, $instagram-purple 58%) !default;
+$linkedin:                   #0077b5 !default;
+$linkedin-hover:             #00517d !default;
+
+$facebook:                   #1877f2 !default;
+$facebook-hover:             #0a52b0 !default;
+
+$snapchat:                   #fffc00 !default;
+$snapchat-hover:             #c4c100 !default;
+
+$instagram-yellow-light:     #ffe17d !default;
+$instagram-yellow-dark:      #ffcd69 !default;
+$instagram-orange:           #fa9137 !default;
+$instagram-red:              #eb4141 !default;
+$instagram-blue:             #234bd7 !default;
+$instagram-purple:           #c33cbe !default;
+
+$instagram:                  radial-gradient(circle farthest-corner at 32% 106%, $instagram-yellow-light 0%, $instagram-yellow-dark 10%, $instagram-orange 28%, $instagram-red 42%, transparent 82%), linear-gradient(135deg, $instagram-blue 12%, $instagram-purple 58%) !default;

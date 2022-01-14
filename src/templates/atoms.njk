@@ -64,7 +64,7 @@
                 <div class="u-margin-right-xs">
                     <a href="javascript:void(0);">
                         <div class="a-avatar a-avatar--primary a-avatar--s">
-                            <span class="a-avatar__letter">A</span>
+                            <span class="a-avatar__letter">AM</span>
                         </div>
                     </a>
                 </div>
@@ -72,14 +72,14 @@
                 <div class="u-margin-right-xs">
                     <a href="javascript:void(0);">
                         <div class="a-avatar a-avatar--primary">
-                            <span class="a-avatar__letter">A</span>
+                            <span class="a-avatar__letter">AM</span>
                         </div>
                     </a>
                 </div>
 
                 <a href="javascript:void(0);">
                     <div class="a-avatar a-avatar--primary a-avatar--l">
-                        <span class="a-avatar__letter">A</span>
+                        <span class="a-avatar__letter">AM</span>
                     </div>
                 </a>
             </div>
@@ -87,7 +87,7 @@
             <div>
                 <pre class="a-pre a-pre--scrollable"><code class="html">&lt;a href="#"&gt;
   &lt;div class="a-avatar"&gt;
-    &lt;span class="a-avatar__letter"&gt;A&lt;/span&gt;
+    &lt;span class="a-avatar__letter"&gt;AM&lt;/span&gt;
   &lt;/div&gt;
 &lt;/a&gt;</code></pre>
             </div>
@@ -142,7 +142,7 @@
                 <div class="u-margin-right-xs">
                     <a href="javascript:void(0);">
                         <div class="a-avatar a-avatar--primary a-avatar--rounded">
-                            <span class="a-avatar__letter">A</span>
+                            <span class="a-avatar__letter">AM</span>
                         </div>
                     </a>
                 </div>
@@ -192,16 +192,46 @@
 &lt;span class="a-badge a-badge--primary a-badge--transparent"&gt;4567&lt;/span&gt;</code></pre>
             </div>
         </div>
+
+        <a name="atoms-breadcrumb" aria-label="Breadcrumb"></a>
+        <h3 class="u-margin-top-xl">Breadcrumb</h3>
+        <span class="d-file">atoms/atoms.breadcrumb</span>
         <div class="d">
             <div>
-                <span class="a-badge a-badge--secondary">1</span>
-                <span class="a-badge a-badge--secondary a-badge--outlined">23</span>
-                <span class="a-badge a-badge--secondary a-badge--transparent">4567</span>
+                <ul class="a-breadcrumbs">
+                    <li><a href="javascript:void(0);">Page</a></li>
+                    <li><a href="javascript:void(0);">Subpage</a></li>
+                    <li>Current page</li>
+                </ul>
             </div>
             <div>
-                <pre class="a-pre a-pre--scrollable"><code class="html">&lt;span class="a-badge a-badge--secondary"&gt;1&lt;/span&gt;
-&lt;span class="a-badge a-badge--secondary a-badge--outlined"&gt;23&lt;/span&gt;
-&lt;span class="a-badge a-badge--secondary a-badge--transparent"&gt;4567&lt;/span&gt;</code></pre>
+                <pre class="a-pre a-pre--scrollable"><code class="html">&lt;ul class="a-breadcrumbs"&gt;
+  &lt;li&gt;&lt;a href="#"&gt;Page&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href="#"&gt;Subpage&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;Current page&lt;/li&gt;
+&lt;/ul&gt;</code></pre>
+            </div>
+        </div>
+        <div class="d">
+            <div>
+                <ul class="a-breadcrumbs">
+                    <li><a href="javascript:void(0);">Page</a></li>
+                    <li><a href="javascript:void(0);">Subpage</a></li>
+                </ul>
+
+                <h1 class="h4 u-margin-top-xxs">Current page</h1>
+
+                <div class="m-alert d-alert u-margin-top">
+                    <p>The current page at the end of the breadcrumb may be omitted only if it's displayed as a title below.</p>
+                </div>
+            </div>
+            <div>
+                <pre class="a-pre a-pre--scrollable"><code class="html">&lt;ul class="a-breadcrumbs"&gt;
+  &lt;li&gt;&lt;a href="#"&gt;Page&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href="#"&gt;Subpage&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h1 class="h4 u-margin-top-xxs"&gt;Current page&lt;/h1&gt;</code></pre>
             </div>
         </div>
 
@@ -558,76 +588,76 @@
 
         <div class="d">
             <div>
-                <button class="a-button a-button--l has-avatar">
+                <button class="a-button a-button--l has-avatar-with-inset">
                     <span class="a-avatar a-avatar--primary a-avatar--l">
-                        <span class="a-avatar__letter" aria-label="avatarTitle">A</span>
+                        <span class="a-avatar__letter" aria-label="avatarTitle">AM</span>
                     </span>
 
-                    Anne-Marie
+                    Anne Martens
                 </button>
 
-                <button class="a-button has-avatar">
+                <button class="a-button has-avatar-with-inset">
                     <span class="a-avatar a-avatar--primary">
-                        <span class="a-avatar__letter" aria-label="avatarTitle">A</span>
+                        <span class="a-avatar__letter" aria-label="avatarTitle">AM</span>
                     </span>
 
-                    Anne-Marie
+                    Anne Martens
                 </button>
 
-                <button class="a-button a-button--s has-avatar">
+                <button class="a-button a-button--s has-avatar-with-inset">
                     <span class="a-avatar a-avatar--primary a-avatar--s">
-                        <span class="a-avatar__letter" aria-label="avatarTitle">A</span>
+                        <span class="a-avatar__letter" aria-label="avatarTitle">AM</span>
                     </span>
 
-                    Anne-Marie
+                    Anne Martens
                 </button>
             </div>
 
             <div>
-                <pre class="a-pre a-pre--scrollable"><code class="html">&lt;button class="a-button has-avatar"&gt;
+                <pre class="a-pre a-pre--scrollable"><code class="html">&lt;button class="a-button has-avatar-with-inset"&gt;
   &lt;span class="a-avatar a-avatar--primary"&gt;
     &lt;span class="a-avatar__letter" aria-label="avatarTitle"&gt;A&lt;/span&gt;
   &lt;/span&gt;
 
-  Anne-Marie
+  Anne Martens
 &lt;/button&gt;</code></pre>
             </div>
         </div>
         <div class="d">
             <div>
-                <button class="a-button a-button--l has-avatar-with-image">
+                <button class="a-button a-button--l has-avatar-with-inset">
                     <span class="a-avatar a-avatar--l">
                         <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Avatar image." />
                     </span>
 
-                    Anne-Marie
+                    Anne Martens
                 </button>
 
-                <button class="a-button has-avatar-with-image">
+                <button class="a-button has-avatar-with-inset">
                     <span class="a-avatar">
                         <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Avatar image." />
                     </span>
 
-                    Anne-Marie
+                    Anne Martens
                 </button>
 
 
-                <button class="a-button a-button--s has-avatar-with-image">
+                <button class="a-button a-button--s has-avatar-with-inset">
                     <span class="a-avatar a-avatar--s">
                         <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Avatar image." />
                     </span>
 
-                    Anne-Marie
+                    Anne Martens
                 </button>
             </div>
 
             <div>
-                <pre class="a-pre a-pre--scrollable"><code class="html">&lt;button class="a-button has-avatar-with-image"&gt;
+                <pre class="a-pre a-pre--scrollable"><code class="html">&lt;button class="a-button has-avatar-with-inset"&gt;
   &lt;span class="a-avatar"&gt;
     &lt;img src="..." alt="..." /&gt;
   &lt;/span&gt;
 
-  Anne-Marie
+  Anne Martens
 &lt;/button&gt;</code></pre>
             </div>
         </div>
@@ -704,6 +734,68 @@
             <div>
                 <pre class="a-pre a-pre--scrollable"><code class="html">&lt;a href="#" class="a-button a-button--snapchat has-icon" aria-label="Snapchat"&gt;
   {{ icon.code('social-media-snapchat') }}
+&lt;/a&gt;</code></pre>
+            </div>
+        </div>
+
+        <h4 class="u-margin-top-xl">Transparent social buttons</h4>
+        <div class="d">
+            <div>
+                <a href="javascript:void(0);" class="a-button a-button--social has-icon" aria-label="Facebook">
+                    {{ icon.render('social-media-facebook') }}
+                </a>
+
+                <a href="javascript:void(0);" class="a-button a-button--social has-icon" aria-label="Twitter">
+                    {{ icon.render('social-media-twitter') }}
+                </a>
+
+                <a href="javascript:void(0);" class="a-button a-button--social has-icon" aria-label="LinkedIn">
+                    {{ icon.render('professional-network-linkedin') }}
+                </a>
+
+                <a href="javascript:void(0);" class="a-button a-button--social has-icon" aria-label="Instagram">
+                    {{ icon.render('social-instagram') }}
+                </a>
+
+                <a href="javascript:void(0);" class="a-button a-button--social has-icon" aria-label="Snapchat">
+                    {{ icon.render('social-media-snapchat') }}
+                </a>
+            </div>
+            <div>
+                <pre class="a-pre a-pre--scrollable"><code class="html">&lt;a href="#" class="a-button a-button--social has-icon" aria-label="Facebook"&gt;
+  {{ icon.code('social-media-facebook') }}
+&lt;/a&gt;</code></pre>
+            </div>
+        </div>
+
+        <h4 class="u-margin-top-xl">Negative social buttons</h4>
+        <div class="d">
+            <div>
+                <div class="u-bg-black d-negative-social-buttons">
+                    <a href="javascript:void(0);" class="a-button a-button--social a-button--negative has-icon" aria-label="Facebook">
+                        {{ icon.render('social-media-facebook') }}
+                    </a>
+
+                    <a href="javascript:void(0);" class="a-button a-button--social a-button--negative has-icon" aria-label="Twitter">
+                        {{ icon.render('social-media-twitter') }}
+                    </a>
+
+                    <a href="javascript:void(0);" class="a-button a-button--social a-button--negative has-icon" aria-label="LinkedIn">
+                        {{ icon.render('professional-network-linkedin') }}
+                    </a>
+
+                    <a href="javascript:void(0);" class="a-button a-button--social a-button--negative has-icon" aria-label="Instagram">
+                        {{ icon.render('social-instagram') }}
+                    </a>
+
+                    <a href="javascript:void(0);" class="a-button a-button--social a-button--negative has-icon" aria-label="Snapchat">
+                        {{ icon.render('social-media-snapchat') }}
+                    </a>
+                </div>
+            </div>
+            <div>
+                <pre class="a-pre a-pre--scrollable"><code class="html">&lt;a href="#" class="a-button a-button--social a-button--negative has-icon" aria-label="Facebook"&gt;
+  {{ icon.code('social-media-facebook') }}
 &lt;/a&gt;</code></pre>
             </div>
         </div>
@@ -794,13 +886,13 @@
             <div>
                 <div class="a-copyright">
                     <span class="a-copyright__sign">©</span>
-                    <span class="a-copyright__label">Jasper Van Proeyen</span>
+                    <span class="a-copyright__label">Anne martens</span>
                 </div>
             </div>
             <div>
                 <pre class="a-pre a-pre--scrollable"><code class="html">&lt;div class="a-copyright"&gt;
   &lt;span class="a-copyright__sign"&gt;&copy;&lt;/span&gt;
-  &lt;span class="a-copyright__label"&gt;Jasper Van Proeyen&lt;/span&gt;
+  &lt;span class="a-copyright__label"&gt;Anne martens&lt;/span&gt;
 &lt;/div&gt;</code></pre>
             </div>
         </div>
@@ -847,19 +939,15 @@
             <div>
                 <div class="a-input">
                     <label class="a-input__label" for="text-field">Text field</label>
-                    <input type="text" name="text-field" id="text-field" placeholder="Placeholder" aria-describedby="text-field-description" />
-                    <div class="a-input__info">
-                        <small class="a-input__helper-text">Input description</small>
-                    </div>
+                    <small class="a-input__description" id="text-field-description">Input description</small>
+                    <input type="text" name="text-field" id="text-field" aria-describedby="text-field-description" />
                 </div>
             </div>
             <div>
                 <pre class="a-pre a-pre--scrollable"><code class="html">&lt;div class="a-input"&gt;
   &lt;label class="a-input__label" for="text-field"&gt;Text field&lt;/label&gt;
-  &lt;input type="text" name="text-field" id="text-field" placeholder="Placeholder" aria-describedby="text-field-description" /&gt;
-  &lt;div class="a-input__info"&gt;
-    &lt;small class="a-input__helper-text"&gt;Input description&lt;/small&gt;
-  &lt;/div&gt;
+  &lt;small class="a-input__description" id="text-field-description"&gt;Input description&lt;/small&gt;
+  &lt;input type="text" name="text-field" id="text-field" aria-describedby="text-field-description" /&gt;
 &lt;/div&gt;</code></pre>
             </div>
         </div>
@@ -867,13 +955,13 @@
             <div>
                 <div class="a-input">
                     <label class="a-input__label" for="text-field-disabled">Text field disabled</label>
-                    <input type="text" name="text-field-disabled" id="text-field-disabled" placeholder="Placeholder" aria-describedby="text-field-description" disabled />
+                    <input type="text" name="text-field-disabled" id="text-field-disabled" disabled />
                 </div>
             </div>
             <div>
                 <pre class="a-pre a-pre--scrollable"><code class="html">&lt;div class="a-input"&gt;
   &lt;label class="a-input__label" for="text-field-disabled"&gt;Text field&lt;/label&gt;
-  &lt;input type="text" name="text-field-disabled" id="text-field-disabled" placeholder="Placeholder" aria-describedby="text-field-description" disabled /&gt;
+  &lt;input type="text" name="text-field-disabled" id="text-field-disabled" disabled /&gt;
 &lt;/div&gt;</code></pre>
             </div>
         </div>
@@ -881,13 +969,13 @@
             <div>
                 <div class="a-input">
                     <label class="a-input__label" for="text-field-readonly">Text field readonly</label>
-                    <input type="text" name="text-field-readonly" id="text-field-readonly" placeholder="Placeholder" aria-describedby="text-field-description" readonly />
+                    <input type="text" name="text-field-readonly" id="text-field-readonly" readonly />
                 </div>
             </div>
             <div>
                 <pre class="a-pre a-pre--scrollable"><code class="html">&lt;div class="a-input"&gt;
   &lt;label class="a-input__label" for="text-field-readonly"&gt;Text field&lt;/label&gt;
-  &lt;input type="text" name="text-field-readonly" id="text-field-readonly" placeholder="Placeholder" aria-describedby="text-field-description" readonly /&gt;
+  &lt;input type="text" name="text-field-readonly" id="text-field-readonly" readonly /&gt;
 &lt;/div&gt;</code></pre>
             </div>
         </div>
@@ -900,18 +988,18 @@
         </div>
         <div class="d">
             <div>
-                <div class="a-input is-required">
-                    <label class="a-input__label" for="required-text-field">Required text field</label>
-                    <input type="text" name="required-text-field" id="required-text-field" placeholder="Placeholder" required />
+                <div class="a-input">
+                    <label class="a-input__label" for="optional-text-field">Optional text field (optional)</label>
+                    <input type="text" name="optional-text-field" id="optional-text-field" />
                 </div>
             </div>
             <div>
-                <pre class="a-pre a-pre--scrollable"><code class="html">&lt;div class="a-input is-required"&gt;
-  &lt;label class="a-input__label" for="required-text-field"&gt;Required text field&lt;/label&gt;
-  &lt;input type="text" name="required-text-field" id="required-text-field" placeholder="Placeholder" required /&gt;
+                <pre class="a-pre a-pre--scrollable"><code class="html">&lt;div class="a-input"&gt;
+  &lt;label class="a-input__label" for="optional-text-field"&gt;Optional text field (optional)&lt;/label&gt;
+  &lt;input type="text" name="optional-text-field" id="optional-text-field" /&gt;
 &lt;/div&gt;</code></pre>
                 <div class="m-alert d-alert m-alert--wcag">
-                    <p><span class="u-screen-reader-only">Accessibility note. </span>Always provide an explanation above the form in case you use asterisks. For example: Fields marked with an asterisk (*) are required.</p>
+                    <p><span class="u-screen-reader-only">Accessibility note. </span>Literally including the phrase "(optional)" after a label is much clearer than any visual symbol you could use to mean the same thing. Someone may always wonder 'what does this asterisk mean?' and have to go hunting for a legend that explains things.</p>
                 </div>
             </div>
         </div>
@@ -919,13 +1007,13 @@
             <div>
                 <div class="a-input a-input--inline">
                     <label class="a-input__label a-input__label--inline" for="inline-text-field">Inline text field</label>
-                    <input type="text" name="inline-text-field" id="inline-text-field" placeholder="Placeholder" />
+                    <input type="text" name="inline-text-field" id="inline-text-field" />
                 </div>
             </div>
             <div>
                 <pre class="a-pre a-pre--scrollable"><code class="html">&lt;div class="a-input a-input--inline"&gt;
   &lt;label class="a-input__label a-input__label--inline" for="inline-text-field"&gt;Inline text field&lt;/label&gt;
-  &lt;input type="text" name="inline-text-field" id="inline-text-field" placeholder="Placeholder" /&gt;
+  &lt;input type="text" name="inline-text-field" id="inline-text-field" /&gt;
 &lt;/div&gt;</code></pre>
             </div>
         </div>
@@ -933,21 +1021,17 @@
             <div>
                 <div class="a-input">
                     <label class="a-input__label" for="text-field-with-character-counter">Text field with character counter</label>
-                    <input type="text" name="text-field-with-character-counter" id="text-field-with-character-counter" placeholder="Placeholder" aria-describedby="text-field-description" />
-                    <div class="a-input__info">
-                        <small class="a-input__helper-text">Input description</small>
-                        <small class="a-input__character-counter">0 / 200</small>
-                    </div>
+                    <small class="a-input__description" id="text-field-with-character-counter-description">Input description</small>
+                    <input type="text" name="text-field-with-character-counter" id="text-field-with-character-counter" aria-describedby="text-field-with-character-counter-description" />
+                    <small aria-live="polite" class="a-input__description u-text-right">0 / 200</small>
                 </div>
             </div>
             <div>
                 <pre class="a-pre a-pre--scrollable"><code class="html">&lt;div class="a-input"&gt;
   &lt;label class="a-input__label" for="text-field-with-character-counter"&gt;Text field with character counter&lt;/label&gt;
-  &lt;input type="text" name="text-field-with-character-counter" id="text-field-with-character-counter" placeholder="Placeholder" aria-describedby="text-field-description" /&gt;
-  &lt;div class="a-input__info"&gt;
-    &lt;small class="a-input__helper-text"&gt;Input description&lt;/small&gt;
-    &lt;small class="a-input__character-counter"&gt;0 / 200&lt;/small&gt;
-  &lt;/div&gt;
+  &lt;small class="a-input__description" id="text-field-with-character-counter-description"&gt;Input description&lt;/small&gt;
+  &lt;input type="text" name="text-field-with-character-counter" id="text-field-with-character-counter" aria-describedby="text-field-with-character-counter-description" /&gt;
+  &lt;small aria-live="polite" class="a-input__description u-text-right"&gt;0 / 200&lt;/small&gt;
 &lt;/div&gt;</code></pre>
             </div>
         </div>
@@ -960,24 +1044,16 @@
                         <label for="checkbox1">Option one is unchecked</label>
                     </div>
                     <div class="a-input__checkbox">
-                        <input type="checkbox" id="checkbox2" name="input-checkbox">
-                        <label for="checkbox2">Option two is indeterminate</label>
+                        <input type="checkbox" id="checkbox2" name="input-checkbox" checked="">
+                        <label for="checkbox2">Option two is checked</label>
                     </div>
                     <div class="a-input__checkbox">
-                        <input type="checkbox" id="checkbox3" name="input-checkbox" checked="">
-                        <label for="checkbox3">Option three is checked</label>
+                        <input type="checkbox" id="checkbox3" name="input-checkbox" disabled="">
+                        <label for="checkbox3">Option three is disabled</label>
                     </div>
                     <div class="a-input__checkbox">
-                        <input type="checkbox" id="checkbox4" name="input-checkbox" disabled="">
-                        <label for="checkbox4">Option four is disabled</label>
-                    </div>
-                    <div class="a-input__checkbox">
-                        <input type="checkbox" id="checkbox5" name="input-checkbox" disabled="">
-                        <label for="checkbox5">Option five is indeterminate and disabled</label>
-                    </div>
-                    <div class="a-input__checkbox">
-                        <input type="checkbox" id="checkbox6" name="input-checkbox" checked="" disabled="">
-                        <label for="checkbox6">Option six is checked and disabled</label>
+                        <input type="checkbox" id="checkbox4" name="input-checkbox" checked="" disabled="">
+                        <label for="checkbox4">Option four is checked and disabled</label>
                     </div>
                 </div>
             </div>
@@ -989,24 +1065,64 @@
     &lt;label for="checkbox1"&gt;Option one is unchecked&lt;/label&gt;
   &lt;/div&gt;
   &lt;div class="a-input__checkbox"&gt;
-    &lt;input type="checkbox" id="checkbox2" name="input-checkbox"&gt;
-    &lt;label for="checkbox2"&gt;Option two is indeterminate&lt;/label&gt;
+    &lt;input type="checkbox" id="checkbox2" name="input-checkbox" checked=""&gt;
+    &lt;label for="checkbox2"&gt;Option two is checked&lt;/label&gt;
   &lt;/div&gt;
   &lt;div class="a-input__checkbox"&gt;
-    &lt;input type="checkbox" id="checkbox3" name="input-checkbox" checked=""&gt;
-    &lt;label for="checkbox3"&gt;Option three is checked&lt;/label&gt;
+    &lt;input type="checkbox" id="checkbox3" name="input-checkbox" disabled=""&gt;
+    &lt;label for="checkbox3"&gt;Option three is disabled&lt;/label&gt;
   &lt;/div&gt;
   &lt;div class="a-input__checkbox"&gt;
-    &lt;input type="checkbox" id="checkbox4" name="input-checkbox" disabled=""&gt;
-    &lt;label for="checkbox4"&gt;Option four is disabled&lt;/label&gt;
+    &lt;input type="checkbox" id="checkbox4" name="input-checkbox" checked="" disabled=""&gt;
+    &lt;label for="checkbox4"&gt;Option four is checked and disabled&lt;/label&gt;
   &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+            </div>
+        </div>
+        <div class="d">
+            <div>
+                <div class="a-input">
+                    <label class="a-input__label">Input with nested checkboxes</label>
+                    <div class="a-input__checkbox">
+                        <input type="checkbox" id="checkbox-indeterminate" name="input-checkbox">
+                        <label for="checkbox-indeterminate">Option one</label>
+                    </div>
+                    <div class="u-margin-left">
+                        <div class="a-input__checkbox">
+                            <input type="checkbox" id="nested-checkbox1" name="input-checkbox">
+                            <label for="nested-checkbox1">Nested option one</label>
+                        </div>
+                        <div class="a-input__checkbox">
+                            <input type="checkbox" id="nested-checkbox2" name="input-checkbox" checked="">
+                            <label for="nested-checkbox2">Nested option two</label>
+                        </div>
+                        <div class="a-input__checkbox">
+                            <input type="checkbox" id="nested-checkbox3" name="input-checkbox">
+                            <label for="nested-checkbox3">Nested option three</label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <pre class="a-pre a-pre--scrollable"><code class="html">&lt;div class="a-input"&gt;
+  &lt;label class="a-input__label"&gt;Input with nested checkboxes&lt;/label&gt;
   &lt;div class="a-input__checkbox"&gt;
-    &lt;input type="checkbox" id="checkbox5" name="input-checkbox" disabled=""&gt;
-    &lt;label for="checkbox5"&gt;Option five is indeterminate and disabled&lt;/label&gt;
+    &lt;input type="checkbox" id="checkbox-indeterminate" name="input-checkbox"&gt;
+    &lt;label for="checkbox-indeterminate"&gt;Option one&lt;/label&gt;
   &lt;/div&gt;
-  &lt;div class="a-input__checkbox"&gt;
-    &lt;input type="checkbox" id="checkbox6" name="input-checkbox" checked="" disabled=""&gt;
-    &lt;label for="checkbox6"&gt;Option six is checked and disabled&lt;/label&gt;
+  &lt;div class="u-margin-left"&gt;
+    &lt;div class="a-input__checkbox"&gt;
+      &lt;input type="checkbox" id="nested-checkbox1" name="input-checkbox"&gt;
+      &lt;label for="nested-checkbox1"&gt;Nested option one&lt;/label&gt;
+    &lt;/div&gt;
+    &lt;div class="a-input__checkbox"&gt;
+      &lt;input type="checkbox" id="nested-checkbox2" name="input-checkbox" checked=""&gt;
+      &lt;label for="nested-checkbox2"&gt;Nested option two&lt;/label&gt;
+    &lt;/div&gt;
+    &lt;div class="a-input__checkbox"&gt;
+      &lt;input type="checkbox" id="nested-checkbox3" name="input-checkbox"&gt;
+      &lt;label for="nested-checkbox3"&gt;Nested option three&lt;/label&gt;
+    &lt;/div&gt;
   &lt;/div&gt;
 &lt;/div&gt;</code></pre>
             </div>
@@ -1059,13 +1175,13 @@
             <div>
                 <div class="a-input">
                     <label class="a-input__label" for="input-textarea">Text area</label>
-                    <textarea name="input-textarea" id="input-textarea" placeholder="Placeholder"></textarea>
+                    <textarea name="input-textarea" id="input-textarea"></textarea>
                 </div>
             </div>
             <div>
                 <pre class="a-pre a-pre--scrollable"><code class="html">&lt;div class="a-input"&gt;
   &lt;label class="a-input__label" for="input-textarea"&gt;Text area&lt;/label&gt;
-  &lt;textarea name="input-textarea" id="input-textarea" placeholder="Placeholder"&gt;&lt;/textarea&gt;
+  &lt;textarea name="input-textarea" id="input-textarea"&gt;&lt;/textarea&gt;
 &lt;/div&gt;</code></pre>
             </div>
         </div>
@@ -1137,13 +1253,70 @@
 &lt;/div&gt;</code></pre>
             </div>
         </div>
+        <div class="d">
+            <div>
+                <div class="a-input">
+                    <label class="a-input__label" for="time-field">Time</label>
+                    <div class="a-input__wrapper">
+                        <input type="time" name="time-field" id="time-field" />
+                    </div>
+                </div>
+            </div>
+            <div>
+                <pre class="a-pre a-pre--scrollable"><code class="html">&lt;div class="a-input"&gt;
+  &lt;label class="a-input__label" for="time-field"&gt;Time&lt;/label&gt;
+  &lt;div class="a-input__wrapper"&gt;
+    &lt;input type="time" name="time-field" id="time-field" /&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+            </div>
+        </div>
+        <div class="d">
+            <div>
+                <div class="a-input has-icon-right">
+                    <label class="a-input__label" for="select-time">Time</label>
+                    <div class="a-input__wrapper">
+                        <select name="select-time" id="select-time">
+                            <option value="" disabled selected>Select...</option>
+                            <option value="09:00">09:00</option>
+                            <option value="09:15">09:15</option>
+                            <option value="09:30">09:30</option>
+                            <option value="09:45">09:45</option>
+                            <option value="10:00">10:00</option>
+                            <option value="10:15">10:15</option>
+                            <option value="10:30">10:30</option>
+                            <option value="10:45">10:45</option>
+                            <option value="11:00">11:00</option>
+                            <option value="11:15">11:15</option>
+                            <option value="11:30">11:30</option>
+                            <option value="11:45">11:45</option>
+                            <option value="12:00">12:00</option>
+                        </select>
+                        {{ icon.render('arrow-down-1') }}
+                    </div>
+                </div>
+            </div>
+            <div>
+                <pre class="a-pre a-pre--scrollable"><code class="html">&lt;div class="a-input has-icon-right"&gt;
+  &lt;label class="a-input__label" for="select-time"&gt;Time&lt;/label&gt;
+  &lt;div class="a-input__wrapper"&gt;
+    &lt;select name="select-time" id="select-time"&gt;
+      &lt;option value="" disabled selected&gt;Select...&lt;/option&gt;
+      &lt;option value="09:00"&gt;09:00&lt;/option&gt;
+      &lt;option&gt;...&lt;/option&gt;
+    &lt;/select&gt;
+    {{ icon.code('arrow-down-1') }}
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+            </div>
+        </div>
 
         <h4 class="u-margin-top-xl">Input field sizes</h4>
         <div class="d">
             <div>
                 <div class="a-input a-input--s u-margin-bottom">
                     <label class="a-input__label" for="text-field-small">Small text field</label>
-                    <input type="text" name="text-field-small" id="text-field-small" placeholder="Placeholder" />
+                    <input type="text" name="text-field-small" id="text-field-small" />
                 </div>
                 <div class="a-input a-input--s has-icon-right u-margin-bottom">
                     <label class="a-input__label" for="input-select-small">Small select with options</label>
@@ -1161,13 +1334,13 @@
                 </div>
                 <div class="a-input a-input--s">
                     <label class="a-input__label" for="input-textarea-small">Small text area</label>
-                    <textarea name="input-textarea-small" id="input-textarea-small" placeholder="Placeholder"></textarea>
+                    <textarea name="input-textarea-small" id="input-textarea-small"></textarea>
                 </div>
             </div>
             <div>
                 <pre class="a-pre a-pre--scrollable"><code class="html">&lt;div class="a-input a-input--s"&gt;
   &lt;label class="a-input__label" for="text-field-small"&gt;Text field&lt;/label&gt;
-  &lt;input type="text" name="text-field-small" id="text-field-small" placeholder="Placeholder" /&gt;
+  &lt;input type="text" name="text-field-small" id="text-field-small" /&gt;
 &lt;/div&gt;</code></pre>
                 <pre class="a-pre a-pre--scrollable"><code class="html">&lt;div class="a-input a-input--s has-icon-right"&gt;
   &lt;label class="a-input__label" for="input-select-small"&gt;Select with options&lt;/label&gt;
@@ -1180,7 +1353,7 @@
 &lt;/div&gt;</code></pre>
                 <pre class="a-pre a-pre--scrollable"><code class="html">&lt;div class="a-input a-input--s"&gt;
   &lt;label class="a-input__label" for="input-textarea-small"&gt;Text area&lt;/label&gt;
-  &lt;textarea name="input-textarea-small" id="input-textarea-small" placeholder="Placeholder"&gt;&lt;/textarea&gt;
+  &lt;textarea name="input-textarea-small" id="input-textarea-small"&gt;&lt;/textarea&gt;
 &lt;/div&gt;</code></pre>
             </div>
         </div>
@@ -1188,7 +1361,7 @@
             <div>
                 <div class="a-input a-input--l u-margin-bottom">
                     <label class="a-input__label" for="text-field-large">Large text field</label>
-                    <input type="text" name="text-field-large" id="text-field-large" placeholder="Placeholder" />
+                    <input type="text" name="text-field-large" id="text-field-large" />
                 </div>
                 <div class="a-input a-input--l has-icon-right u-margin-bottom">
                     <label class="a-input__label" for="input-select-large">Large select with options</label>
@@ -1206,13 +1379,13 @@
                 </div>
                 <div class="a-input a-input--l">
                     <label class="a-input__label" for="input-textarea-large">Large text area</label>
-                    <textarea name="input-textarea-large" id="input-textarea-large" placeholder="Placeholder"></textarea>
+                    <textarea name="input-textarea-large" id="input-textarea-large"></textarea>
                 </div>
             </div>
             <div>
                 <pre class="a-pre a-pre--scrollable"><code class="html">&lt;div class="a-input a-input--l"&gt;
   &lt;label class="a-input__label" for="text-field-large"&gt;Text field&lt;/label&gt;
-  &lt;input type="text" name="text-field-large" id="text-field-large" placeholder="Placeholder" /&gt;
+  &lt;input type="text" name="text-field-large" id="text-field-large" /&gt;
 &lt;/div&gt;</code></pre>
                 <pre class="a-pre a-pre--scrollable"><code class="html">&lt;div class="a-input a-input--l has-icon-right"&gt;
   &lt;label class="a-input__label" for="input-select-large"&gt;Select with options&lt;/label&gt;
@@ -1225,7 +1398,7 @@
 &lt;/div&gt;</code></pre>
                 <pre class="a-pre a-pre--scrollable"><code class="html">&lt;div class="a-input a-input--l"&gt;
   &lt;label class="a-input__label" for="input-textarea-large"&gt;Text area&lt;/label&gt;
-  &lt;textarea name="input-textarea-large" id="input-textarea-large" placeholder="Placeholder"&gt;&lt;/textarea&gt;
+  &lt;textarea name="input-textarea-large" id="input-textarea-large"&gt;&lt;/textarea&gt;
 &lt;/div&gt;</code></pre>
             </div>
         </div>
@@ -1237,7 +1410,7 @@
                     <label class="a-input__label" for="text-field-icon-left">Text field with left icon</label>
                     <div class="a-input__wrapper">
                         {{ icon.render('single-neutral') }}
-                        <input type="text" name="text-field-icon-left" id="text-field-icon-left" placeholder="Placeholder" />
+                        <input type="text" name="text-field-icon-left" id="text-field-icon-left" />
                     </div>
                 </div>
             </div>
@@ -1246,7 +1419,7 @@
   &lt;label class="a-input__label" for="text-field-icon-left"&gt;Text field with left icon&lt;/label&gt;
   &lt;div class="a-input__wrapper"&gt;
     {{ icon.code('single-neutral') }}
-    &lt;input type="text" name="text-field-icon-left" id="text-field-icon-left" placeholder="Placeholder" /&gt;
+    &lt;input type="text" name="text-field-icon-left" id="text-field-icon-left" /&gt;
   &lt;/div&gt;
 &lt;/div&gt;</code></pre>
             </div>
@@ -1256,7 +1429,7 @@
                 <div class="a-input has-icon-right">
                     <label class="a-input__label" for="text-field-icon-right">Text field with right icon</label>
                     <div class="a-input__wrapper">
-                        <input type="text" name="text-field-icon-right" id="text-field-icon-right" placeholder="Placeholder" />
+                        <input type="text" name="text-field-icon-right" id="text-field-icon-right" />
                         {{ icon.render('view-1') }}
                     </div>
                 </div>
@@ -1265,7 +1438,7 @@
                 <pre class="a-pre a-pre--scrollable"><code class="html">&lt;div class="a-input has-icon-right"&gt;
   &lt;label class="a-input__label" for="text-field-icon-right"&gt;Text field with right icon&lt;/label&gt;
   &lt;div class="a-input__wrapper"&gt;
-    &lt;input type="text" name="text-field-icon-right" id="text-field-icon-right" placeholder="Placeholder" /&gt;
+    &lt;input type="text" name="text-field-icon-right" id="text-field-icon-right" /&gt;
     {{ icon.code('view-1') }}
   &lt;/div&gt;
 &lt;/div&gt;</code></pre>
@@ -1277,7 +1450,7 @@
                     <label class="a-input__label" for="text-field-addon-left">Text field with left addon</label>
                     <div class="a-input__wrapper">
                         <div class="a-input__addon">&euro;</div>
-                        <input type="text" name="text-field-addon-left" id="text-field-addon-left" placeholder="Placeholder" />
+                        <input type="text" name="text-field-addon-left" id="text-field-addon-left" />
                     </div>
                 </div>
             </div>
@@ -1286,7 +1459,7 @@
   &lt;label class="a-input__label" for="text-field-addon-left"&gt;Text field with left addon&lt;/label&gt;
   &lt;div class="a-input__wrapper"&gt;
     &lt;div class="a-input__addon"&gt;&amp;euro;&lt;/div&gt;
-    &lt;input type="text" name="text-field-addon-left" id="text-field-addon-left" placeholder="Placeholder" /&gt;
+    &lt;input type="text" name="text-field-addon-left" id="text-field-addon-left" /&gt;
   &lt;/div&gt;
 &lt;/div&gt;</code></pre>
             </div>
@@ -1296,7 +1469,7 @@
                 <div class="a-input has-addon-right">
                     <label class="a-input__label" for="text-field-addon-right">Text field with right addon</label>
                     <div class="a-input__wrapper">
-                        <input type="text" name="text-field-addon-right" id="text-field-addon-right" placeholder="Placeholder" />
+                        <input type="text" name="text-field-addon-right" id="text-field-addon-right" />
                         <div class="a-input__addon">km</div>
                     </div>
                 </div>
@@ -1305,7 +1478,7 @@
                 <pre class="a-pre a-pre--scrollable"><code class="html">&lt;div class="a-input has-addon-right"&gt;
   &lt;label class="a-input__label" for="text-field-addon-right"&gt;Text field with right addon&lt;/label&gt;
   &lt;div class="a-input__wrapper"&gt;
-    &lt;input type="text" name="text-field-addon-right" id="text-field-addon-right" placeholder="Placeholder" /&gt;
+    &lt;input type="text" name="text-field-addon-right" id="text-field-addon-right" /&gt;
     &lt;div class="a-input__addon"&gt;km&lt;/div&gt;
   &lt;/div&gt;
 &lt;/div&gt;</code></pre>
@@ -1317,27 +1490,18 @@
             <div>
                 <div class="a-input">
                     <label class="a-input__label" for="text-field-success">Success text field</label>
+                    <small class="a-input__description is-success" id="text-field-success-description">{{ icon.render('check-1') }} Success description</small>
                     <div class="a-input__wrapper">
-                        <input type="text" name="text-field-success" id="text-field-success" placeholder="Placeholder" />
-                    </div>
-                    <div class="a-input__info">
-                        <small class="a-input__success-text">
-                            {{ icon.render('check-1') }} Success description
-                        </small>
+                        <input type="text" name="text-field-success" id="text-field-success" aria-describedby="text-field-success-description" />
                     </div>
                 </div>
             </div>
             <div>
                 <pre class="a-pre a-pre--scrollable"><code class="html">&lt;div class="a-input"&gt;
   &lt;label class="a-input__label" for="text-field-success"&gt;Success text field&lt;/label&gt;
+  &lt;small class="a-input__description is-success" id="text-field-success-description"&gt;{{ icon.code('check-1') }} Success description&lt;/div&gt;
   &lt;div class="a-input__wrapper"&gt;
-    &lt;input type="text" name="text-field-success" id="text-field-success" placeholder="Placeholder" /&gt;
-  &lt;/div&gt;
-  &lt;div class="a-input__info"&gt;
-    &lt;small class="a-input__success-text"&gt;
-      {{ icon.code('check-1') }}
-      Success description
-    &lt;/small&gt;
+    &lt;input type="text" name="text-field-success" id="text-field-success" aria-describedby="text-field-success-description" /&gt;
   &lt;/div&gt;
 &lt;/div&gt;</code></pre>
             </div>
@@ -1346,27 +1510,18 @@
             <div>
                 <div class="a-input has-error">
                     <label class="a-input__label" for="text-field-error">Error text field</label>
+                    <small class="a-input__description is-error" id="text-field-error-description">{{ icon.render('alert-triangle') }} Error description</small>
                     <div class="a-input__wrapper">
-                        <input type="text" name="text-field-error" id="text-field-error" placeholder="Placeholder" />
-                    </div>
-                    <div class="a-input__info">
-                        <small class="a-input__error-text">
-                            {{ icon.render('alert-triangle') }} Error description
-                        </small>
+                        <input type="text" name="text-field-error" id="text-field-error" aria-describedby="text-field-error-description" />
                     </div>
                 </div>
             </div>
             <div>
                 <pre class="a-pre a-pre--scrollable"><code class="html">&lt;div class="a-input has-error"&gt;
   &lt;label class="a-input__label" for="text-field-error"&gt;Error text field&lt;/label&gt;
+  &lt;small class="a-input__description is-error" id="text-field-error-description"&gt;{{ icon.code('alert-triangle') }}Error description&lt;/small&gt;
   &lt;div class="a-input__wrapper"&gt;
-    &lt;input type="text" name="text-field-error" id="text-field-error" placeholder="Placeholder" /&gt;
-  &lt;/div&gt;
-  &lt;div class="a-input__info"&gt;
-    &lt;small class="a-input__error-text"&gt;
-      {{ icon.code('alert-triangle') }}
-      Error description
-    &lt;/small&gt;
+    &lt;input type="text" name="text-field-error" id="text-field-error" aria-describedby="text-field-error-description" /&gt;
   &lt;/div&gt;
 &lt;/div&gt;</code></pre>
             </div>
@@ -1389,14 +1544,6 @@
             </div>
             <div>
                 <pre class="a-pre a-pre--scrollable"><code class="html">&lt;span class="a-label a-label--primary"&gt;Primary label&lt;/span&gt;</code></pre>
-            </div>
-        </div>
-        <div class="d">
-            <div>
-                <span class="a-label a-label--secondary">Secondary label</span>
-            </div>
-            <div>
-                <pre class="a-pre a-pre--scrollable"><code class="html">&lt;span class="a-label a-label--secondary"&gt;Secondary label&lt;/span&gt;</code></pre>
             </div>
         </div>
         <div class="d">
@@ -1470,307 +1617,298 @@
             </div>
         </div>
 
-
-
         <a name="atoms-list" aria-label="List"></a>
         <h3 class="u-margin-top-xl">List</h3>
         <span class="d-file">atoms/atoms.list</span>
 
-        <h4 class="u-margin-top-xl">Standard lists</h4>
+        <h4 class="u-margin-top-xl">Textual list</h4>
         <div class="d">
             <div>
                 <ul class="a-list">
-                    <li>First item</li>
-                    <li>Second item
+                    <li class="a-list__item">
+                        <span class="a-list__content">First item</span>
+                    </li>
+                    <li class="a-list__item">
+                        <a href="javascript:void(0);" class="a-list__content">Second item</a>
                         <ul class="a-list">
-                            <li>First subitem</li>
-                            <li>Second subitem</li>
+                            <li class="a-list__item">
+                                <span class="a-list__content">First subitem</span>
+                            </li>
+                            <li class="a-list__item">
+                                <span class="a-list__content">Second subitem</span>
+                            </li>
                         </ul>
                     </li>
-                    <li>Third item</li>
-                    <li>Fourth item</li>
+                    <li class="a-list__item">
+                        <span class="a-list__content">Third item</span>
+                    </li>
+                    <li class="a-list__item">
+                        <span class="a-list__content">Fourth item</span>
+                    </li>
                 </ul>
                 <ol class="a-list">
-                    <li>First item</li>
-                    <li>Second item
+                    <li class="a-list__item">
+                        <span class="a-list__content">First item</span>
+                    </li>
+                    <li class="a-list__item">
+                        <a href="javascript:void(0);" class="a-list__content">Second item</a>
                         <ol class="a-list">
-                            <li>First subitem</li>
-                            <li>Second subitem</li>
+                            <li class="a-list__item">
+                                <span class="a-list__content">First subitem</span>
+                            </li>
+                            <li class="a-list__item">
+                                <span class="a-list__content">Second subitem</span>
+                            </li>
                         </ol>
                     </li>
-                    <li>Third item</li>
-                    <li>Fourth item</li>
+                    <li class="a-list__item">
+                        <span class="a-list__content">Third item</span>
+                    </li>
+                    <li class="a-list__item">
+                        <span class="a-list__content">Fourth item</span>
+                    </li>
                 </ol>
-            </div>
-            <div>
-                <pre class="a-pre a-pre--scrollable"><code class="html">&lt;ul class="a-list"&gt;
-  &lt;li&gt;First item&lt;/li&gt;
-  &lt;li&gt;Second item
-    &lt;ul class="a-list"&gt;
-      &lt;li&gt;First subitem&lt;/li&gt;
-      &lt;li&gt;Second subitem&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Third item&lt;/li&gt;
-  &lt;li&gt;Fourth item&lt;/li&gt;
-&lt;/ul&gt;</code></pre>
-                <pre class="a-pre a-pre--scrollable"><code class="html">&lt;ol class="a-list"&gt;
-  &lt;li&gt;First item&lt;/li&gt;
-  &lt;li&gt;Second item
-    &lt;ol class="a-list"&gt;
-      &lt;li&gt;First subitem&lt;/li&gt;
-      &lt;li&gt;Second subitem&lt;/li&gt;
-    &lt;/ol&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Third item&lt;/li&gt;
-  &lt;li&gt;Fourth item&lt;/li&gt;
-&lt;/ol&gt;</code></pre>
-                <pre class="a-pre a-pre--scrollable"><code class="scss">.css {
-  @extend %a-list;
-}</code></pre>
             </div>
         </div>
 
-        <h4 class="u-margin-top-xl">List variations</h4>
-        <div class="d">
-            <div>
-                <ul class="a-list a-list--reset">
-                    <li>First item</li>
-                    <li>Second item
-                        <ul class="a-list">
-                            <li>First subitem</li>
-                            <li>Second subitem</li>
-                        </ul>
-                    </li>
-                    <li>Third item</li>
-                    <li>Fourth item</li>
-                </ul>
-            </div>
-            <div>
-                <pre class="a-pre a-pre--scrollable"><code class="html">&lt;ul class="a-list a-list--reset"&gt;
-  &lt;li&gt;First item&lt;/li&gt;
-  &lt;li&gt;Second item
-    &lt;ul class="a-list"&gt;
-      &lt;li&gt;First subitem&lt;/li&gt;
-      &lt;li&gt;Second subitem&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Third item&lt;/li&gt;
-  &lt;li&gt;Fourth item&lt;/li&gt;
-&lt;/ul&gt;</code></pre>
-                <pre class="a-pre a-pre--scrollable"><code class="scss">.css {
-  @extend %a-list--reset;
-}</code></pre>
-            </div>
-        </div>
-        <div class="d">
-            <div>
-                <ul class="a-list a-list--unstyled">
-                    <li>First item</li>
-                    <li>Second item
-                        <ul class="a-list">
-                            <li>First subitem</li>
-                            <li>Second subitem</li>
-                        </ul>
-                    </li>
-                    <li>Third item</li>
-                    <li>Fourth item</li>
-                </ul>
-            </div>
-            <div>
-                <pre class="a-pre a-pre--scrollable"><code class="html">&lt;ul class="a-list a-list--unstyled"&gt;
-  &lt;li&gt;First item&lt;/li&gt;
-  &lt;li&gt;Second item
-    &lt;ul class="a-list"&gt;
-      &lt;li&gt;First subitem&lt;/li&gt;
-      &lt;li&gt;Second subitem&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Third item&lt;/li&gt;
-  &lt;li&gt;Fourth item&lt;/li&gt;
-&lt;/ul&gt;</code></pre>
-                <pre class="a-pre a-pre--scrollable"><code class="scss">.css {
-  @extend %a-list--unstyled;
-}</code></pre>
-            </div>
-        </div>
-        <div class="d">
-            <div>
-                <ul class="a-list a-list--flattened">
-                    <li>First item</li>
-                    <li>Second item
-                        <ul class="a-list">
-                            <li>First subitem</li>
-                            <li>Second subitem</li>
-                        </ul>
-                    </li>
-                    <li>Third item</li>
-                    <li>Fourth item</li>
-                </ul>
-            </div>
-            <div>
-                <pre class="a-pre a-pre--scrollable"><code class="html">&lt;ul class="a-list a-list--flattened"&gt;
-  &lt;li&gt;First item&lt;/li&gt;
-  &lt;li&gt;Second item
-    &lt;ul class="a-list"&gt;
-      &lt;li&gt;First subitem&lt;/li&gt;
-      &lt;li&gt;Second subitem&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Third item&lt;/li&gt;
-  &lt;li&gt;Fourth item&lt;/li&gt;
-&lt;/ul&gt;</code></pre>
-                <pre class="a-pre a-pre--scrollable"><code class="scss">.css {
-  @extend %a-list--flattened;
-}</code></pre>
-            </div>
-        </div>
-        <div class="d">
-            <div>
-                <ul class="a-list a-list--primary">
-                    <li>First item</li>
-                    <li>Second item
-                        <ul class="a-list">
-                            <li>First subitem</li>
-                            <li>Second subitem</li>
-                        </ul>
-                    </li>
-                    <li>Third item</li>
-                    <li>Fourth item</li>
-                </ul>
-            </div>
-            <div>
-                <pre class="a-pre a-pre--scrollable"><code class="html">&lt;ul class="a-list a-list--primary"&gt;
-  &lt;li&gt;First item&lt;/li&gt;
-  &lt;li&gt;Second item
-    &lt;ul class="a-list"&gt;
-      &lt;li&gt;First subitem&lt;/li&gt;
-      &lt;li&gt;Second subitem&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Third item&lt;/li&gt;
-  &lt;li&gt;Fourth item&lt;/li&gt;
-&lt;/ul&gt;</code></pre>
-                <pre class="a-pre a-pre--scrollable"><code class="scss">.css {
-  @extend %a-list--primary;
-}</code></pre>
-            </div>
-        </div>
+        <h4 class="u-margin-top-xl">Lined list</h4>
         <div class="d">
             <div>
                 <ul class="a-list a-list--lined">
-                    <li>First item</li>
-                    <li>Second item
+                    <li class="a-list__item">
+                        <span class="a-list__content">First item</span>
+                    </li>
+                    <li class="a-list__item">
+                        <span class="a-list__content">Second item</span>
                         <ul class="a-list a-list--lined">
-                            <li>First subitem</li>
-                            <li>Second subitem</li>
+                            <li class="a-list__item">
+                                <span class="a-list__content">First subitem</span>
+                            </li>
+                            <li class="a-list__item">
+                                <span class="a-list__content">Second subitem</span>
+                            </li>
                         </ul>
                     </li>
-                    <li>Third item</li>
-                    <li>Fourth item</li>
+                    <li class="a-list__item">
+                        <span class="a-list__content">Third item</span>
+                    </li>
+                    <li class="a-list__item">
+                        <span class="a-list__content">Fourth item</span>
+                    </li>
                 </ul>
             </div>
+            <div></div>
+        </div>
+        <div class="d">
             <div>
-                <pre class="a-pre a-pre--scrollable"><code class="html">&lt;ul class="a-list a-list--lined"&gt;
-  &lt;li&gt;First item&lt;/li&gt;
-  &lt;li&gt;Second item
-    &lt;ul class="a-list a-list--lined"&gt;
-      &lt;li&gt;First subitem&lt;/li&gt;
-      &lt;li&gt;Second subitem&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Third item&lt;/li&gt;
-  &lt;li&gt;Fourth item&lt;/li&gt;
-&lt;/ul&gt;</code></pre>
-                <pre class="a-pre a-pre--scrollable"><code class="scss">.css {
-  @extend %a-list--lined;
-}</code></pre>
+                <ul class="a-list a-list--lined a-list--flushed">
+                    <li class="a-list__item">
+                        <span class="a-list__content">First item</span>
+                    </li>
+                    <li class="a-list__item">
+                        <span class="a-list__content">Second item</span>
+                        <ul class="a-list a-list--lined">
+                            <li class="a-list__item">
+                                <span class="a-list__content">First subitem</span>
+                            </li>
+                            <li class="a-list__item">
+                                <span class="a-list__content">Second subitem</span>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="a-list__item">
+                        <span class="a-list__content">Third item</span>
+                    </li>
+                    <li class="a-list__item">
+                        <span class="a-list__content">Fourth item</span>
+                    </li>
+                </ul>
             </div>
+            <div></div>
         </div>
 
         <h4 class="u-margin-top-xl">Icon lists</h4>
         <div class="d">
             <div>
-                <ul class="a-list has-icon-left">
-                    <li>{{ icon.render('arrow-left-1') }}First item</li>
-                    <li>{{ icon.render('arrow-left-1') }}Second item
-                        <ul class="a-list">
-                            <li>{{ icon.render('arrow-left-1') }}First subitem</li>
-                            <li>{{ icon.render('arrow-left-1') }}Second subitem</li>
+                <ul class="a-list a-list--lined">
+                    <li class="a-list__item">
+                        <span class="a-list__content">
+                            {{ icon.render('arrow-left-1') }}<span class="a-list__text">First item</span>
+                        </span>
+                    </li>
+                    <li class="a-list__item">
+                        <span class="a-list__content">
+                            {{ icon.render('arrow-left-1') }}<span class="a-list__text">Second item</span>
+                        </span>
+                        <ul class="a-list a-list--lined">
+                            <li class="a-list__item">
+                                <span class="a-list__content">
+                                    {{ icon.render('arrow-left-1') }}<span class="a-list__text">First subitem</span>
+                                </span>
+                            </li>
+                            <li class="a-list__item">
+                                <span class="a-list__content">
+                                    {{ icon.render('arrow-left-1') }}<span class="a-list__text">Second subitem</span>
+                                </span>
+                            </li>
                         </ul>
                     </li>
-                    <li>{{ icon.render('arrow-left-1') }}Third item</li>
-                    <li>{{ icon.render('arrow-left-1') }}Fourth item</li>
-                </ul>
-                <ul class="a-list has-icon-right">
-                    <li>First item{{ icon.render('arrow-right-1') }}</li>
-                    <li>Second item{{ icon.render('arrow-right-1') }}
-                        <ul class="a-list">
-                            <li>First subitem{{ icon.render('arrow-right-1') }}</li>
-                            <li>Second subitem{{ icon.render('arrow-right-1') }}</li>
-                        </ul>
+                    <li class="a-list__item">
+                        <span class="a-list__content">
+                            {{ icon.render('arrow-left-1') }}<span class="a-list__text">Third item</span>
+                        </span>
                     </li>
-                    <li>Third item{{ icon.render('arrow-right-1') }}</li>
-                    <li>Fourth item{{ icon.render('arrow-right-1') }}</li>
+                    <li class="a-list__item">
+                        <span class="a-list__content">
+                            {{ icon.render('arrow-left-1') }}<span class="a-list__text">Fourth item</span>
+                        </span>
+                    </li>
                 </ul>
             </div>
-            <div>
-                <pre class="a-pre a-pre--scrollable"><code class="html">&lt;ul class="a-list has-icon-left"&gt;
-  &lt;li&gt;{{ icon.code('arrow-left-1') }}First item&lt;/li&gt;
-  &lt;li&gt;{{ icon.code('arrow-left-1') }}Second item
-    &lt;ul class="a-list"&gt;
-      &lt;li&gt;{{ icon.code('arrow-left-1') }}First subitem&lt;/li&gt;
-      &lt;li&gt;{{ icon.code('arrow-left-1') }}Second subitem&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;{{ icon.code('arrow-left-1') }}Third item&lt;/li&gt;
-  &lt;li&gt;{{ icon.code('arrow-left-1') }}Fourth item&lt;/li&gt;
-&lt;/ul&gt;</code></pre>
-                <pre class="a-pre a-pre--scrollable"><code class="html">&lt;ul class="a-list has-icon-right"&gt;
-  &lt;li&gt;First item{{ icon.code('arrow-right-1') }}&lt;/li&gt;
-  &lt;li&gt;Second item{{ icon.code('arrow-right-1') }}
-    &lt;ul class="a-list"&gt;
-      &lt;li&gt;First subitem{{ icon.code('arrow-right-1') }}&lt;/li&gt;
-      &lt;li&gt;Second subitem{{ icon.code('arrow-right-1') }}&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Third item{{ icon.code('arrow-right-1') }}&lt;/li&gt;
-  &lt;li&gt;Fourth item{{ icon.code('arrow-right-1') }}&lt;/li&gt;
-&lt;/ul&gt;</code></pre>
-            </div>
+            <div></div>
         </div>
-
-        <h4 class="u-margin-top-xl">List combinations</h4>
         <div class="d">
             <div>
-                <ul class="a-list a-list--lined has-icon-left">
-                    <li>{{ icon.render('arrow-left-1') }}First item</li>
-                    <li>{{ icon.render('arrow-left-1') }}Second item
-                        <ul class="a-list a-list--lined has-icon-left">
-                            <li>{{ icon.render('arrow-left-1') }}First subitem</li>
-                            <li>{{ icon.render('arrow-left-1') }}Second subitem</li>
+                <ul class="a-list a-list--lined">
+                    <li class="a-list__item">
+                        <span class="a-list__content">
+                            <span class="a-list__text">First item</span>{{ icon.render('arrow-right-1') }}
+                        </span>
+                    </li>
+                    <li class="a-list__item">
+                        <span class="a-list__content">
+                            <span class="a-list__text">Second item</span>{{ icon.render('arrow-right-1') }}
+                        </span>
+                        <ul class="a-list a-list--lined">
+                            <li class="a-list__item">
+                                <span class="a-list__content">
+                                    <span class="a-list__text">First subitem</span>{{ icon.render('arrow-right-1') }}
+                                </span>
+                            </li>
+                            <li class="a-list__item">
+                                <span class="a-list__content">
+                                    <span class="a-list__text">Second subitem</span>{{ icon.render('arrow-right-1') }}
+                                </span>
+                            </li>
                         </ul>
                     </li>
-                    <li>{{ icon.render('arrow-left-1') }}Third item</li>
-                    <li>{{ icon.render('arrow-left-1') }}Fourth item</li>
+                    <li class="a-list__item">
+                        <span class="a-list__content">
+                            <span class="a-list__text">Third item</span>{{ icon.render('arrow-right-1') }}
+                        </span>
+                    </li>
+                    <li class="a-list__item">
+                        <span class="a-list__content">
+                            <span class="a-list__text">Fourth item</span>{{ icon.render('arrow-right-1') }}
+                        </span>
+                    </li>
                 </ul>
             </div>
+            <div></div>
+        </div>
+        <div class="d">
             <div>
-                <pre class="a-pre a-pre--scrollable"><code class="html">&lt;ul class="a-list a-list--lined has-icon-left"&gt;
-  &lt;li&gt;{{ icon.code('arrow-left-1') }}First item&lt;/li&gt;
-  &lt;li&gt;{{ icon.code('arrow-left-1') }}Second item
-    &lt;ul class="a-list a-list--lined has-icon-left"&gt;
-      &lt;li&gt;{{ icon.code('arrow-left-1') }}First subitem&lt;/li&gt;
-      &lt;li&gt;{{ icon.code('arrow-left-1') }}Second subitem&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;{{ icon.code('arrow-left-1') }}Third item&lt;/li&gt;
-  &lt;li&gt;{{ icon.code('arrow-left-1') }}Fourth item&lt;/li&gt;
-&lt;/ul&gt;</code></pre>
-                <pre class="a-pre a-pre--scrollable"><code class="scss">.css {
-  @extend %a-list--lined has-icon-left;
-}</code></pre>
+                <ul class="a-list a-list--lined">
+                    <li class="a-list__item">
+                        <span class="a-list__content">
+                            {{ icon.render('arrow-left-1') }}
+                            <span class="a-list__text">First item</span>
+                            {{ icon.render('arrow-right-1') }}
+                        </span>
+                    </li>
+                    <li class="a-list__item">
+                        <span class="a-list__content">
+                            {{ icon.render('arrow-left-1') }}
+                            <span class="a-list__text">Second item</span>
+                            {{ icon.render('arrow-right-1') }}
+                        </span>
+                        <ul class="a-list a-list--lined">
+                            <li class="a-list__item">
+                                <span class="a-list__content">
+                                    {{ icon.render('arrow-left-1') }}
+                                    <span class="a-list__text">First subitem</span>
+                                    {{ icon.render('arrow-right-1') }}
+                                </span>
+                            </li>
+                            <li class="a-list__item">
+                                <span class="a-list__content">
+                                    {{ icon.render('arrow-left-1') }}
+                                    <span class="a-list__text">Second subitem</span>
+                                    {{ icon.render('arrow-right-1') }}
+                                </span>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="a-list__item">
+                        <span class="a-list__content">
+                            {{ icon.render('arrow-left-1') }}
+                            <span class="a-list__text">Third item</span>
+                            {{ icon.render('arrow-right-1') }}
+                        </span>
+                    </li>
+                    <li class="a-list__item">
+                        <span class="a-list__content">
+                            {{ icon.render('arrow-left-1') }}
+                            <span class="a-list__text">Fourth item</span>
+                            {{ icon.render('arrow-right-1') }}
+                        </span>
+                    </li>
+                </ul>
             </div>
+            <div></div>
+        </div>
+
+        <h4 class="u-margin-top-xl">Selectable lists</h4>
+        <div class="d">
+            <div>
+                <ul class="a-list a-list--lined">
+                    <li class="a-list__item">
+                        <a href="javascript:void(0);" class="a-list__content">
+                            {{ icon.render('arrow-left-1') }}
+                            <span class="a-list__text">First item</span>
+                            {{ icon.render('arrow-right-1') }}
+                        </a>
+                    </li>
+                    <li class="a-list__item">
+                        <a href="javascript:void(0);" class="a-list__content is-active">
+                            {{ icon.render('arrow-left-1') }}
+                            <span class="a-list__text">Second item</span>
+                            {{ icon.render('arrow-right-1') }}
+                        </a>
+                        <ul class="a-list a-list--lined">
+                            <li class="a-list__item">
+                                <a href="javascript:void(0);" class="a-list__content">
+                                    {{ icon.render('arrow-left-1') }}
+                                    <span class="a-list__text">First subitem</span>
+                                    {{ icon.render('arrow-right-1') }}
+                                </a>
+                            </li>
+                            <li class="a-list__item">
+                                <a href="javascript:void(0);" class="a-list__content">
+                                    {{ icon.render('arrow-left-1') }}
+                                    <span class="a-list__text">Second subitem</span>
+                                    {{ icon.render('arrow-right-1') }}
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="a-list__item">
+                        <a href="javascript:void(0);" class="a-list__content">
+                            {{ icon.render('arrow-left-1') }}
+                            <span class="a-list__text">Third item</span>
+                            {{ icon.render('arrow-right-1') }}
+                        </a>
+                    </li>
+                    <li class="a-list__item">
+                        <a href="javascript:void(0);" class="a-list__content">
+                            {{ icon.render('arrow-left-1') }}
+                            <span class="a-list__text">Fourth item</span>
+                            {{ icon.render('arrow-right-1') }}
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div></div>
         </div>
 
         <h4 class="u-margin-top-xl">Definition list</h4>
@@ -1797,6 +1935,432 @@
             </div>
         </div>
 
+        <h4 class="u-margin-top-xl">Avatar list</h4>
+        <div class="d">
+            <div>
+                <ul class="a-avatar-list">
+                    <li class="a-avatar-list__item">
+                        <a href="javascript:void(0);" class="a-avatar-list__item-container">
+                            <div class="a-avatar a-avatar--s a-avatar--rounded a-avatar-list__avatar">
+                                <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Avatar image." />
+                            </div>
+
+                            <div class="a-avatar-list__content">
+                                <span class="a-avatar-list__text">
+                                    <span class="avatar-list__name paragraph">Anne Martens</span>
+                                </span>
+
+                                {{ icon.render('navigation-menu-horizontal') }}
+                            </div>
+                        </a>
+                    </li>
+                    <li class="a-avatar-list__item is-active">
+                        <a href="javascript:void(0);" class="a-avatar-list__item-container">
+                            <div class="a-avatar a-avatar--s a-avatar--rounded a-avatar--primary a-avatar-list__avatar">
+                                <span class="a-avatar__letter">JJ</span>
+                            </div>
+
+                            <div class="a-avatar-list__content">
+                                <span class="a-avatar-list__text">
+                                    <span class="avatar-list__name paragraph">Jan Janssens</span>
+                                </span>
+
+                                {{ icon.render('navigation-menu-horizontal') }}
+                            </div>
+                        </a>
+                    </li>
+                    <li class="a-avatar-list__item">
+                        <a href="javascript:void(0);" class="a-avatar-list__item-container">
+                            <div class="a-avatar a-avatar--s a-avatar--rounded a-avatar--primary a-avatar-list__avatar">
+                                <span class="a-avatar__letter">EP</span>
+                            </div>
+
+                            <div class="a-avatar-list__content">
+                                <span class="a-avatar-list__text">
+                                    <span class="avatar-list__name paragraph">Elke Peters</span>
+                                </span>
+
+                                {{ icon.render('navigation-menu-horizontal') }}
+                            </div>
+                        </a>
+                    </li>
+                    <li class="a-avatar-list__item">
+                        <a href="javascript:void(0);" class="a-avatar-list__item-container">
+                            <div class="a-avatar a-avatar--s a-avatar--rounded a-avatar--primary a-avatar-list__avatar">
+                                <span class="a-avatar__letter">FM</span>
+                            </div>
+
+                            <div class="a-avatar-list__content">
+                                <span class="a-avatar-list__text">
+                                    <span class="avatar-list__name paragraph">Finn Maes</span>
+                                </span>
+
+                                {{ icon.render('navigation-menu-horizontal') }}
+                            </div>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div><pre class="a-pre a-pre--scrollable"><code class="html">&lt;ul class="a-avatar-list"&gt;
+  &lt;li class="a-avatar-list__item"&gt;
+    &lt;a href="javascript:void(0);" class="a-avatar-list__item-container"&gt;
+      &lt;div class="a-avatar a-avatar--s a-avatar--rounded a-avatar-list__avatar"&gt;
+        &lt;img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Avatar image." /&gt;
+      &lt;/div&gt;
+
+      &lt;div class="a-avatar-list__content"&gt;
+        &lt;span class="a-avatar-list__text"&gt;
+          &lt;span class="avatar-list__name paragraph"&gt;Anne Martens&lt;/span&gt;
+        &lt;/span&gt;
+
+        {{ icon.code('navigation-menu-horizontal') }}
+      &lt;/div&gt;
+    &lt;/a&gt;
+  &lt;/li&gt;
+
+  &lt;li class="a-avatar-list__item is-active"&gt;
+    &lt;a href="javascript:void(0);" class="a-avatar-list__item-container"&gt;
+      &lt;div class="a-avatar a-avatar--s a-avatar--rounded a-avatar--primary a-avatar-list__avatar"&gt;
+        &lt;span class="a-avatar__letter"&gt;JJ&lt;/span&gt;
+      &lt;/div&gt;
+
+      &lt;div class="a-avatar-list__content"&gt;
+        &lt;span class="a-avatar-list__text"&gt;
+          &lt;span class="avatar-list__name paragraph"&gt;Jan Janssens&lt;/span&gt;
+        &lt;/span&gt;
+
+        {{ icon.code('navigation-menu-horizontal') }}
+      &lt;/div&gt;
+    &lt;/a&gt;
+  &lt;/li&gt;
+
+  &lt;li class="a-avatar-list__item"&gt;...&lt;/li&gt;
+
+  &lt;li class="a-avatar-list__item"&gt;...&lt;/li&gt;
+&lt;/ul&gt;</code></pre></div>
+        </div>
+        <div class="d">
+            <div>
+                <ul class="a-avatar-list">
+                    <li class="a-avatar-list__item">
+                        <a href="javascript:void(0);" class="a-avatar-list__item-container">
+                            <div class="a-avatar a-avatar--s a-avatar--rounded a-avatar-list__avatar">
+                                <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Avatar image." />
+                            </div>
+
+                            <div class="a-avatar-list__content">
+                                <span class="a-avatar-list__text">
+                                    <span class="avatar-list__name paragraph">Anne Martens</span>
+                                    <span class="small">anne.martens@antwerpen.be</span>
+                                </span>
+
+                                {{ icon.render('navigation-menu-horizontal') }}
+                            </div>
+                        </a>
+                    </li>
+                    <li class="a-avatar-list__item is-active">
+                        <a href="javascript:void(0);" class="a-avatar-list__item-container">
+                            <div class="a-avatar a-avatar--s a-avatar--rounded a-avatar--primary a-avatar-list__avatar">
+                                <span class="a-avatar__letter">JJ</span>
+                            </div>
+
+                            <div class="a-avatar-list__content">
+                                <span class="a-avatar-list__text">
+                                    <span class="avatar-list__name paragraph">Jan Janssens</span>
+                                    <span class="small">jan.janssens@antwerpen.be</span>
+                                </span>
+
+                                {{ icon.render('navigation-menu-horizontal') }}
+                            </div>
+                        </a>
+                    </li>
+                    <li class="a-avatar-list__item">
+                        <a href="javascript:void(0);" class="a-avatar-list__item-container">
+                            <div class="a-avatar a-avatar--s a-avatar--rounded a-avatar--primary a-avatar-list__avatar">
+                                <span class="a-avatar__letter">EP</span>
+                            </div>
+
+                            <div class="a-avatar-list__content">
+                                <span class="a-avatar-list__text">
+                                    <span class="avatar-list__name paragraph">Elke Peters</span>
+                                    <span class="small">elke.peters@antwerpen.be</span>
+                                </span>
+
+                                {{ icon.render('navigation-menu-horizontal') }}
+                            </div>
+                        </a>
+                    </li>
+                    <li class="a-avatar-list__item">
+                        <a href="javascript:void(0);" class="a-avatar-list__item-container">
+                            <div class="a-avatar a-avatar--s a-avatar--rounded a-avatar--primary a-avatar-list__avatar">
+                                <span class="a-avatar__letter">FM</span>
+                            </div>
+
+                            <div class="a-avatar-list__content">
+                                <span class="a-avatar-list__text">
+                                    <span class="avatar-list__name paragraph">Finn Maes</span>
+                                    <span class="small">finn.maes@antwerpen.be</span>
+                                </span>
+
+                                {{ icon.render('navigation-menu-horizontal') }}
+                            </div>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div><pre class="a-pre a-pre--scrollable"><code class="html">&lt;ul class="a-avatar-list"&gt;
+  &lt;li class="a-avatar-list__item"&gt;
+    &lt;a href="javascript:void(0);" class="a-avatar-list__item-container"&gt;
+      &lt;div class="a-avatar a-avatar--s a-avatar--rounded a-avatar-list__avatar"&gt;
+        &lt;img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Avatar image." /&gt;
+      &lt;/div&gt;
+
+      &lt;div class="a-avatar-list__content"&gt;
+        &lt;span class="a-avatar-list__text"&gt;
+          &lt;span class="avatar-list__name paragraph"&gt;Anne Martens&lt;/span&gt;
+          &lt;span class="small"&gt;anne.martens@antwerpen.be&lt;/span&gt;
+        &lt;/span&gt;
+
+        {{ icon.code('navigation-menu-horizontal') }}
+      &lt;/div&gt;
+    &lt;/a&gt;
+  &lt;/li&gt;
+
+  &lt;li class="a-avatar-list__item"&gt;...&lt;/li&gt;
+&lt;/ul&gt;</code></pre></div>
+        </div>
+        <div class="d">
+            <div>
+                <ul class="a-avatar-list">
+                    <li class="a-avatar-list__item">
+                        <a href="javascript:void(0);" class="a-avatar-list__item-container">
+                            <div class="a-avatar a-avatar--s a-avatar--rounded a-avatar-list__avatar">
+                                <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Avatar image." />
+                            </div>
+
+                            <div class="a-avatar-list__content">
+                                <span class="a-avatar-list__text">
+                                    <span class="avatar-list__name paragraph">Anne Martens</span>
+                                    <span class="small">Copywriter</span>
+                                    <span class="small">anne.martens@antwerpen.be</span>
+                                </span>
+
+                                {{ icon.render('navigation-menu-horizontal') }}
+                            </div>
+                        </a>
+                    </li>
+                    <li class="a-avatar-list__item is-active">
+                        <a href="javascript:void(0);" class="a-avatar-list__item-container">
+                            <div class="a-avatar a-avatar--s a-avatar--rounded a-avatar--primary a-avatar-list__avatar">
+                                <span class="a-avatar__letter">JJ</span>
+                            </div>
+
+                            <div class="a-avatar-list__content">
+                                <span class="a-avatar-list__text">
+                                    <span class="avatar-list__name paragraph">Jan Janssens</span>
+                                    <span class="small">Developer</span>
+                                    <span class="small">jan.janssens@antwerpen.be</span>
+                                </span>
+
+                                {{ icon.render('navigation-menu-horizontal') }}
+                            </div>
+                        </a>
+                    </li>
+                    <li class="a-avatar-list__item">
+                        <a href="javascript:void(0);" class="a-avatar-list__item-container">
+                            <div class="a-avatar a-avatar--s a-avatar--rounded a-avatar--primary a-avatar-list__avatar">
+                                <span class="a-avatar__letter">EP</span>
+                            </div>
+
+                            <div class="a-avatar-list__content">
+                                <span class="a-avatar-list__text">
+                                    <span class="avatar-list__name paragraph">Elke Peters</span>
+                                    <span class="small">Designer</span>
+                                    <span class="small">elke.peters@antwerpen.be</span>
+                                </span>
+
+                                {{ icon.render('navigation-menu-horizontal') }}
+                            </div>
+                        </a>
+                    </li>
+                    <li class="a-avatar-list__item">
+                        <a href="javascript:void(0);" class="a-avatar-list__item-container">
+                            <div class="a-avatar a-avatar--s a-avatar--rounded a-avatar--primary a-avatar-list__avatar">
+                                <span class="a-avatar__letter">FM</span>
+                            </div>
+
+                            <div class="a-avatar-list__content">
+                                <span class="a-avatar-list__text">
+                                    <span class="avatar-list__name paragraph">Finn Maes</span>
+                                    <span class="small">Project manager</span>
+                                    <span class="small">finn.maes@antwerpen.be</span>
+                                </span>
+
+                                {{ icon.render('navigation-menu-horizontal') }}
+                            </div>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div><pre class="a-pre a-pre--scrollable"><code class="html">&lt;ul class="a-avatar-list"&gt;
+  &lt;li class="a-avatar-list__item"&gt;
+    &lt;a href="javascript:void(0);" class="a-avatar-list__item-container"&gt;
+      &lt;div class="a-avatar a-avatar--s a-avatar--rounded a-avatar-list__avatar"&gt;
+        &lt;img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Avatar image." /&gt;
+      &lt;/div&gt;
+
+      &lt;div class="a-avatar-list__content"&gt;
+        &lt;span class="a-avatar-list__text"&gt;
+          &lt;span class="avatar-list__name paragraph"&gt;Anne Martens&lt;/span&gt;
+          &lt;span class="small"&gt;Copywriter&lt;/span&gt;
+          &lt;span class="small"&gt;anne.martens@antwerpen.be&lt;/span&gt;
+        &lt;/span&gt;
+
+        {{ icon.code('navigation-menu-horizontal') }}
+      &lt;/div&gt;
+    &lt;/a&gt;
+  &lt;/li&gt;
+
+  &lt;li class="a-avatar-list__item"&gt;...&lt;/li&gt;
+&lt;/ul&gt;</code></pre></div>
+        </div>
+        <div class="d">
+            <div>
+                <ul class="a-avatar-list a-avatar-list--flushed">
+                    <li class="a-avatar-list__item">
+                        <a href="javascript:void(0);" class="a-avatar-list__item-container">
+                            <div class="a-avatar a-avatar--s a-avatar--rounded a-avatar-list__avatar">
+                                <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Avatar image." />
+                            </div>
+
+                            <div class="a-avatar-list__content">
+                                <span class="a-avatar-list__text">
+                                    <span class="avatar-list__name paragraph">Anne Martens</span>
+                                    <span class="small">Copywriter</span>
+                                    <span class="small">anne.martens@antwerpen.be</span>
+                                </span>
+
+                                {{ icon.render('navigation-menu-horizontal') }}
+                            </div>
+                        </a>
+                    </li>
+                    <li class="a-avatar-list__item is-active">
+                        <a href="javascript:void(0);" class="a-avatar-list__item-container">
+                            <div class="a-avatar a-avatar--s a-avatar--rounded a-avatar--primary a-avatar-list__avatar">
+                                <span class="a-avatar__letter">JJ</span>
+                            </div>
+
+                            <div class="a-avatar-list__content">
+                                <span class="a-avatar-list__text">
+                                    <span class="avatar-list__name paragraph">Jan Janssens</span>
+                                    <span class="small">Developer</span>
+                                    <span class="small">jan.janssens@antwerpen.be</span>
+                                </span>
+
+                                {{ icon.render('navigation-menu-horizontal') }}
+                            </div>
+                        </a>
+                    </li>
+                    <li class="a-avatar-list__item">
+                        <a href="javascript:void(0);" class="a-avatar-list__item-container">
+                            <div class="a-avatar a-avatar--s a-avatar--rounded a-avatar--primary a-avatar-list__avatar">
+                                <span class="a-avatar__letter">EP</span>
+                            </div>
+
+                            <div class="a-avatar-list__content">
+                                <span class="a-avatar-list__text">
+                                    <span class="avatar-list__name paragraph">Elke Peters</span>
+                                    <span class="small">Designer</span>
+                                    <span class="small">elke.peters@antwerpen.be</span>
+                                </span>
+
+                                {{ icon.render('navigation-menu-horizontal') }}
+                            </div>
+                        </a>
+                    </li>
+                    <li class="a-avatar-list__item">
+                        <a href="javascript:void(0);" class="a-avatar-list__item-container">
+                            <div class="a-avatar a-avatar--s a-avatar--rounded a-avatar--primary a-avatar-list__avatar">
+                                <span class="a-avatar__letter">FM</span>
+                            </div>
+
+                            <div class="a-avatar-list__content">
+                                <span class="a-avatar-list__text">
+                                    <span class="avatar-list__name paragraph">Finn Maes</span>
+                                    <span class="small">Project manager</span>
+                                    <span class="small">finn.maes@antwerpen.be</span>
+                                </span>
+
+                                {{ icon.render('navigation-menu-horizontal') }}
+                            </div>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div><pre class="a-pre a-pre--scrollable"><code class="html">&lt;ul class="a-avatar-list a-avatar-list--flushed"&gt;
+  &lt;li class="a-avatar-list__item"&gt;...&lt;/li&gt;
+&lt;/ul&gt;</code></pre></div>
+        </div>
+
+        <a name="atoms-progress" aria-label="Progress"></a>
+        <h3 class="u-margin-top-xl">Progress</h3>
+        <span class="d-file">molecules/molecules.progress</span>
+        <div class="d">
+            <div>
+                <div class="a-progress">
+                    <div class="a-progress__inner">
+                        <div class="a-progress__bar" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100" style="width: 20%"></div>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <pre class="a-pre a-pre--scrollable"><code class="html">&lt;div class="a-progress"&gt;
+  &lt;div class="a-progress__inner"&gt;
+    &lt;div class="a-progress__bar" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100" style="width: 20%"&gt;&lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+            </div>
+        </div>
+        <div class="d">
+            <div>
+                <div class="a-progress">
+                    <div class="a-progress__label">Please wait...</div>
+                    <div class="a-progress__inner">
+                        <div class="a-progress__bar" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100" style="width: 20%"></div>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <pre class="a-pre a-pre--scrollable"><code class="html">&lt;div class="a-progress"&gt;
+  &lt;div class="a-progress__label"&gt;Please wait...&lt;/div&gt;
+  &lt;div class="a-progress__inner"&gt;
+    &lt;div class="a-progress__bar" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100" style="width: 20%"&gt;&lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+            </div>
+        </div>
+
+        <h4 class="u-margin-top-xl">Progress sizes</h4>
+        <div class="d">
+            <div>
+                <div class="a-progress a-progress--l u-margin-bottom-l">
+                    <div class="a-progress__inner">
+                        <div class="a-progress__bar" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100" style="width: 20%"></div>
+                    </div>
+                </div>
+
+                <div class="a-progress a-progress--inline a-progress--l u-margin-bottom-l">
+                    <div class="a-progress__label">Downloading 24/128 messages...</div>
+                    <div class="a-progress__inner">
+                        <div class="a-progress__bar" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100" style="width: 20%"></div>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <pre class="a-pre a-pre--scrollable"><code class="html">&lt;div class="a-progress a-progress--l"&gt;...&lt;/div&gt;</code></pre>
+            </div>
+        </div>
+
         <a name="atoms-radiobutton-checkbox" aria-label="Radio button / checkbox"></a>
         <h3 class="u-margin-top-xl">Radio button / checkbox</h3>
         <span class="d-file">atoms/atoms.radio-checkbox</span>
@@ -1806,34 +2370,466 @@
             </div>
         </div>
 
+        <a name="atoms-range-slider" aria-label="Range slider"></a>
+        <h3 class="u-margin-top-xl">Range slider</h3>
+        <span class="d-file">atoms/atoms.range-slider</span>
+        <div class="m-alert d-alert m-alert--wcag">
+            <p><span class="u-screen-reader-only">Accessibility note. </span>Also check the <a href="https://www.w3.org/TR/wai-aria-practices-1.2/#slider" title="WAI-ARIA Authoring Practices 1.2 - 3.19 Slider" class="has-icon-right" target="_blank">ARIA best practices{{ icon.render('navigation-next') }}<span class="u-screen-reader-only"> (external)</span></a> in order to make the range slider accessible.</p>
+        </div>
+        <div class="d">
+            <div>
+                <div class="a-range-slider">
+                    <div class="a-range-slider__labels">
+                        <div class="a-range-slider__label">Score</div>
+                        <div class="a-range-slider__label">2</div>
+                    </div>
+                    <div class="a-range-slider__inner">
+                        <div class="a-range-slider__bar" style="width: 20%"></div>
+                        <div class="a-range-slider__handle" style="left: 20%;" role="slider" aria-valuenow="2" aria-valuemin="0" aria-valuemax="10" tabindex="0"></div>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <pre class="a-pre a-pre--scrollable"><code class="html">&lt;div class="a-range-slider"&gt;
+  &lt;div class="a-range-slider__labels"&gt;
+    &lt;div class="a-range-slider__label"&gt;Opacity&lt;/div&gt;
+    &lt;div class="a-range-slider__label"&gt;20%&lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class="a-range-slider__inner"&gt;
+    &lt;div class="a-range-slider__bar" style="width: 20%"&gt;&lt;/div&gt;
+    &lt;div class="a-range-slider__handle" style="left: 20%;" role="slider" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100" tabindex="0"&gt;&lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+            </div>
+        </div>
+        <div class="d">
+            <div>
+                <div class="a-range-slider">
+                    <div class="a-range-slider__labels">
+                        <div class="a-range-slider__label">Score</div>
+                        <div class="a-range-slider__label">2</div>
+                    </div>
+                    <div class="a-range-slider__inner">
+                        <div class="a-range-slider__bar" style="width: 20%"></div>
+                        <div class="a-range-slider__handle" style="left: 20%;" role="slider" aria-valuenow="2" aria-valuemin="0" aria-valuemax="10" tabindex="0"></div>
+                    </div>
+                    <div class="a-range-slider__descriptions">
+                        <div class="a-range-slider__description small">0</div>
+                        <div class="a-range-slider__description small">10</div>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <pre class="a-pre a-pre--scrollable"><code class="html">&lt;div class="a-range-slider"&gt;
+  &lt;div class="a-range-slider__labels"&gt;
+    &lt;div class="a-range-slider__label"&gt;Opacity&lt;/div&gt;
+    &lt;div class="a-range-slider__label"&gt;20%&lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class="a-range-slider__inner"&gt;
+    &lt;div class="a-range-slider__bar" style="width: 20%"&gt;&lt;/div&gt;
+    &lt;div class="a-range-slider__handle" style="left: 20%;" role="slider" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100" tabindex="0"&gt;&lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class="a-range-slider__descriptions"&gt;
+    &lt;div class="a-range-slider__description small"&gt;0%&lt;/div&gt;
+    &lt;div class="a-range-slider__description small"&gt;100%&lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+            </div>
+        </div>
+        <div class="d">
+            <div>
+                <div class="a-range-slider">
+                    <div class="a-range-slider__labels">
+                        <div class="a-range-slider__label">Volume</div>
+                        <div class="a-range-slider__label">2</div>
+                    </div>
+                    <div class="a-range-slider__inner">
+                        <div class="a-range-slider__bar" style="width: 20%"></div>
+                        <div class="a-range-slider__handle" style="left: 20%;" role="slider" aria-valuenow="2" aria-valuemin="0" aria-valuemax="10" tabindex="0"></div>
+                    </div>
+                    <div class="a-range-slider__descriptions">
+                        <div class="a-range-slider__description small">{{ icon.render('volume-control-off') }}</div>
+                        <div class="a-range-slider__description small">{{ icon.render('volume-control-full') }}</div>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <pre class="a-pre a-pre--scrollable"><code class="html">&lt;div class="a-range-slider"&gt;
+  &lt;div class="a-range-slider__labels"&gt;
+    &lt;div class="a-range-slider__label"&gt;Opacity&lt;/div&gt;
+    &lt;div class="a-range-slider__label"&gt;20%&lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class="a-range-slider__inner"&gt;
+    &lt;div class="a-range-slider__bar" style="width: 20%"&gt;&lt;/div&gt;
+    &lt;div class="a-range-slider__handle" style="left: 20%;" role="slider" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100" tabindex="0"&gt;&lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class="a-range-slider__descriptions"&gt;
+    &lt;div class="a-range-slider__description small"&gt;{{ icon.code('volume-control-off') }}&lt;/div&gt;
+    &lt;div class="a-range-slider__description small"&gt;{{ icon.code('volume-control-full') }}&lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+            </div>
+        </div>
+        <div class="d">
+            <div>
+                <div class="a-range-slider">
+                    <div class="a-range-slider__labels">
+                        <div class="a-range-slider__label">Opacity</div>
+                        <div class="a-range-slider__label">20%</div>
+                    </div>
+                    <div class="a-range-slider__inner">
+                        <div class="a-range-slider__tickmarks">
+                            <div class="a-range-slider__tickmark"></div>
+                            <div class="a-range-slider__tickmark"></div>
+                            <div class="a-range-slider__tickmark"></div>
+                            <div class="a-range-slider__tickmark"></div>
+                            <div class="a-range-slider__tickmark"></div>
+                            <div class="a-range-slider__tickmark"></div>
+                        </div>
+                        <div class="a-range-slider__bar" style="width: 20%"></div>
+                        <div class="a-range-slider__handle" style="left: 20%;" role="slider" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100" tabindex="0"></div>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <pre class="a-pre a-pre--scrollable"><code class="html">&lt;div class="a-range-slider"&gt;
+  &lt;div class="a-range-slider__labels"&gt;
+    &lt;div class="a-range-slider__label"&gt;Opacity&lt;/div&gt;
+    &lt;div class="a-range-slider__label"&gt;20%&lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class="a-range-slider__inner"&gt;
+    &lt;div class="a-range-slider__tickmarks"&gt;
+      &lt;div class="a-range-slider__tickmark"&gt;&lt;/div&gt;
+      &lt;div class="a-range-slider__tickmark"&gt;&lt;/div&gt;
+      &lt;div class="a-range-slider__tickmark"&gt;&lt;/div&gt;
+      &lt;div class="a-range-slider__tickmark"&gt;&lt;/div&gt;
+      &lt;div class="a-range-slider__tickmark"&gt;&lt;/div&gt;
+      &lt;div class="a-range-slider__tickmark"&gt;&lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class="a-range-slider__bar" style="width: 20%"&gt;&lt;/div&gt;
+    &lt;div class="a-range-slider__handle" style="left: 20%;" role="slider" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100" tabindex="0"&gt;&lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+            </div>
+        </div>
+        <div class="d">
+            <div>
+                <div class="a-range-slider">
+                    <div class="a-range-slider__labels">
+                        <div class="a-range-slider__label">Opacity</div>
+                        <div class="a-range-slider__label">20%</div>
+                    </div>
+                    <div class="a-range-slider__inner">
+                        <div class="a-range-slider__tickmarks">
+                            <div class="a-range-slider__tickmark"></div>
+                            <div class="a-range-slider__tickmark"></div>
+                            <div class="a-range-slider__tickmark"></div>
+                            <div class="a-range-slider__tickmark"></div>
+                            <div class="a-range-slider__tickmark"></div>
+                            <div class="a-range-slider__tickmark"></div>
+                        </div>
+                        <div class="a-range-slider__bar" style="width: 20%"></div>
+                        <div class="a-range-slider__handle" style="left: 20%;" role="slider" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100" tabindex="0"></div>
+                    </div>
+                    <div class="a-range-slider__descriptions">
+                        <div class="a-range-slider__description small">0%</div>
+                        <div class="a-range-slider__description small">100%</div>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <pre class="a-pre a-pre--scrollable"><code class="html">&lt;div class="a-range-slider"&gt;
+  &lt;div class="a-range-slider__labels"&gt;
+    &lt;div class="a-range-slider__label"&gt;Opacity&lt;/div&gt;
+    &lt;div class="a-range-slider__label"&gt;20%&lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class="a-range-slider__inner"&gt;
+    &lt;div class="a-range-slider__tickmarks"&gt;
+      &lt;div class="a-range-slider__tickmark"&gt;&lt;/div&gt;
+      &lt;div class="a-range-slider__tickmark"&gt;&lt;/div&gt;
+      &lt;div class="a-range-slider__tickmark"&gt;&lt;/div&gt;
+      &lt;div class="a-range-slider__tickmark"&gt;&lt;/div&gt;
+      &lt;div class="a-range-slider__tickmark"&gt;&lt;/div&gt;
+      &lt;div class="a-range-slider__tickmark"&gt;&lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class="a-range-slider__bar" style="width: 20%"&gt;&lt;/div&gt;
+    &lt;div class="a-range-slider__handle" style="left: 20%;" role="slider" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100" tabindex="0"&gt;&lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class="a-range-slider__descriptions"&gt;
+    &lt;div class="a-range-slider__description small"&gt;0%&lt;/div&gt;
+    &lt;div class="a-range-slider__description small"&gt;100%&lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+            </div>
+        </div>
+        <div class="d">
+            <div>
+                <div class="a-range-slider">
+                    <div class="a-range-slider__labels">
+                        <div class="a-range-slider__label">Price</div>
+                        <div class="a-range-slider__label">€10 - €50</div>
+                    </div>
+                    <div class="a-range-slider__inner">
+                        <div class="a-range-slider__bar" style="left: 10%; width: 40%"></div>
+                        <div class="a-range-slider__handle" style="left: 10%;" role="slider" aria-valuenow="10" aria-valuemin="0" aria-valuemax="100" tabindex="0"></div>
+                        <div class="a-range-slider__handle" style="left: 50%;" role="slider" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100" tabindex="0"></div>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <pre class="a-pre a-pre--scrollable"><code class="html">&lt;div class="a-range-slider"&gt;
+  &lt;div class="a-range-slider__labels"&gt;
+    &lt;div class="a-range-slider__label"&gt;Price&lt;/div&gt;
+    &lt;div class="a-range-slider__label"&gt;&euro;10 - &euro;50&lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class="a-range-slider__inner"&gt;
+    &lt;div class="a-range-slider__bar" style="left: 10%; width: 40%"&gt;&lt;/div&gt;
+    &lt;div class="a-range-slider__handle" style="left: 10%;" role="slider" aria-valuenow="10" aria-valuemin="0" aria-valuemax="100" tabindex="0"&gt;&lt;/div&gt;
+    &lt;div class="a-range-slider__handle" style="left: 50%;" role="slider" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100" tabindex="0"&gt;&lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+            </div>
+        </div>
+        <div class="d">
+            <div>
+                <div class="a-range-slider">
+                    <div class="a-range-slider__labels">
+                        <div class="a-range-slider__label">Price</div>
+                        <div class="a-range-slider__label">€10 - €50</div>
+                    </div>
+                    <div class="a-range-slider__inner">
+                        <div class="a-range-slider__bar" style="left: 10%; width: 40%"></div>
+                        <div class="a-range-slider__handle" style="left: 10%;" role="slider" aria-valuenow="10" aria-valuemin="0" aria-valuemax="100" tabindex="0"></div>
+                        <div class="a-range-slider__handle" style="left: 50%;" role="slider" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100" tabindex="0"></div>
+                    </div>
+                    <div class="a-range-slider__descriptions">
+                        <div class="a-range-slider__description small">0€</div>
+                        <div class="a-range-slider__description small">100€</div>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <pre class="a-pre a-pre--scrollable"><code class="html">&lt;div class="a-range-slider"&gt;
+  &lt;div class="a-range-slider__labels"&gt;
+    &lt;div class="a-range-slider__label"&gt;Price&lt;/div&gt;
+    &lt;div class="a-range-slider__label"&gt;&euro;10 - &euro;50&lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class="a-range-slider__inner"&gt;
+    &lt;div class="a-range-slider__bar" style="left: 10%; width: 40%"&gt;&lt;/div&gt;
+    &lt;div class="a-range-slider__handle" style="left: 10%;" role="slider" aria-valuenow="10" aria-valuemin="0" aria-valuemax="100" tabindex="0"&gt;&lt;/div&gt;
+    &lt;div class="a-range-slider__handle" style="left: 50%;" role="slider" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100" tabindex="0"&gt;&lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class="a-range-slider__descriptions"&gt;
+    &lt;div class="a-range-slider__description small"&gt;0&euro;&lt;/div&gt;
+    &lt;div class="a-range-slider__description small"&gt;100&euro;&lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+            </div>
+        </div>
+        <div class="d">
+            <div>
+                <div class="a-range-slider">
+                    <div class="a-range-slider__labels">
+                        <div class="a-range-slider__label">Price</div>
+                        <div class="a-range-slider__label">€10 - €50</div>
+                    </div>
+                    <div class="a-range-slider__inner">
+                        <div class="a-range-slider__tickmarks">
+                            <div class="a-range-slider__tickmark"></div>
+                            <div class="a-range-slider__tickmark"></div>
+                            <div class="a-range-slider__tickmark"></div>
+                            <div class="a-range-slider__tickmark"></div>
+                            <div class="a-range-slider__tickmark"></div>
+                            <div class="a-range-slider__tickmark"></div>
+                            <div class="a-range-slider__tickmark"></div>
+                            <div class="a-range-slider__tickmark"></div>
+                            <div class="a-range-slider__tickmark"></div>
+                            <div class="a-range-slider__tickmark"></div>
+                            <div class="a-range-slider__tickmark"></div>
+                        </div>
+                        <div class="a-range-slider__bar" style="left: 10%; width: 40%"></div>
+                        <div class="a-range-slider__handle" style="left: 10%;" role="slider" aria-valuenow="10" aria-valuemin="0" aria-valuemax="100" tabindex="0"></div>
+                        <div class="a-range-slider__handle" style="left: 50%;" role="slider" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100" tabindex="0"></div>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <pre class="a-pre a-pre--scrollable"><code class="html">&lt;div class="a-range-slider"&gt;
+  &lt;div class="a-range-slider__labels"&gt;
+    &lt;div class="a-range-slider__label"&gt;Price&lt;/div&gt;
+    &lt;div class="a-range-slider__label"&gt;&euro;10 - &euro;50&lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class="a-range-slider__inner"&gt;
+    &lt;div class="a-range-slider__tickmarks"&gt;
+      &lt;div class="a-range-slider__tickmark"&gt;&lt;/div&gt;
+      &lt;div class="a-range-slider__tickmark"&gt;&lt;/div&gt;
+      &lt;div class="a-range-slider__tickmark"&gt;&lt;/div&gt;
+      &lt;div class="a-range-slider__tickmark"&gt;&lt;/div&gt;
+      &lt;div class="a-range-slider__tickmark"&gt;&lt;/div&gt;
+      &lt;div class="a-range-slider__tickmark"&gt;&lt;/div&gt;
+      &lt;div class="a-range-slider__tickmark"&gt;&lt;/div&gt;
+      &lt;div class="a-range-slider__tickmark"&gt;&lt;/div&gt;
+      &lt;div class="a-range-slider__tickmark"&gt;&lt;/div&gt;
+      &lt;div class="a-range-slider__tickmark"&gt;&lt;/div&gt;
+      &lt;div class="a-range-slider__tickmark"&gt;&lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class="a-range-slider__bar" style="left: 10%; width: 40%"&gt;&lt;/div&gt;
+    &lt;div class="a-range-slider__handle" style="left: 10%;" role="slider" aria-valuenow="10" aria-valuemin="0" aria-valuemax="100" tabindex="0"&gt;&lt;/div&gt;
+    &lt;div class="a-range-slider__handle" style="left: 50%;" role="slider" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100" tabindex="0"&gt;&lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+            </div>
+        </div>
+        <div class="d">
+            <div>
+                <div class="a-range-slider">
+                    <div class="a-range-slider__labels">
+                        <div class="a-range-slider__label">Price</div>
+                        <div class="a-range-slider__label">€10 - €50</div>
+                    </div>
+                    <div class="a-range-slider__inner">
+                        <div class="a-range-slider__tickmarks">
+                            <div class="a-range-slider__tickmark"></div>
+                            <div class="a-range-slider__tickmark"></div>
+                            <div class="a-range-slider__tickmark"></div>
+                            <div class="a-range-slider__tickmark"></div>
+                            <div class="a-range-slider__tickmark"></div>
+                            <div class="a-range-slider__tickmark"></div>
+                            <div class="a-range-slider__tickmark"></div>
+                            <div class="a-range-slider__tickmark"></div>
+                            <div class="a-range-slider__tickmark"></div>
+                            <div class="a-range-slider__tickmark"></div>
+                            <div class="a-range-slider__tickmark"></div>
+                        </div>
+                        <div class="a-range-slider__bar" style="left: 10%; width: 40%"></div>
+                        <div class="a-range-slider__handle" style="left: 10%;" role="slider" aria-valuenow="10" aria-valuemin="0" aria-valuemax="100" tabindex="0"></div>
+                        <div class="a-range-slider__handle" style="left: 50%;" role="slider" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100" tabindex="0"></div>
+                    </div>
+                    <div class="a-range-slider__descriptions">
+                        <div class="a-range-slider__description small">0€</div>
+                        <div class="a-range-slider__description small">100€</div>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <pre class="a-pre a-pre--scrollable"><code class="html">&lt;div class="a-range-slider"&gt;
+  &lt;div class="a-range-slider__labels"&gt;
+    &lt;div class="a-range-slider__label"&gt;Price&lt;/div&gt;
+    &lt;div class="a-range-slider__label"&gt;&euro;10 - &euro;50&lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class="a-range-slider__inner"&gt;
+    &lt;div class="a-range-slider__tickmarks"&gt;
+      &lt;div class="a-range-slider__tickmark"&gt;&lt;/div&gt;
+      &lt;div class="a-range-slider__tickmark"&gt;&lt;/div&gt;
+      &lt;div class="a-range-slider__tickmark"&gt;&lt;/div&gt;
+      &lt;div class="a-range-slider__tickmark"&gt;&lt;/div&gt;
+      &lt;div class="a-range-slider__tickmark"&gt;&lt;/div&gt;
+      &lt;div class="a-range-slider__tickmark"&gt;&lt;/div&gt;
+      &lt;div class="a-range-slider__tickmark"&gt;&lt;/div&gt;
+      &lt;div class="a-range-slider__tickmark"&gt;&lt;/div&gt;
+      &lt;div class="a-range-slider__tickmark"&gt;&lt;/div&gt;
+      &lt;div class="a-range-slider__tickmark"&gt;&lt;/div&gt;
+      &lt;div class="a-range-slider__tickmark"&gt;&lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class="a-range-slider__bar" style="left: 10%; width: 40%"&gt;&lt;/div&gt;
+    &lt;div class="a-range-slider__handle" style="left: 10%;" role="slider" aria-valuenow="10" aria-valuemin="0" aria-valuemax="100" tabindex="0"&gt;&lt;/div&gt;
+    &lt;div class="a-range-slider__handle" style="left: 50%;" role="slider" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100" tabindex="0"&gt;&lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class="a-range-slider__descriptions"&gt;
+    &lt;div class="a-range-slider__description small"&gt;0&euro;&lt;/div&gt;
+    &lt;div class="a-range-slider__description small"&gt;100&euro;&lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+            </div>
+        </div>
+
         <a name="atoms-spinner" aria-label="Spinner"></a>
         <h3 class="u-margin-top-xl">Spinner</h3>
         <span class="d-file">atoms/atoms.spinner</span>
         <div class="d">
             <div>
-                <div class="a-spinner" role="alert"><span class="u-screen-reader-only">Loading</span></div>
+                <div class="u-margin-bottom">
+                    <div class="a-spinner" role="alert">
+                        <span class="u-screen-reader-only">Fetching data...</span>
+                    </div>
+                </div>
+
+                <div class="u-margin-bottom">
+                    <div class="a-spinner" role="alert">
+                        <span class="a-spinner__text">Fetching data...</span>
+                    </div>
+                </div>
+
+                <div>
+                    <div class="a-spinner a-spinner--vertical" role="alert">
+                        <span class="a-spinner__text">Fetching data...</span>
+                    </div>
+                </div>
             </div>
             <div>
-                <pre class="a-pre a-pre--scrollable"><code class="html">&lt;div class="a-spinner" role="alert"&gt;&lt;span class="u-screen-reader-only"&gt;Loading&lt;/span&gt;&lt;/div&gt;</code></pre>
+                <pre class="a-pre a-pre--scrollable"><code class="html">&lt;div class="a-spinner" role="alert"&gt;
+  &lt;span class="u-screen-reader-only"&gt;Fetching data...&lt;/span&gt;
+&lt;/div&gt;
+
+&lt;div class="a-spinner" role="alert"&gt;
+  &lt;span class="a-spinner__text"&gt;Fetching data...&lt;/span&gt;
+&lt;/div&gt;
+
+&lt;div class="a-spinner a-spinner--vertical" role="alert"&gt;
+  &lt;span class="a-spinner__text"&gt;Fetching data...&lt;/span&gt;
+&lt;/div&gt;</code></pre>
             </div>
         </div>
         <div class="d">
             <div>
-                <div class="a-spinner a-spinner--s" role="alert"><span class="u-screen-reader-only">Loading</span></div>
+                <div class="u-margin-bottom">
+                    <div class="a-spinner a-spinner--s" role="alert">
+                        <span class="u-screen-reader-only">Fetching data...</span>
+                    </div>
+                </div>
+
+                <div class="u-margin-bottom">
+                    <div class="a-spinner a-spinner--s" role="alert">
+                        <span class="a-spinner__text">Fetching data...</span>
+                    </div>
+                </div>
+
+                <div>
+                    <div class="a-spinner a-spinner--s a-spinner--vertical" role="alert">
+                        <span class="a-spinner__text">Fetching data...</span>
+                    </div>
+                </div>
             </div>
             <div>
-                <pre class="a-pre a-pre--scrollable"><code class="html">&lt;div class="a-spinner a-spinner--s" role="alert"&gt;&lt;span class="u-screen-reader-only"&gt;Loading&lt;/span&gt;&lt;/div&gt;</code></pre>
+                <pre class="a-pre a-pre--scrollable"><code class="html">&lt;div class="a-spinner a-spinner--s" role="alert"&gt;...&lt;/div&gt;</code></pre>
             </div>
         </div>
         <div class="d">
             <div>
-                <div class="a-spinner a-spinner--l" role="alert"><span class="u-screen-reader-only">Loading</span></div>
+                <div class="u-margin-bottom">
+                    <div class="a-spinner a-spinner--l" role="alert">
+                        <span class="u-screen-reader-only">Fetching data...</span>
+                    </div>
+                </div>
+
+                <div class="u-margin-bottom">
+                    <div class="a-spinner a-spinner--l" role="alert">
+                        <span class="a-spinner__text">Fetching data...</span>
+                    </div>
+                </div>
+
+                <div>
+                    <div class="a-spinner a-spinner--l a-spinner--vertical" role="alert">
+                        <span class="a-spinner__text">Fetching data...</span>
+                    </div>
+                </div>
+
                 <div class="m-alert d-alert">
                     <p>Note that the large spinner can be used only once per page and only for indicating that the complete page is loading.</p>
                 </div>
             </div>
             <div>
-                <pre class="a-pre a-pre--scrollable"><code class="html">&lt;div class="a-spinner a-spinner--l" role="alert"&gt;&lt;span class="u-screen-reader-only"&gt;Loading&lt;/span&gt;&lt;/div&gt;</code></pre>
+                <pre class="a-pre a-pre--scrollable"><code class="html">&lt;div class="a-spinner a-spinner--l" role="alert"&gt;...&lt;/div&gt;</code></pre>
             </div>
         </div>
 
@@ -1846,77 +2842,95 @@
         <div class="d">
             <div>
                 <div class="d-tooltip">
-                    <div class="a-switch">
-                        <button class="a-switch__button" role="switch" aria-checked="false">
-                            <span class="a-switch__off">Off</span>
-                            <span class="a-switch__on">On</span>
-                        </button>
-                    </div>
+                    <button class="a-switch" role="switch" aria-checked="true">
+                        <div class="a-switch__toggle" aria-hidden="true"></div>
+                        <div class="a-switch__label a-switch__label--on" aria-hidden="true">Aan</div>
+                        <div class="a-switch__label a-switch__label--off" aria-hidden="true">Uit</div>
+                    </button>
+                </div>
+
+                <div class="d-tooltip">
+                    <button class="a-switch" role="switch" aria-checked="false">
+                        <div class="a-switch__toggle" aria-hidden="true"></div>
+                        <div class="a-switch__label a-switch__label--on" aria-hidden="true">Aan</div>
+                        <div class="a-switch__label a-switch__label--off" aria-hidden="true">Uit</div>
+                    </button>
                 </div>
             </div>
             <div>
-                <pre class="a-pre a-pre--scrollable"><code class="html">&lt;div class="a-switch"&gt;
-  &lt;button class="a-switch__button" role="switch" aria-checked="false"&gt;
-    &lt;span class="a-switch__off"&gt;Off&lt;/span&gt;
-    &lt;span class="a-switch__on"&gt;On&lt;/span&gt;
-  &lt;/button&gt;
-&lt;/div&gt;</code></pre>
+                <pre class="a-pre a-pre--scrollable"><code class="html">&lt;button class="a-switch" role="switch" aria-checked="true"&gt;
+  &lt;div class="a-switch__toggle" aria-hidden="true"&gt;&lt;/div&gt;
+  &lt;div class="a-switch__label a-switch__label--on" aria-hidden="true"&gt;Aan&lt;/div&gt;
+  &lt;div class="a-switch__label a-switch__label--off" aria-hidden="true"&gt;Uit&lt;/div&gt;
+&lt;/button&gt;</code></pre>
+                <pre class="a-pre a-pre--scrollable"><code class="html">&lt;button class="a-switch" role="switch" aria-checked="false"&gt;
+  &lt;div class="a-switch__toggle" aria-hidden="true"&gt;&lt;/div&gt;
+  &lt;div class="a-switch__label a-switch__label--on" aria-hidden="true"&gt;Aan&lt;/div&gt;
+  &lt;div class="a-switch__label a-switch__label--off" aria-hidden="true"&gt;Uit&lt;/div&gt;
+&lt;/button&gt;</code></pre>
             </div>
         </div>
         <div class="d">
             <div>
                 <div class="d-tooltip">
-                    <div class="a-switch">
-                        <button class="a-switch__button" role="switch" aria-checked="true">
-                            <span class="a-switch__off">Off</span>
-                            <span class="a-switch__on">On</span>
-                        </button>
-                    </div>
+                    <button class="a-switch" role="switch" aria-checked="true">
+                        <div class="a-switch__label a-switch__label--on" aria-hidden="true">Ja</div>
+                        <div class="a-switch__label a-switch__label--off" aria-hidden="true">Nee</div>
+                        <div class="a-switch__toggle" aria-hidden="true"></div>
+                    </button>
+                </div>
+
+                <div class="d-tooltip">
+                    <button class="a-switch" role="switch" aria-checked="false">
+                        <div class="a-switch__label a-switch__label--on" aria-hidden="true">Ja</div>
+                        <div class="a-switch__label a-switch__label--off" aria-hidden="true">Nee</div>
+                        <div class="a-switch__toggle" aria-hidden="true"></div>
+                    </button>
                 </div>
             </div>
             <div>
-                <pre class="a-pre a-pre--scrollable"><code class="html">&lt;div class="a-switch"&gt;
-  &lt;button class="a-switch__button" role="switch" aria-checked="true"&gt;
-    &lt;span class="a-switch__off"&gt;Off&lt;/span&gt;
-    &lt;span class="a-switch__on"&gt;On&lt;/span&gt;
-  &lt;/button&gt;
-&lt;/div&gt;</code></pre>
+                <pre class="a-pre a-pre--scrollable"><code class="html">&lt;button class="a-switch" role="switch" aria-checked="true"&gt;
+  &lt;div class="a-switch__label a-switch__label--on" aria-hidden="true"&gt;Ja&lt;/div&gt;
+  &lt;div class="a-switch__label a-switch__label--off" aria-hidden="true"&gt;Nee&lt;/div&gt;
+  &lt;div class="a-switch__toggle" aria-hidden="true"&gt;&lt;/div&gt;
+&lt;/button&gt;</code></pre>
+                <pre class="a-pre a-pre--scrollable"><code class="html">&lt;button class="a-switch" role="switch" aria-checked="false"&gt;
+  &lt;div class="a-switch__label a-switch__label--on" aria-hidden="true"&gt;Ja&lt;/div&gt;
+  &lt;div class="a-switch__label a-switch__label--off" aria-hidden="true"&gt;Nee&lt;/div&gt;
+  &lt;div class="a-switch__toggle" aria-hidden="true"&gt;&lt;/div&gt;
+&lt;/button&gt;</code></pre>
             </div>
         </div>
 
-        <h4 class="u-margin-top-xl">Disabled switch</h4>
         <div class="d">
             <div>
                 <div class="d-tooltip">
-                    <div class="a-switch">
-                        <button class="a-switch__button" role="switch" aria-checked="false" disabled>
-                            <span class="a-switch__off">Off</span>
-                            <span class="a-switch__on">On</span>
-                        </button>
-                    </div>
+                    <button class="a-switch" role="switch" aria-checked="true" disabled>
+                        <div class="a-switch__label a-switch__label--on" aria-hidden="true">Ja</div>
+                        <div class="a-switch__label a-switch__label--off" aria-hidden="true">Nee</div>
+                        <div class="a-switch__toggle" aria-hidden="true"></div>
+                    </button>
                 </div>
+
                 <div class="d-tooltip">
-                    <div class="a-switch">
-                        <button class="a-switch__button" role="switch" aria-checked="true" disabled>
-                            <span class="a-switch__off">Off</span>
-                            <span class="a-switch__on">On</span>
-                        </button>
-                    </div>
+                    <button class="a-switch" role="switch" aria-checked="false" disabled>
+                        <div class="a-switch__label a-switch__label--on" aria-hidden="true">Ja</div>
+                        <div class="a-switch__label a-switch__label--off" aria-hidden="true">Nee</div>
+                        <div class="a-switch__toggle" aria-hidden="true"></div>
+                    </button>
                 </div>
             </div>
             <div>
-                <pre class="a-pre a-pre--scrollable"><code class="html">&lt;div class="a-switch"&gt;
-  &lt;button class="a-switch__button" role="switch" aria-checked="false" disabled&gt;
-    &lt;span class="a-switch__off"&gt;Off&lt;/span&gt;
-    &lt;span class="a-switch__on"&gt;On&lt;/span&gt;
-  &lt;/button&gt;
-&lt;/div&gt;</code></pre>
-                <pre class="a-pre a-pre--scrollable"><code class="html">&lt;div class="a-switch"&gt;
-  &lt;button class="a-switch__button" role="switch" aria-checked="true" disabled&gt;
-    &lt;span class="a-switch__off"&gt;Off&lt;/span&gt;
-    &lt;span class="a-switch__on"&gt;On&lt;/span&gt;
-  &lt;/button&gt;
-&lt;/div&gt;</code></pre>
+                <pre class="a-pre a-pre--scrollable"><code class="html">&lt;button class="a-switch" role="switch" aria-checked="true" disabled&gt;
+  &lt;div class="a-switch__label a-switch__label--on" aria-hidden="true"&gt;Ja&lt;/div&gt;
+  &lt;div class="a-switch__label a-switch__label--off" aria-hidden="true"&gt;Nee&lt;/div&gt;
+  &lt;div class="a-switch__toggle" aria-hidden="true"&gt;&lt;/div&gt;
+&lt;/button&gt;</code></pre>
+                <pre class="a-pre a-pre--scrollable"><code class="html">&lt;button class="a-switch" role="switch" aria-checked="false" disabled&gt;
+  &lt;div class="a-switch__label a-switch__label--on" aria-hidden="true"&gt;Ja&lt;/div&gt;
+  &lt;div class="a-switch__label a-switch__label--off" aria-hidden="true"&gt;Nee&lt;/div&gt;
+  &lt;div class="a-switch__toggle" aria-hidden="true"&gt;&lt;/div&gt;
+&lt;/button&gt;</code></pre>
             </div>
         </div>
 
@@ -1926,24 +2940,28 @@
                 <div class="d-tooltip">
                     <div class="a-input">
                         <label class="a-input__label" for="switch-button">Switch label</label>
-                        <div class="a-switch">
-                            <button class="a-switch__button" id="switch-button" role="switch" aria-checked="false">
-                                <span class="a-switch__off">Off</span>
-                                <span class="a-switch__on">On</span>
-                            </button>
-                        </div>
+                        <button class="a-switch" role="switch" aria-checked="true">
+                            <div class="a-switch__toggle" aria-hidden="true">
+                                <span class="a-switch__toggle-label a-switch__toggle-label--on" aria-hidden="true">i</span>
+                                <span class="a-switch__toggle-label a-switch__toggle-label--off" aria-hidden="true">o</span>
+                            </div>
+                            <div class="a-switch__label a-switch__label--on" aria-hidden="true">Aan</div>
+                            <div class="a-switch__label a-switch__label--off" aria-hidden="true">Uit</div>
+                        </button>
                     </div>
                 </div>
             </div>
             <div>
                 <pre class="a-pre a-pre--scrollable"><code class="html">&lt;div class="a-input"&gt;
   &lt;label class="a-input__label" for="switch-button"&gt;Switch label&lt;/label&gt;
-  &lt;div class="a-switch"&gt;
-    &lt;button class="a-switch__button" id="switch-button" role="switch" aria-checked="false"&gt;
-      &lt;span class="a-switch__off"&gt;Off&lt;/span&gt;
-      &lt;span class="a-switch__on"&gt;On&lt;/span&gt;
-    &lt;/button&gt;
-  &lt;/div&gt;
+  &lt;button class="a-switch" role="switch" aria-checked="true"&gt;
+    &lt;div class="a-switch__toggle" aria-hidden="true"&gt;
+      &lt;div class="a-switch__toggle-label a-switch__toggle-label--on" aria-hidden="true"&gt;i&lt;/div&gt;
+      &lt;div class="a-switch__toggle-label a-switch__toggle-label--off" aria-hidden="true"&gt;o&lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class="a-switch__label a-switch__label--on" aria-hidden="true"&gt;Aan&lt;/div&gt;
+    &lt;div class="a-switch__label a-switch__label--off" aria-hidden="true"&gt;Uit&lt;/div&gt;
+  &lt;/button&gt;
 &lt;/div&gt;</code></pre>
             </div>
         </div>
@@ -1968,26 +2986,26 @@
                     <tbody>
                         <tr>
                             <td class="u-text-bold">Ice cream</td>
-                            <td><small>Tasty, frozen treat for a hot day</small></td>
-                            <td class="u-text-right"><small>160</small></td>
+                            <td class="small">Tasty, frozen treat for a hot day</td>
+                            <td class="u-text-right small">160</td>
                             <td class="u-text-right">€2,49</td>
                         </tr>
                         <tr>
                             <td class="u-text-bold">Chips</td>
-                            <td><small>Salty, crunchy goodness</small></td>
-                            <td class="u-text-right"><small>48</small></td>
+                            <td class="small">Salty, crunchy goodness</td>
+                            <td class="u-text-right small">48</td>
                             <td class="u-text-right">€1,99</td>
                         </tr>
                         <tr>
                             <td class="u-text-bold">Lollipop</td>
-                            <td><small>Rainbow flavors with a bubblegum center</small></td>
-                            <td class="u-text-right"><small>480</small></td>
+                            <td class="small">Rainbow flavors with a bubblegum center</td>
+                            <td class="u-text-right small">480</td>
                             <td class="u-text-right">€0,99</td>
                         </tr>
                         <tr>
                             <td class="u-text-bold">Candy bar</td>
-                            <td><small>Chewy and quite nutty</small></td>
-                            <td class="u-text-right"><small>240</small></td>
+                            <td class="small">Chewy and quite nutty</td>
+                            <td class="u-text-right small">240</td>
                             <td class="u-text-right">€1,49</td>
                         </tr>
                     </tbody>
@@ -2007,8 +3025,8 @@
   &lt;tbody&gt;
     &lt;tr&gt;
       &lt;td class="u-text-bold"&gt;Ice cream&lt;/td&gt;
-      &lt;td&gt;&lt;small&gt;Tasty, frozen treat for a hot day&lt;/small&gt;&lt;/td&gt;
-      &lt;td class="u-text-right"&gt;&lt;small&gt;160&lt;/small&gt;&lt;/td&gt;
+      &lt;td class="small"&gt;Tasty, frozen treat for a hot day&lt;/small&gt;&lt;/td&gt;
+      &lt;td class="u-text-right small"&gt;160&lt;/small&gt;&lt;/td&gt;
       &lt;td class="u-text-right"&gt;&euro;2,49&lt;/td&gt;
     &lt;/tr&gt;
     &lt;tr&gt;
@@ -2035,7 +3053,7 @@
                                 <div class="a-input">
                                     <div class="a-input__checkbox">
                                         <input type="checkbox" id="table-checkbox1" name="table-checkbox">
-                                        <label for="table-checkbox1"></label>
+                                        <label for="table-checkbox1"><span class="u-screen-reader-only">Select all rows</span></label>
                                     </div>
                                 </div>
                             </th>
@@ -2051,13 +3069,13 @@
                                 <div class="a-input">
                                     <div class="a-input__checkbox">
                                         <input type="checkbox" id="table-checkbox2" name="table-checkbox">
-                                        <label for="table-checkbox2"></label>
+                                        <label for="table-checkbox2"><span class="u-screen-reader-only">Select row</span></label>
                                     </div>
                                 </div>
                             </td>
                             <td class="u-text-bold">Ice cream</td>
-                            <td><small>Tasty, frozen treat for a hot day</small></td>
-                            <td class="u-text-right"><small>160</small></td>
+                            <td class="small">Tasty, frozen treat for a hot day</td>
+                            <td class="u-text-right small">160</td>
                             <td class="u-text-right">€2,49</td>
                         </tr>
                         <tr class="is-clickable is-selected">
@@ -2065,13 +3083,13 @@
                                 <div class="a-input">
                                     <div class="a-input__checkbox">
                                         <input type="checkbox" id="table-checkbox3" name="table-checkbox" checked>
-                                        <label for="table-checkbox3"></label>
+                                        <label for="table-checkbox3"><span class="u-screen-reader-only">Select row</span></label>
                                     </div>
                                 </div>
                             </td>
                             <td class="u-text-bold">Chips</td>
-                            <td><small>Salty, crunchy goodness</small></td>
-                            <td class="u-text-right"><small>48</small></td>
+                            <td class="small">Salty, crunchy goodness</td>
+                            <td class="u-text-right small">48</td>
                             <td class="u-text-right">€1,99</td>
                         </tr>
                         <tr class="is-clickable">
@@ -2079,13 +3097,13 @@
                                 <div class="a-input">
                                     <div class="a-input__checkbox">
                                         <input type="checkbox" id="table-checkbox4" name="table-checkbox">
-                                        <label for="table-checkbox4"></label>
+                                        <label for="table-checkbox4"><span class="u-screen-reader-only">Select row</span></label>
                                     </div>
                                 </div>
                             </td>
                             <td class="u-text-bold">Lollipop</td>
-                            <td><small>Rainbow flavors with a bubblegum center</small></td>
-                            <td class="u-text-right"><small>480</small></td>
+                            <td class="small">Rainbow flavors with a bubblegum center</td>
+                            <td class="u-text-right small">480</td>
                             <td class="u-text-right">€0,99</td>
                         </tr>
                         <tr class="is-clickable">
@@ -2093,13 +3111,13 @@
                                 <div class="a-input">
                                     <div class="a-input__checkbox">
                                         <input type="checkbox" id="table-checkbox5" name="table-checkbox">
-                                        <label for="table-checkbox5"></label>
+                                        <label for="table-checkbox5"><span class="u-screen-reader-only">Select row</span></label>
                                     </div>
                                 </div>
                             </td>
                             <td class="u-text-bold">Candy bar</td>
-                            <td><small>Chewy and quite nutty</small></td>
-                            <td class="u-text-right"><small>240</small></td>
+                            <td class="small">Chewy and quite nutty</td>
+                            <td class="u-text-right small">240</td>
                             <td class="u-text-right">€1,49</td>
                         </tr>
                     </tbody>
@@ -2114,7 +3132,7 @@
         &lt;div class="a-input"&gt;
           &lt;div class="a-input__checkbox"&gt;
             &lt;input type="checkbox" id="table-checkbox1" name="table-checkbox"&gt;
-            &lt;label for="table-checkbox1"&gt;&lt;/label&gt;
+            &lt;label for="table-checkbox1"&gt;&lt;span class="u-screen-reader-only"&gt;Select all rows&lt;/span&gt;&lt;span class="u-screen-reader-only"&gt;Select row&lt;/span&gt;&lt;/label&gt;
           &lt;/div&gt;
         &lt;/div&gt;
       &lt;/th&gt;
@@ -2133,13 +3151,13 @@
         &lt;div class="a-input"&gt;
           &lt;div class="a-input__checkbox"&gt;
             &lt;input type="checkbox" id="table-checkbox3" name="table-checkbox" checked&gt;
-            &lt;label for="table-checkbox3"&gt;&lt;/label&gt;
+            &lt;label for="table-checkbox3"&gt;&lt;span class="u-screen-reader-only"&gt;Select row&lt;/span&gt;&lt;span class="u-screen-reader-only"&gt;Select row&lt;/span&gt;&lt;/label&gt;
           &lt;/div&gt;
         &lt;/div&gt;
       &lt;/td&gt;
       &lt;td class="u-text-bold"&gt;Chips&lt;/td&gt;
-      &lt;td&gt;&lt;small&gt;Salty, crunchy goodness&lt;/small&gt;&lt;/td&gt;
-      &lt;td class="u-text-right"&gt;&lt;small&gt;48&lt;/small&gt;&lt;/td&gt;
+      &lt;td class="small"&gt;Salty, crunchy goodness&lt;/small&gt;&lt;/td&gt;
+      &lt;td class="u-text-right small"&gt;48&lt;/small&gt;&lt;/td&gt;
       &lt;td class="u-text-right"&gt;&euro;1,99&lt;/td&gt;
     &lt;/tr&gt;
     &lt;tr class="is-clickable"&gt;
@@ -2163,7 +3181,7 @@
                                 <div class="a-input">
                                     <div class="a-input__checkbox">
                                         <input type="checkbox" id="table-checkbox-and-action1" name="table-checkbox-and-action">
-                                        <label for="table-checkbox-and-action1"></label>
+                                        <label for="table-checkbox-and-action1"><span class="u-screen-reader-only">Select all rows</span></label>
                                     </div>
                                 </div>
                             </th>
@@ -2171,7 +3189,7 @@
                             <th>Description</th>
                             <th class="u-text-right">Stock</th>
                             <th class="u-text-right">Price</th>
-                            <th></th>
+                            <th class="u-text-right">Action</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -2180,60 +3198,60 @@
                                 <div class="a-input">
                                     <div class="a-input__checkbox">
                                         <input type="checkbox" id="table-checkbox-and-action2" name="table-checkbox-and-action">
-                                        <label for="table-checkbox-and-action2"></label>
+                                        <label for="table-checkbox-and-action2"><span class="u-screen-reader-only">Select row</span></label>
                                     </div>
                                 </div>
                             </td>
                             <td class="u-text-bold">Ice cream</td>
-                            <td><small>Tasty, frozen treat for a hot day</small></td>
-                            <td class="u-text-right"><small>160</small></td>
+                            <td class="small">Tasty, frozen treat for a hot day</td>
+                            <td class="u-text-right small">160</td>
                             <td class="u-text-right">€2,49</td>
-                            <td><button class="a-button a-button--s">Buy</button></td>
+                            <td class="u-text-right"><button class="a-button a-button--s">Buy</button></td>
                         </tr>
                         <tr>
                             <td>
                                 <div class="a-input">
                                     <div class="a-input__checkbox">
                                         <input type="checkbox" id="table-checkbox-and-action3" name="table-checkbox-and-action">
-                                        <label for="table-checkbox-and-action3"></label>
+                                        <label for="table-checkbox-and-action3"><span class="u-screen-reader-only">Select row</span></label>
                                     </div>
                                 </div>
                             </td>
                             <td class="u-text-bold">Chips</td>
-                            <td><small>Salty, crunchy goodness</small></td>
-                            <td class="u-text-right"><small>48</small></td>
+                            <td class="small">Salty, crunchy goodness</td>
+                            <td class="u-text-right small">48</td>
                             <td class="u-text-right">€1,99</td>
-                            <td><button class="a-button a-button--s">Buy</button></td>
+                            <td class="u-text-right"><button class="a-button a-button--s">Buy</button></td>
                         </tr>
                         <tr>
                             <td>
                                 <div class="a-input">
                                     <div class="a-input__checkbox">
                                         <input type="checkbox" id="table-checkbox-and-action4" name="table-checkbox-and-action">
-                                        <label for="table-checkbox-and-action4"></label>
+                                        <label for="table-checkbox-and-action4"><span class="u-screen-reader-only">Select row</span></label>
                                     </div>
                                 </div>
                             </td>
                             <td class="u-text-bold">Lollipop</td>
-                            <td><small>Rainbow flavors with a bubblegum center</small></td>
-                            <td class="u-text-right"><small>480</small></td>
+                            <td class="small">Rainbow flavors with a bubblegum center</td>
+                            <td class="u-text-right small">480</td>
                             <td class="u-text-right">€0,99</td>
-                            <td><button class="a-button a-button--s">Buy</button></td>
+                            <td class="u-text-right"><button class="a-button a-button--s">Buy</button></td>
                         </tr>
                         <tr>
                             <td>
                                 <div class="a-input">
                                     <div class="a-input__checkbox">
                                         <input type="checkbox" id="table-checkbox-and-action5" name="table-checkbox-and-action">
-                                        <label for="table-checkbox-and-action5"></label>
+                                        <label for="table-checkbox-and-action5"><span class="u-screen-reader-only">Select row</span></label>
                                     </div>
                                 </div>
                             </td>
                             <td class="u-text-bold">Candy bar</td>
-                            <td><small>Chewy and quite nutty</small></td>
-                            <td class="u-text-right"><small>240</small></td>
+                            <td class="small">Chewy and quite nutty</td>
+                            <td class="u-text-right small">240</td>
                             <td class="u-text-right">€1,49</td>
-                            <td><button class="a-button a-button--s">Buy</button></td>
+                            <td class="u-text-right"><button class="a-button a-button--s">Buy</button></td>
                         </tr>
                     </tbody>
                 </table>
@@ -2247,7 +3265,7 @@
         &lt;div class="a-input"&gt;
           &lt;div class="a-input__checkbox"&gt;
             &lt;input type="checkbox" id="table-checkbox-and-action1" name="table-checkbox-and-action"&gt;
-            &lt;label for="table-checkbox-and-action1"&gt;&lt;/label&gt;
+            &lt;label for="table-checkbox-and-action1"&gt;&lt;span class="u-screen-reader-only"&gt;Select all rows&lt;/span&gt;&lt;/label&gt;
           &lt;/div&gt;
         &lt;/div&gt;
       &lt;/th&gt;
@@ -2255,7 +3273,7 @@
       &lt;th&gt;Description&lt;/th&gt;
       &lt;th class="u-text-right"&gt;Stock&lt;/th&gt;
       &lt;th class="u-text-right"&gt;Price&lt;/th&gt;
-      &lt;th&gt;&lt;/th&gt;
+      &lt;th class="u-text-right"&gt;Action&lt;/th&gt;
     &lt;/tr&gt;
   &lt;/thead&gt;
   &lt;tbody&gt;
@@ -2267,21 +3285,277 @@
         &lt;div class="a-input"&gt;
           &lt;div class="a-input__checkbox"&gt;
             &lt;input type="checkbox" id="table-checkbox-and-action3" name="table-checkbox-and-action" checked&gt;
-            &lt;label for="table-checkbox-and-action3"&gt;&lt;/label&gt;
+            &lt;label for="table-checkbox-and-action3"&gt;&lt;span class="u-screen-reader-only"&gt;Select row&lt;/span&gt;&lt;/label&gt;
           &lt;/div&gt;
         &lt;/div&gt;
       &lt;/td&gt;
       &lt;td class="u-text-bold"&gt;Chips&lt;/td&gt;
-      &lt;td&gt;&lt;small&gt;Salty, crunchy goodness&lt;/small&gt;&lt;/td&gt;
-      &lt;td class="u-text-right"&gt;&lt;small&gt;48&lt;/small&gt;&lt;/td&gt;
+      &lt;td class="small"&gt;Salty, crunchy goodness&lt;/small&gt;&lt;/td&gt;
+      &lt;td class="u-text-right small"&gt;48&lt;/small&gt;&lt;/td&gt;
       &lt;td class="u-text-right"&gt;&euro;1,99&lt;/td&gt;
-      &lt;td&gt;&lt;button class="a-button a-button--s"&gt;Buy&lt;/button&gt;&lt;/td&gt;
+      &lt;td class="u-text-right"&gt;&lt;button class="a-button a-button--s"&gt;Buy&lt;/button&gt;&lt;/td&gt;
     &lt;/tr&gt;
     &lt;tr&gt;
       &lt;td&gt;...&lt;/td&gt;
     &lt;/tr&gt;
     &lt;tr&gt;
       &lt;td&gt;...&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;</code></pre>
+            </div>
+        </div>
+
+        <h4 class="u-margin-top-xl">Sortable tables</h4>
+        <div class="d">
+            <div>
+                <table class="a-table">
+                    <caption>Sortable table with one unsorted column</caption>
+                    <thead>
+                        <tr>
+                            <th>Snack</th>
+                            <th class="is-collapsed" aria-sort="none">
+                                <button class="a-table__sort-button a-table__sort-button--unsorted">Description</button>
+                            </th>
+                            <th class="u-text-right">Stock</th>
+                            <th class="u-text-right">Price</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="u-text-bold">Ice cream</td>
+                            <td class="small">Tasty, frozen treat for a hot day</td>
+                            <td class="u-text-right small">160</td>
+                            <td class="u-text-right">€2,49</td>
+                        </tr>
+                        <tr>
+                            <td class="u-text-bold">Chips</td>
+                            <td class="small">Salty, crunchy goodness</td>
+                            <td class="u-text-right small">48</td>
+                            <td class="u-text-right">€1,99</td>
+                        </tr>
+                        <tr>
+                            <td class="u-text-bold">Lollipop</td>
+                            <td class="small">Rainbow flavors with a bubblegum center</td>
+                            <td class="u-text-right small">480</td>
+                            <td class="u-text-right">€0,99</td>
+                        </tr>
+                        <tr>
+                            <td class="u-text-bold">Candy bar</td>
+                            <td class="small">Chewy and quite nutty</td>
+                            <td class="u-text-right small">240</td>
+                            <td class="u-text-right">€1,49</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div>
+                <pre class="a-pre a-pre--scrollable"><code class="html">&lt;table class="a-table"&gt;
+  &lt;caption&gt;Sortable table with one unsorted column&lt;/caption&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th&gt;Snack&lt;/th&gt;
+      &lt;th class="is-collapsed" aria-sort="none"&gt;
+        &lt;button class="a-table__sort-button a-table__sort-button--unsorted"&gt;Description&lt;/button&gt;
+      &lt;/th&gt;
+      &lt;th class="u-text-right"&gt;Stock&lt;/th&gt;
+      &lt;th class="u-text-right"&gt;Price&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+  &lt;tr&gt;...&lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;</code></pre>
+            </div>
+        </div>
+        <div class="d">
+            <div>
+                <table class="a-table">
+                    <caption>Sortable table with one column sorted ascending</caption>
+                    <thead>
+                        <tr>
+                            <th>Snack</th>
+                            <th class="is-collapsed" aria-sort="ascending">
+                                <button class="a-table__sort-button a-table__sort-button--sorted-asc">Description</button>
+                            </th>
+                            <th class="u-text-right">Stock</th>
+                            <th class="u-text-right">Price</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="u-text-bold">Ice cream</td>
+                            <td class="small">Tasty, frozen treat for a hot day</td>
+                            <td class="u-text-right small">160</td>
+                            <td class="u-text-right">€2,49</td>
+                        </tr>
+                        <tr>
+                            <td class="u-text-bold">Chips</td>
+                            <td class="small">Salty, crunchy goodness</td>
+                            <td class="u-text-right small">48</td>
+                            <td class="u-text-right">€1,99</td>
+                        </tr>
+                        <tr>
+                            <td class="u-text-bold">Lollipop</td>
+                            <td class="small">Rainbow flavors with a bubblegum center</td>
+                            <td class="u-text-right small">480</td>
+                            <td class="u-text-right">€0,99</td>
+                        </tr>
+                        <tr>
+                            <td class="u-text-bold">Candy bar</td>
+                            <td class="small">Chewy and quite nutty</td>
+                            <td class="u-text-right small">240</td>
+                            <td class="u-text-right">€1,49</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <!-- https://adrianroselli.com/2021/04/sortable-table-columns.html -->
+                <div class="u-screen-reader-only" aria-live="polite">Description column sorted ascending</div>
+            </div>
+            <div>
+                <pre class="a-pre a-pre--scrollable"><code class="html">&lt;table class="a-table"&gt;
+  &lt;caption&gt;Sortable table with one column sorted ascending&lt;/caption&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th&gt;Snack&lt;/th&gt;
+      &lt;th class="is-collapsed" aria-sort="ascending"&gt;
+        &lt;button class="a-table__sort-button a-table__sort-button--sorted-asc"&gt;Description&lt;/button&gt;
+      &lt;/th&gt;
+      &lt;th class="u-text-right"&gt;Stock&lt;/th&gt;
+      &lt;th class="u-text-right"&gt;Price&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+  &lt;tr&gt;...&lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;div class="u-screen-reader-only" aria-live="polite"&gt;Description column sorted ascending&lt;/div&gt;</code></pre>
+            </div>
+        </div>
+        <div class="d">
+            <div>
+                <table class="a-table">
+                    <caption>Sortable table with one column sorted descending</caption>
+                    <thead>
+                        <tr>
+                            <th>Snack</th>
+                            <th class="is-collapsed" aria-sort="descending">
+                                <button class="a-table__sort-button a-table__sort-button--sorted-desc">Description</button>
+                            </th>
+                            <th class="u-text-right">Stock</th>
+                            <th class="u-text-right">Price</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="u-text-bold">Ice cream</td>
+                            <td class="small">Tasty, frozen treat for a hot day</td>
+                            <td class="u-text-right small">160</td>
+                            <td class="u-text-right">€2,49</td>
+                        </tr>
+                        <tr>
+                            <td class="u-text-bold">Chips</td>
+                            <td class="small">Salty, crunchy goodness</td>
+                            <td class="u-text-right small">48</td>
+                            <td class="u-text-right">€1,99</td>
+                        </tr>
+                        <tr>
+                            <td class="u-text-bold">Lollipop</td>
+                            <td class="small">Rainbow flavors with a bubblegum center</td>
+                            <td class="u-text-right small">480</td>
+                            <td class="u-text-right">€0,99</td>
+                        </tr>
+                        <tr>
+                            <td class="u-text-bold">Candy bar</td>
+                            <td class="small">Chewy and quite nutty</td>
+                            <td class="u-text-right small">240</td>
+                            <td class="u-text-right">€1,49</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <!-- https://adrianroselli.com/2021/04/sortable-table-columns.html -->
+                <div class="u-screen-reader-only" aria-live="polite">Description column sorted descending</div>
+            </div>
+            <div>
+                <pre class="a-pre a-pre--scrollable"><code class="html">&lt;table class="a-table"&gt;
+  &lt;caption&gt;Sortable table with one column sorted descending&lt;/caption&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th&gt;Snack&lt;/th&gt;
+      &lt;th class="is-collapsed" aria-sort="descending"&gt;
+        &lt;button class="a-table__sort-button a-table__sort-button--sorted-desc"&gt;Description&lt;/button&gt;
+      &lt;/th&gt;
+      &lt;th class="u-text-right"&gt;Stock&lt;/th&gt;
+      &lt;th class="u-text-right"&gt;Price&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+  &lt;tr&gt;...&lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;div class="u-screen-reader-only" aria-live="polite"&gt;Description column sorted descending&lt;/div&gt;</code></pre>
+            </div>
+        </div>
+
+        <h4 class="u-margin-top-xl">Table cell options</h4>
+        <div class="d">
+            <div>
+                <table class="a-table">
+                    <caption>Table with less padding</caption>
+                    <thead>
+                        <tr>
+                            <th class="is-condensed">Snack</th>
+                            <th class="is-condensed">Description</th>
+                            <th class="is-condensed u-text-right">Stock</th>
+                            <th class="is-condensed u-text-right">Price</th>
+                            <th class="is-condensed u-text-right">Action</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="is-condensed u-text-bold">Ice cream</td>
+                            <td class="is-condensed small">Tasty, frozen treat for a hot day</td>
+                            <td class="is-condensed u-text-right small">160</td>
+                            <td class="is-condensed u-text-right">€2,49</td>
+                            <td class="is-condensed u-text-right"><button class="a-button a-button--s">Buy</button></td>
+                        </tr>
+                        <tr>
+                            <td class="is-condensed u-text-bold">Chips</td>
+                            <td class="is-condensed small">Salty, crunchy goodness</td>
+                            <td class="is-condensed u-text-right small">48</td>
+                            <td class="is-condensed u-text-right">€1,99</td>
+                            <td class="is-condensed u-text-right"><button class="a-button a-button--s">Buy</button></td>
+                        </tr>
+                        <tr>
+                            <td class="is-condensed u-text-bold">Lollipop</td>
+                            <td class="is-condensed small">Rainbow flavors with a bubblegum center</td>
+                            <td class="is-condensed u-text-right small">480</td>
+                            <td class="is-condensed u-text-right">€0,99</td>
+                            <td class="is-condensed u-text-right"><button class="a-button a-button--s">Buy</button></td>
+                        </tr>
+                        <tr>
+                            <td class="is-condensed u-text-bold">Candy bar</td>
+                            <td class="is-condensed small">Chewy and quite nutty</td>
+                            <td class="is-condensed u-text-right small">240</td>
+                            <td class="is-condensed u-text-right">€1,49</td>
+                            <td class="is-condensed u-text-right"><button class="a-button a-button--s">Buy</button></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div>
+                <pre class="a-pre a-pre--scrollable"><code class="html">&lt;table class="a-table"&gt;
+  &lt;caption&gt;Table with less padding&lt;/caption&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th class="is-condensed"&gt;Table cells with smaller padding&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td class="is-condensed"&gt;...&lt;/td&gt;
     &lt;/tr&gt;
   &lt;/tbody&gt;
 &lt;/table&gt;</code></pre>
@@ -2299,7 +3573,7 @@
                                 <div class="a-input">
                                     <div class="a-input__checkbox">
                                         <input type="checkbox" id="striped-table-checkbox1" name="striped-table-checkbox">
-                                        <label for="striped-table-checkbox1"></label>
+                                        <label for="striped-table-checkbox1"><span class="u-screen-reader-only">Select all row</span></label>
                                     </div>
                                 </div>
                             </th>
@@ -2315,13 +3589,13 @@
                                 <div class="a-input">
                                     <div class="a-input__checkbox">
                                         <input type="checkbox" id="striped-table-checkbox2" name="striped-table-checkbox">
-                                        <label for="striped-table-checkbox2"></label>
+                                        <label for="striped-table-checkbox2"><span class="u-screen-reader-only">Select row</span></label>
                                     </div>
                                 </div>
                             </th>
                             <td class="u-text-bold">Ice cream</td>
-                            <td><small>Tasty, frozen treat for a hot day</small></td>
-                            <td><small>160</small></td>
+                            <td class="small">Tasty, frozen treat for a hot day</td>
+                            <td class="small">160</td>
                             <td>€2,49</td>
                         </tr>
                         <tr class="is-clickable">
@@ -2329,13 +3603,13 @@
                                 <div class="a-input">
                                     <div class="a-input__checkbox">
                                         <input type="checkbox" id="striped-table-checkbox3" name="striped-table-checkbox">
-                                        <label for="striped-table-checkbox3"></label>
+                                        <label for="striped-table-checkbox3"><span class="u-screen-reader-only">Select row</span></label>
                                     </div>
                                 </div>
                             </th>
                             <td class="u-text-bold">Chips</td>
-                            <td><small>Salty, crunchy goodness</small></td>
-                            <td><small>48</small></td>
+                            <td class="small">Salty, crunchy goodness</td>
+                            <td class="small">48</td>
                             <td>€1,99</td>
                         </tr>
                         <tr class="is-clickable">
@@ -2343,13 +3617,13 @@
                                 <div class="a-input">
                                     <div class="a-input__checkbox">
                                         <input type="checkbox" id="striped-table-checkbox4" name="striped-table-checkbox">
-                                        <label for="striped-table-checkbox4"></label>
+                                        <label for="striped-table-checkbox4"><span class="u-screen-reader-only">Select row</span></label>
                                     </div>
                                 </div>
                             </th>
                             <td class="u-text-bold">Lollipop</td>
-                            <td><small>Rainbow flavors with a bubblegum center</small></td>
-                            <td><small>480</small></td>
+                            <td class="small">Rainbow flavors with a bubblegum center</td>
+                            <td class="small">480</td>
                             <td>€0,99</td>
                         </tr>
                         <tr class="is-clickable">
@@ -2357,13 +3631,13 @@
                                 <div class="a-input">
                                     <div class="a-input__checkbox">
                                         <input type="checkbox" id="striped-table-checkbox5" name="input-checkbox">
-                                        <label for="striped-table-checkbox5"></label>
+                                        <label for="striped-table-checkbox5"><span class="u-screen-reader-only">Select row</span></label>
                                     </div>
                                 </div>
                             </th>
                             <td class="u-text-bold">Candy bar</td>
-                            <td><small>Chewy and quite nutty</small></td>
-                            <td><small>240</small></td>
+                            <td class="small">Chewy and quite nutty</td>
+                            <td class="small">240</td>
                             <td>€1,49</td>
                         </tr>
                     </tbody>
@@ -2371,110 +3645,361 @@
             </div>
             <div>
                 <pre class="a-pre a-pre--scrollable"><code class="html">&lt;table class="a-table a-table--striped"&gt;
-  &lt;caption&gt;Standard table&lt;/caption&gt;
+  &lt;caption&gt;Striped table with checkbox&lt;/caption&gt;
   &lt;thead&gt;
-    &lt;tr&gt;
-      &lt;th&gt;Snack&lt;/th&gt;
-      &lt;th&gt;Description&lt;/th&gt;
-      &lt;th class="u-text-right"&gt;Stock&lt;/th&gt;
-      &lt;th class="u-text-right"&gt;Price&lt;/th&gt;
-    &lt;/tr&gt;
+    &lt;tr&gt;...&lt;/tr&gt;
   &lt;/thead&gt;
   &lt;tbody&gt;
-    &lt;tr class="is-clickable"&gt;
-      &lt;td class="u-text-bold"&gt;Ice cream&lt;/td&gt;
-      &lt;td&gt;&lt;small&gt;Tasty, frozen treat for a hot day&lt;/small&gt;&lt;/td&gt;
-      &lt;td&gt;&lt;small&gt;160&lt;/small&gt;&lt;/td&gt;
-      &lt;td&gt;&euro;2,49&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr class="is-clickable"&gt;
-      &lt;td&gt;...&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr class="is-clickable"&gt;
-      &lt;td&gt;...&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr class="is-clickable"&gt;
-      &lt;td&gt;...&lt;/td&gt;
-    &lt;/tr&gt;
+    &lt;tr&gt;...&lt;/tr&gt;
   &lt;/tbody&gt;
 &lt;/table&gt;</code></pre>
             </div>
         </div>
 
-        <a name="atoms-timepicker" aria-label="Timepicker"></a>
-        <h3 class="u-margin-top-xl">Timepicker</h3>
-        <span class="d-file">atoms/atoms.timepicker</span>
         <div class="d">
             <div>
-                <div class="a-timepicker">
-                    <div class="a-input has-icon-right">
-                        <label class="a-input__label" for="input-hours">Hours</label>
-                        <div class="a-input__wrapper">
-                            <select name="input-hours" id="input-hours">
-                                <option value="" disabled selected>hh</option>
-                                <option value="1">1</option>
-                                <option value="2">2</option>
-                                <option value="3">3</option>
-                                <option value="4">4</option>
-                                <option value="5">5</option>
-                                <option value="6">6</option>
-                                <option value="7">7</option>
-                                <option value="8">8</option>
-                                <option value="9">9</option>
-                                <option value="10">10</option>
-                                <option value="11">11</option>
-                                <option value="12">12</option>
-                            </select>
-                            {{ icon.render('arrow-down-1') }}
-                        </div>
-                    </div>
-                    <span class="a-timepicker__separator">:</span>
-                    <div class="a-input has-icon-right">
-                        <label class="a-input__label" for="input-minutes">Minutes</label>
-                        <div class="a-input__wrapper">
-                            <select name="input-minutes" id="input-minutes">
-                                <option value="" disabled selected>mm</option>
-                                <option value="0">0</option>
-                                <option value="5">5</option>
-                                <option value="10">10</option>
-                                <option value="15">15</option>
-                                <option value="20">20</option>
-                                <option value="25">25</option>
-                                <option value="35">35</option>
-                                <option value="45">45</option>
-                                <option value="50">50</option>
-                                <option value="55">55</option>
-                            </select>
-                            {{ icon.render('arrow-down-1') }}
-                        </div>
+                <table class="a-table a-table--open">
+                    <caption>Open table with checkboxes</caption>
+                    <thead>
+                        <tr>
+                            <th>
+                                <div class="a-input">
+                                    <div class="a-input__checkbox">
+                                        <input type="checkbox" id="open-table-checkbox1" name="open-table-checkbox">
+                                        <label for="open-table-checkbox1"><span class="u-screen-reader-only">Select all rows</span></label>
+                                    </div>
+                                </div>
+                            </th>
+                            <th>Snack</th>
+                            <th>Description</th>
+                            <th class="u-text-right">Stock</th>
+                            <th class="u-text-right">Price</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="is-clickable">
+                            <td>
+                                <div class="a-input">
+                                    <div class="a-input__checkbox">
+                                        <input type="checkbox" id="open-table-checkbox2" name="open-table-checkbox">
+                                        <label for="open-table-checkbox2"><span class="u-screen-reader-only">Select row</span></label>
+                                    </div>
+                                </div>
+                            </th>
+                            <td class="u-text-bold">Ice cream</td>
+                            <td class="small">Tasty, frozen treat for a hot day</td>
+                            <td class="small">160</td>
+                            <td>€2,49</td>
+                        </tr>
+                        <tr class="is-clickable">
+                            <td>
+                                <div class="a-input">
+                                    <div class="a-input__checkbox">
+                                        <input type="checkbox" id="open-table-checkbox3" name="open-table-checkbox">
+                                        <label for="open-table-checkbox3"><span class="u-screen-reader-only">Select row</span></label>
+                                    </div>
+                                </div>
+                            </th>
+                            <td class="u-text-bold">Chips</td>
+                            <td class="small">Salty, crunchy goodness</td>
+                            <td class="small">48</td>
+                            <td>€1,99</td>
+                        </tr>
+                        <tr class="is-clickable">
+                            <td>
+                                <div class="a-input">
+                                    <div class="a-input__checkbox">
+                                        <input type="checkbox" id="open-table-checkbox4" name="open-table-checkbox">
+                                        <label for="open-table-checkbox4"><span class="u-screen-reader-only">Select row</span></label>
+                                    </div>
+                                </div>
+                            </th>
+                            <td class="u-text-bold">Lollipop</td>
+                            <td class="small">Rainbow flavors with a bubblegum center</td>
+                            <td class="small">480</td>
+                            <td>€0,99</td>
+                        </tr>
+                        <tr class="is-clickable">
+                            <td>
+                                <div class="a-input">
+                                    <div class="a-input__checkbox">
+                                        <input type="checkbox" id="open-table-checkbox5" name="input-checkbox">
+                                        <label for="open-table-checkbox5"><span class="u-screen-reader-only">Select row</span></label>
+                                    </div>
+                                </div>
+                            </th>
+                            <td class="u-text-bold">Candy bar</td>
+                            <td class="small">Chewy and quite nutty</td>
+                            <td class="small">240</td>
+                            <td>€1,49</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div>
+                <pre class="a-pre a-pre--scrollable"><code class="html">&lt;table class="a-table a-table--open"&gt;
+  &lt;caption&gt;Open table with checkboxes&lt;/caption&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;...&lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;...&lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;</code></pre>
+            </div>
+        </div>
+
+        <h4 class="u-margin-top-xl">Responsive wrapper for tables</h4>
+        <div class="d">
+            <div>
+                <div class="a-table-responsive-wrapper has-shadow-left has-shadow-right">
+                    <div class="a-table-scrollable-wrapper">
+                        <table class="a-table">
+                            <thead>
+                                <tr>
+                                    <th>Snack</th>
+                                    <th>Description</th>
+                                    <th>Ingredients</th>
+                                    <th class="u-text-right">Stock</th>
+                                    <th class="u-text-right">Price</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td class="u-text-bold">Ice cream</td>
+                                    <td class="small">Tasty, frozen treat for a hot day</td>
+                                    <td class="small">Milk, Vanilla</td>
+                                    <td class="u-text-right small">160</td>
+                                    <td class="u-text-right">€2,49</td>
+                                </tr>
+                                <tr>
+                                    <td class="u-text-bold">Chips</td>
+                                    <td class="small">Salty, crunchy goodness</td>
+                                    <td class="small">Potatoes, sea salt</td>
+                                    <td class="u-text-right small">48</td>
+                                    <td class="u-text-right">€1,99</td>
+                                </tr>
+                                <tr>
+                                    <td class="u-text-bold">Lollipop</td>
+                                    <td class="small">Rainbow flavors with a bubblegum center</td>
+                                    <td class="small">Water, corn syrup</td>
+                                    <td class="u-text-right small">480</td>
+                                    <td class="u-text-right">€0,99</td>
+                                </tr>
+                                <tr>
+                                    <td class="u-text-bold">Candy bar</td>
+                                    <td class="small">Chewy and quite nutty</td>
+                                    <td class="small">Cocoa butter</td>
+                                    <td class="u-text-right small">240</td>
+                                    <td class="u-text-right">€1,49</td>
+                                </tr>
+                            </tbody>
+                        </table>
                     </div>
                 </div>
             </div>
             <div>
-                <pre class="a-pre a-pre--scrollable"><code class="html">&lt;div class="a-timepicker"&gt;
-  &lt;div class="a-input has-icon-right"&gt;
-    &lt;label class="a-input__label" for="input-hours"&gt;Hours&lt;/label&gt;
-    &lt;div class="a-input__wrapper"&gt;
-      &lt;select name="input-hours" id="input-houres"&gt;
-        &lt;option value="" disabled selected&gt;hh&lt;/option&gt;
-        &lt;option value="..."&gt;...&lt;/option&gt;
-      &lt;/select&gt;
-      {{ icon.code('arrow-down-1') }}
-    &lt;/div&gt;
+                <pre class="a-pre a-pre--scrollable"><code class="html">&lt;div class="a-table-responsive-wrapper has-shadow-left has-shadow-right"&gt;
+  &lt;div class="a-table-scrollable-wrapper"&gt;
+    &lt;table class="a-table"&gt;
+      &lt;thead&gt;
+        &lt;tr&gt;...&lt;/tr&gt;
+      &lt;/thead&gt;
+      &lt;tbody&gt;
+        &lt;tr&gt;...&lt;/tr&gt;
+      &lt;/tbody&gt;
+    &lt;/table&gt;
   &lt;/div&gt;
-  &lt;span class="a-timepicker__separator"&gt;:&lt;/span&gt;
-  &lt;div class="a-input has-icon-right"&gt;
-    &lt;label class="a-input__label" for="input-minutes"&gt;Minutes&lt;/label&gt;
-    &lt;div class="a-input__wrapper"&gt;
-      &lt;select name="input-minutes" id="input-minutes"&gt;
-        &lt;option value="" disabled selected&gt;mm&lt;/option&gt;
-        &lt;option value="..."&gt;...&lt;/option&gt;
-      &lt;/select&gt;
-      {{ icon.code('arrow-down-1') }}
-    &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+            </div>
+        </div>
+        <div class="d">
+            <div>
+                <div class="a-table-responsive-wrapper has-first-column-fixed has-shadow-left has-shadow-right">
+                    <div class="a-table-scrollable-wrapper">
+                        <table class="a-table">
+                            <thead>
+                                <tr>
+                                    <th>Snack</th>
+                                    <th>Description</th>
+                                    <th>Ingredients</th>
+                                    <th class="u-text-right">Stock</th>
+                                    <th class="u-text-right">Price</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td class="u-text-bold">Ice cream</td>
+                                    <td class="small">Tasty, frozen treat for a hot day</td>
+                                    <td class="small">Milk, Vanilla</td>
+                                    <td class="u-text-right small">160</td>
+                                    <td class="u-text-right">€2,49</td>
+                                </tr>
+                                <tr>
+                                    <td class="u-text-bold">Chips</td>
+                                    <td class="small">Salty, crunchy goodness</td>
+                                    <td class="small">Potatoes, sea salt</td>
+                                    <td class="u-text-right small">48</td>
+                                    <td class="u-text-right">€1,99</td>
+                                </tr>
+                                <tr>
+                                    <td class="u-text-bold">Lollipop</td>
+                                    <td class="small">Rainbow flavors with a bubblegum center</td>
+                                    <td class="small">Water, corn syrup</td>
+                                    <td class="u-text-right small">480</td>
+                                    <td class="u-text-right">€0,99</td>
+                                </tr>
+                                <tr>
+                                    <td class="u-text-bold">Candy bar</td>
+                                    <td class="small">Chewy and quite nutty</td>
+                                    <td class="small">Cocoa butter</td>
+                                    <td class="u-text-right small">240</td>
+                                    <td class="u-text-right">€1,49</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <pre class="a-pre a-pre--scrollable"><code class="html">&lt;div class="a-table-responsive-wrapper has-first-column-fixed has-shadow-left has-shadow-right"&gt;
+  &lt;div class="a-table-scrollable-wrapper"&gt;
+    &lt;table class="a-table"&gt;
+      &lt;thead&gt;
+        &lt;tr&gt;...&lt;/tr&gt;
+      &lt;/thead&gt;
+      &lt;tbody&gt;
+        &lt;tr&gt;...&lt;/tr&gt;
+      &lt;/tbody&gt;
+    &lt;/table&gt;
   &lt;/div&gt;
-&lt;/div&gt;
-</code></pre>
+&lt;/div&gt;</code></pre>
+            </div>
+        </div>
+        <div class="d">
+            <div>
+                <div class="a-table-responsive-wrapper has-last-column-fixed has-shadow-left has-shadow-right">
+                    <div class="a-table-scrollable-wrapper">
+                        <table class="a-table">
+                            <thead>
+                                <tr>
+                                    <th>Snack</th>
+                                    <th>Description</th>
+                                    <th>Ingredients</th>
+                                    <th class="u-text-right">Stock</th>
+                                    <th class="u-text-right">Price</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td class="u-text-bold">Ice cream</td>
+                                    <td class="small">Tasty, frozen treat for a hot day</td>
+                                    <td class="small">Milk, Vanilla</td>
+                                    <td class="u-text-right small">160</td>
+                                    <td class="u-text-right">€2,49</td>
+                                </tr>
+                                <tr>
+                                    <td class="u-text-bold">Chips</td>
+                                    <td class="small">Salty, crunchy goodness</td>
+                                    <td class="small">Potatoes, sea salt</td>
+                                    <td class="u-text-right small">48</td>
+                                    <td class="u-text-right">€1,99</td>
+                                </tr>
+                                <tr>
+                                    <td class="u-text-bold">Lollipop</td>
+                                    <td class="small">Rainbow flavors with a bubblegum center</td>
+                                    <td class="small">Water, corn syrup</td>
+                                    <td class="u-text-right small">480</td>
+                                    <td class="u-text-right">€0,99</td>
+                                </tr>
+                                <tr>
+                                    <td class="u-text-bold">Candy bar</td>
+                                    <td class="small">Chewy and quite nutty</td>
+                                    <td class="small">Cocoa butter</td>
+                                    <td class="u-text-right small">240</td>
+                                    <td class="u-text-right">€1,49</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <pre class="a-pre a-pre--scrollable"><code class="html">&lt;div class="a-table-responsive-wrapper has-last-column-fixed has-shadow-left has-shadow-right"&gt;
+  &lt;div class="a-table-scrollable-wrapper"&gt;
+    &lt;table class="a-table"&gt;
+      &lt;thead&gt;
+        &lt;tr&gt;...&lt;/tr&gt;
+      &lt;/thead&gt;
+      &lt;tbody&gt;
+        &lt;tr&gt;...&lt;/tr&gt;
+      &lt;/tbody&gt;
+    &lt;/table&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+            </div>
+        </div>
+        <div class="d">
+            <div>
+                <div class="a-table-responsive-wrapper has-first-column-fixed has-last-column-fixed has-shadow-left has-shadow-right">
+                    <div class="a-table-scrollable-wrapper">
+                        <table class="a-table">
+                            <thead>
+                                <tr>
+                                    <th>Snack</th>
+                                    <th>Description</th>
+                                    <th>Ingredients</th>
+                                    <th class="u-text-right">Stock</th>
+                                    <th class="u-text-right">Price</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td class="u-text-bold">Ice cream</td>
+                                    <td class="small">Tasty, frozen treat for a hot day</td>
+                                    <td class="small">Milk, Vanilla</td>
+                                    <td class="u-text-right small">160</td>
+                                    <td class="u-text-right">€2,49</td>
+                                </tr>
+                                <tr>
+                                    <td class="u-text-bold">Chips</td>
+                                    <td class="small">Salty, crunchy goodness</td>
+                                    <td class="small">Potatoes, sea salt</td>
+                                    <td class="u-text-right small">48</td>
+                                    <td class="u-text-right">€1,99</td>
+                                </tr>
+                                <tr>
+                                    <td class="u-text-bold">Lollipop</td>
+                                    <td class="small">Rainbow flavors with a bubblegum center</td>
+                                    <td class="small">Water, corn syrup</td>
+                                    <td class="u-text-right small">480</td>
+                                    <td class="u-text-right">€0,99</td>
+                                </tr>
+                                <tr>
+                                    <td class="u-text-bold">Candy bar</td>
+                                    <td class="small">Chewy and quite nutty</td>
+                                    <td class="small">Cocoa butter</td>
+                                    <td class="u-text-right small">240</td>
+                                    <td class="u-text-right">€1,49</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <pre class="a-pre a-pre--scrollable"><code class="html">&lt;div class="a-table-responsive-wrapper has-first-column-fixed has-last-column-fixed has-shadow-left has-shadow-right"&gt;
+  &lt;div class="a-table-scrollable-wrapper"&gt;
+    &lt;table class="a-table"&gt;
+      &lt;thead&gt;
+        &lt;tr&gt;...&lt;/tr&gt;
+      &lt;/thead&gt;
+      &lt;tbody&gt;
+        &lt;tr&gt;...&lt;/tr&gt;
+      &lt;/tbody&gt;
+    &lt;/table&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre>
             </div>
         </div>
 
@@ -2600,107 +4125,16 @@
         <div class="d">
             <div>
                 <div>
-                    <div class="a-tooltip a-tooltip--top-right d-tooltip">
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vel eum <a href="javascript:void(0);">nihil perspiciatis</a> molestias mollitia.
-                    </div>
-                    <div class="a-tooltip a-tooltip--primary a-tooltip--top d-tooltip">
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vel eum <a href="javascript:void(0);">nihil perspiciatis</a> molestias mollitia.
-                    </div>
-                    <div class="a-tooltip a-tooltip--secondary a-tooltip--top-left d-tooltip">
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vel eum <a href="javascript:void(0);">nihil perspiciatis</a> molestias mollitia.
+                    <div class="a-tooltip d-tooltip">
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vel eum nihil perspiciatis molestias mollitia.
                     </div>
                 </div>
             </div>
             <div>
-                <pre class="a-pre a-pre--scrollable"><code class="html">&lt;div class="a-tooltip a-tooltip--top-right"&gt;
-  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vel eum &lt;a href="#"&gt;nihil perspiciatis&lt;/a&gt; molestias mollitia.
-&lt;/div&gt;</code></pre>
-                <pre class="a-pre a-pre--scrollable"><code class="html">&lt;div class="a-tooltip a-tooltip--primary a-tooltip--top"&gt;
-  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vel eum &lt;a href="#"&gt;nihil perspiciatis&lt;/a&gt; molestias mollitia.
-&lt;/div&gt;</code></pre>
-                <pre class="a-pre a-pre--scrollable"><code class="html">&lt;div class="a-tooltip a-tooltip--secondary a-tooltip--top-left"&gt;
-  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vel eum &lt;a href="#"&gt;nihil perspiciatis&lt;/a&gt; molestias mollitia.
+                <pre class="a-pre a-pre--scrollable"><code class="html">&lt;div class="a-tooltip"&gt;
+  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vel eum nihil perspiciatis molestias mollitia.
 &lt;/div&gt;</code></pre>
             </div>
         </div>
-        <div class="d">
-            <div>
-                <div>
-                    <div class="a-tooltip a-tooltip--bottom-right d-tooltip">
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vel eum <a href="javascript:void(0);">nihil perspiciatis</a> molestias mollitia.
-                    </div>
-                    <div class="a-tooltip a-tooltip--primary a-tooltip--bottom d-tooltip">
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vel eum <a href="javascript:void(0);">nihil perspiciatis</a> molestias mollitia.
-                    </div>
-                    <div class="a-tooltip a-tooltip--secondary a-tooltip--bottom-left d-tooltip">
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vel eum <a href="javascript:void(0);">nihil perspiciatis</a> molestias mollitia.
-                    </div>
-                </div>
-            </div>
-            <div>
-                <pre class="a-pre a-pre--scrollable"><code class="html">&lt;div class="a-tooltip a-tooltip--bottom-right"&gt;
-  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vel eum &lt;a href="#"&gt;nihil perspiciatis&lt;/a&gt; molestias mollitia.
-&lt;/div&gt;</code></pre>
-                <pre class="a-pre a-pre--scrollable"><code class="html">&lt;div class="a-tooltip a-tooltip--primary a-tooltip--bottom"&gt;
-  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vel eum &lt;a href="#"&gt;nihil perspiciatis&lt;/a&gt; molestias mollitia.
-&lt;/div&gt;</code></pre>
-                <pre class="a-pre a-pre--scrollable"><code class="html">&lt;div class="a-tooltip a-tooltip--secondary a-tooltip--bottom-left"&gt;
-  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vel eum &lt;a href="#"&gt;nihil perspiciatis&lt;/a&gt; molestias mollitia.
-&lt;/div&gt;</code></pre>
-            </div>
-        </div>
-        <div class="d">
-            <div>
-                <div>
-                    <div class="a-tooltip a-tooltip--left-bottom d-tooltip">
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vel eum <a href="javascript:void(0);">nihil perspiciatis</a> molestias mollitia.
-                    </div>
-                    <div class="a-tooltip  a-tooltip--primary a-tooltip--left d-tooltip">
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vel eum <a href="javascript:void(0);">nihil perspiciatis</a> molestias mollitia.
-                    </div>
-                    <div class="a-tooltip a-tooltip--secondary a-tooltip--left-top d-tooltip">
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vel eum <a href="javascript:void(0);">nihil perspiciatis</a> molestias mollitia.
-                    </div>
-                </div>
-            </div>
-            <div>
-                <pre class="a-pre a-pre--scrollable"><code class="html">&lt;div class="a-tooltip a-tooltip--left-bottom"&gt;
-  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vel eum &lt;a href="#"&gt;nihil perspiciatis&lt;/a&gt; molestias mollitia.
-&lt;/div&gt;</code></pre>
-                <pre class="a-pre a-pre--scrollable"><code class="html">&lt;div class="a-tooltip  a-tooltip--primary a-tooltip--left"&gt;
-  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vel eum &lt;a href="#"&gt;nihil perspiciatis&lt;/a&gt; molestias mollitia.
-&lt;/div&gt;</code></pre>
-                <pre class="a-pre a-pre--scrollable"><code class="html">&lt;div class="a-tooltip a-tooltip--secondary a-tooltip--left-top"&gt;
-  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vel eum &lt;a href="#"&gt;nihil perspiciatis&lt;/a&gt; molestias mollitia.
-&lt;/div&gt;</code></pre>
-            </div>
-        </div>
-        <div class="d">
-            <div>
-                <div>
-                    <div class="a-tooltip a-tooltip--right-bottom d-tooltip">
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vel eum <a href="javascript:void(0);">nihil perspiciatis</a> molestias mollitia.
-                    </div>
-                    <div class="a-tooltip a-tooltip--primary a-tooltip--right d-tooltip">
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vel eum <a href="javascript:void(0);">nihil perspiciatis</a> molestias mollitia.
-                    </div>
-                    <div class="a-tooltip a-tooltip--secondary a-tooltip--right-top d-tooltip">
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vel eum <a href="javascript:void(0);">nihil perspiciatis</a> molestias mollitia.
-                    </div>
-                </div>
-            </div>
-            <div>
-                <pre class="a-pre a-pre--scrollable"><code class="html">&lt;div class="a-tooltip a-tooltip--right-bottom"&gt;
-  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vel eum &lt;a href="#"&gt;nihil perspiciatis&lt;/a&gt; molestias mollitia.
-&lt;/div&gt;</code></pre>
-                <pre class="a-pre a-pre--scrollable"><code class="html">&lt;div class="a-tooltip a-tooltip--primary a-tooltip--right"&gt;
-  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vel eum &lt;a href="#"&gt;nihil perspiciatis&lt;/a&gt; molestias mollitia.
-&lt;/div&gt;</code></pre>
-                <pre class="a-pre a-pre--scrollable"><code class="html">&lt;div class="a-tooltip a-tooltip--secondary a-tooltip--right-top"&gt;
-  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vel eum &lt;a href="#"&gt;nihil perspiciatis&lt;/a&gt; molestias mollitia.
-&lt;/div&gt;</code></pre>
-            </div>
-        </div>
-
     </div>
 </div>

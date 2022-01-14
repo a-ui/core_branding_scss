@@ -130,6 +130,10 @@ textarea {
   + .a-input__radio {
     margin-top: var(--spacer-xxs);
   }
+
+  + .a-input__description {
+    margin-top: 0;
+  }
 }
 
 /**
@@ -137,33 +141,26 @@ textarea {
  * -------------------------------------------------------------------
  */
 
-.a-input__info {
-  display: flex;
-  justify-content: space-between;
+.a-input__description {
+  display: block;
   margin: var(--spacer-xxs) 0;
-}
 
-.a-input__character-counter {
-  flex: 1 0 auto;
-  margin-left: var(--spacer);
-  text-align: right;
-}
+  &.is-error,
+  &.is-success {
+    display: flex;
 
-.a-input__error-text,
-.a-input__success-text {
-  display: flex;
-
-  .ai {
-    margin-right: var(--spacer-xxs);
+    .ai {
+      margin-right: var(--spacer-xxs);
+    }
   }
-}
 
-.a-input__success-text {
-  color: var(--state-success);
-}
+  &.is-success {
+    color: var(--state-success);
+  }
 
-.a-input__error-text {
-  color: var(--state-danger-light);
+  &.is-error {
+    color: var(--state-danger-light);
+  }
 }
 
 /**
@@ -181,15 +178,8 @@ textarea {
  * -------------------------------------------------------------------
  */
 
-.a-input {
-  &.has-error {
-    --input-border-color: var(--input-danger-border-color);
-  }
-
-  &.is-required .a-input__label:after {
-    content: '*';
-    margin-left: var(--spacer-3xs);
-  }
+.a-input.has-error {
+  --input-border-color: var(--input-danger-border-color);
 }
 
 /**

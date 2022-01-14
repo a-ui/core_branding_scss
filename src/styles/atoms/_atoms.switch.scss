@@ -4,22 +4,27 @@
  */
 
 .a-switch {
-  --switch-width:                    var(--spacer-xl);
-  --switch-height:                   calc(var(--switch-width) / 2 + var(--spacer-3xs));
-  --switch-label:                    var(--text-color);
+  --switch-width:                                      2.75rem;
+  --switch-height:                                     var(--spacer);
+  --switch-inset:                                      .1875rem;
 
-  --switch-bg-color:                 #{$white};
-  --switch-border-color:             var(--border-color);
+  --switch-handle-size:                                1.125rem;
 
-  --switch-disabled:                 #{$gray-100};
-  --switch-disabled-label:           var(--state-disabled);
-  --switch-disabled-border:          #{$gray-200};
-  --switch-disabled-bg-color:        var(--switch-disabled-label);
+  --switch-label-font-size:                            1rem;
+  --switch-label-color:                                var(--text-color);
+  --switch-label-disabled-color:                       #{$gray-300};
 
-  --switch-handle-width:             calc((var(--switch-width) - .5rem) / 2);
+  --switch-bg-color:                                   #{$gray-300};
+  --switch-border-color:                               var(--switch-bg-color);
+  --switch-handle-bg-color:                            #{$white};
 
-  --switch-handle-bg-color:          #{$gray-400};
-  --switch-handle-active-bg-color:   var(--theme1-400);
+  --switch-active-bg-color:                            var(--theme1-400);
+  --switch-active-border-color:                        var(--switch-active-bg-color);
+  --switch-handle-active-bg-color:                     #{$white};
+
+  --switch-disabled-bg-color:                          #{$gray-200};
+  --switch-disabled-border-color:                      var(--switch-disabled-bg-color);
+  --switch-handle-disabled-bg-color:                   #{$white};
 }
 
 /**
@@ -28,76 +33,103 @@
  */
 
 .a-switch {
-  display: block;
-}
-
-.a-switch__button {
+  align-items: center;
   background: transparent;
   border: none;
-  height: var(--switch-height);
+  cursor: pointer;
+  display: flex;
   padding: 0;
-  position: relative;
-
-  &:before {
-    background-color: var(--switch-bg-color);
-    border: var(--border-width) solid var(--switch-border-color);
-    content: '';
-    cursor: pointer;
-    display: inline-block;
-    height: var(--switch-height);
-    left: calc(50% - var(--switch-width) / 2);
-    position: absolute;
-    top: 0;
-    width: var(--switch-width);
-  }
-
-  &:after {
-    background-color: var(--switch-handle-bg-color);
-    content: '';
-    display: inline-block;
-    height: var(--switch-handle-width);
-    left: 50%;
-    margin-left: calc(var(--switch-handle-width) / -2);
-    position: absolute;
-    top: .25rem;
-    transform: translateX(-50%);
-    transition: background, transform var(--animation-normal);
-    width: var(--switch-handle-width);
-  }
 
   &[aria-checked='true'] {
-    &:after {
-      background-color: var(--switch-handle-active-bg-color);
-      transform: translateX(50%);
+    --switch-bg-color: var(--switch-active-bg-color);
+    --switch-border-color: var(--switch-active-border-color);
+    --switch-handle-bg-color: var(--switch-handle-active-bg-color);
+
+    .a-switch__label--off {
+      display: none;
+    }
+
+    .a-switch__toggle-label--off {
+      opacity: 0;
+    }
+
+    .a-switch__toggle:after {
+      transform: translate(calc(var(--switch-width) - var(--switch-handle-size) - var(--switch-inset)), -50%);
+    }
+  }
+
+  &[aria-checked='false'] {
+    .a-switch__label--on {
+      display: none;
+    }
+
+    .a-switch__toggle-label--on {
+      opacity: 0;
     }
   }
 
   &:disabled {
+    --switch-bg-color: var(--switch-disabled-bg-color);
+    --switch-border-color: var(--switch-disabled-border-color);
+    --switch-handle-bg-color: var(--switch-handle-disabled-bg-color);
+    --switch-label-color: var(--switch-label-disabled-color);
+
     cursor: not-allowed;
-
-    &:before {
-      background-color: var(--switch-disabled);
-      border: var(--border-width) solid var(--switch-disabled-border);
-    }
-
-    .a-switch__off,
-    .a-switch__on {
-      color: var(--switch-disabled-label);
-    }
   }
 }
 
-.a-switch__off,
-.a-switch__on {
-  color: var(--switch-label);
+/**
+ * SWITCH ELEMENTS
+ * -------------------------------------------------------------------
+ */
+
+.a-switch__toggle {
+  align-items: center;
+  background-color: var(--switch-bg-color);
+  border-radius: var(--switch-height);
+  display: flex;
+  height: var(--switch-height);
+  justify-content: space-between;
+  padding: var(--switch-inset);
+  position: relative;
+  transition: background-color, border;
+  width: var(--switch-width);
+
+  &:after {
+    background-color: var(--switch-handle-bg-color);
+    border-radius: var(--switch-handle-size);
+    content: '';
+    height: var(--switch-handle-size);
+    left: 0;
+    position: absolute;
+    top: 50%;
+    transform: translate(var(--switch-inset), -50%);
+    transition: background, transform var(--animation-normal);
+    width: var(--switch-handle-size);
+  }
 }
 
-.a-switch__off {
-  margin-right: calc(var(--switch-width) / 2);
-  padding-right: var(--spacer-xs);
+.a-switch__label {
+  color: var(--switch-label-color);
+  font-size: var(--switch-label-font-size);
+  min-width: 2rem;
+  transition: color var(--animation-normal);
+  text-align: right;
 }
 
-.a-switch__on {
-  margin-left: calc(var(--switch-width) / 2);
-  padding-left: var(--spacer-xs);
+.a-switch__label + .a-switch__toggle,
+.a-switch__toggle + .a-switch__label {
+  margin-left: var(--spacer-xs);
+}
+
+.a-switch__toggle + .a-switch__label {
+  text-align: left;
+}
+
+.a-switch__toggle-label {
+  color: var(--switch-handle-bg-color);
+  font-size: .875rem;
+  text-transform: uppercase;
+  transition: opacity var(--animation-normal);
+  width: var(--switch-handle-size);
 }

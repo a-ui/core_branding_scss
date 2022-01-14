@@ -3,13 +3,13 @@
  * -------------------------------------------------------------------
  */
 
-$modal-bg:                $white !default;
-$modal-border:            $border-color-light !default;
+.m-modal {
+  --modal-bg-color:       #{$white};
+  --modal-border-color:   var(--border-color);
 
-$modal-width:             calc(var(--spacer) * 17) !default;
-$modal-width-large:       calc(var(--spacer) * 25) !default;
-
-$modal-padding:           var(--spacer) !default;
+  --modal-width:          calc(var(--spacer) * 17);
+  --modal-width-l:        calc(var(--spacer) * 25);
+}
 
 /**
  * MODAL
@@ -17,12 +17,12 @@ $modal-padding:           var(--spacer) !default;
  */
 
 .m-modal {
-  background-color: $modal-bg;
-  border: var(--border-width) solid $modal-border;
+  background-color: var(--modal-bg-color);
+  border: var(--border-width) solid var(--modal-border-color);
   width: 100%;
 
   @include at($screen-xs) {
-    max-width: $modal-width;
+    max-width: var(--modal-width);
   }
 
   .m-modal__close {
@@ -42,7 +42,7 @@ $modal-padding:           var(--spacer) !default;
  */
 
 .m-modal__content {
-  padding: $modal-padding;
+  padding: var(--spacer);
   position: relative;
 }
 
@@ -75,6 +75,6 @@ $modal-padding:           var(--spacer) !default;
 .m-modal--l {
 
   @include at($screen-xs) {
-    max-width: $modal-width-large;
+    --modal-width: var(--modal-width-l);
   }
 }

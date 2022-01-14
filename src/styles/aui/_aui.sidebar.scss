@@ -3,7 +3,9 @@
  * -------------------------------------------------------------------
  */
 
-$sidebar-width: 20rem;
+.o-sidebar {
+  --sidebar-width: 20rem;
+}
 
 /**
  * PANE
@@ -21,7 +23,7 @@ $sidebar-width: 20rem;
     height: 100%;
     overflow-x: hidden;
     overflow-y: auto;
-    width: $sidebar-width;
+    width: var(--sidebar-width);
 
     &--padding {
       padding: var(--spacer-xl);
@@ -29,6 +31,6 @@ $sidebar-width: 20rem;
   }
 
   &.o-sidebar--open {
-    width: $sidebar-width;
+    width: var(--sidebar-width);
   }
 }

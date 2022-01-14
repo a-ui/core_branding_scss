@@ -66,17 +66,17 @@
         }
 
         .o-menu__submenu-content-wrapper {
-          box-shadow: $box-shadow;
+          box-shadow: var(--box-shadow);
           max-height: inherit;
           transition: width var(--animation-easing);
           width: 0;
 
-          .m-nav-list {
+          .o-menu__submenu-list {
             border: var(--border-width) solid var(--navigation-menu-border-color);
             border-bottom: none;
             border-left: none;
 
-            .m-nav-list {
+            .o-menu__submenu-list {
               border-left: var(--border-width) solid var(--navigation-menu-border-color);
             }
 
@@ -102,7 +102,7 @@
 }
 
 .o-menu .o-menu__link,
-.o-menu .m-nav-list a {
+.o-menu .o-menu__submenu-list a {
   white-space: nowrap;
 
   &,
@@ -281,7 +281,7 @@
     overflow: hidden;
     transition: max-height var(--animation-easing) var(--navigation-menu-animation-speed);
 
-    .m-nav-list {
+    .o-menu__submenu-list {
       border: none;
 
       li {
@@ -294,8 +294,6 @@
         display: flex;
         justify-content: space-between;
         overflow: hidden;
-        padding-bottom: .875rem;
-        padding-top: .875rem;
         white-space: nowrap;
 
         @include at($screen-sm) {
@@ -336,12 +334,55 @@
   }
 
   // First sub-layer of menus will get larger padding
-  & .m-nav-list li .o-menu__submenu li > a {
+  & .o-menu__submenu-list li .o-menu__submenu li > a {
     padding-left: calc(var(--navigation-menu-docked-width) + var(--navigation-menu-submenu-inset) * 2);
   }
 
   @include at($screen-sm) {
     display: block;
+  }
+}
+
+.o-menu__submenu-list {
+  @extend %u-list-reset;
+
+  border-top: var(--border-width) solid var(--navigation-menu-border-color);
+
+  > li {
+    font-weight: var(--font-weight-bold);
+    line-height: $line-height-paragraph;
+    text-align: center;
+
+    > a,
+    > button {
+      align-items: center;
+      background: $white;
+      border: none;
+      border-bottom: var(--border-width) solid var(--navigation-menu-border-color);
+      color: inherit;
+      display: flex;
+      flex: 1 1 auto;
+      min-height: calc(var(--spacer-xl) + var(--border-width));
+      text-decoration: none;
+      transition-duration: var(--animation-duration);
+      transition-property: background, color;
+      transition-timing-function: var(--animation-easing);
+
+      &:hover,
+      &:active {
+        background-color: $gray-100;
+      }
+
+      > .ai {
+        display: inline-block;
+        margin-right: var(--spacer-xs);
+      }
+    }
+
+    > button {
+      cursor: pointer;
+      width: 100%;
+    }
   }
 }
 
@@ -380,7 +421,7 @@
 
   .o-navigation-pane__wrapper {
     background: $white;
-    box-shadow: 0 -.75rem 0 rgba($black, .1);
+    box-shadow: 0 -.75rem 0 var(--box-shadow-color);
     margin-bottom: calc(var(--border-width) * -1);
     max-height: calc(100vh - var(--shared-header-height) - var(--navigation-menu-mobile-height));
     min-height: var(--spacer); // make up for the box shadow to be visible, even when hidden

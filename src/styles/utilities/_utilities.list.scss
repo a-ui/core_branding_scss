@@ -1,0 +1,41 @@
+/**
+ * LIST HELPERS
+ * -------------------------------------------------------------------
+ */
+
+/**
+ * List without default padding and standard list styling.
+ */
+%u-list-reset {
+  line-height: 1;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+
+  ul,
+  ol {
+    list-style: none;
+    padding: 0;
+  }
+}
+
+.u-list-reset {
+  @extend %u-list-reset;
+}
+
+/**
+ * List without standard list styling.
+ */
+%u-list-unstyled {
+  list-style: none;
+  padding: 0;
+
+  ul,
+  ol {
+    list-style: none;
+  }
+}
+
+.u-list-unstyled {
+  @extend %u-list-unstyled;
+}

@@ -1,36 +1,21 @@
 /**
  * COLLAPSIBLE LIST
  * -------------------------------------------------------------------
- * This component has shared variables with _atoms.list.scss. You can find them in _quarks.variables.scss.
  */
 
 .m-collapsible-list {
-  --collapsible-list-spacing:   var(--shared-list-item-padding-top);
-}
-
-/**
- * COLLAPSIBLE LIST
- * -------------------------------------------------------------------
- */
-
-.m-collapsible-list {
-  @extend %a-list;
-  @extend %a-list--unstyled;
+  @extend %u-list-unstyled;
 
   ul {
-    @extend %a-list;
-
-    margin-bottom: calc(var(--collapsible-list-spacing) * -1);
-    margin-top: var(--collapsible-list-spacing);
+    margin-bottom: calc(var(--spacer-xxs) * -1);
+    margin-top: var(--spacer-xxs);
+    padding-left: var(--spacer);
   }
 }
 
-/**
- * COLLAPSIBLE LIST ITEMS
- * -------------------------------------------------------------------
- */
-
 .m-collapsible-list__item {
+  padding: var(--spacer-xxs) 0;
+
   &:not(.is-active) {
     > a {
       text-decoration: none;
@@ -57,7 +42,7 @@
 }
 
 /**
- * MODIFIERS
+ * COLLAPSIBLE LIST MODIFIERS
  * -------------------------------------------------------------------
  */
 

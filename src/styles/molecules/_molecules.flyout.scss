@@ -3,12 +3,13 @@
  * -------------------------------------------------------------------
  */
 
-$flyout-bg:               $white !default;
-$flyout-border:           $border-color-light !default;
-$flyout-max-width-sm:     calc(var(--spacer) * 10) !default;
-$flyout-max-width-md:     calc(var(--spacer) * 20) !default;
-$flyout-max-width-lg:     calc(var(--spacer) * 30) !default;
-$flyout-max-height:       calc(var(--spacer) * 9) !default;
+.m-flyout {
+  --flyout-bg-color:         #{$white};
+  --flyout-border-color:     var(--border-color);
+  --flyout-max-width:        24rem;
+  --flyout-max-width-s:      16rem;
+  --flyout-max-height:       calc(var(--spacer) * 9);
+}
 
 /**
  * FLYOUT
@@ -27,26 +28,20 @@ $flyout-max-height:       calc(var(--spacer) * 9) !default;
  */
 
 .m-flyout__content {
-  background-color: $flyout-bg;
-  border: var(--border-width) solid $flyout-border;
-  box-shadow: $box-shadow;
+  @include at($screen-sm) {
+    width: var(--flyout-max-width);
+  }
+
+  background-color: var(--flyout-bg-color);
+  border: var(--border-width) solid var(--flyout-border-color);
+  box-shadow: var(--box-shadow);
   opacity: 0;
   position: absolute;
   transform: translateY(calc(var(--spacer-xl) * -1));
   transition: visibility 0s var(--animation-normal), opacity var(--animation-normal), transform var(--animation-normal);
   visibility: hidden;
+  width: var(--flyout-max-width-s);
   z-index: layer('flyout');
-}
-
-/**
- * FLYOUT MODIFIERS
- * -------------------------------------------------------------------
- */
-
-.m-flyout.opens-above {
-  .m-flyout__content {
-    box-shadow: $box-shadow-reverse;
-  }
 }
 
 /**
@@ -54,8 +49,26 @@ $flyout-max-height:       calc(var(--spacer) * 9) !default;
  * -------------------------------------------------------------------
  */
 
-.m-flyout--right .m-flyout__content {
+.m-flyout--bottom-right .m-flyout__content,
+.m-flyout--upper-right .m-flyout__content {
   right: 0;
+}
+
+.m-flyout--upper-left .m-flyout__content,
+.m-flyout--upper-right .m-flyout__content {
+  transform: translateY(-100%);
+}
+
+.m-flyout--bottom-right .m-flyout__content {
+  box-shadow: var(--box-shadow-bottom-left);
+}
+
+.m-flyout--upper-left .m-flyout__content {
+  box-shadow: var(--box-shadow-upper-right);
+}
+
+.m-flyout--upper-right .m-flyout__content {
+  box-shadow: var(--box-shadow-upper-left);
 }
 
 /**
@@ -63,39 +76,14 @@ $flyout-max-height:       calc(var(--spacer) * 9) !default;
  * -------------------------------------------------------------------
  */
 
-.m-flyout--full .m-flyout__content,
-.m-flyout--xl .m-flyout__content,
-.m-flyout--l .m-flyout__content,
 .m-flyout--s .m-flyout__content {
-  min-width: 100%;
-}
-
-.m-flyout--xl .m-flyout__content {
-  @include at($screen-md) {
-    width: $flyout-max-width-lg;
-  }
-
   @include at($screen-sm) {
-    width: $flyout-max-width-md;
+    width: var(--flyout-max-width-s);
   }
-
-  width: $flyout-max-width-sm;
-}
-
-.m-flyout--l .m-flyout__content {
-  @include at($screen-sm) {
-    width: $flyout-max-width-md;
-  }
-
-  width: $flyout-max-width-sm;
-}
-
-.m-flyout--s .m-flyout__content {
-  width: $flyout-max-width-sm;
 }
 
 .m-flyout--scrollable .m-flyout__content {
-  max-height: $flyout-max-height;
+  max-height: var(--flyout-max-height);
   overflow-y: scroll;
 }
 
@@ -104,15 +92,24 @@ $flyout-max-height:       calc(var(--spacer) * 9) !default;
  * -------------------------------------------------------------------
  */
 
-.m-flyout.is-open > .m-flyout__content {
-  opacity: 1;
-  transform: translateY(0);
-  transition-delay: 0s;
-  visibility: visible;
+.m-flyout.is-open {
+  .m-flyout__content {
+    opacity: 1;
+    transform: translateY(0);
+    transition-delay: 0s;
+    visibility: visible;
+  }
+
+  &.m-flyout--upper-left,
+  &.m-flyout--upper-right {
+    .m-flyout__content {
+      transform: translateY(calc(-100% - var(--spacer-xl)));
+    }
+  }
 }
 
 .m-flyout__content.has-padding {
-  padding: var(--spacer-s) var(--spacer);
+  padding: var(--spacer-s);
 }
 
 /**
@@ -121,7 +118,9 @@ $flyout-max-height:       calc(var(--spacer) * 9) !default;
  */
 
 .a-input + .m-flyout__content {
+  min-width: 100%;
   margin-top: calc(var(--border-width) * -1);
+  width: auto;
 }
 
 /**

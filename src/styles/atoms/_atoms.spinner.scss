@@ -5,7 +5,8 @@
 
 .a-spinner {
   --spinner-color:              #{$gray-300};
-  --spinner-size:               #{rem($icon-size-lg)};
+  --spinner-size:               2rem;
+  --spinner-text-color:         var(--text-color-light);
 
   --spinner-animation-name:     spin reverse;
   --spinner-animation-speed:    1600ms;
@@ -17,14 +18,26 @@
  * -------------------------------------------------------------------
  */
 
-.a-spinner:before {
-  animation: var(--spinner-animation-name) var(--spinner-animation-speed) infinite var(--spinner-animation-timing);
-  background: var(--spinner-color);
-  content: '';
-  display: inline-block;
-  height: var(--spinner-size);
-  mask: url('data:image/svg+xml;utf8,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 24 24%22><defs><style>.a{fill:none;stroke:%23ffffff;stroke-linecap:round;stroke-linejoin:round;stroke-width:6.25%;}</style></defs><path class=%22a%22 d=%22M.714 10.353l2.787 4.15 3.205-3.838M23.286 14.655l-2.785-4.152-3.207 3.839%22/><path class=%22a%22 d=%22M20.464 10.54a8.622 8.622 0 01-6.51 9.729 8.493 8.493 0 01-7.931-2.224M3.505 14.479a8.853 8.853 0 016.538-10.753 8.493 8.493 0 018.324 2.642%22/></svg>') no-repeat center center;
-  width: var(--spinner-size);
+.a-spinner {
+  align-items: center;
+  display: inline-flex;
+
+  &:before {
+    animation: var(--spinner-animation-name) var(--spinner-animation-speed) infinite var(--spinner-animation-timing);
+    background: var(--spinner-color);
+    content: '';
+    display: inline-block;
+    flex-shrink: 0;
+    height: var(--spinner-size);
+    mask: url('data:image/svg+xml;utf8,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 24 24%22><defs><style>.a{fill:none;stroke:%23ffffff;stroke-linecap:round;stroke-linejoin:round;stroke-width:6.25%;}</style></defs><path class=%22a%22 d=%22M.714 10.353l2.787 4.15 3.205-3.838M23.286 14.655l-2.785-4.152-3.207 3.839%22/><path class=%22a%22 d=%22M20.464 10.54a8.622 8.622 0 01-6.51 9.729 8.493 8.493 0 01-7.931-2.224M3.505 14.479a8.853 8.853 0 016.538-10.753 8.493 8.493 0 018.324 2.642%22/></svg>') no-repeat center center;
+    width: var(--spinner-size);
+  }
+}
+
+.a-spinner__text {
+  color: var(--spinner-text-color);
+  font-size: .875rem;
+  margin-left: var(--spacer-s);
 }
 
 /**
@@ -33,20 +46,23 @@
  */
 
 .a-spinner {
-  &.a-spinner--inline {
-    display: inline-block;
-    vertical-align: middle;
-  }
-
-  &.a-spinner--centered {
-    text-align: center;
-  }
-
   &.a-spinner--s {
-    --spinner-size: #{rem($icon-size-base)};
+    --spinner-size: var(--spacer);
   }
 
   &.a-spinner--l {
-    --spinner-size: calc(#{rem($icon-size-lg)} * 2);
+    --spinner-size: 4rem;
+  }
+
+  &.a-spinner--vertical {
+    --spinner-size: 4rem;
+
+    flex-direction: column;
+
+    .a-spinner__text {
+      margin-left: 0;
+      margin-top: var(--spacer-xxs);
+      text-align: center;
+    }
   }
 }

@@ -1,21 +1,14 @@
 /**
  * PROGRESS VARIABLES
  * -------------------------------------------------------------------
- * This component has shared variables with _atoms.tooltip.scss. You can find them in _quarks.css-properties.scss.
  */
 
-.m-progress {
-  --progress-height:           calc(var(--spacer) + var(--spacer-3xs));
-  --progress-bar-padding:      var(--spacer-3xs);
-  --progress-tooltip-offset:   var(--shared-progress-tooltip-offset);
-
-  --progress-bg:               #{$white};
-  --progress-border:           var(--border-color);
-
-  --progress-bar-bg:           var(--theme1-400);
-
-  --progress-tooltip-top:      calc((var(--shared-tooltip-min-height) + var(--shared-tooltip-arrow-height) + var(--progress-tooltip-offset) + var(--progress-bar-padding)) * -1);
-  --progress-tooltip-bottom:   calc(var(--progress-height) - var(--progress-bar-padding) + var(--shared-tooltip-arrow-height) + var(--progress-tooltip-offset));
+.a-progress {
+  --progress-height:          var(--spacer-xxs);
+  --progress-label-size:      .875rem;
+  --progress-label-spacing:   var(--spacer-xxs);
+  --progress-bg-color:        var(--theme1-050);
+  --progress-bar-bg-color:    var(--theme1-400);
 }
 
 /**
@@ -28,36 +21,23 @@
  * -------------------------------------------------------------------
  */
 
-.m-progress__label {
+.a-progress__label {
   display: block;
-  margin-bottom: var(--spacer-xxs);
-  text-align: left;
+  font-size: var(--progress-label-size);
+  margin-bottom: var(--spacer-3xs);
 }
 
-.m-progress__inner {
-  background-color: var(--progress-bg);
-  box-shadow: inset 0 0 0 var(--border-width) var(--progress-border);
+.a-progress__inner {
+  background-color: var(--progress-bg-color);
+  display: flex;
   height: var(--progress-height);
-  padding: var(--progress-bar-padding);
   position: relative;
   width: 100%;
-
-  .a-tooltip {
-    display: block;
-    float: right;
-    position: relative;
-    top: var(--progress-tooltip-top);
-    transform: translateX(50%);
-  }
-
-  .a-tooltip--bottom {
-    top: var(--progress-tooltip-bottom);
-  }
 }
 
-.m-progress__bar {
-  background-color: var(--theme1-400);
-  height: calc(var(--progress-height) - (var(--progress-bar-padding) * 2));
+.a-progress__bar {
+  background-color: var(--progress-bar-bg-color);
+  height: 100%;
 }
 
 /**
@@ -65,19 +45,8 @@
  * -------------------------------------------------------------------
  */
 
-.m-progress--inline {
-  align-items: center;
-  display: flex;
-
-  .m-progress__label {
-    margin-bottom: 0;
-    margin-right: var(--spacer-xs);
-    min-width: var(--spacer-l);
-    text-align: right;
-  }
-
-  .m-progress__inner + .m-progress__label {
-    margin-left: var(--spacer-xs);
-    margin-right: 0;
-  }
+.a-progress.a-progress--l {
+  --progress-height: 1.25rem;
+  --progress-label-size: 1rem;
+  --progress-label-spacing: var(--spacer-xs);
 }

@@ -80,7 +80,8 @@ h6,
  * -------------------------------------------------------------------
  */
 
-p {
+p,
+.paragraph {
   font-size: rem($font-size-base);
   line-height: $line-height-paragraph;
   margin: 0;

@@ -4,17 +4,21 @@
  */
 
 .m-alert {
-  --alert-bg-color:               var(--theme1-050);
-  --alert-border-color:           var(--theme1-400);
+  --alert-color:                  var(--theme1-400);
+  --alert-bg-color:               #{$white};
+  --alert-border-color:           var(--alert-color);
 
-  --alert-success-bg-color:       var(--success-050);
-  --alert-success-border-color:   var(--success-600);
+  --alert-success-color:          var(--success-600);
+  --alert-success-bg-color:       var(--alert-bg-color);
+  --alert-success-border-color:   var(--alert-success-color);
 
-  --alert-warning-bg-color:       var(--warning-050);
-  --alert-warning-border-color:   var(--warning-500);
+  --alert-warning-color:          #{$burnt-orange-400};
+  --alert-warning-bg-color:       var(--alert-bg-color);
+  --alert-warning-border-color:   var(--alert-warning-color);
 
-  --alert-danger-bg-color:        var(--danger-050);
-  --alert-danger-border-color:    var(--danger-500);
+  --alert-danger-color:           var(--danger-500);
+  --alert-danger-bg-color:        var(--alert-bg-color);
+  --alert-danger-border-color:    var(--alert-danger-color);
 
   --alert-padding:                var(--spacer);
 }
@@ -27,6 +31,7 @@
 .m-alert {
   background-color: var(--alert-bg-color);
   border: var(--border-width) solid var(--alert-border-color);
+  color: var(--alert-color);
   padding: var(--alert-padding);
   position: relative;
 
@@ -46,12 +51,21 @@
  * -------------------------------------------------------------------
  */
 
+.m-alert__icon {
+  position: absolute;
+  left: var(--alert-padding);
+  top: var(--alert-padding);
+
+  .ai {
+    font-size: 1.5rem;
+  }
+}
+
 .m-alert__actions {
   margin-bottom: calc(var(--spacer-xs) * -1);
 
   @include at($screen-xs) {
     display: flex;
-    justify-content: flex-end;
     margin-bottom: 0;
   }
 
@@ -69,23 +83,36 @@
 }
 
 /**
- * ALERTS COLORS
+ * ALERTS MODIFIERS
  * -------------------------------------------------------------------
  */
 
 .m-alert {
   &.m-alert--success {
+    --alert-color: var(--alert-success-color);
     --alert-bg-color: var(--alert-success-bg-color);
     --alert-border-color: var(--alert-success-border-color);
   }
 
   &.m-alert--warning {
+    --alert-color: var(--alert-warning-color);
     --alert-bg-color: var(--alert-warning-bg-color);
     --alert-border-color: var(--alert-warning-border-color);
   }
 
   &.m-alert--danger {
+    --alert-color: var(--alert-danger-color);
     --alert-bg-color: var(--alert-danger-bg-color);
     --alert-border-color: var(--alert-danger-border-color);
   }
+
+  &.m-alert--success,
+  &.m-alert--warning,
+  &.m-alert--danger {
+    padding-left: calc(var(--alert-padding) + var(--spacer-l));
+  }
+}
+
+.m-alert.m-alert--inline {
+  --alert-padding: var(--spacer-xs);
 }

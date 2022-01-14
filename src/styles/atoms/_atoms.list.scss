@@ -1,13 +1,16 @@
 /**
  * LIST VARIABLES
  * -------------------------------------------------------------------
- * This component has shared variables with _molecules.collapsible-list.scss. You can find them in _quarks.css-properties.scss.
  */
 
-%a-list {
-  --list-padding-left:          var(--spacer);
-  --list-item-padding-top:      var(--shared-list-item-padding-top);
-  --list-item-padding-bottom:   var(--list-item-padding-top);
+.a-list,
+.a-avatar-list {
+  --list-item-color:             var(--text-color);
+  --list-item-hover-color:       var(--theme1-400);
+  --list-item-active-color:      var(--text-color);
+  --list-item-hover-bg-color:    var(--theme1-050);
+  --list-item-active-bg-color:   #{$gray-100};
+  --list-item-border-color:      #{$gray-200};
 }
 
 /**
@@ -15,30 +18,26 @@
  * -------------------------------------------------------------------
  */
 
-ul,
-ol,
-dl {
-  line-height: 1.3;
-}
-
 /**
  * STANDARD LIST
  * -------------------------------------------------------------------
  */
 
 %a-list {
-  padding-left: var(--list-padding-left);
+  padding-left: var(--spacer-s);
 
-  .a-list {
-    margin-top: var(--list-item-padding-top);
-
-    > li:last-of-type {
-      margin-bottom: calc(var(--list-item-padding-bottom) * -1);
-    }
+  .a-list__content {
+    display: inline-flex;
+    padding: var(--spacer-xxs) 0;
   }
 
-  > li {
-    padding: var(--list-item-padding-top) 0 var(--list-item-padding-bottom);
+  .a-list__text {
+    flex-grow: 1;
+  }
+
+  .a-list__text + .ai,
+  .ai + .a-list__text {
+    margin-left: var(--spacer-xs);
   }
 }
 
@@ -47,134 +46,78 @@ dl {
 }
 
 /**
- * LIST PLACEHOLDERS
+ * LINED LIST
  * -------------------------------------------------------------------
- * List without default padding and standard list styling.
  */
 
-/**
- * List without default padding and standard list styling.
- */
-%a-list--reset {
-  line-height: 1;
+.a-list.a-list--lined {
   list-style: none;
   margin: 0;
   padding: 0;
 
-  ul,
-  ol {
-    list-style: none;
-    padding: 0;
+  .a-list__item {
+    &:last-of-type .a-list__content {
+      border-bottom: var(--border-width) solid var(--list-item-border-color);
+    }
+
+    .a-list__content {
+      border-top: var(--border-width) solid var(--list-item-border-color);
+      padding: .875rem var(--spacer-s);
+    }
   }
-}
 
-.a-list--reset {
-  @extend %a-list--reset;
-}
-
-/**
- * List without standard list styling.
- */
-%a-list--unstyled {
-  list-style: none;
-  padding: 0;
-
-  ul,
-  ol {
-    list-style: none;
+  .a-list__content {
+    display: flex;
   }
-}
 
-.a-list--unstyled {
-  @extend %a-list--unstyled;
-}
+  a.a-list__content {
+    color: var(--list-item-color);
+    text-decoration: none;
+    transition-duration: var(--animation-duration);
+    transition-property: background-color, color;
+    transition-timing-function: var(--animation-easing);
 
-/**
- * List without default padding.
- */
-%a-list--flattened {
-  line-height: 1;
-  padding: 0;
+    &:hover,
+    &:active,
+    &:focus {
+      background-color: var(--list-item-hover-bg-color);
+      color: var(--list-item-hover-color);
+      font-weight: var(--font-weight-bold);
+    }
 
-  ul,
-  ol {
-    padding: 0;
+    &.is-active {
+      background-color: var(--list-item-active-bg-color);
+      color: var(--list-item-active-color);
+      font-weight: var(--font-weight-bold);
+    }
   }
-}
 
-.a-list--flattened {
-  @extend %a-list--flattened;
-}
-
-/**
- * List with more padding.
- */
-%a-list--primary {
   .a-list {
-    line-height: 1;
-    margin-top: var(--spacer-s);
+    border-top: var(--border-width) solid var(--list-item-border-color);
 
-    > li {
-      padding-left: var(--spacer-xs);
+    .a-list__item {
+      &:first-of-type .a-list__content {
+        border-top: none;
+      }
 
-      &:last-of-type {
-        margin-bottom: calc(var(--spacer-s) * -1);
+      &:last-of-type .a-list__content {
+        border-bottom: none;
+      }
+
+      .a-list__content {
+        padding-left: calc(var(--spacer-s) * 2);
       }
     }
   }
 
-  > li {
-    padding: var(--spacer-s) 0 var(--spacer-s) var(--spacer-xs);
-  }
-}
-
-.a-list--primary {
-  @extend %a-list--primary;
-}
-
-/**
- * LIST MODIFIERS
- * -------------------------------------------------------------------
- */
-
-/**
- * List with list items separated by a border.
- */
-.a-list--lined {
-  @extend %a-list--primary;
-  @extend %a-list--flattened;
-
-  > li {
-    border-top: var(--border-width) solid var(--border-color);
-    list-style-position: inside;
-
-    &:last-of-type {
-      border-bottom: var(--border-width) solid var(--border-color);
+  &.a-list--flushed .a-list__item {
+    &:first-of-type .a-list__content {
+      border-top: none;
     }
-  }
 
-  .a-list--lined {
-    > li:last-of-type {
+    &:last-of-type .a-list__content {
       border-bottom: none;
     }
-  }
-}
-
-/**
- * List with list items including an icon.
- */
-.a-list {
-  &.has-icon-left,
-  &.has-icon-right {
-    @extend %a-list--unstyled;
-  }
-
-  &.has-icon-left > li .ai {
-    margin-right: var(--spacer-xs);
-  }
-
-  &.has-icon-right > li .ai {
-    margin-left: var(--spacer-xs);
   }
 }
 
@@ -195,4 +138,90 @@ dl {
     margin-left: 0;
     padding-bottom: var(--spacer-3xs);
   }
+}
+
+/**
+ * AVATAR LIST
+ * -------------------------------------------------------------------
+ */
+
+.a-avatar-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+
+  &:not(.a-avatar-list--flushed) {
+    border-bottom: var(--border-width) solid var(--list-item-border-color);
+    border-top: var(--border-width) solid var(--list-item-border-color);
+  }
+
+  .ai {
+    color: var(--text-color-light);
+    transition: color var(--animation-normal);
+  }
+}
+
+.a-avatar-list__item {
+  &:first-of-type .a-avatar-list__content {
+    border-top: none;
+  }
+
+  &:not(:last-child) .a-avatar-list__item-container {
+    margin-bottom: calc(var(--border-width) * -1);
+  }
+
+  &.is-active .a-avatar-list__item-container {
+    background-color: var(--list-item-active-bg-color);
+    color: var(--list-item-active-color);
+
+    .avatar-list__name {
+      font-weight: var(--font-weight-bold);
+    }
+  }
+
+  &:not(.is-active) a.a-avatar-list__item-container {
+    color: var(--list-item-color);
+    transition: background-color var(--animation-normal);
+
+    &:hover,
+    &:active,
+    &:focus {
+      background-color: var(--list-item-hover-bg-color);
+      color: var(--list-item-hover-color);
+
+      .ai {
+        color: var(--list-item-hover-color);
+      }
+    }
+  }
+}
+
+a.a-avatar-list__item-container {
+  text-decoration: none;
+}
+
+.a-avatar-list__item-container {
+  align-items: center;
+  display: flex;
+  flex-grow: 1;
+  padding-left: var(--spacer-s);
+}
+
+.a-avatar-list__avatar {
+  margin-right: var(--spacer-s);
+}
+
+.a-avatar-list__content {
+  border-top: var(--border-width) solid var(--list-item-border-color);
+  display: flex;
+  flex-grow: 1;
+  min-height: var(--spacer-xl);
+  padding: var(--spacer-xs) var(--spacer-s) var(--spacer-xs) 0;
+}
+
+.a-avatar-list__text {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  justify-content: center;
 }

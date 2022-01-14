@@ -4,22 +4,22 @@
  */
 
 .m-pagination {
-  --pagination-font-size:                #{rem($font-size-base)};
-  --pagination-size:                     var(--spacer-xl);
-  --pagination-padding:                  0 var(--spacer);
+  --pagination-font-size:                 #{rem($font-size-base)};
+  --pagination-size:                      var(--spacer-xl);
+  --pagination-padding:                   0 var(--spacer);
 
-  --pagination-color:                    #{$white};
-  --pagination-bg-color:                 var(--theme1-400);
-  --pagination-hover-bg-color:           var(--theme1-500);
+  --pagination-color:                     #{$white};
+  --pagination-bg-color:                  var(--theme1-400);
+  --pagination-hover-bg-color:            var(--theme1-500);
 
-  --pagination-outline-color:            var(--theme1-400);
-  --pagination-outline-bg-color:         transparent;
-  --pagination-outline-hover-bg-color:   var(--theme1-050);
-  --pagination-outline-border:           var(--pagination-outline-color);
-  --pagination-outline-hover-border:     var(--theme1-500);
+  --pagination-outlined-color:            var(--theme1-400);
+  --pagination-outlined-bg-color:         transparent;
+  --pagination-outlined-hover-bg-color:   var(--theme1-050);
+  --pagination-outlined-border:           var(--pagination-outlined-color);
+  --pagination-outlined-hover-border:     var(--theme1-500);
 
-  --pagination-disabled-color:           #{$gray-400};
-  --pagination-disabled-bg-color:        #{$gray-100};
+  --pagination-disabled-color:            #{$gray-400};
+  --pagination-disabled-bg-color:         #{$gray-100};
 }
 
 /**
@@ -28,7 +28,7 @@
  */
 
 .m-pagination {
-  @extend %a-list--reset;
+  @extend %u-list-reset;
 
   display: flex;
 
@@ -91,9 +91,9 @@
 
 .m-pagination--outlined {
   > li {
-    background-color: var(--pagination-outline-bg-color);
-    box-shadow: 0 0 0 var(--border-width) var(--pagination-outline-border) inset;
-    color: var(--pagination-outline-color);
+    background-color: var(--pagination-outlined-bg-color);
+    box-shadow: 0 0 0 var(--border-width) var(--pagination-outlined-border) inset;
+    color: var(--pagination-outlined-color);
 
     > a,
     > a:hover,
@@ -118,8 +118,8 @@
     > a:hover,
     > a:active,
     > a:focus {
-      background-color: var(--pagination-outline-hover-bg-color);
-      box-shadow: 0 0 0 var(--border-width) var(--pagination-outline-hover-border) inset;
+      background-color: var(--pagination-outlined-hover-bg-color);
+      box-shadow: 0 0 0 var(--border-width) var(--pagination-outlined-hover-border) inset;
     }
 
     + li {

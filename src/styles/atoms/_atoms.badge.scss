@@ -5,7 +5,7 @@
 
 .a-badge {
   --badge-font-size:         #{$font-size-sm};
-  --badge-font-weight:       #{var(--font-weight-bold)};
+  --badge-font-weight:       var(--font-weight-bold);
   --badge-size:              var(--spacer);
   --badge-padding:           0 var(--spacer-3xs);
 
@@ -70,24 +70,6 @@
       --badge-border-color:   var(--theme1-050);
     }
   }
-
-  &.a-badge--secondary {
-    --badge-color:            #{$white};
-    --badge-bg-color:         var(--theme2-400);
-    --badge-border-color:     var(--theme2-400);
-
-    &.a-badge--outlined {
-      --badge-color:          var(--theme2-400);
-      --badge-bg-color:       transparent;
-      --badge-border-color:   var(--theme2-400);
-    }
-
-    &.a-badge--transparent {
-      --badge-color:          var(--theme2-400);
-      --badge-bg-color:       var(--theme2-100);
-      --badge-border-color:   var(--theme2-100);
-    }
-  }
 }
 
 /**
@@ -98,8 +80,7 @@
 .is-disabled {
   .a-badge {
     &,
-    &.a-badge--primary,
-    &.a-badge--secondary {
+    &.a-badge--primary {
       --badge-color:             #{$white};
       --badge-bg-color:          #{$gray-400};
       --badge-border-color:      #{$gray-400};

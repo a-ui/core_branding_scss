@@ -4,7 +4,7 @@
  */
 
 .m-button-list {
-  @extend %a-list--reset;
+  @extend %u-list-reset;
 
   li:not(:last-child) {
     margin-bottom: var(--spacer-xs);

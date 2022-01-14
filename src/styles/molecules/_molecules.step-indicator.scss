@@ -23,7 +23,7 @@ $step-indicator-square-size:            var(--spacer-l) !default;
  */
 
 .m-step-indicator {
-  @extend %a-list--reset;
+  @extend %u-list-reset;
 
   display: flex;
   flex-wrap: wrap;

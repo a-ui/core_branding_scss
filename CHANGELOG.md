@@ -12,6 +12,7 @@
 - [BREAKING] Removed SASS variables of warm gray colors
 - [BREAKING] Updated and renamed SASS variables of grayscale colors
 - [BREAKING] Moved various SASS variables from global variables stylesheet to corresponding component stylesheets
+- [BREAKING] Replaced all component-related SASS variables to CSS properties.
 
 ### Tooling
 
@@ -29,6 +30,15 @@
 
 ### Components
 
+#### Alert
+
+##### Added
+- Added inline variant
+
+##### Changed
+- Implemented new design changes
+- [BREAKING] Replaced SASS variables by CSS properties
+
 #### Avatar
 
 ##### Added
@@ -41,6 +51,17 @@
   - Changed `.a-avatar--small` to `.a-avatar--s`
   - Changed `.a-avatar--medium` to `.a-avatar--l`
   - Changed `.a-avatar--large` to `.a-avatar--xl`
+
+#### Accordion
+
+##### Added
+- Added round variant for every avatar
+
+##### Changed
+- Implemented new design changes
+- [BREAKING] Replaced SASS variables by CSS properties
+- [BREAKING] Changed various CSS classes:
+  - Removed `.has-margins`
 
 #### Badge
 
@@ -68,13 +89,26 @@
   - Changed `.a-button--small` to `.a-button--s`
   - Changed `.a-button--large` to `.a-button--l`
 
-#### Flyout
+#### Datepicker
 
 ##### Changed
+- Implemented new design changes
+- [BREAKING] Replaced SASS variables by CSS properties
+- [BREAKING] Changed various CSS classes
+
+#### Flyout
+
+##### Added
+- Added classes to position flyout above button/input field
+
+##### Changed
+- [BREAKING] Replaced SASS variables by CSS properties
 - [BREAKING] Changed various CSS classes:
-  - Changed `.m-flyout--lg` to `.m-flyout--xl`
-  - Changed `.m-flyout--md` to `.m-flyout--l`
+  - Removed `.m-flyout--lg`
+  - Removed `.m-flyout--md`
+  - Removed `.m-flyout.opens-above`
   - Changed `.m-flyout--sm` to `.m-flyout--s`
+  - Replaced `.m-flyout--right` to `.m-flyout--bottom-right`
 
 #### Header
 
@@ -96,10 +130,48 @@
 - [BREAKING] Changed the way of adding a description, success and error message to an input field
 - [BREAKING] Removed warning messages
 
+#### Label
+
+##### Changed
+- Implemented new design changes
+- [BREAKING] Replaced SASS variables by CSS properties
+- [BREAKING] Changed various CSS classes:
+  - Removed `.a-label--secondary`
+
+#### List
+
+##### Added
+- Added flushed list variant with no top and bottom border
+
+##### Changed
+- Implemented new design changes
+- [BREAKING] Replaced SASS variables by CSS properties
+- [BREAKING] Changed various CSS classes:
+  - Changed `.a-list--reset` to `.u-list-reset`
+  - Changed `.a-list--unstyled` to `.u-list-unstyled`
+  - Removed `.a-list--primary`
+  - Removed `.a-list--flattened`
+  - Removed `.has-icon-left` and `.has-icon-right`
+- [BREAKING] Provide list styles through class selectors instead of element selectors
+
 #### Modal
 
 ##### Changed
 - [BREAKING] Changed `.m-modal--large` to `.m-modal--l`
+
+#### Navigation
+
+##### Added
+- Added horizontal scrollable variant of tab navigation
+
+##### Changed
+- Implemented new design changes
+- [BREAKING] Replaced SASS variables by CSS properties
+- [BREAKING] Changed various CSS classes:
+  - Removed `.m-nav-list--left`
+  - Removed `.m-nav-tabs--left`
+  - Removed `.m-nav-tabs--right`
+- [BREAKING] `<ul>` element must be wrapped with an `<nav>` element
 
 #### Pagination
 
@@ -109,17 +181,83 @@
   - Changed `.m-pagination--small` to `.m-pagination--s`
   - Changed `.m-pagination--large` to `.m-pagination--l`
 
+#### Progress
+
+##### Added
+- Added small and large variant
+- Added progress variant with steps
+
+##### Changed
+- Implemented new design changes
+- [BREAKING] Replaced SASS variables by CSS properties
+- [BREAKING] Removed progress variant with tooltip
+- [BREAKING] Changed from molecule to atom
+
+#### Range slider
+
+##### Changed
+- [BREAKING] Removed range slider variant with tooltip
+- [BREAKING] Changed from molecule to atom
+
+#### Selectable list
+
+##### Changed
+- [BREAKING] Selectable list styling got removed
+
 #### Spinner
+
+##### Added
+- Extended spinner with loading message
 
 ##### Changed
 - [BREAKING] Changed various CSS classes:
   - Changed `.a-spinner--small` to `.a-spinner--s`
   - Changed `.a-spinner--large` to `.a-spinner--l`
 
-#### Table
+#### Switch
+
+##### Added
+- Added variant with I/O labels
 
 ##### Changed
-- [BREAKING] Changed `.a-table--small` to `.a-table--s`
+- Implemented new design changes
+- [BREAKING] Replaced SASS variables by CSS properties
+- [BREAKING] Changed various CSS classes.
+
+##### Changed
+- Implemented new design changes
+- [BREAKING] Replaced SASS variables by CSS properties
+
+#### Table
+
+##### Added
+- Added helper classes to set fixed columns and drop shadows
+- Added `.is-condensed` to decrease padding in table cell
+
+##### Changed
+- Implemented new design changes
+- [BREAKING] Replaced SASS variables by CSS properties
+- [BREAKING] Changed various CSS classes:
+  - Changed `.a-table--small` to `.a-table--s`
+  - Changed `.a-table__wrapper-responsive` to `.a-table-scrollable-wrapper`
+  - Changed `.has-no-padding` to `.is-collapsed`
+
+#### Tag
+
+##### Changed
+- Implemented new design changes
+- [BREAKING] Replaced SASS variables by CSS properties
+- [BREAKING] Changed various CSS classes.
+
+#### Tag list
+
+##### Changed
+- [BREAKING] `m-tag` should be wrapper in `o-tag-list__item`.
+
+#### Timepicker
+
+##### Changed
+- [BREAKING] Timepicker styling got removed
 
 #### Toggle
 
@@ -128,6 +266,18 @@
   - Changed `.a-toggle--tiny` to `.a-toggle--xs`
   - Changed `.a-toggle--small` to `.a-toggle--s`
   - Changed `.a-toggle--large` to `.a-toggle--l`
+
+#### Toggle
+
+##### Added
+- Added inverted variant
+
+##### Changed
+- Implemented new design changes
+- [BREAKING] Replaced SASS variables by CSS properties
+- [BREAKING] Changed various CSS classes:
+  - Removed `.a-tooltip--primary`
+  - Removed `.a-tooltip--secondary`
 
 #### Upload
 

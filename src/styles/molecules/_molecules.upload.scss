@@ -3,49 +3,45 @@
  * -------------------------------------------------------------------
  */
 
-$upload-height:              calc(var(--spacer) * 5) !default;
-$upload-padding:             var(--spacer-l) var(--spacer) !default;
+.m-upload {
+  --upload-color:                   var(--text-color);
+  --upload-bg-color:                #{$white};
+  --upload-hover-bg-color:          var(--theme1-050);
+  --upload-border-color:            var(--theme1-400);
+  --upload-disabled-color:          var(--state-disabled);
+  --upload-disabled-bg-color:       #{$gray-100};
+  --upload-disabled-border-color:   var(--upload-disabled-color);
+  --upload-focus-border-color:      var(--theme1-050);
 
-$upload-color:               $text-color !default;
-$upload-bg:                  $white !default;
-$upload-bg-hover:            mix($brand-primary, $white, 20%) !default;
-$upload-border:              $brand-primary !default;
-$upload-disabled-color:      $state-disabled !default;
-$upload-disabled-bg:         $gray-100 !default;
-$upload-disabled-border:     $upload-disabled-color !default;
-$upload-focus-border:        rgb(192, 223, 254) !default;
-
-$upload-file-color:           $text-color !default;
-$upload-file-bg:              $background-color-light !default;
-$upload-file-bg-danger:       mix($state-danger, $white, 10%) !default;
-$upload-file-color-danger:    mix($black, $state-danger, 40%) !default;
+  --upload-file-color:              var(--text-color);
+  --upload-file-bg-color:           var(--bg-color-light);
+  --upload-file-danger-color:       var(--state-danger);
+}
 
 /**
  * UPLOAD
  * -------------------------------------------------------------------
  */
 
-.m-upload {
-  &.is-disabled {
-    .m-upload__dropzone {
-      border-color: $upload-disabled-border;
-      cursor: not-allowed;
+.m-upload.is-disabled {
+  .m-upload__dropzone {
+    border-color: var(--upload-disabled-border-color);
+    cursor: not-allowed;
 
-      &,
-      &:active,
-      &:hover,
-      &:focus {
-        background-color: $upload-disabled-bg;
-      }
+    &,
+    &:active,
+    &:hover,
+    &:focus {
+      background-color: var(--upload-disabled-bg-color);
     }
+  }
 
-    .m-upload__input {
-      cursor: not-allowed;
-    }
+  .m-upload__input {
+    cursor: not-allowed;
+  }
 
-    .m-upload__content {
-      color: $upload-disabled-color;
-    }
+  .m-upload__content {
+    color: var(--upload-disabled-color);
   }
 }
 
@@ -61,14 +57,14 @@ $upload-file-color-danger:    mix($black, $state-danger, 40%) !default;
 
 .m-upload__dropzone {
   align-items: center;
-  background-color: $upload-bg;
-  border: calc(var(--border-width) * 2) dashed $upload-border;
-  color: $upload-color;
+  background-color: var(--upload-bg-color);
+  border: calc(var(--border-width) * 2) dashed var(--upload-border-color);
+  color: var(--upload-color);
   cursor: pointer;
   display: flex;
   justify-content: center;
-  min-height: $upload-height;
-  padding: $upload-padding;
+  min-height: calc(var(--spacer) * 5);
+  padding: var(--spacer-l) var(--spacer);
   position: relative;
   text-align: center;
   transition: background var(--animation-normal);
@@ -77,7 +73,7 @@ $upload-file-color-danger:    mix($black, $state-danger, 40%) !default;
   &:active,
   &:hover,
   &:focus {
-    background-color: $upload-bg-hover;
+    background-color: var(--upload-hover-bg-color);
   }
 }
 
@@ -92,10 +88,8 @@ $upload-file-color-danger:    mix($black, $state-danger, 40%) !default;
   top: 0;
   width: 100%;
 
-  &:focus {
-    + .m-upload__content:before {
-      content: '';
-    }
+  &:focus + .m-upload__content:before {
+    content: '';
   }
 }
 
@@ -126,13 +120,13 @@ $upload-file-color-danger:    mix($black, $state-danger, 40%) !default;
 }
 
 .m-upload__files {
-  @extend %a-list--reset;
+  @extend %u-list-reset;
 
   margin-top: var(--spacer);
 
   > li {
-    background-color: $upload-file-bg;
-    color: $upload-file-color;
+    background-color: var(--upload-file-bg-color);
+    color: var(--upload-file-color);
     line-height: $line-height-paragraph;
     min-height: var(--spacer-l);
     padding: var(--spacer-xxs) var(--spacer-xl) var(--spacer-xxs) var(--spacer-xl);
@@ -163,5 +157,5 @@ $upload-file-color-danger:    mix($black, $state-danger, 40%) !default;
 }
 
 .m-upload__error {
-  color: $upload-file-color-danger;
+  color: var(--upload-file-danger-color);
 }

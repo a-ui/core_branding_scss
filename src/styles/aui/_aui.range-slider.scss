@@ -3,7 +3,7 @@
  * -------------------------------------------------------------------
  */
 
-.m-range-slider {
+.a-range-slider {
   &__handle {
     z-index: layer('top');
   }
@@ -23,7 +23,7 @@
     width: 100%;
     z-index: layer('base');
 
-    .m-range-slider__step {
+    .a-range-slider__step {
       background-color: $gray-300;
       border-radius: 50%;
       height: calc(var(--range-slider-inner-height) - (2 * var(--range-slider-padding)));
@@ -33,13 +33,13 @@
     }
   }
 
-  .m-range-slider__step-labels {
+  .a-range-slider__step-labels {
     display: flex;
     font-size: $font-size-sm;
     justify-content: space-between;
     margin-top: var(--spacer-s);
 
-    .m-range-slider__step {
+    .a-range-slider__step {
       width: var(--spacer);
     }
   }

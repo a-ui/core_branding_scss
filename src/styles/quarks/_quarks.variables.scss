@@ -186,13 +186,3 @@ $icon-size-ti:            12px !default;
 $icon-size-sm:            16px !default;
 $icon-size-base:          22px !default;
 $icon-size-lg:            28px !default;
-
-/**
- * BOX SHADOWS
- * -------------------------------------------------------------------
- */
-
-$box-shadow:              $spacer / 2 $spacer / 2 0 rgba($black, .1) !default;
-$box-shadow-reverse:      $spacer / 2 $spacer / -2 0 rgba($black, .1) !default;
-$box-shadow-top:          0 $spacer / -2 0 rgba($black, .1) !default;
-$box-shadow-bottom:       0 $spacer / 2 0 rgba($black, .1) !default;

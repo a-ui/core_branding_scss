@@ -4,17 +4,24 @@
  */
 
 .a-table,
-.a-table__wrapper-responsive {
-  --table-bg-color:                 #{$white};
-  --table-border-color:             var(--border-color);
-  --table-highlight-bg-color:       var(--theme1-050);
-  --table-highlight-border-color:   var(--theme1-400);
+.a-table-scrollable-wrapper {
+  --table-bg-color:                     #{$white};
+  --table-border-color:                 var(--border-color);
+  --table-border-color-light:           #{$gray-200};
+  --table-highlight-bg-color:           var(--theme1-050);
+  --table-highlight-border-color:       var(--theme1-400);
+  --table-striped-bg-color:             var(--bg-color-light);
 
-  --table-striped-bg-color:         var(--bg-color-light);
+  --table-sort-btn-color:               var(--text-color);
+  --table-sort-btn-active-color:        var(--theme1-400);
+  --table-sort-btn-bg-color:            #{$white};
+  --table-sort-btn-hover-bg-color:      var(--theme1-050);
+  --table-sort-btn-icon-color:          #{$gray-300};
+  --table-sort-btn-icon-active-color:   var(--theme1-400);
 }
 
 /**
- * TABLE PLACEHOLDER
+ * TABLE
  * -------------------------------------------------------------------
  */
 
@@ -29,10 +36,16 @@
     text-align: left;
   }
 
-  tr {
+  thead tr {
     border-bottom: var(--border-width) solid var(--table-border-color);
-    height: var(--spacer-xl);
+  }
+
+  tbody tr {
     transition: background-color var(--animation-normal);
+
+    &:not(:last-child) {
+      border-bottom: var(--border-width) solid var(--table-border-color-light);
+    }
 
     &.is-selected,
     &.is-clickable:active,
@@ -56,12 +69,100 @@
     }
   }
 
+  tr {
+    height: var(--spacer-xl);
+  }
+
   th,
   td {
     padding: var(--spacer-xs);
 
     &:not(.u-text-center):not(.u-text-right):not(.u-text-justify) {
       text-align: left;
+    }
+
+    &.is-condensed {
+      padding: var(--spacer-3xs) var(--spacer-xs);
+    }
+
+    &.is-collapsed {
+      padding: 0;
+    }
+  }
+}
+
+/**
+ * TABLE ELEMENTS
+ * -------------------------------------------------------------------
+ */
+
+.a-table__sort-button {
+  align-items: center;
+  background-color: var(--table-sort-btn-bg-color);
+  border: none;
+  color: var(--table-sort-btn-color);
+  cursor: pointer;
+  display: flex;
+  font-weight: var(--font-weight-bold);
+  justify-content: flex-start;
+  margin: 0;
+  min-height: var(--spacer-xl);
+  padding: 0 var(--spacer-xs);
+  transition: background-color var(--animation-normal);
+  user-select: none;
+  width: 100%;
+
+  &:hover,
+  &:active,
+  &:focus {
+    --table-sort-btn-bg-color: var(--table-sort-btn-hover-bg-color);
+  }
+
+  &.a-table__sort-button--align-right {
+    justify-content: flex-end;
+  }
+
+  &.a-table__sort-button--unsorted,
+  &.a-table__sort-button--sorted-asc,
+  &.a-table__sort-button--sorted-desc {
+    --table-sort-btn-color: var(--table-sort-btn-active-color);
+
+    &:after {
+      background: var(--table-sort-btn-icon-color);
+      content: '';
+      height: 1rem;
+      margin-left: var(--spacer-3xs);
+      mask-size: contain;
+      width: 1rem;
+    }
+  }
+
+  &.a-table__sort-button--unsorted {
+    &:after {
+      mask: url('data:image/svg+xml;utf8,<svg id=%22expanded-vertical-1%22 viewBox=%220 0 17 17%22 xml:space=%22preserve%22 xmlns=%22http://www.w3.org/2000/svg%22><style>.st0{fill:none;stroke:%23000000;stroke-linecap:round;stroke-linejoin:round;}</style><g><path class=%22st0%22 d=%22M8.5,1.5v14%22/><path class=%22st0%22 d=%22M5.5,4.5l3-3l3,3%22/><path class=%22st0%22 d=%22M5.5,12.5l3,3l3-3%22/></g></svg>') no-repeat center center;
+    }
+
+    &:hover,
+    &:focus {
+      &:after {
+        mask: url('data:image/svg+xml;utf8,<svg id=%22keyboard-arrow-up%22 viewBox=%220 0 17 17%22 xml:space=%22preserve%22 xmlns=%22http://www.w3.org/2000/svg%22><style>.st0{fill:none;stroke:%23000000;stroke-linecap:round;stroke-linejoin:round;}</style><g><path class=%22st0%22 d=%22M8.5,1.5v14%22/><path class=%22st0%22 d=%22M5.5,4.5l3-3l3,3%22/><path class=%22st0%22 d=%22M8.5,15.5%22/></g></svg>') no-repeat center center;
+      }
+    }
+  }
+
+  &.a-table__sort-button--sorted-asc {
+    --table-sort-btn-icon-color: var(--table-sort-btn-icon-active-color);
+
+    &:after {
+      mask: url('data:image/svg+xml;utf8,<svg id=%22keyboard-arrow-up%22 viewBox=%220 0 17 17%22 xml:space=%22preserve%22 xmlns=%22http://www.w3.org/2000/svg%22><style>.st0{fill:none;stroke:%23000000;stroke-linecap:round;stroke-linejoin:round;}</style><g><path class=%22st0%22 d=%22M8.5,1.5v14%22/><path class=%22st0%22 d=%22M5.5,4.5l3-3l3,3%22/><path class=%22st0%22 d=%22M8.5,15.5%22/></g></svg>') no-repeat center center;
+    }
+  }
+
+  &.a-table__sort-button--sorted-desc {
+    --table-sort-btn-icon-color: var(--table-sort-btn-icon-active-color);
+
+    &:after {
+      mask: url('data:image/svg+xml;utf8,<svg id=%22keyboard-arrow-down%22 viewBox=%220 0 17 17%22 xml:space=%22preserve%22 xmlns=%22http://www.w3.org/2000/svg%22><style>.st0{fill:none;stroke:%23000000;stroke-linecap:round;stroke-linejoin:round;}</style><g><path class=%22st0%22 d=%22M8.5,1.5v14%22/><path class=%22st0%22 d=%22M8.5,1.5%22/><path class=%22st0%22 d=%22M5.5,12.5l3,3l3-3%22/></g></svg>') no-repeat center center;
     }
   }
 }
@@ -84,21 +185,121 @@
   }
 }
 
+.a-table.a-table--open {
+  border: none;
+}
+
 /**
  * TABLE RESPONSIVE WRAPPER
  * -------------------------------------------------------------------
  */
 
-.a-table__wrapper-responsive {
+.a-table-responsive-wrapper {
+  position: relative;
+
+  &:not(.has-first-column-fixed) {
+    // Display a drop shadow on the left inner side of the table
+    &.has-shadow-left:before {
+      background-color: var(--box-shadow-color);
+      bottom: 0;
+      content: '';
+      left: 0;
+      position: absolute;
+      top: 0;
+      width: var(--spacer-xs);
+    }
+  }
+
+  &:not(.has-last-column-fixed) {
+    // Display a drop shadow on the right inner side of the table
+    &.has-shadow-right:after {
+      background-color: var(--box-shadow-color);
+      bottom: 0;
+      content: '';
+      position: absolute;
+      right: 0;
+      top: 0;
+      width: var(--spacer-xs);
+    }
+  }
+
+  // Make first column of the table fixed
+  &.has-first-column-fixed {
+    table {
+      tr th:first-child,
+      tr td:first-child {
+        background-color: var(--table-bg-color);
+        box-shadow: inset calc(var(--border-width) * -1) 0 0 0 var(--table-border-color);
+        left: 0;
+        position: sticky;
+      }
+    }
+
+    /*
+      When the first column of the table is fixed, the drop shadow on the
+      left side of the table is displayed on the right side of the fixed first column
+    */
+    &.has-shadow-left table {
+      tr th:first-child,
+      tr td:first-child {
+        &:after {
+          background-color: var(--box-shadow-color);
+          bottom: 0;
+          content: '';
+          position: absolute;
+          right: 0;
+          top: 0;
+          transform: translateX(100%);
+          width: var(--spacer-xs);
+        }
+      }
+    }
+  }
+
+  // Make last column of the table fixed
+  &.has-last-column-fixed {
+    table {
+      tr th:last-child,
+      tr td:last-child {
+        background-color: var(--table-bg-color);
+        box-shadow: inset var(--border-width) 0 0 0 var(--table-border-color);
+        position: sticky;
+        right: 0;
+      }
+    }
+
+    /*
+      When the last column of the table is fixed, the drop shadow on the
+      right side of the table is displayed on the lefst side of the fixed last column
+    */
+    &.has-shadow-right table {
+      tr th:last-child,
+      tr td:last-child {
+        &:after {
+          background-color: var(--box-shadow-color);
+          bottom: 0;
+          content: '';
+          left: 0;
+          position: absolute;
+          top: 0;
+          transform: translateX(-100%);
+          width: var(--spacer-xs);
+        }
+      }
+    }
+  }
+}
+
+.a-table-scrollable-wrapper {
   -ms-overflow-style: scrollbar;
   -webkit-overflow-scrolling: touch;
-  background-color: var(--table-bg-color);
   border: var(--border-width) solid var(--table-border-color);
   overflow-x: auto;
   overflow-y: hidden;
   width: 100%;
 
   table {
+    background-color: transparent;
     border: none;
     margin-bottom: calc(var(--border-width) * -1);
 

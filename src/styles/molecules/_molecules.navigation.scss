@@ -5,24 +5,17 @@
 
 .m-nav-list,
 .m-nav-tabs {
-  --nav-font-weight:          var(--font-weight-bold);
-  --nav-icon-size:            1.25rem;
-  --nav-padding:              .8125rem var(--spacer);
+  --nav-color:                 var(--text-color);
+  --nav-bg-color:              transparent;
+  --nav-border-color:          #{$gray-200};
 
-  --nav-color:                var(--text-color);
-  --nav-bg-color:             transparent;
-  --nav-border-color:         var(--border-color);
+  --nav-hover-color:           var(--theme1-400);
+  --nav-hover-bg-color:        var(--theme1-050);
 
-  --nav-active-color:         var(--nav-hover-color);
-  --nav-active-bg-color:      var(--nav-bg-color);
-
-  --nav-hover-color:          var(--theme1-400);
-  --nav-hover-bg-color:       #{$gray-100};
-  --nav-hover-border-color:   var(--theme1-400);
+  --nav-active-color:          var(--theme1-400);
+  --nav-active-border-color:   var(--theme1-400);
 
   --nav-disabled-color:       var(--state-disabled);
-  --nav-disabled-bg-color:    #{$gray-100};
-  --nav-disabled-tab-color:   var(--nav-disabled-color);
 }
 
 /**
@@ -30,85 +23,102 @@
  * -------------------------------------------------------------------
  */
 
-%m-nav-list {
-  @extend %a-list--reset;
+.m-nav-list {
+  ol,
+  ul {
+    @extend %u-list-reset;
 
-  border-top: var(--border-width) solid var(--nav-border-color);
-
-  > li {
-    font-weight: var(--nav-font-weight);
-    line-height: $line-height-paragraph;
-    min-height: var(--spacer-xl);
-    text-align: center;
-
-    > a,
-    > button {
-      background-color: var(--nav-bg-color);
-      border: none;
-      border-bottom: var(--border-width) solid var(--nav-border-color);
-      color: inherit;
-      display: block;
-      flex: 1 1 auto;
-      padding: var(--nav-padding);
-      text-decoration: none;
+    > li {
+      display: flex;
+      flex-direction: column;
+      min-height: var(--spacer-xl);
       transition-duration: var(--animation-duration);
-      transition-property: background, color;
+      transition-property: background-color, box-shadow;
       transition-timing-function: var(--animation-easing);
 
-      &:hover,
-      &:active {
-        background-color: var(--nav-hover-bg-color);
-        color: var(--nav-hover-color);
+      &:not(:first-child) {
+        > a,
+        > button {
+          border-top: var(--border-width) solid var(--nav-border-color);
+        }
+      }
+
+      &:not(.is-active):not(.is-disabled) {
+        &:hover,
+        &:active,
+        &:focus,
+        &:focus-within {
+          background-color: var(--nav-hover-bg-color);
+          color: var(--nav-hover-color);
+
+          > a,
+          > button {
+            border-top-color: transparent;
+          }
+
+          + li {
+            > a,
+            > button {
+              border-top-color: transparent;
+            }
+          }
+        }
       }
 
       &.is-active {
         &,
         &:hover,
-        &:active {
+        &:active,
+        &:focus,
+        &:focus-within {
           background-color: var(--nav-active-bg-color);
+          box-shadow: var(--spacer-3xs) 0 0 0 var(--nav-active-border-color) inset;
           color: var(--nav-active-color);
-          text-decoration: underline;
+          font-weight: var(--font-weight-bold);
         }
       }
 
       &.is-disabled {
         &,
         &:hover,
-        &:active {
-          background-color: var(--nav-disabled-bg-color);
+        &:active,
+        &:focus,
+        &:focus-within {
           color: var(--nav-disabled-color);
-          cursor: not-allowed;
-          text-decoration: none;
+
+          > a,
+          > button {
+            cursor: not-allowed;
+          }
         }
       }
 
-      > .ai {
-        display: inline-block;
-        margin-right: var(--spacer-xs);
+      > a,
+      > button {
+        align-items: center;
+        background: transparent;
+        border: none;
+        color: inherit;
+        cursor: pointer;
+        display: flex;
+        flex-grow: 1;
+        margin-left: var(--spacer-s);
+        padding: var(--spacer-3xs) var(--spacer-s) var(--spacer-3xs) 0;
+        text-decoration: none;
+        transition-duration: var(--animation-duration);
+        transition-property: border-top-color, color;
+        transition-timing-function: var(--animation-easing);
+
+        > .ai {
+          display: inline-block;
+          margin-right: var(--spacer-xxs);
+        }
+
+        > .a-badge {
+          margin-left: var(--spacer-xxs);
+        }
       }
     }
-
-    > button {
-      cursor: pointer;
-      width: 100%;
-    }
-  }
-}
-
-.m-nav-list {
-  @extend %m-nav-list;
-}
-
-/**
- * NAVIGATION LIST MODIFIERS
- * -------------------------------------------------------------------
- */
-
-.m-nav-list--left > li {
-  &,
-  > a,
-  > button {
-    text-align: left;
   }
 }
 
@@ -118,69 +128,111 @@
  */
 
 .m-nav-tabs {
-  @extend %m-nav-list;
+  position: relative;
 
-  @include at($screen-sm) {
-    border-top: none;
+  ol,
+  ul {
+    @extend %u-list-reset;
+
+    -ms-overflow-style: scrollbar;
+    -webkit-overflow-scrolling: touch;
     display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
+    overflow-x: auto;
 
     > li {
-      > a,
-      > button {
-        border-bottom: calc(var(--border-width) * 3) solid transparent;
-        display: inline-flex;
-        text-decoration: none;
-        transition-property: border, color;
+      display: flex;
+      flex-direction: column;
+      min-height: var(--spacer-xl);
+      transition-duration: var(--animation-duration);
+      transition-property: background-color, box-shadow;
+      transition-timing-function: var(--animation-easing);
 
+      &:not(.is-active):not(.is-disabled) {
         &:hover,
-        &:active {
-          background-color: transparent;
-          border-color: var(--nav-active-color);
-          color: var(--nav-color);
-          text-decoration: none;
+        &:active,
+        &:focus,
+        &:focus-within {
+          background-color: var(--nav-hover-bg-color);
+          color: var(--nav-hover-color);
         }
+      }
 
-        &.is-active {
-          &,
-          &:hover,
-          &:active {
-            background-color: var(--nav-active-bg-color);
-            border-color: var(--nav-active-color);
-            color: var(--nav-active-color);
-            text-decoration: none;
-          }
+      &.is-active {
+        &,
+        &:hover,
+        &:active,
+        &:focus,
+        &:focus-within {
+          background-color: var(--nav-active-bg-color);
+          box-shadow: 0 calc(var(--spacer-3xs) * -1) 0 0 var(--nav-active-border-color) inset;
+          color: var(--nav-active-color);
+          font-weight: var(--font-weight-bold);
         }
+      }
 
-        &.is-disabled {
-          &,
-          &:hover,
-          &:active {
-            background-color: var(--nav-bg-color);
-            border-color: transparent;
-            color: var(--nav-disabled-color);
+      &.is-disabled {
+        &,
+        &:hover,
+        &:active,
+        &:focus,
+        &:focus-within {
+          color: var(--nav-disabled-color);
+
+          > a,
+          > button {
             cursor: not-allowed;
           }
         }
       }
+
+      > a,
+      > button {
+        align-items: center;
+        background: transparent;
+        border: none;
+        color: inherit;
+        cursor: pointer;
+        display: flex;
+        flex-grow: 1;
+        padding: var(--spacer-3xs) var(--spacer-s);
+        text-decoration: none;
+        transition: color var(--animation-normal);
+
+        > .ai {
+          display: inline-block;
+          margin-right: var(--spacer-xxs);
+        }
+
+        > .a-badge {
+          margin-left: var(--spacer-xxs);
+        }
+      }
     }
   }
-}
 
-/**
- * NAVIGATION LIST MODIFIERS
- * -------------------------------------------------------------------
- */
-
-.m-nav-tabs--left {
-  @include at($screen-sm) {
-    justify-content: flex-start;
+  &.has-border {
+    border-bottom: var(--border-width) solid var(--nav-border-color);
   }
-}
 
-.m-nav-tabs--right {
-  @include at($screen-sm) {
-    justify-content: flex-end;
+  // Display a drop shadow on the left inner side of the navigation
+  &.has-shadow-left:before {
+    background-color: var(--box-shadow-color);
+    bottom: 0;
+    content: '';
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: var(--spacer-xs);
+  }
+
+  // Display a drop shadow on the right inner side of the navigation
+  &.has-shadow-right:after {
+    background-color: var(--box-shadow-color);
+    bottom: 0;
+    content: '';
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: var(--spacer-xs);
   }
 }

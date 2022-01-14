@@ -6,7 +6,6 @@
 
 .a-copyright {
   --copyright-height:        var(--shared-copyright-height);
-  --copyright-font-size:     #{$font-size-sm};
   --copyright-color:         var(--shared-copyright-color);
   --copyright-bg-color:      var(--overlay-color);
 }
@@ -20,7 +19,7 @@
   background-color: var(--copyright-bg-color);
   color: var(--copyright-color);
   display: inline-block;
-  font-size: var(--copyright-font-size);
+  font-size: 1rem;
   height: var(--copyright-height);
   transition: transform var(--animation-normal);
 }
@@ -38,13 +37,14 @@
 .a-copyright__sign {
   align-items: center;
   display: flex;
-  font-size: calc(var(--copyright-font-size) * 1.25);
+  font-size: 1.125rem;
   height: 100%;
   justify-content: center;
   width: var(--copyright-height);
 }
 
 .a-copyright__label {
+  font-weight: var(--font-weight-bold);
   line-height: var(--copyright-height);
   margin-right: var(--spacer-xs);
 }

@@ -24,6 +24,7 @@
   --theme2-200:              #{$monza-200};
   --theme2-100:              #{$monza-100};
 
+  --success-700:             #{$mantis-700};
   --success-600:             #{$mantis-600};
   --success-500:             #{$mantis-500};
   --success-400:             #{$mantis-400};
@@ -32,13 +33,9 @@
   --success-100:             #{$mantis-100};
   --success-050:             #{$mantis-050};
 
-  --warning-600:             #{$supernova-600};
-  --warning-500:             #{$supernova-500};
-  --warning-400:             #{$supernova-400};
-  --warning-300:             #{$supernova-300};
-  --warning-200:             #{$supernova-200};
-  --warning-100:             #{$supernova-100};
-  --warning-050:             #{$supernova-050};
+  --warning-500:             #{$burnt-orange-500};
+  --warning-400:             #{$burnt-orange-400};
+  --warning-050:             #{$burnt-orange-050};
 
   --danger-600:              #{$cinnabar-600};
   --danger-500:              #{$cinnabar-500};
@@ -60,6 +57,7 @@
   --bg-color-light:          #{$gray-100};
   --border-color:            #{$gray-300};
   --overlay-color:           #{rgba($black, .75)};
+  --box-shadow-color:        #{rgba($gray-600, .12)};
 
   --state-info:              var(--theme1-400);
   --state-success:           var(--success-600);
@@ -158,6 +156,17 @@
   --animation-normal:        var(--animation-duration) var(--animation-easing);
 
   /**
+   * BOX SHADOWS
+   * -------------------------------------------------------------------
+   */
+
+  --box-shadow-bottom-left:      calc(var(--spacer) / -2) calc(var(--spacer) / 2) 0 var(--box-shadow-color);
+  --box-shadow-bottom-right:     calc(var(--spacer) / 2) calc(var(--spacer) / 2) 0 var(--box-shadow-color);
+  --box-shadow-upper-left:       calc(var(--spacer) / -2) calc(var(--spacer) / -2) 0 var(--box-shadow-color);
+  --box-shadow-upper-right:      calc(var(--spacer) / 2) calc(var(--spacer) / -2) 0 var(--box-shadow-color);
+  --box-shadow:                  var(--box-shadow-bottom-right);
+
+  /**
    * SHARED CSS PROPERTIES
    * -------------------------------------------------------------------
    */
@@ -173,16 +182,6 @@
 
   // Header
   --shared-header-height:                  var(--spacer-xl);
-
-  // List
-  --shared-list-item-padding-top:          var(--spacer-xxs);
-
-  // Tooltip
-  --shared-tooltip-min-height:             var(--spacer-l);
-  --shared-tooltip-arrow-height:           calc(var(--spacer) / 4);
-
-  // Progress
-  --shared-progress-tooltip-offset:        .625rem;
 
   // Slideshow
   --shared-slideshow-footer-color-light:   #{$white};

@@ -1,23 +1,16 @@
 /**
  * TOOLTIP VARIABLES
  * -------------------------------------------------------------------
- * This component has shared variables with _molecules.progress.scss and _molecules.range-slider.scss. You can find them in _quarks.css-properties.scss.
  */
 
 .a-tooltip {
-  --tooltip-max-width:            calc(var(--spacer) * 12);
-  --tooltip-min-height:           var(--shared-tooltip-min-height);
-  --tooltip-padding:              var(--spacer-xxs) var(--spacer-xs);
-  --tooltip-arrow-height:         var(--shared-tooltip-arrow-height);
+  --tooltip-max-width:           13rem;
 
-  --tooltip-color:                var(--text-color);
-  --tooltip-bg-color:             var(--bg-color);
+  --tooltip-color:               #{$white};
+  --tooltip-bg-color:            #{$gray-500};
 
-  --tooltip-primary-color:        #{$white};
-  --tooltip-primary-bg-color:     var(--theme1-400);
-
-  --tooltip-secondary-color:      #{$white};
-  --tooltip-secondary-bg-color:   var(--theme2-400);
+  --tooltip-inverted-color:      #{$gray-600};
+  --tooltip-inverted-bg-color:   #{$gray-200};
 }
 
 /**
@@ -27,21 +20,13 @@
 
 .a-tooltip {
   display: inline-block;
+  font-size: .875rem;
   max-width: var(--tooltip-max-width);
-  min-height: var(--tooltip-min-height);
-  padding: var(--tooltip-padding);
+  padding: var(--spacer-3xs) var(--spacer-xxs);
   position: relative;
 
   a {
     color: inherit;
-  }
-
-  &:before {
-    content: '';
-    display: block;
-    height: calc(var(--tooltip-arrow-height) * 2);
-    position: absolute;
-    width: calc(var(--tooltip-arrow-height) * 2);
   }
 }
 
@@ -54,120 +39,8 @@
   background-color: var(--tooltip-bg-color);
   color: var(--tooltip-color);
 
-  &:before {
-    background-color: var(--tooltip-bg-color);
-  }
-
-  &.a-tooltip--primary {
-    --tooltip-color: var(--tooltip-primary-color);
-    --tooltip-bg-color: var(--tooltip-primary-bg-color);
-  }
-
-  &.a-tooltip--secondary {
-    --tooltip-color: var(--tooltip-secondary-color);
-    --tooltip-bg-color: var(--tooltip-secondary-bg-color);
-  }
-}
-
-/**
- * TOOLTIP POSITIONS
- * -------------------------------------------------------------------
- */
-
-.a-tooltip {
-  /**
-   * TOP
-   */
-  &.a-tooltip--top:before,
-  &.a-tooltip--top-right:before,
-  &.a-tooltip--top-left:before {
-    bottom: 0;
-  }
-
-  &.a-tooltip--top:before {
-    left: 50%;
-    transform: translate(-50%, 50%) rotate(45deg);
-  }
-
-  &.a-tooltip--top-right:before {
-    left: var(--spacer-xs);
-    transform: translate(0, 50%) rotate(45deg);
-  }
-
-  &.a-tooltip--top-left:before {
-    right: var(--spacer-xs);
-    transform: translate(0, 50%) rotate(45deg);
-  }
-
-  /**
-   * BOTTOM
-   */
-  &.a-tooltip--bottom:before,
-  &.a-tooltip--bottom-right:before,
-  &.a-tooltip--bottom-left:before {
-    top: 0;
-  }
-
-  &.a-tooltip--bottom:before {
-    left: 50%;
-    transform: translate(-50%, -50%) rotate(45deg);
-  }
-
-  &.a-tooltip--bottom-right:before {
-    left: var(--spacer-xs);
-    transform: translate(0, -50%) rotate(45deg);
-  }
-
-  &.a-tooltip--bottom-left:before {
-    right: var(--spacer-xs);
-    transform: translate(0, -50%) rotate(45deg);
-  }
-
-  /**
-   * LEFT
-   */
-  &.a-tooltip--left:before,
-  &.a-tooltip--left-top:before,
-  &.a-tooltip--left-bottom:before {
-    right: 0;
-  }
-
-  &.a-tooltip--left:before {
-    top: 50%;
-    transform: translate(50%, -50%) rotate(45deg);
-  }
-
-  &.a-tooltip--left-top:before {
-    bottom: var(--spacer-xs);
-    transform: translate(50%, 0) rotate(45deg);
-  }
-
-  &.a-tooltip--left-bottom:before {
-    top: var(--spacer-xs);
-    transform: translate(50%, 0) rotate(45deg);
-  }
-
-  /**
-   * RIGHT
-   */
-  &.a-tooltip--right:before,
-  &.a-tooltip--right-top:before,
-  &.a-tooltip--right-bottom:before {
-    left: 0;
-  }
-
-  &.a-tooltip--right:before {
-    top: 50%;
-    transform: translate(-50%, -50%) rotate(45deg);
-  }
-
-  &.a-tooltip--right-top:before {
-    bottom: var(--spacer-xs);
-    transform: translate(-50%, 0) rotate(45deg);
-  }
-
-  &.a-tooltip--right-bottom:before {
-    top: var(--spacer-xs);
-    transform: translate(-50%, 0) rotate(45deg);
+  &.a-tooltip--inverted {
+    --tooltip-color: var(--tooltip-inverted-color);
+    --tooltip-bg-color: var(--tooltip-inverted-bg-color);
   }
 }

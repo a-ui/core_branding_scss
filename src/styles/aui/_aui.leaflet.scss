@@ -107,7 +107,7 @@
 
     .o-leaflet__content {
       border: var(--border-width) solid $gray-300;
-      box-shadow: .75rem .75rem 0 rgba($black, .1);
+      box-shadow: .75rem .75rem 0 var(--box-shadow-color);
       left: var(--spacer-s);
       max-height: calc(100% - #{rem(160px)});
       position: absolute;
@@ -129,7 +129,7 @@
 .leaflet-popup-content-wrapper {
   border: var(--border-width) solid $gray-100 !important;
   border-radius: 0 !important;
-  box-shadow: var(--spacer-xs) var(--spacer-xs) 0 rgba($black, .1) !important;
+  box-shadow: var(--spacer-xs) var(--spacer-xs) 0 var(--box-shadow-color) !important;
   position: relative;
 
   &:after {

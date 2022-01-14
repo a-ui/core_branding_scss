@@ -283,21 +283,17 @@
     }
   }
 
-  &--full {
-    margin-bottom: 7rem;
-  }
-
-  &--no-padding {
-    margin-bottom: 3rem;
-  }
-
   &--opens-above {
-    margin-bottom: 6rem;
+    margin-top: 14rem;
+
+    @include at($screen-sm) {
+      margin-top: 8rem;
+    }
   }
 }
 
-.d-icon-list {
-  padding: var(--spacer);
+.d-negative-social-buttons {
+  padding: var(--spacer-xs);
 }
 
 .d-avatar {
