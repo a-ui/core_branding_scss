@@ -148,7 +148,6 @@
       &:focus {
         background-color: var(--datepicker-highlight-color);
         color: var(--datepicker-active-color);
-        font-weight: var(--font-weight-bold);
       }
     }
 
@@ -262,7 +261,6 @@
     &:focus {
       background-color: var(--datepicker-highlight-color);
       color: var(--datepicker-active-color);
-      font-weight: var(--font-weight-bold);
     }
 
     &.is-current {
