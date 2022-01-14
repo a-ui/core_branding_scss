@@ -196,3 +196,16 @@
     }
   }
 }
+
+/**
+ * RADIO BUTTON & CHECKBOX MODIFIERS
+ * -------------------------------------------------------------------
+ */
+
+.a-input__checkbox.a-input__checkbox--full,
+.a-input__radio.a-input__radio--full {
+
+  label {
+    display: block;
+  }
+}
