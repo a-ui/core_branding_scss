@@ -33,6 +33,8 @@
   --input-padding-vertical:        0;
   --input-padding-horizontal:      var(--spacer-s);
 
+  --select-padding-vertical:       var(--spacer-xs);
+
   --textarea-height:               12rem;
 }
 
@@ -93,7 +95,14 @@ textarea {
   input,
   select {
     min-height: var(--input-height);
+  }
+
+  input {
     padding: var(--input-padding-vertical) var(--input-padding-horizontal);
+  }
+
+  select {
+    padding: var(--select-padding-vertical) var(--input-padding-horizontal);
   }
 
   textarea {
@@ -256,7 +265,8 @@ textarea {
     }
 
     &:focus-within .a-input__wrapper {
-      @include focus;
+      outline: 5px auto Highlight;
+      outline: 2px auto -webkit-focus-ring-color; // Decrease focus outline on Safari to make it connect to input field border
     }
   }
 
@@ -322,12 +332,20 @@ textarea {
     --input-height: var(--spacer-l);
     --input-icon-size: 1rem;
     --input-padding-horizontal: var(--spacer-xs);
+    --select-padding-vertical: 0;
     --textarea-height: 8rem;
+
+    select {
+      @-moz-document url-prefix() { // sass-lint:disable-line no-vendor-prefixes
+        line-height: 2.1; // Fixes Firefox line-height bug (https://stackoverflow.com/a/5440037)
+      }
+    }
   }
 
   &.a-input--l {
     --input-height: var(--spacer-xxl);
     --input-padding-horizontal: var(--spacer);
+    --select-padding-vertical: 1.125rem;
     --textarea-height: 16rem;
   }
 }

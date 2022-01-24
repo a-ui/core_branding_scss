@@ -3,19 +3,33 @@
  * -------------------------------------------------------------------
  */
 
-$step-indicator-color:                  $text-color !default;
-$step-indicator-bg:                     $background-color !default;
-$step-indicator-border:                 $border-color-light !default;
-$step-indicator-label-color:            $step-indicator-color !default;
-$step-indicator-color-active:           $text-color !default;
-$step-indicator-bg-active:              $white !default;
-$step-indicator-border-active:          $step-indicator-border !default;
-$step-indicator-label-color-active:     $step-indicator-color-active !default;
-$step-indicator-color-success:          $white !default;
-$step-indicator-bg-success:             $state-success !default;
-$step-indicator-border-success:         $step-indicator-bg-success !default;
-$step-indicator-label-color-success:    $step-indicator-bg-success !default;
-$step-indicator-square-size:            var(--spacer-l) !default;
+.m-step-indicator {
+  --step-indicator-square-size:                           var(--spacer);
+
+  --step-indicator-square-color:                          var(--text-color-light);
+  --step-indicator-square-bg-color:                       var(--bg-color-light);
+  --step-indicator-square-hover-bg-color:                 var(--theme1-050);
+  --step-indicator-square-border-color:                   #{$gray-400};
+
+  --step-indicator-square-active-color:                   var(--theme1-400);
+  --step-indicator-square-active-bg-color:                #{$white};
+  --step-indicator-square-active-border-color:            var(--theme1-400);
+
+  --step-indicator-square-completed-color:                #{$white};
+  --step-indicator-square-completed-bg-color:             var(--theme1-400);
+  --step-indicator-square-completed-hover-bg-color:       var(--theme1-500);
+  --step-indicator-square-completed-border-color:         var(--theme1-400);
+  --step-indicator-square-completed-hover-border-color:   var(--theme1-500);
+
+  --step-indicator-line-color:                            #{$gray-400};
+  --step-indicator-line-active-color:                     #{$gray-400};
+  --step-indicator-line-completed-color:                  var(--theme1-400);
+
+  --step-indicator-label-color:                           var(--text-color-light);
+  --step-indicator-label-active-color:                    var(--text-color);
+  --step-indicator-label-completed-color:                 var(--text-color);
+  --step-indicator-label-highlight-color:                 var(--theme1-400);
+}
 
 /**
  * STEP INDICATOR
@@ -26,110 +40,157 @@ $step-indicator-square-size:            var(--spacer-l) !default;
   @extend %u-list-reset;
 
   display: flex;
-  flex-wrap: wrap;
+
+  @include to($screen-sm) {
+    padding-bottom: var(--spacer);
+    position: relative;
+  }
 
   li {
-    color: $step-indicator-label-color;
     counter-increment: steps;
-    flex: 0 1 25%;
-    position: relative;
-    text-align: center;
 
-    // On smaller devices there's no max-width of 25% when there are less than 4 steps
-    &:first-child:nth-last-child(1),
-    &:first-child:nth-last-child(2),
-    &:first-child:nth-last-child(2) ~ li,
-    &:first-child:nth-last-child(3),
-    &:first-child:nth-last-child(3) ~ li {
+    @include at($screen-sm) {
       flex: 1 1 0;
     }
 
-    &:first-child:after {
+    &:last-child .m-step-indicator__number:after {
       content: none;
     }
 
-    // The square
-    &:before {
-      background-color: $step-indicator-bg;
-      border: var(--border-width) solid $step-indicator-border;
-      color: $step-indicator-color;
-      content: counter(steps);
-      display: block;
-      font-size: $font-size-h6;
-      font-weight: var(--font-weight-bold);
-      height: $step-indicator-square-size;
-      margin: 0 auto var(--spacer);
-      padding: var(--spacer-xxs) 0;
-      text-align: center;
-      width: $step-indicator-square-size;
-
-      @include at($screen-sm) {
-        margin: 0 auto var(--spacer-xs);
+    &:not(:last-child) {
+      @include to($screen-sm) {
+        flex-grow: 1;
       }
     }
 
-    // The connection line
-    &:after {
-      background-color: $step-indicator-border;
-      content: '';
-      height: var(--border-width);
-      position: absolute;
-      right: calc(50% + #{$step-indicator-square-size} / 4 * 3);
-      top: calc(#{$step-indicator-square-size} / 2 - #{var(--border-width) / 2});
-      width: calc(100% - #{$step-indicator-square-size} * 3 / 2);
+    &.is-incompleted a {
+      --step-indicator-square-color: var(--step-indicator-square-active-color);
+      --step-indicator-square-bg-color: var(--step-indicator-square-active-bg-color);
+      --step-indicator-square-border-color: var(--step-indicator-square-active-border-color);
+      --step-indicator-line-color: var(--step-indicator-line-active-color);
+
+      &:hover,
+      &:active,
+      &:focus {
+        --step-indicator-square-bg-color: var(--step-indicator-square-hover-bg-color);
+      }
     }
 
     &.is-active {
-      color: $step-indicator-label-color-active;
-      font-weight: var(--font-weight-bold);
+      --step-indicator-square-color: var(--step-indicator-square-active-color);
+      --step-indicator-square-bg-color: var(--step-indicator-square-active-bg-color);
+      --step-indicator-square-border-color: var(--step-indicator-square-active-border-color);
+      --step-indicator-line-color: var(--step-indicator-line-active-color);
+      --step-indicator-label-color: var(--step-indicator-label-active-color);
 
-      &:before {
-        background-color: $step-indicator-bg-active;
-        border-color: $step-indicator-border-active;
-        color: $step-indicator-color-active;
+      .m-step-indicator__number {
+        font-weight: var(--font-weight-bold);
+      }
+
+      .m-step-indicator__label {
+        display: block;
+        font-size: 1rem;
+        font-weight: var(--font-weight-bold);
       }
     }
 
     &.is-completed {
-      color: $step-indicator-label-color-success;
-      font-weight: var(--font-weight-bold);
+      --step-indicator-square-color: var(--step-indicator-square-completed-color);
+      --step-indicator-square-bg-color: var(--step-indicator-square-completed-bg-color);
+      --step-indicator-square-border-color: var(--step-indicator-square-completed-border-color);
+      --step-indicator-line-color: var(--step-indicator-line-completed-color);
+      --step-indicator-label-color: var(--step-indicator-label-completed-color);
 
-      &:before {
-        background: $step-indicator-bg-success url('data:image/svg+xml;utf8,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 15 15%22><path fill=%22none%22 stroke=%22%23ffffff%22 stroke-linecap=%22round%22 stroke-linejoin=%22round%22 stroke-width=%226.25%%22 d=%22M14.5.5l-10 14-4-4%22/></svg>') center center no-repeat;
-        background-size: 50% 50%;
-        border-color: $step-indicator-border-success;
-        content: '';
+      a {
+        &:hover,
+        &:active,
+        &:focus {
+          --step-indicator-square-bg-color: var(--step-indicator-square-completed-hover-bg-color);
+          --step-indicator-square-border-color: var(--step-indicator-square-completed-hover-border-color);
+        }
       }
 
-      &:after {
-        background-color: $step-indicator-border-success;
-        height: calc(var(--border-width) + var(--border-width));
-        top: calc(#{$step-indicator-square-size} / 2 - #{var(--border-width)});
-      }
-    }
-
-    // On smaller devices …
-    @include to($screen-sm) {
-
-      // … hide the text label
-      .m-step-indicator__label {
-        display: none;
-      }
-
-      // … hide the connection line on every (4th+1) step (e.g.: step 1, 5, 9, 13, …)
-      &:nth-child(4n+1):after {
-        content: none;
-      }
-
-      // … reset the margin for the last row of steps
-      &:nth-last-child(-n+4):before {
-        margin-bottom: 0;
+      .m-step-indicator__number {
+        font-weight: var(--font-weight-bold);
       }
     }
 
-    // On larger devices there's no max-width of 25%
-    @include at($screen-sm) {
-      flex: 1 1 0;
+    &.is-incompleted,
+    &.is-completed {
+      a {
+        --step-indicator-label-color: var(--step-indicator-label-highlight-color);
+
+        &:hover,
+        &:active,
+        &:focus {
+          .m-step-indicator__label {
+            @include at($screen-sm) {
+              text-decoration: underline;
+            }
+          }
+        }
+      }
     }
+
+    a {
+      text-decoration: none;
+
+      .m-step-indicator__number {
+        font-weight: var(--font-weight-bold);
+      }
+    }
+  }
+}
+
+/**
+ * STEP INDICATOR ELEMENTS
+ * -------------------------------------------------------------------
+ */
+
+.m-step-indicator__number {
+  display: block;
+  position: relative;
+
+  &:before {
+    align-items: center;
+    background-color: var(--step-indicator-square-bg-color);
+    border: var(--border-width) solid var(--step-indicator-square-border-color);
+    color: var(--step-indicator-square-color);
+    content: counter(steps);
+    display: flex;
+    font-size: 1rem;
+    height: var(--step-indicator-square-size);
+    justify-content: center;
+    position: relative;
+    transition: background-color var(--animation-normal);
+    width: var(--step-indicator-square-size);
+  }
+
+  &:after {
+    background-color: var(--step-indicator-line-color);
+    content: "";
+    height: var(--border-width);
+    left: var(--step-indicator-square-size);
+    position: absolute;
+    top: calc(var(--step-indicator-square-size) / 2 - var(--border-width) / 2);
+    width: calc(100% - var(--step-indicator-square-size));
+  }
+}
+
+.m-step-indicator__label {
+  color: var(--step-indicator-label-color);
+  display: block;
+  font-size: .875rem;
+
+  @include to($screen-sm) {
+    bottom: 0;
+    display: none;
+    left: 0;
+    position: absolute;
+  }
+
+  @include at($screen-sm) {
+    margin-top: var(--spacer-xxs);
+    padding-right: var(--spacer-xxs);
   }
 }

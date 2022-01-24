@@ -198,14 +198,14 @@
         <span class="d-file">atoms/atoms.breadcrumb</span>
         <div class="d">
             <div>
-                <ul class="a-breadcrumbs">
+                <ul class="a-breadcrumb">
                     <li><a href="javascript:void(0);">Page</a></li>
                     <li><a href="javascript:void(0);">Subpage</a></li>
                     <li>Current page</li>
                 </ul>
             </div>
             <div>
-                <pre class="a-pre a-pre--scrollable"><code class="html">&lt;ul class="a-breadcrumbs"&gt;
+                <pre class="a-pre a-pre--scrollable"><code class="html">&lt;ul class="a-breadcrumb"&gt;
   &lt;li&gt;&lt;a href="#"&gt;Page&lt;/a&gt;&lt;/li&gt;
   &lt;li&gt;&lt;a href="#"&gt;Subpage&lt;/a&gt;&lt;/li&gt;
   &lt;li&gt;Current page&lt;/li&gt;
@@ -214,7 +214,7 @@
         </div>
         <div class="d">
             <div>
-                <ul class="a-breadcrumbs">
+                <ul class="a-breadcrumb">
                     <li><a href="javascript:void(0);">Page</a></li>
                     <li><a href="javascript:void(0);">Subpage</a></li>
                 </ul>
@@ -226,7 +226,7 @@
                 </div>
             </div>
             <div>
-                <pre class="a-pre a-pre--scrollable"><code class="html">&lt;ul class="a-breadcrumbs"&gt;
+                <pre class="a-pre a-pre--scrollable"><code class="html">&lt;ul class="a-breadcrumb"&gt;
   &lt;li&gt;&lt;a href="#"&gt;Page&lt;/a&gt;&lt;/li&gt;
   &lt;li&gt;&lt;a href="#"&gt;Subpage&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
@@ -1727,7 +1727,7 @@
             <div></div>
         </div>
 
-        <h4 class="u-margin-top-xl">Icon lists</h4>
+        <h4 class="u-margin-top-xl">Icon list</h4>
         <div class="d">
             <div>
                 <ul class="a-list a-list--lined">
@@ -1858,7 +1858,7 @@
             <div></div>
         </div>
 
-        <h4 class="u-margin-top-xl">Selectable lists</h4>
+        <h4 class="u-margin-top-xl">Selectable list</h4>
         <div class="d">
             <div>
                 <ul class="a-list a-list--lined">
@@ -1911,28 +1911,124 @@
             <div></div>
         </div>
 
-        <h4 class="u-margin-top-xl">Definition list</h4>
+        <h4 class="u-margin-top-xl">Checkbox list</h4>
         <div class="d">
             <div>
-                <dl class="a-definition-list">
-                    <dt>Name:</dt>
-                        <dd>Sander</dd>
-                    <dt>Surname:</dt>
-                        <dd>Geenen</dd>
-                    <dt>Address:</dt>
-                        <dd>[Private]</dd>
-                </dl>
+                <ul class="a-checkbox-list">
+                    <li class="a-checkbox-list__item">
+                        <div class="a-input a-checkbox-list__checkbox">
+                            <div class="a-input__checkbox">
+                                <input type="checkbox" id="list-checkbox1" name="list-checkbox">
+                                <label for="list-checkbox1">First item</label>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="a-checkbox-list__item">
+                        <div class="a-input a-checkbox-list__checkbox">
+                            <div class="a-input__checkbox">
+                                <input type="checkbox" id="list-checkbox2" name="list-checkbox" checked>
+                                <label for="list-checkbox2">Second item</label>
+                            </div>
+                        </div>
+
+                        <ul class="a-checkbox-list">
+                            <li class="a-checkbox-list__item">
+                                <div class="a-input a-checkbox-list__checkbox">
+                                    <div class="a-input__checkbox">
+                                        <input type="checkbox" id="list-checkbox3" name="list-checkbox">
+                                        <label for="list-checkbox3">First subitem</label>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="a-checkbox-list__item">
+                                <div class="a-input a-checkbox-list__checkbox">
+                                    <div class="a-input__checkbox">
+                                        <input type="checkbox" id="list-checkbox4" name="list-checkbox">
+                                        <label for="list-checkbox4">Second subitem</label>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="a-checkbox-list__item">
+                        <div class="a-input a-checkbox-list__checkbox">
+                            <div class="a-input__checkbox">
+                                <input type="checkbox" id="list-checkbox5" name="list-checkbox">
+                                <label for="list-checkbox5">Third item</label>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="a-checkbox-list__item">
+                        <div class="a-input a-checkbox-list__checkbox">
+                            <div class="a-input__checkbox">
+                                <input type="checkbox" id="list-checkbox6" name="list-checkbox">
+                                <label for="list-checkbox6">Fourth item</label>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
             </div>
+            <div></div>
+        </div>
+
+        <div class="d">
             <div>
-                <pre class="a-pre a-pre--scrollable"><code class="html">&lt;dl class="a-definition-list"&gt;
-  &lt;dt&gt;Name:&lt;/dt&gt;
-    &lt;dd&gt;Sander&lt;/dd&gt;
-  &lt;dt&gt;Surname:&lt;/dt&gt;
-    &lt;dd&gt;Geenen&lt;/dd&gt;
-  &lt;dt&gt;Address:&lt;/dt&gt;
-    &lt;dd&gt;[Private]&lt;/dd&gt;
-&lt;/dl&gt;</code></pre>
+                <ul class="a-checkbox-list a-checkbox-list--flushed">
+                    <li class="a-checkbox-list__item">
+                        <div class="a-input a-checkbox-list__checkbox">
+                            <div class="a-input__checkbox">
+                                <input type="checkbox" id="flushed-list-checkbox1" name="flushed-list-checkbox">
+                                <label for="flushed-list-checkbox1">First item</label>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="a-checkbox-list__item">
+                        <div class="a-input a-checkbox-list__checkbox">
+                            <div class="a-input__checkbox">
+                                <input type="checkbox" id="flushed-list-checkbox2" name="flushed-list-checkbox" checked>
+                                <label for="flushed-list-checkbox2">Second item</label>
+                            </div>
+                        </div>
+
+                        <ul class="a-checkbox-list">
+                            <li class="a-checkbox-list__item">
+                                <div class="a-input a-checkbox-list__checkbox">
+                                    <div class="a-input__checkbox">
+                                        <input type="checkbox" id="flushed-list-checkbox3" name="flushed-list-checkbox">
+                                        <label for="flushed-list-checkbox3">First subitem</label>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="a-checkbox-list__item">
+                                <div class="a-input a-checkbox-list__checkbox">
+                                    <div class="a-input__checkbox">
+                                        <input type="checkbox" id="flushed-list-checkbox4" name="flushed-list-checkbox">
+                                        <label for="flushed-list-checkbox4">Second subitem</label>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="a-checkbox-list__item">
+                        <div class="a-input a-checkbox-list__checkbox">
+                            <div class="a-input__checkbox">
+                                <input type="checkbox" id="flushed-list-checkbox5" name="flushed-list-checkbox">
+                                <label for="flushed-list-checkbox5">Third item</label>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="a-checkbox-list__item">
+                        <div class="a-input a-checkbox-list__checkbox">
+                            <div class="a-input__checkbox">
+                                <input type="checkbox" id="flushed-list-checkbox6" name="flushed-list-checkbox">
+                                <label for="flushed-list-checkbox6">Fourth item</label>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
             </div>
+
+            <div></div>
         </div>
 
         <h4 class="u-margin-top-xl">Avatar list</h4>
@@ -2300,6 +2396,30 @@
             <div><pre class="a-pre a-pre--scrollable"><code class="html">&lt;ul class="a-avatar-list a-avatar-list--flushed"&gt;
   &lt;li class="a-avatar-list__item"&gt;...&lt;/li&gt;
 &lt;/ul&gt;</code></pre></div>
+        </div>
+
+        <h4 class="u-margin-top-xl">Definition list</h4>
+        <div class="d">
+            <div>
+                <dl class="a-definition-list">
+                    <dt>Name:</dt>
+                        <dd>Sander</dd>
+                    <dt>Surname:</dt>
+                        <dd>Geenen</dd>
+                    <dt>Address:</dt>
+                        <dd>[Private]</dd>
+                </dl>
+            </div>
+            <div>
+                <pre class="a-pre a-pre--scrollable"><code class="html">&lt;dl class="a-definition-list"&gt;
+  &lt;dt&gt;Name:&lt;/dt&gt;
+    &lt;dd&gt;Sander&lt;/dd&gt;
+  &lt;dt&gt;Surname:&lt;/dt&gt;
+    &lt;dd&gt;Geenen&lt;/dd&gt;
+  &lt;dt&gt;Address:&lt;/dt&gt;
+    &lt;dd&gt;[Private]&lt;/dd&gt;
+&lt;/dl&gt;</code></pre>
+            </div>
         </div>
 
         <a name="atoms-progress" aria-label="Progress"></a>
@@ -2750,32 +2870,40 @@
             <div>
                 <div class="u-margin-bottom">
                     <div class="a-spinner" role="alert">
-                        <span class="u-screen-reader-only">Fetching data...</span>
+                        <span class="a-spinner__circle">
+                            <span class="u-screen-reader-only">Fetching data...</span>
+                        </span>
                     </div>
                 </div>
 
                 <div class="u-margin-bottom">
                     <div class="a-spinner" role="alert">
+                        <span class="a-spinner__circle"></span>
                         <span class="a-spinner__text">Fetching data...</span>
                     </div>
                 </div>
 
                 <div>
                     <div class="a-spinner a-spinner--vertical" role="alert">
+                        <span class="a-spinner__circle"></span>
                         <span class="a-spinner__text">Fetching data...</span>
                     </div>
                 </div>
             </div>
             <div>
                 <pre class="a-pre a-pre--scrollable"><code class="html">&lt;div class="a-spinner" role="alert"&gt;
-  &lt;span class="u-screen-reader-only"&gt;Fetching data...&lt;/span&gt;
+  &lt;span class="a-spinner__circle"&gt;
+    &lt;span class="u-screen-reader-only"&gt;Fetching data...&lt;/span&gt;
+  &lt;/span&gt;
 &lt;/div&gt;
 
 &lt;div class="a-spinner" role="alert"&gt;
+  &lt;span class="a-spinner__circle"&gt;&lt;/span&gt;
   &lt;span class="a-spinner__text"&gt;Fetching data...&lt;/span&gt;
 &lt;/div&gt;
 
 &lt;div class="a-spinner a-spinner--vertical" role="alert"&gt;
+  &lt;span class="a-spinner__circle"&gt;&lt;/span&gt;
   &lt;span class="a-spinner__text"&gt;Fetching data...&lt;/span&gt;
 &lt;/div&gt;</code></pre>
             </div>
@@ -2784,18 +2912,22 @@
             <div>
                 <div class="u-margin-bottom">
                     <div class="a-spinner a-spinner--s" role="alert">
-                        <span class="u-screen-reader-only">Fetching data...</span>
+                        <span class="a-spinner__circle">
+                            <span class="u-screen-reader-only">Fetching data...</span>
+                        </span>
                     </div>
                 </div>
 
                 <div class="u-margin-bottom">
                     <div class="a-spinner a-spinner--s" role="alert">
+                        <span class="a-spinner__circle"></span>
                         <span class="a-spinner__text">Fetching data...</span>
                     </div>
                 </div>
 
                 <div>
                     <div class="a-spinner a-spinner--s a-spinner--vertical" role="alert">
+                        <span class="a-spinner__circle"></span>
                         <span class="a-spinner__text">Fetching data...</span>
                     </div>
                 </div>
@@ -2808,18 +2940,22 @@
             <div>
                 <div class="u-margin-bottom">
                     <div class="a-spinner a-spinner--l" role="alert">
-                        <span class="u-screen-reader-only">Fetching data...</span>
+                        <span class="a-spinner__circle">
+                            <span class="u-screen-reader-only">Fetching data...</span>
+                        </span>
                     </div>
                 </div>
 
                 <div class="u-margin-bottom">
                     <div class="a-spinner a-spinner--l" role="alert">
+                        <span class="a-spinner__circle"></span>
                         <span class="a-spinner__text">Fetching data...</span>
                     </div>
                 </div>
 
                 <div>
                     <div class="a-spinner a-spinner--l a-spinner--vertical" role="alert">
+                        <span class="a-spinner__circle"></span>
                         <span class="a-spinner__text">Fetching data...</span>
                     </div>
                 </div>

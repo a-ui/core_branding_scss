@@ -75,6 +75,9 @@
 
   th,
   td {
+    // https://stackoverflow.com/a/41883019
+    // Fix incorrect border of td/th with "position: sticky" on Firefox
+    background-clip: padding-box;
     padding: var(--spacer-xs);
 
     &:not(.u-text-center):not(.u-text-right):not(.u-text-justify) {

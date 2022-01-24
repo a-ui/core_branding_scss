@@ -6,11 +6,22 @@
 .a-spinner {
   --spinner-color:              #{$gray-300};
   --spinner-size:               2rem;
+  --spinner-thickness:          .1875rem;
   --spinner-text-color:         var(--text-color-light);
 
-  --spinner-animation-name:     spin reverse;
+  --spinner-animation-name:     spin;
   --spinner-animation-speed:    1600ms;
   --spinner-animation-timing:   linear;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
 }
 
 /**
@@ -21,15 +32,28 @@
 .a-spinner {
   align-items: center;
   display: inline-flex;
+}
+
+.a-spinner__circle {
+  animation: var(--spinner-animation-name) var(--spinner-animation-speed) infinite var(--spinner-animation-timing);
+  border-radius: 100%;
+  border: var(--spinner-thickness) solid var(--spinner-color);
+  border-top-color: transparent;
+  height: var(--spinner-size);
+  position: relative;
+  transform: rotate(-25deg);
+  width: var(--spinner-size);
 
   &:before {
-    animation: var(--spinner-animation-name) var(--spinner-animation-speed) infinite var(--spinner-animation-timing);
-    background: var(--spinner-color);
+    border-radius: 100%;
+    border: var(--spinner-thickness) solid var(--spinner-color);
+    border-top-color: transparent;
     content: '';
-    display: inline-block;
-    flex-shrink: 0;
     height: var(--spinner-size);
-    mask: url('data:image/svg+xml;utf8,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 24 24%22><defs><style>.a{fill:none;stroke:%23ffffff;stroke-linecap:round;stroke-linejoin:round;stroke-width:6.25%;}</style></defs><path class=%22a%22 d=%22M.714 10.353l2.787 4.15 3.205-3.838M23.286 14.655l-2.785-4.152-3.207 3.839%22/><path class=%22a%22 d=%22M20.464 10.54a8.622 8.622 0 01-6.51 9.729 8.493 8.493 0 01-7.931-2.224M3.505 14.479a8.853 8.853 0 016.538-10.753 8.493 8.493 0 018.324 2.642%22/></svg>') no-repeat center center;
+    left: calc(var(--spinner-thickness) * -1);
+    position: absolute;
+    top: calc(var(--spinner-thickness) * -1);
+    transform: rotate(50deg);
     width: var(--spinner-size);
   }
 }
@@ -48,21 +72,25 @@
 .a-spinner {
   &.a-spinner--s {
     --spinner-size: var(--spacer);
+    --spinner-thickness: .125rem;
   }
 
   &.a-spinner--l {
     --spinner-size: 4rem;
+    --spinner-thickness: 4px;
   }
 
   &.a-spinner--vertical {
-    --spinner-size: 4rem;
-
     flex-direction: column;
 
     .a-spinner__text {
       margin-left: 0;
       margin-top: var(--spacer-xxs);
       text-align: center;
+    }
+
+    &.a-spinner--l .a-spinner__text {
+      margin-top: var(--spacer-xs);
     }
   }
 }

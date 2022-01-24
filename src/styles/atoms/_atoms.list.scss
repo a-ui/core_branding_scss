@@ -4,6 +4,7 @@
  */
 
 .a-list,
+.a-checkbox-list,
 .a-avatar-list {
   --list-item-color:             var(--text-color);
   --list-item-hover-color:       var(--theme1-400);
@@ -82,7 +83,6 @@
     &:focus {
       background-color: var(--list-item-hover-bg-color);
       color: var(--list-item-hover-color);
-      font-weight: var(--font-weight-bold);
     }
 
     &.is-active {
@@ -137,6 +137,81 @@
   dd {
     margin-left: 0;
     padding-bottom: var(--spacer-3xs);
+  }
+}
+
+/**
+ * CHECKBOX LIST
+ * -------------------------------------------------------------------
+ */
+
+.a-checkbox-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+
+  .a-checkbox-list__item {
+    &:last-of-type .a-checkbox-list__checkbox {
+      border-bottom: var(--border-width) solid var(--list-item-border-color);
+    }
+
+    .a-checkbox-list__checkbox {
+      border-top: var(--border-width) solid var(--list-item-border-color);
+      padding-left: var(--spacer-s);
+      transition: background-color var(--animation-normal);
+
+      &:hover,
+      &:active,
+      &:focus {
+        background-color: var(--list-item-hover-bg-color);
+      }
+
+      .a-input__checkbox,
+      .a-input__radio {
+        label {
+          align-items: center;
+          display: inline-flex;
+          min-height: var(--spacer-xl);
+          padding-bottom: var(--spacer-3xs);
+          padding-right: var(--spacer-s);
+          padding-top: var(--spacer-3xs);
+
+          &:before,
+          &:after {
+            top: 50%;
+            transform: translateY(-50%);
+          }
+        }
+      }
+    }
+  }
+
+  .a-checkbox-list {
+    border-top: var(--border-width) solid var(--list-item-border-color);
+
+    .a-checkbox-list__item {
+      &:first-of-type .a-checkbox-list__checkbox {
+        border-top: none;
+      }
+
+      &:last-of-type .a-checkbox-list__checkbox {
+        border-bottom: none;
+      }
+
+      .a-checkbox-list__checkbox {
+        padding-left: calc(var(--spacer-s) * 2);
+      }
+    }
+  }
+
+  &.a-checkbox-list--flushed .a-checkbox-list__item {
+    &:first-of-type .a-checkbox-list__checkbox {
+      border-top: none;
+    }
+
+    &:last-of-type .a-checkbox-list__checkbox {
+      border-bottom: none;
+    }
   }
 }
 
