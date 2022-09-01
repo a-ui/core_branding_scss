@@ -63,29 +63,30 @@ gulp.task('sass', function () {
 // :: SASS DIST
 // -------------------------------------------------------------------
 
-gulp.task('sass:dist', function () {
-    // Get package version to generate correct font url
-    var nodePackageFile = JSON.parse(fs.readFileSync(__dirname + '/../package.json'));
-    var nodePackageVersion = nodePackageFile.version;
-    var nodePackageDescription = nodePackageFile.description;
+const { version, description } = JSON.parse(fs.readFileSync(__dirname + '/../package.json'));
 
+const compileAndCopyStyles = (dest, cssUrl) => {
     return gulp.src(['src/styles/**/*.scss', '!src/styles/**/styleguide.scss'])
         .pipe(sass(sassOptions).on('error', sass.logError))
         .pipe(postcss(autoPrefixer))
         .pipe(license('/*\n' + fs.readFileSync('LICENSE.md', 'utf8') + '*/'))
         .pipe(cssUrlAdjuster({
             replace: ['../../fonts', 'assets/fonts'],
-            prepend: 'https:///cdn.antwerpen.be/' + nodePackageDescription + '/' + nodePackageVersion + '/'
+            prepend: 'https:///cdn.antwerpen.be/' + cssUrl + '/'
         }))
-        .pipe(gulp.dest('dist'))
+        .pipe(gulp.dest(dest))
         .pipe(sourcemaps.init())
-        .pipe(gulp.dest('./dist/'))
+        .pipe(gulp.dest(`./${dest}/`))
         .pipe(rename({ extname: '.min.css' }))
         .pipe(postcss(cssNano))
         .pipe(license('/*\n' + fs.readFileSync('LICENSE.md', 'utf8') + '*/'))
         .pipe(sourcemaps.write("./", sourcemapOptions))
-        .pipe(gulp.dest('dist'));
-});
+        .pipe(gulp.dest(dest));
+}
+
+gulp.task('sass:dist', () => compileAndCopyStyles('dist', `${description}/${version}`));
+gulp.task('sass:aws:version', () => compileAndCopyStyles(`aws/${version}`, `${description}/${version}`));
+gulp.task('sass:aws:latest', () => compileAndCopyStyles('aws/latest', `${description}/latest`));
 
 gulp.task('stylelint', function () {
     return gulp
