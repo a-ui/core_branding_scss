@@ -4,6 +4,8 @@
 ## Unreleased
 
 
+## [6.2.1] - 2023-02-10
+
 ### Changed
 - Tweaked the design of the alert
 - Tweaked the accordion design
@@ -704,6 +706,7 @@
 - Initial release.
 
 
+[6.2.1]: https://github.com/a-ui/core_branding_scss/tree/v6.2.1
 [6.2.0]: https://github.com/a-ui/core_branding_scss/tree/v6.2.0
 [6.1.1]: https://github.com/a-ui/core_branding_scss/tree/v6.1.1
 [6.1.0]: https://github.com/a-ui/core_branding_scss/tree/v6.1.0

@@ -3696,6 +3696,11 @@ a.a-page-indicator__item:focus {
   left: 0;
   position: -webkit-sticky;
   position: sticky;
+  z-index: 1;
+}
+.a-table-responsive-wrapper.has-first-column-fixed table tr th:first-child.is-collapsed,
+.a-table-responsive-wrapper.has-first-column-fixed table tr td:first-child.is-collapsed {
+  padding-right: 1px;
 }
 .a-table-responsive-wrapper.has-first-column-fixed.has-shadow-left table tr th:first-child:after,
 .a-table-responsive-wrapper.has-first-column-fixed.has-shadow-left table tr td:first-child:after {
@@ -3721,6 +3726,10 @@ a.a-page-indicator__item:focus {
   position: -webkit-sticky;
   position: sticky;
   right: 0;
+}
+.a-table-responsive-wrapper.has-last-column-fixed table tr th:last-child.is-collapsed,
+.a-table-responsive-wrapper.has-last-column-fixed table tr td:last-child.is-collapsed {
+  padding-left: 1px;
 }
 .a-table-responsive-wrapper.has-last-column-fixed.has-shadow-right table tr th:last-child:after,
 .a-table-responsive-wrapper.has-last-column-fixed.has-shadow-right table tr td:last-child:after {
@@ -3906,19 +3915,20 @@ a.a-page-indicator__item:focus {
 .m-accordion__tab:not(:first-child) {
   margin-top: calc(var(--border-width) * -1);
 }
-.m-accordion__tab[aria-expanded=true] .m-accordion__header {
+.m-accordion__tab .m-accordion__header[aria-expanded=true] {
   font-weight: var(--font-weight-bold);
 }
-.m-accordion__tab[aria-expanded=true] .m-accordion__header:after {
+.m-accordion__tab .m-accordion__header[aria-expanded=true]:after {
   -webkit-mask: url("data:image/svg+xml;utf8,<svg id=%22arrow-up-1%22 viewBox=%22-1 -1 17 17%22 xml:space=%22preserve%22 xmlns=%22http://www.w3.org/2000/svg%22><style>.bgst0{fill:none;stroke:%23ffffff;stroke-width:6.25%;stroke-linecap:round;stroke-linejoin:round}</style><path class=%22bgst0%22 d=%22M14.5 11.4L7.7 3.7c-.1-.1-.3-.1-.4 0L.5 11.4%22/></svg>") no-repeat center center;
           mask: url("data:image/svg+xml;utf8,<svg id=%22arrow-up-1%22 viewBox=%22-1 -1 17 17%22 xml:space=%22preserve%22 xmlns=%22http://www.w3.org/2000/svg%22><style>.bgst0{fill:none;stroke:%23ffffff;stroke-width:6.25%;stroke-linecap:round;stroke-linejoin:round}</style><path class=%22bgst0%22 d=%22M14.5 11.4L7.7 3.7c-.1-.1-.3-.1-.4 0L.5 11.4%22/></svg>") no-repeat center center;
 }
-.m-accordion__tab[aria-expanded=true] .m-accordion__header:hover, .m-accordion__tab[aria-expanded=true] .m-accordion__header:active, .m-accordion__tab[aria-expanded=true] .m-accordion__header:focus {
+.m-accordion__tab .m-accordion__header[aria-expanded=true]:hover, .m-accordion__tab .m-accordion__header[aria-expanded=true]:active, .m-accordion__tab .m-accordion__header[aria-expanded=true]:focus {
   --accordion-header-color: var(--accordion-header-hover-color);
   --accordion-icon-color: var(--accordion-icon-hover-color);
 }
-.m-accordion__tab[aria-expanded=true] .m-accordion__content {
-  max-height: 31.25rem;
+.m-accordion__tab .m-accordion__header[aria-expanded=true] + .m-accordion__content {
+  display: block;
+  max-height: none;
 }
 
 .m-accordion__header {
@@ -3965,7 +3975,7 @@ a.a-page-indicator__item:focus {
   background-color: var(--accordion-content-bg-color);
   border: var(--border-width) solid var(--accordion-content-border-color);
   border-top: none;
-  display: block;
+  display: none;
   margin-top: calc(var(--border-width) * -1);
   max-height: 0;
   overflow: auto;
@@ -4025,18 +4035,14 @@ a.a-page-indicator__item:focus {
   right: 0;
   top: 0;
 }
-.m-alert .m-alert__close + * {
-  margin-right: var(--spacer-l);
-}
 
 /**
  * ALERTS ELEMENTS
  * -------------------------------------------------------------------
  */
 .m-alert__icon {
-  position: absolute;
-  left: var(--alert-padding);
-  top: var(--alert-padding);
+  float: left;
+  margin: calc(var(--spacer-xs) / -3) 0.75rem 0 0;
 }
 .m-alert__icon .ai {
   font-size: 1.5rem;
@@ -4081,9 +4087,6 @@ a.a-page-indicator__item:focus {
   --alert-color: var(--alert-danger-color);
   --alert-bg-color: var(--alert-danger-bg-color);
   --alert-border-color: var(--alert-danger-border-color);
-}
-.m-alert.m-alert--success, .m-alert.m-alert--warning, .m-alert.m-alert--danger {
-  padding-left: calc(var(--alert-padding) + var(--spacer-l));
 }
 
 .m-alert.m-alert--inline {
@@ -5155,6 +5158,9 @@ a.a-page-indicator__item:focus {
 }
 .m-pagination .m-pagination__next {
   z-index: 0;
+}
+.m-pagination .m-pagination__prev + .m-pagination__next {
+  z-index: 1;
 }
 
 /**
