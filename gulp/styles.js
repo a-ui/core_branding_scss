@@ -91,7 +91,7 @@ gulp.task('stylelint', function () {
         .pipe(stylelint({
             failAfterError: false,
             reporters: [
-                { formatter: 'verbose', console: true },
+                { formatter: 'verbose', console: false },
             ]
         }));
 });

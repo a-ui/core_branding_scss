@@ -43,7 +43,7 @@
   line-height: $line-height-paragraph;
   padding: 0 var(--spacer-xs);
 
-  @include to($screen-sm) {
+  @include to($screen-xs-max) {
     flex: 1 1 auto;
   }
 

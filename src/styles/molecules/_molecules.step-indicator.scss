@@ -41,7 +41,7 @@
 
   display: flex;
 
-  @include to($screen-sm) {
+  @include to($screen-xs-max) {
     padding-bottom: var(--spacer);
     position: relative;
   }
@@ -58,7 +58,7 @@
     }
 
     &:not(:last-child) {
-      @include to($screen-sm) {
+      @include to($screen-xs-max) {
         flex-grow: 1;
       }
     }
@@ -182,7 +182,7 @@
   display: block;
   font-size: .875rem;
 
-  @include to($screen-sm) {
+  @include to($screen-xs-max) {
     bottom: 0;
     display: none;
     left: 0;
