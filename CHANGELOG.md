@@ -4,6 +4,15 @@
 ## Unreleased
 
 
+### Added
+- [BREAKING] Added correct code for Leaflet
+- Added info, earth, newspaper and overview icon
+
+### Removed
+- [BREAKING] Removed all AUI-kit code
+- [BREAKING] Removed old earth icon
+
+
 ## [6.2.1] - 2023-02-10
 
 ### Changed

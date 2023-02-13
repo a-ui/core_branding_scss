@@ -178,27 +178,46 @@
                     <div class="o-leaflet__wrapper">
                         <div id="map" class="o-leaflet__map"></div>
                         <div class="o-leaflet__controls o-leaflet__controls--top-left">
-                            <div><button class="o-leaflet__control a-button a-button--s has-icon">{{ icon.render('arrow-left-1') }}</button></div>
-                            <button class="o-leaflet__control a-button a-button--s has-icon">{{ icon.render('arrow-left-1') }}</button>
+                            <!-- Intentionally left blank -->
                         </div>
                         <div class="o-leaflet__controls o-leaflet__controls--top-right">
-                            <button class="o-leaflet__control a-button a-button--s has-icon">{{ icon.render('arrow-left-1') }}</button>
-                            <button class="o-leaflet__control a-button a-button--s has-icon">{{ icon.render('arrow-left-1') }}</button>
+                            <!-- Intentionally left blank -->
                         </div>
                         <div class="o-leaflet__controls o-leaflet__controls--bottom-right">
-                            <button class="o-leaflet__control a-button a-button--s has-icon">{{ icon.render('arrow-left-1') }}</button>
-                            <button class="o-leaflet__control a-button a-button--s has-icon">{{ icon.render('arrow-left-1') }}</button>
+                            <div class="m-button-group m-button-group--vertical o-leaflet__control">
+                                <button class="a-button a-button--s has-icon">{{ icon.render('add') }}</button>
+                                <button class="a-button a-button--s has-icon">{{ icon.render('subtract') }}</button>
+                            </div>
                         </div>
                         <div class="o-leaflet__controls o-leaflet__controls--bottom-left">
-                            <button class="o-leaflet__control a-button a-button--s has-icon">{{ icon.render('arrow-left-1') }}</button>
-                            <button class="o-leaflet__control a-button a-button--s has-icon">{{ icon.render('arrow-left-1') }}</button>
+                            <button class="o-leaflet__control a-button a-button--s has-icon">{{ icon.render('compass-arrow') }}</button>
                         </div>
                     </div>
                 </div>
             </div>
             <div>
                 <pre class="a-pre a-pre--scrollable"><code class="html">&lt;div class="o-leaflet"&gt;
-  …
+  &lt;div class="o-leaflet__content o-leaflet__content--open"&gt;
+    &lt;p&gt;...&lt;/p&gt;
+  &lt;/div&gt;
+  &lt;div class="o-leaflet__wrapper"&gt;
+    &lt;div id="map" class="o-leaflet__map"&gt;&lt;/div&gt;
+    &lt;div class="o-leaflet__controls o-leaflet__controls--top-left"&gt;
+      &lt;!-- Intentionally left blank --&gt;
+    &lt;/div&gt;
+    &lt;div class="o-leaflet__controls o-leaflet__controls--top-right"&gt;
+      &lt;!-- Intentionally left blank --&gt;
+    &lt;/div&gt;
+    &lt;div class="o-leaflet__controls o-leaflet__controls--bottom-right"&gt;
+      &lt;div class="m-button-group m-button-group--vertical o-leaflet__control"&gt;
+        &lt;button class="a-button a-button--s has-icon"&gt;{{ icon.render('add') }}&lt;/button&gt;
+        &lt;button class="a-button a-button--s has-icon"&gt;{{ icon.render('subtract') }}&lt;/button&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class="o-leaflet__controls o-leaflet__controls--bottom-left"&gt;
+      &lt;button class="o-leaflet__control a-button a-button--s has-icon"&gt;{{ icon.render('compass-arrow') }}&lt;/button&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
 &lt;/div&gt;</code></pre>
             </div>
         </div>

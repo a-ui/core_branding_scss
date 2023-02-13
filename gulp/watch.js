@@ -16,9 +16,7 @@ gulp.task('watch', function () {
     });
     gulp.watch('src/icons/*.*', gulp.series('icon-sprite', 'sass', 'render-templates', 'stylelint'));
     gulp.watch('src/styles/**/*.scss', gulp.series('sass', 'stylelint'));
-    gulp.watch('src/**/*.njk', gulp.series('render-templates'));
-    gulp.watch([
-        '.tmp/**/*.css',
-        '.tmp/**/*.html'
-    ]).on('change', browserSync.reload);
+    gulp.watch('src/**/*.njk', gulp.task('render-templates'));
+    gulp.watch(['.tmp/**/*.css']).on('change', browserSync.reload);
+    gulp.watch(['.tmp/**/*.html']).on('change', browserSync.reload);
 });
