@@ -24,6 +24,7 @@
  */
 
 .m-datepicker {
+  background-color: var(--datepicker-bg-color);
   max-width: calc(var(--spacer) * 14);
   opacity: 0;
   transform: translateY(calc(var(--spacer-xl) * -1));
@@ -56,7 +57,7 @@
 
 .m-datepicker__nav-title {
   align-items: center;
-  background-color: var(--datepicker-bg-color);
+  background: transparent;
   border: none;
   color: var(--datepicker-text-color);
   cursor: pointer;

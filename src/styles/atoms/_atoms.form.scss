@@ -24,11 +24,18 @@ fieldset {
   + fieldset {
     margin-top: calc(var(--border-width) * -1);
   }
+
+  &.a-input {
+    border: none;
+    padding: 0;
+  }
 }
 
 legend {
-  color: #{$gray-400};
-  font-size: #{rem($font-size-lg)};
-  font-weight: var(--font-weight-bold);
-  padding: 0 var(--spacer-xxs) 0 0;
+  &:not(.a-input__label) {
+    color: #{$gray-400};
+    font-size: #{rem($font-size-lg)};
+    font-weight: var(--font-weight-bold);
+    padding: 0 var(--spacer-xxs) 0 0;
+  }
 }

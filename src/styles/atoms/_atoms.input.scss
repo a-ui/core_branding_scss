@@ -168,7 +168,7 @@ textarea {
   }
 
   &.is-error {
-    color: var(--state-danger-light);
+    color: var(--state-danger);
   }
 }
 
@@ -214,7 +214,9 @@ textarea {
       display: flex;
       height: 100%;
       pointer-events: auto;
+      right: 0;
       transition: color var(--animation-normal);
+      width: $spacer-lg;
 
       &:hover {
         color: var(--input-icon-hover-color);

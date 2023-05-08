@@ -27,18 +27,32 @@
  */
 
 .a-page-indicator__item {
-  background-color: var(--page-indicator-bg-color);
+  background-color: transparent;
   flex-grow: 1;
-  height: var(--page-indicator-height);
-  transition: background-color var(--animation-normal);
+  height: var(--spacer-xl);
+  position: relative;
   width: var(--page-indicator-width);
+
+  &:before {
+    background-color: var(--page-indicator-bg-color);
+    content: '';
+    height: var(--page-indicator-height);
+    left: 0;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    transition: background-color var(--animation-normal);
+    width: 100%;
+  }
 
   &:not(:last-child) {
     margin-right: var(--page-indicator-spacing);
   }
 
   &.is-active {
-    --page-indicator-bg-color: var(--page-indicator-active-bg-color);
+    &:before {
+      --page-indicator-bg-color: var(--page-indicator-active-bg-color);
+    }
   }
 }
 
@@ -52,7 +66,9 @@ a {
     &:hover,
     &:active,
     &:focus {
-      --page-indicator-bg-color: var(--page-indicator-active-bg-color);
+      &:before {
+        --page-indicator-bg-color: var(--page-indicator-active-bg-color);
+      }
     }
   }
 }

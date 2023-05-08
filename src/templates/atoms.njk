@@ -22,7 +22,7 @@
                 <div class="u-margin-right-xs">
                     <a href="javascript:void(0);">
                         <div class="a-avatar a-avatar--s">
-                            <span class="a-avatar__icon" aria-label="avatarTitle">
+                            <span class="a-avatar__icon" aria-label="avatarTitle" role="img">
                                 {{ icon.render('single-neutral') }}
                             </span>
                         </div>
@@ -32,7 +32,7 @@
                 <div class="u-margin-right-xs">
                     <a href="javascript:void(0);">
                         <div class="a-avatar">
-                            <span class="a-avatar__icon" aria-label="avatarTitle">
+                            <span class="a-avatar__icon" aria-label="avatarTitle" role="img">
                                 {{ icon.render('single-neutral') }}
                             </span>
                         </div>
@@ -41,7 +41,7 @@
 
                 <a href="javascript:void(0);">
                     <div class="a-avatar a-avatar--l">
-                        <span class="a-avatar__icon" aria-label="avatarTitle">
+                        <span class="a-avatar__icon" aria-label="avatarTitle" role="img">
                             {{ icon.render('single-neutral') }}
                         </span>
                     </div>
@@ -51,7 +51,7 @@
             <div>
                 <pre class="a-pre a-pre--scrollable"><code class="html">&lt;a href="#"&gt;
   &lt;div class="a-avatar"&gt;
-    &lt;span class="a-avatar__icon" aria-label="avatarTitle"&gt;
+    &lt;span class="a-avatar__icon" aria-label="avatarTitle" role="img"&gt;
       {{ icon.code('single-neutral') }}
     &lt;/span&gt;
   &lt;/div&gt;
@@ -132,7 +132,7 @@
                 <div class="u-margin-right-xs">
                     <a href="javascript:void(0);">
                         <div class="a-avatar a-avatar--rounded">
-                            <span class="a-avatar__icon" aria-label="avatarTitle">
+                            <span class="a-avatar__icon" aria-label="avatarTitle" role="img">
                                 {{ icon.render('single-neutral') }}
                             </span>
                         </div>
@@ -1057,8 +1057,8 @@
         </div>
         <div class="d">
             <div>
-                <div class="a-input">
-                    <label class="a-input__label">Input checkbox</label>
+                <fieldset class="a-input">
+                    <legend class="a-input__label">Input checkbox</legend>
                     <div class="a-input__checkbox">
                         <input type="checkbox" id="checkbox1" name="input-checkbox">
                         <label for="checkbox1">Option one is unchecked</label>
@@ -1075,11 +1075,11 @@
                         <input type="checkbox" id="checkbox4" name="input-checkbox" checked="" disabled="">
                         <label for="checkbox4">Option four is checked and disabled</label>
                     </div>
-                </div>
+                </fieldset>
             </div>
             <div>
-                <pre class="a-pre a-pre--scrollable"><code class="html">&lt;div class="a-input"&gt;
-  &lt;label class="a-input__label"&gt;Input checkbox&lt;/label&gt;
+                <pre class="a-pre a-pre--scrollable"><code class="html">&lt;fieldset class="a-input"&gt;
+  &lt;legend class="a-input__label"&gt;Input checkbox&lt;/legend&gt;
   &lt;div class="a-input__checkbox"&gt;
     &lt;input type="checkbox" id="checkbox1" name="input-checkbox"&gt;
     &lt;label for="checkbox1"&gt;Option one is unchecked&lt;/label&gt;
@@ -1096,13 +1096,13 @@
     &lt;input type="checkbox" id="checkbox4" name="input-checkbox" checked="" disabled=""&gt;
     &lt;label for="checkbox4"&gt;Option four is checked and disabled&lt;/label&gt;
   &lt;/div&gt;
-&lt;/div&gt;</code></pre>
+&lt;/fieldset&gt;</code></pre>
             </div>
         </div>
         <div class="d">
             <div>
-                <div class="a-input">
-                    <label class="a-input__label">Input with nested checkboxes</label>
+                <fieldset class="a-input">
+                    <legend class="a-input__label">Input with nested checkboxes</legend>
                     <div class="a-input__checkbox">
                         <input type="checkbox" id="checkbox-indeterminate" name="input-checkbox">
                         <label for="checkbox-indeterminate">Option one</label>
@@ -1121,11 +1121,11 @@
                             <label for="nested-checkbox3">Nested option three</label>
                         </div>
                     </div>
-                </div>
+                </fieldset>
             </div>
             <div>
-                <pre class="a-pre a-pre--scrollable"><code class="html">&lt;div class="a-input"&gt;
-  &lt;label class="a-input__label"&gt;Input with nested checkboxes&lt;/label&gt;
+                <pre class="a-pre a-pre--scrollable"><code class="html">&lt;fieldset class="a-input"&gt;
+  &lt;legend class="a-input__label"&gt;Input with nested checkboxes&lt;/legend&gt;
   &lt;div class="a-input__checkbox"&gt;
     &lt;input type="checkbox" id="checkbox-indeterminate" name="input-checkbox"&gt;
     &lt;label for="checkbox-indeterminate"&gt;Option one&lt;/label&gt;
@@ -1144,13 +1144,13 @@
       &lt;label for="nested-checkbox3"&gt;Nested option three&lt;/label&gt;
     &lt;/div&gt;
   &lt;/div&gt;
-&lt;/div&gt;</code></pre>
+&lt;/fieldset&gt;</code></pre>
             </div>
         </div>
         <div class="d">
             <div>
-                <div class="a-input">
-                    <label class="a-input__label">Input radio button</label>
+                <fieldset class="a-input">
+                    <legend class="a-input__label">Input radio button</legend>
                     <div class="a-input__radio">
                         <input type="radio" id="radio1" name="input-radio" checked="">
                         <label for="radio1">Option one</label>
@@ -1167,11 +1167,11 @@
                         <input type="radio" id="radio4" name="input-radio2" checked="" disabled="">
                         <label for="radio4">Separate radio button that is checked and disabled</label>
                     </div>
-                </div>
+                </fieldset>
             </div>
             <div>
-                <pre class="a-pre a-pre--scrollable"><code class="html">&lt;div class="a-input"&gt;
-  &lt;label class="a-input__label"&gt;Input radio button&lt;/label&gt;
+                <pre class="a-pre a-pre--scrollable"><code class="html">&lt;fieldset class="a-input"&gt;
+  &lt;legend class="a-input__label"&gt;Input radio button&lt;/legend&gt;
   &lt;div class="a-input__radio"&gt;
     &lt;input type="radio" id="radio1" name="input-radio" checked=""&gt;
     &lt;label for="radio1"&gt;Option one&lt;/label&gt;
@@ -1188,7 +1188,7 @@
     &lt;input type="radio" id="radio4" name="input-radio2" checked="" disabled=""&gt;
     &lt;label for="radio4"&gt;Separate radio button that is checked and disabled&lt;/label&gt;
   &lt;/div&gt;
-&lt;/div&gt;</code></pre>
+&lt;/fieldset&gt;</code></pre>
             </div>
         </div>
         <div class="d">
@@ -2465,37 +2465,37 @@
         </div>
         <div class="d">
             <div>
-                <div class="a-page-indicator">
-                    <button class="a-page-indicator__item" aria-label="Go to page 1"></button>
-                    <button class="a-page-indicator__item is-active" aria-label="Go to page 2"></button>
-                    <button class="a-page-indicator__item" aria-label="Go to page 3"></button>
-                    <button class="a-page-indicator__item" aria-label="Go to page 4"></button>
+                <div class="a-page-indicator" role="tablist">
+                    <button class="a-page-indicator__item" aria-label="Go to page 1" role="tab"></button>
+                    <button class="a-page-indicator__item is-active" aria-label="Go to page 2" role="tab"></button>
+                    <button class="a-page-indicator__item" aria-label="Go to page 3" role="tab"></button>
+                    <button class="a-page-indicator__item" aria-label="Go to page 4" role="tab"></button>
                 </div>
             </div>
             <div>
-                <pre class="a-pre a-pre--scrollable"><code class="html">&lt;div class="a-page-indicator"&gt;
-  &lt;button class="a-page-indicator__item" aria-label="Go to page 1"&gt;&lt;/button&gt;
-  &lt;button class="a-page-indicator__item is-active" aria-label="Go to page 2"&gt;&lt;/button&gt;
-  &lt;button class="a-page-indicator__item" aria-label="Go to page 3"&gt;&lt;/button&gt;
-  &lt;button class="a-page-indicator__item" aria-label="Go to page 4"&gt;&lt;/button&gt;
+                <pre class="a-pre a-pre--scrollable"><code class="html">&lt;div class="a-page-indicator" role="tablist"&gt;
+  &lt;button class="a-page-indicator__item" aria-label="Go to page 1" role="tab"&gt;&lt;/button&gt;
+  &lt;button class="a-page-indicator__item is-active" aria-label="Go to page 2" role="tab"&gt;&lt;/button&gt;
+  &lt;button class="a-page-indicator__item" aria-label="Go to page 3" role="tab"&gt;&lt;/button&gt;
+  &lt;button class="a-page-indicator__item" aria-label="Go to page 4" role="tab"&gt;&lt;/button&gt;
 &lt;/div&gt;</code></pre>
             </div>
         </div>
         <div class="d">
             <div>
-                <div class="a-page-indicator">
-                    <a href="javascript:void(0);" class="a-page-indicator__item" aria-label="Go to page 1"></a>
-                    <a href="javascript:void(0);" class="a-page-indicator__item is-active" aria-label="Go to page 2"></a>
-                    <a href="javascript:void(0);" class="a-page-indicator__item" aria-label="Go to page 3"></a>
-                    <a href="javascript:void(0);" class="a-page-indicator__item" aria-label="Go to page 4"></a>
+                <div class="a-page-indicator" role="tablist">
+                    <a href="javascript:void(0);" class="a-page-indicator__item" aria-label="Go to page 1" role="tab"></a>
+                    <a href="javascript:void(0);" class="a-page-indicator__item is-active" aria-label="Go to page 2" role="tab"></a>
+                    <a href="javascript:void(0);" class="a-page-indicator__item" aria-label="Go to page 3" role="tab"></a>
+                    <a href="javascript:void(0);" class="a-page-indicator__item" aria-label="Go to page 4" role="tab"></a>
                 </div>
             </div>
             <div>
-                <pre class="a-pre a-pre--scrollable"><code class="html">&lt;div class="a-page-indicator"&gt;
-  &lt;a href="#" class="a-page-indicator__item" aria-label="Go to page 1"&gt;&lt;/a&gt;
-  &lt;a href="#" class="a-page-indicator__item is-active" aria-label="Go to page 2"&gt;&lt;/a&gt;
-  &lt;a href="#" class="a-page-indicator__item" aria-label="Go to page 3"&gt;&lt;/a&gt;
-  &lt;a href="#" class="a-page-indicator__item" aria-label="Go to page 4"&gt;&lt;/a&gt;
+                <pre class="a-pre a-pre--scrollable"><code class="html">&lt;div class="a-page-indicator" role="tablist"&gt;
+  &lt;a href="#" class="a-page-indicator__item" aria-label="Go to page 1" role="tab"&gt;&lt;/a&gt;
+  &lt;a href="#" class="a-page-indicator__item is-active" aria-label="Go to page 2" role="tab"&gt;&lt;/a&gt;
+  &lt;a href="#" class="a-page-indicator__item" aria-label="Go to page 3" role="tab"&gt;&lt;/a&gt;
+  &lt;a href="#" class="a-page-indicator__item" aria-label="Go to page 4" role="tab"&gt;&lt;/a&gt;
 &lt;/div&gt;</code></pre>
             </div>
         </div>
@@ -2572,14 +2572,14 @@
             <div>
                 <div class="a-progress">
                     <div class="a-progress__inner">
-                        <div class="a-progress__bar" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100" style="width: 20%"></div>
+                        <div class="a-progress__bar" aria-label="Progress" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100" style="width: 20%"></div>
                     </div>
                 </div>
             </div>
             <div>
                 <pre class="a-pre a-pre--scrollable"><code class="html">&lt;div class="a-progress"&gt;
   &lt;div class="a-progress__inner"&gt;
-    &lt;div class="a-progress__bar" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100" style="width: 20%"&gt;&lt;/div&gt;
+    &lt;div class="a-progress__bar" role="progressbar" aria-label="Progress" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100" style="width: 20%"&gt;&lt;/div&gt;
   &lt;/div&gt;
 &lt;/div&gt;</code></pre>
             </div>
@@ -2587,17 +2587,17 @@
         <div class="d">
             <div>
                 <div class="a-progress">
-                    <div class="a-progress__label">Please wait...</div>
+                    <div class="a-progress__label" id="progress-label">Please wait...</div>
                     <div class="a-progress__inner">
-                        <div class="a-progress__bar" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100" style="width: 20%"></div>
+                        <div class="a-progress__bar" role="progressbar" aria-labelledby="progress-label" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100" style="width: 20%"></div>
                     </div>
                 </div>
             </div>
             <div>
                 <pre class="a-pre a-pre--scrollable"><code class="html">&lt;div class="a-progress"&gt;
-  &lt;div class="a-progress__label"&gt;Please wait...&lt;/div&gt;
+  &lt;div class="a-progress__label" id="progress-label-1"&gt;Please wait...&lt;/div&gt;
   &lt;div class="a-progress__inner"&gt;
-    &lt;div class="a-progress__bar" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100" style="width: 20%"&gt;&lt;/div&gt;
+    &lt;div class="a-progress__bar" role="progressbar" aria-labelledby="progress-label-1" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100" style="width: 20%"&gt;&lt;/div&gt;
   &lt;/div&gt;
 &lt;/div&gt;</code></pre>
             </div>
@@ -2608,14 +2608,14 @@
             <div>
                 <div class="a-progress a-progress--l u-margin-bottom-l">
                     <div class="a-progress__inner">
-                        <div class="a-progress__bar" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100" style="width: 20%"></div>
+                        <div class="a-progress__bar" role="progressbar" aria-label="Large progress" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100" style="width: 20%"></div>
                     </div>
                 </div>
 
                 <div class="a-progress a-progress--inline a-progress--l u-margin-bottom-l">
-                    <div class="a-progress__label">Downloading 24/128 messages...</div>
+                    <div class="a-progress__label" id="large-progress-label">Downloading 24/128 messages...</div>
                     <div class="a-progress__inner">
-                        <div class="a-progress__bar" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100" style="width: 20%"></div>
+                        <div class="a-progress__bar" role="progressbar" aria-labelledby="large-progress-label" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100" style="width: 20%"></div>
                     </div>
                 </div>
             </div>
@@ -3221,8 +3221,8 @@
                         <div class="a-input__label" id="switch-label" for="switch-button">Switch label</div>
                         <button class="a-switch" role="switch" aria-checked="true" aria-labelledby="switch-label">
                             <div class="a-switch__toggle" aria-hidden="true">
-                                <span class="a-switch__toggle-label a-switch__toggle-label--on" aria-hidden="true">i</span>
-                                <span class="a-switch__toggle-label a-switch__toggle-label--off" aria-hidden="true">o</span>
+                                <span class="a-switch__toggle-label a-switch__toggle-label--on" aria-hidden="true" role="presentation">i</span>
+                                <span class="a-switch__toggle-label a-switch__toggle-label--off" aria-hidden="true" role="presentation">o</span>
                             </div>
                             <div class="a-switch__label a-switch__label--on" aria-hidden="true">Aan</div>
                             <div class="a-switch__label a-switch__label--off" aria-hidden="true">Uit</div>
@@ -3235,8 +3235,8 @@
   &lt;div class="a-input__label" id="switch-label" for="switch-button"&gt;Switch label&lt;/div&gt;
   &lt;button class="a-switch" role="switch" aria-checked="true" aria-labelledby="switch-label"&gt;
     &lt;div class="a-switch__toggle" aria-hidden="true"&gt;
-      &lt;div class="a-switch__toggle-label a-switch__toggle-label--on" aria-hidden="true"&gt;i&lt;/div&gt;
-      &lt;div class="a-switch__toggle-label a-switch__toggle-label--off" aria-hidden="true"&gt;o&lt;/div&gt;
+      &lt;div class="a-switch__toggle-label a-switch__toggle-label--on" aria-hidden="true" role="presentation"&gt;i&lt;/div&gt;
+      &lt;div class="a-switch__toggle-label a-switch__toggle-label--off" aria-hidden="true" role="presentation"&gt;o&lt;/div&gt;
     &lt;/div&gt;
     &lt;div class="a-switch__label a-switch__label--on" aria-hidden="true"&gt;Aan&lt;/div&gt;
     &lt;div class="a-switch__label a-switch__label--off" aria-hidden="true"&gt;Uit&lt;/div&gt;

@@ -174,7 +174,9 @@
 
     &:disabled {
       + label:after {
+        background-color: var(--radio-checkbox-disabled-bg-color);
         background-image: url('data:image/svg+xml;utf8,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 20 20%22><path fill=%22%236f6f6f%22 d=%22M16.5,10.5h-13C3.2,10.5,3,10.3,3,10s0.2-0.5,0.4-0.5h13.1c0.3,0,0.4,0.2,0.4,0.5S16.7,10.5,16.5,10.5z%22/></svg>');
+        box-shadow: 0 0 0 var(--border-width) var(--radio-checkbox-disabled-border-color) inset;
       }
     }
   }

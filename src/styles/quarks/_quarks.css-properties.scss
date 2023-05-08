@@ -64,7 +64,6 @@
   --state-success:           var(--success-600);
   --state-warning:           var(--warning-400);
   --state-danger:            var(--danger-500);
-  --state-danger-light:      var(--danger-400); // TODO: Give --state-danger-light a better name
   --state-disabled:          #{$gray-400};
 
   /**

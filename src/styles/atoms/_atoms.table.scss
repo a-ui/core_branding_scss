@@ -53,6 +53,10 @@
     &.is-clickable:focus {
       background-color: var(--table-highlight-bg-color);
       cursor: pointer;
+
+      .small {
+        color: $gray-500;
+      }
     }
 
     &.is-selected td {

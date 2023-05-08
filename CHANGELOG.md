@@ -13,6 +13,39 @@
 - [BREAKING] Removed old earth icon
 
 
+## [6.3.0] - 2023-05-08
+
+### Added
+- Added style variant for fieldset and legend
+
+### Fixed
+- Fixed the datepicker not having a background color
+- Fixed the click size of the button to open the datepicker
+
+
+## [6.2.3] - 2023-03-30
+
+### Fixed
+- Fixed a border layout issue for the accordion
+
+
+## [6.2.2] - 2023-03-24
+
+### Fixed
+- Fixed strange focus ring when using step indicator with buttons
+- Fixed input error text contrast
+- Fixed switch syntax to fix accessibility
+- Removed the accordion's overflow in order to be completely accessible
+- Removed the aria-expanded attribute on copyright anchor elements
+- Added the img role to the avatar with icon to fix accessibility
+- Made the page indicator higher to fix accessibility
+- Added label to the progress bar to fix accessibility
+- Fixed navigation syntax to fix accessibility
+- Fixed a contrast issue with small text in a highlighted table row
+- Fixed a layout issue with disabled indeterminate checkboxes
+- Fixed a layout issue with button tags
+
+
 ## [6.2.1] - 2023-02-10
 
 ### Changed
@@ -715,6 +748,9 @@
 - Initial release.
 
 
+[6.3.0]: https://github.com/a-ui/core_branding_scss/tree/v6.3.0
+[6.2.3]: https://github.com/a-ui/core_branding_scss/tree/v6.2.3
+[6.2.2]: https://github.com/a-ui/core_branding_scss/tree/v6.2.2
 [6.2.1]: https://github.com/a-ui/core_branding_scss/tree/v6.2.1
 [6.2.0]: https://github.com/a-ui/core_branding_scss/tree/v6.2.0
 [6.1.1]: https://github.com/a-ui/core_branding_scss/tree/v6.1.1
