@@ -1,0 +1,126 @@
+/**
+ * MAP
+ * -------------------------------------------------------------------
+ */
+
+.o-map {
+  --map-bg-color:                           #{$gray-200};
+  --map-height:                             24rem;
+  --map-map-spacer:                         var(--spacer-xs);
+  --map-content-bg-color:                   #{$white};
+  --map-content-spacer:                     var(--spacer);
+  --map-content-width:                      16rem;
+  --map-control-spacer:                     var(--spacer-3xs);
+}
+
+.o-map {
+  background-color: var(--map-bg-color);
+  border: var(--border-width) solid $gray-300;
+  display: flex;
+  height: var(--map-height);
+  width: 100%;
+
+  &__wrapper {
+    flex: 1;
+    height: 100%;
+    overflow: hidden;
+    position: relative;
+  }
+
+  &__map {
+    font-family: inherit;
+    font-size: inherit;
+    height: 100%;
+    position: relative;
+    z-index: layer('base');
+  }
+
+  &__content {
+    background-color: var(--map-content-bg-color);
+    border-right: solid var(--border-width) var(--border-color);
+    display: none;
+    height: 100%;
+    overflow: auto;
+    padding: var(--map-content-spacer);
+    width: var(--map-content-width);
+    z-index: layer('top');
+
+    @include to($screen-xs) {
+      position: absolute;
+      z-index: layer('pane');
+    }
+
+    &--open {
+      display: block;
+    }
+  }
+
+  &__controls {
+    position: absolute;
+    z-index: layer('top');
+
+    &--bottom-left {
+      bottom: var(--map-map-spacer);
+      left: var(--map-map-spacer);
+    }
+
+    &--bottom-right {
+      bottom: var(--map-map-spacer);
+      right: var(--map-map-spacer);
+    }
+
+    &--top-left {
+      left: var(--map-map-spacer);
+      top: var(--map-map-spacer);
+    }
+
+    &--top-right {
+      right: var(--map-map-spacer);
+      top: var(--map-map-spacer);
+    }
+
+    &--top-left .o-map__control,
+    &--top-right .o-map__control {
+      margin-bottom: var(--map-control-spacer);
+    }
+
+    &--bottom-left .o-map__control,
+    &--bottom-right .o-map__control {
+      margin-top: var(--map-control-spacer);
+    }
+
+    &--bottom-left .o-map__control,
+    &--top-left .o-map__control {
+      margin-right: var(--map-control-spacer);
+    }
+
+    &--bottom-right .o-map__control,
+    &--top-right .o-map__control {
+      margin-left: var(--map-control-spacer);
+    }
+  }
+
+  &__control {
+    float: left;
+  }
+
+  &__zoom-control {
+    display: block;
+  }
+
+  &__html-icon {
+    background-color: transparent;
+    border: none;
+  }
+
+  &.o-map--full-screen {
+    border: none;
+    bottom: 0;
+    height: 100%;
+    left: 0;
+    position: fixed;
+    right: 0;
+    top: 0;
+    z-index: layer('overlay');
+  }
+}

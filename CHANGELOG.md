@@ -5,7 +5,7 @@
 
 
 ### Added
-- [BREAKING] Added correct code for Leaflet
+- [BREAKING] Moved leaflet code to a more generic map organism
 - Added info, earth, newspaper and overview icon
 
 ### Removed
