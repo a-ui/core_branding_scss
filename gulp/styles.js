@@ -20,7 +20,6 @@ var sass = require('gulp-sass')(require('sass')),
     autoprefixer = require("autoprefixer"),
     cssnano = require("cssnano"),
     rename = require('gulp-rename'),
-    cssUrlAdjuster = require('gulp-css-url-adjuster'),
     license = require('gulp-header-license'),
     stylelint = require('gulp-stylelint'),
     browserSync = require('browser-sync');
@@ -40,7 +39,8 @@ var autoPrefixer = [
 
 var sassOptions = {
     outputStyle: 'expanded',
-    sourceComments: false
+    sourceComments: false,
+    basePath: './public',
 }
 
 var sourcemapOptions = {
@@ -62,19 +62,11 @@ gulp.task('sass', function () {
 // -------------------------------------------------------------------
 
 gulp.task('sass:dist', function () {
-    // Get package version to generate correct font url
-    var nodePackageFile = JSON.parse(fs.readFileSync(__dirname + '/../package.json'));
-    var nodePackageVersion = nodePackageFile.version;
-    var nodePackageDescription = nodePackageFile.description;
 
     return gulp.src(['src/styles/**/*.scss', '!src/styles/**/styleguide.scss'])
         .pipe(sass(sassOptions).on('error', sass.logError))
         .pipe(postcss(autoPrefixer))
         .pipe(license('/*\n' + fs.readFileSync('LICENSE.md', 'utf8') + '*/'))
-        .pipe(cssUrlAdjuster({
-            replace: ['../../fonts', 'assets/fonts'],
-            prepend: 'https:///cdn.antwerpen.be/' + nodePackageDescription + '/' + nodePackageVersion + '/'
-        }))
         .pipe(gulp.dest('dist'))
         .pipe(sourcemaps.init())
         .pipe(gulp.dest('./dist/'))
