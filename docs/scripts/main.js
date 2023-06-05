@@ -53,4 +53,9 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         }
     }
+
+    const map = L.map('map', {attributionControl: false, zoomControl: false}).setView([51.21793, 4.41039], 11);
+    L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+        maxZoom: 19,
+    }).addTo(map);
 }, false);
