@@ -40,7 +40,6 @@ var autoPrefixer = [
 var sassOptions = {
     outputStyle: 'expanded',
     sourceComments: false,
-    basePath: './public',
 }
 
 var sourcemapOptions = {
