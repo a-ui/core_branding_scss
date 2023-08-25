@@ -8,11 +8,19 @@
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "gulp build",
-    "start": "gulp server",
-    "docs": "gulp docs",
-    "aws": "gulp aws",
-    "version": "gulp docs && git add -A ."
+    "clean:dist": "rimraf dist",
+    "clean:tmp": "rimraf tmp",
+    "clean:docs": "rimraf docs",
+    "gulp-build": "gulp build",
+    "gulp-start": "gulp server",
+    "gulp-docs": "gulp docs",
+    "gulp-cdn": "gulp cdn",
+    "gulp-version": "gulp-docs && git add -A .",
+    "build": "npm-run-all clean:dist gulp-build",
+    "start": "npm-run-all clean:tmp gulp-start",
+    "docs": "npm-run-all clean:docs gulp-docs",
+    "aws": "npm-run-all clean:dist gulp-build gulp-cdn",
+    "version": "npm-run-all gulp-version"
   },
   "contributors": [
     {
@@ -34,8 +42,8 @@
   "devDependencies": {
     "autoprefixer": "^10.4.14",
     "browser-sync": "^2.29.1",
+    "concurrently": "^8.2.1",
     "cssnano": "^5.1.15",
-    "del": "^5.1.0",
     "glob": "^7.2.3",
     "gulp": "^4.0.2",
     "gulp-header-license": "^1.0.12",
@@ -50,7 +58,9 @@
     "gulp-watch": "^5.0.1",
     "list-selectors": "^2.0.1",
     "merge-stream": "^2.0.0",
+    "npm-run-all": "^4.1.5",
     "postcss": "^8.4.23",
+    "rimraf": "^5.0.1",
     "sass": "^1.62.1",
     "sass-export": "^2.1.2",
     "stylelint": "^13.13.1",

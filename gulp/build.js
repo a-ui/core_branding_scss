@@ -12,7 +12,7 @@ gulp.task('cdn', function (callback) {
     var nodePackageFile = JSON.parse(fs.readFileSync('./package.json'));
     var version = nodePackageFile.version;
 
-    fs.rename('dist/aws', 'dist/' + version, function (err) {
+    fs.rename('dist', version, function (err) {
         if (err) {
             throw err;
         } else {
