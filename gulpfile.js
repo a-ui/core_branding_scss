@@ -1,22 +1,17 @@
 'use strict';
 
 require('./gulp/build'),
-require('./gulp/copy'),
 require('./gulp/iconsprite'),
 require('./gulp/styles'),
-require('./gulp/templates'),
-require('./gulp/watch');
+require('./gulp/templates');
 
 var gulp = require('gulp');
 
 // Start a development server
-gulp.task('server', gulp.series(gulp.parallel('icon-sprite', 'sass', 'render-templates', 'stylelint'), 'watch'));
+gulp.task('templates', gulp.series('render-templates'));
 
 // Create a build
-gulp.task('build', gulp.series(gulp.parallel('icon-sprite', 'sass:dist'), 'copy', 'replace:dist'));
+gulp.task('build', gulp.parallel('sass:dist'));
 
 // Build documentation
-gulp.task('docs', gulp.series(gulp.parallel('icon-sprite', 'sass', 'render-templates', 'readme'), 'copy:docs', 'replace'));
-
-// Default task
-gulp.task('default', gulp.series('server'));
+gulp.task('docs', gulp.parallel('templates', 'readme'));

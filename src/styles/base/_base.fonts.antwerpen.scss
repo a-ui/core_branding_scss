@@ -5,9 +5,9 @@
  * https://alistapart.com/article/say-no-to-faux-bold/
  */
 
-@include font-face('Antwerpen Small', '../../fonts/AntwerpenSmallCaps-Regular', 500, normal);
-@include font-face('Antwerpen Small', '../../fonts/AntwerpenSmallCaps-Regular', 700, normal);
-@include font-face('Antwerpen Regular', '../../fonts/Antwerpen-Regular', 500, normal);
-@include font-face('Antwerpen Regular', '../../fonts/Antwerpen-Regular', 700, normal);
-@include font-face('Antwerpen Tall', '../../fonts/AntwerpenTall-Tall', 500, normal);
-@include font-face('Antwerpen Tall', '../../fonts/AntwerpenTall-Tall', 700, normal);
+@include font-face('Antwerpen Small', '../fonts/AntwerpenSmallCaps-Regular', 500, normal);
+@include font-face('Antwerpen Small', '../fonts/AntwerpenSmallCaps-Regular', 700, normal);
+@include font-face('Antwerpen Regular', '../fonts/Antwerpen-Regular', 500, normal);
+@include font-face('Antwerpen Regular', '../fonts/Antwerpen-Regular', 700, normal);
+@include font-face('Antwerpen Tall', '../fonts/AntwerpenTall-Tall', 500, normal);
+@include font-face('Antwerpen Tall', '../fonts/AntwerpenTall-Tall', 700, normal);

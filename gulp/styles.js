@@ -7,9 +7,7 @@
 // - https://www.npmjs.com/package/autoprefixer
 // - https://www.npmjs.com/package/cssnano
 // - https://www.npmjs.com/package/gulp-rename
-// - https://www.npmjs.com/package/gulp-css-url-adjuster
 // - https://www.npmjs.com/package/gulp-header-license
-// - https://www.npmjs.com/package/gulp-stylelint
 
 var gulp = require('gulp'),
     fs = require('fs');
@@ -20,9 +18,7 @@ var sass = require('gulp-sass')(require('sass')),
     autoprefixer = require("autoprefixer"),
     cssnano = require("cssnano"),
     rename = require('gulp-rename'),
-    license = require('gulp-header-license'),
-    stylelint = require('gulp-stylelint'),
-    browserSync = require('browser-sync');
+    license = require('gulp-header-license');
 
 var cssNano = [
     cssnano({
@@ -46,15 +42,6 @@ var sourcemapOptions = {
     includeContent: false
 };
 
-gulp.task('sass', function () {
-    return gulp.src('src/styles/**/*.scss')
-        .pipe(sourcemaps.init())
-        .pipe(sass(sassOptions).on('error', sass.logError))
-        .pipe(postcss(autoPrefixer))
-        .pipe(gulp.dest('.tmp/styles'))
-        .pipe(browserSync.stream());
-});
-
 
 // -------------------------------------------------------------------
 // :: SASS DIST
@@ -74,15 +61,4 @@ gulp.task('sass:dist', function () {
         .pipe(license('/*\n' + fs.readFileSync('LICENSE.md', 'utf8') + '*/'))
         .pipe(sourcemaps.write("./", sourcemapOptions))
         .pipe(gulp.dest('dist'));
-});
-
-gulp.task('stylelint', function () {
-    return gulp
-        .src('src/styles/**/*.scss')
-        .pipe(stylelint({
-            failAfterError: false,
-            reporters: [
-                { formatter: 'verbose', console: true },
-            ]
-        }));
 });
