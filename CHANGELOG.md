@@ -4,6 +4,8 @@
 ## Unreleased
 
 
+## [6.4.1] - 2023-09-12
+
 ### Fixed
 - Fixed switch margin in case its right label would be longer
 - Fixed an unwanted scrollbar in the overlay component
@@ -753,6 +755,7 @@
 - Initial release.
 
 
+[6.4.1]: https://github.com/a-ui/core_branding_scss/tree/v6.4.1
 [6.4.0]: https://github.com/a-ui/core_branding_scss/tree/v6.4.0
 [6.3.0]: https://github.com/a-ui/core_branding_scss/tree/v6.3.0
 [6.2.3]: https://github.com/a-ui/core_branding_scss/tree/v6.2.3
