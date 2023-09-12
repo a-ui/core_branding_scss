@@ -183,7 +183,7 @@
     row-gap: var(--SPACER);
 
     > li {
-      border: 1px solid var(--BG-COLOR);
+      border: 1px solid var(--BORDER-COLOR-LIGHT);
       min-height: 4rem;
       padding-bottom: var(--SPACER-XS);
       padding-left: var(--SPACER-XL);
@@ -193,7 +193,7 @@
 
       .d-color {
         bottom: 0;
-        box-shadow: 0 0 0 var(--BORDER-WIDTH) var(--BG-COLOR);
+        box-shadow: 0 0 0 var(--BORDER-WIDTH) var(--BORDER-COLOR-LIGHT);
         display: block;
         left: 0;
         position: absolute;

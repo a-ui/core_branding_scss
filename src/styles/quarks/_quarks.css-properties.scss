@@ -54,6 +54,15 @@
   --DANGER-200:              var(--danger-200, #{$cinnabar-100});
   --DANGER-100:              var(--danger-100, #{$cinnabar-050});
 
+  --GRAY-800:                var(--gray-800,);
+  --GRAY-700:                var(--gray-700,);
+  --GRAY-600:                var(--gray-600, #{$gray-600});
+  --GRAY-500:                var(--gray-500, #{$gray-500});
+  --GRAY-400:                var(--gray-400, #{$gray-400});
+  --GRAY-300:                var(--gray-300, #{$gray-300});
+  --GRAY-200:                var(--gray-200, #{$gray-200});
+  --GRAY-100:                var(--gray-100, #{$gray-100});
+
   /**
    * UI COLORS
    * -------------------------------------------------------------------
@@ -62,9 +71,11 @@
   --TEXT-COLOR:              var(--text-color, #{$black});
   --TEXT-COLOR-LIGHT:        var(--text-color-light, #{$gray-400});
   --TEXT-COLOR-XLIGHT:       var(--text-color-xlight, #{$white});
-  --BG-COLOR:                var(--bg-color, #{$gray-200});
-  --BG-COLOR-LIGHT:          var(--bg-color-light, #{$gray-100});
+  --BG-COLOR:                var(--bg-color, #{$gray-100});
+  --BG-COLOR-LIGHT:          var(--bg-color-light, #{$white});
+
   --BORDER-COLOR:            var(--border-color, #{$gray-300});
+  --BORDER-COLOR-LIGHT:      var(--border-color-light, #{$gray-200});
   --OVERLAY-COLOR:           var(--overlay-color, #{rgba($black, .75)});
   --BOX-SHADOW-COLOR:        var(--box-shadow-color, #{rgba($gray-600, .12)});
 
