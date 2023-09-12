@@ -3763,8 +3763,6 @@ a.a-page-indicator__item:focus:before {
 }
 
 .a-table-scrollable-wrapper {
-  -ms-overflow-style: scrollbar;
-  -webkit-overflow-scrolling: touch;
   border: var(--BORDER-WIDTH) solid var(--table-border-color);
   overflow-x: auto;
   overflow-y: hidden;
@@ -5082,10 +5080,9 @@ a.a-page-indicator__item:focus:before {
 }
 
 .m-overlay__inner {
-  -ms-overflow-style: none;
   max-height: calc(100vh - 8.75rem);
-  overflow: auto;
-  overflow-y: scroll;
+  overflow-x: hidden;
+  overflow-y: auto;
 }
 
 .m-overlay__slideshow.o-slideshow {
