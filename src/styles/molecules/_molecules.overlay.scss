@@ -60,10 +60,9 @@
 }
 
 .m-overlay__inner {
-  -ms-overflow-style: none;
   max-height: calc(100vh - 8.75rem);
-  overflow: auto;
-  overflow-y: scroll;
+  overflow-x: hidden;
+  overflow-y: auto;
 }
 
 .m-overlay__slideshow.o-slideshow {

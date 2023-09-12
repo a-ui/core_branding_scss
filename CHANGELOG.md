@@ -6,6 +6,7 @@
 
 ### Fixed
 - Fixed switch margin in case its right label would be longer
+- Fixed an unwanted scrollbar in the overlay component
 
 
 ## [6.4.0] - 2023-06-22
