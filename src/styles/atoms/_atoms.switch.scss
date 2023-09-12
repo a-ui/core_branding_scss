@@ -118,11 +118,11 @@
 }
 
 .a-switch__label + .a-switch__toggle,
-.a-switch__toggle + .a-switch__label {
+.a-switch__toggle ~ .a-switch__label {
   margin-left: var(--SPACER-XS);
 }
 
-.a-switch__toggle + .a-switch__label {
+.a-switch__toggle ~ .a-switch__label {
   text-align: left;
 }
 
