@@ -156,6 +156,13 @@
   --btn-twitter-border-color:                   #{$twitter};
   --btn-twitter-hover-border-color:             #{$twitter-hover};
 
+  --btn-x-color:                                #{$white};
+  --btn-x-hover-color:                          var(--btn-x-color);
+  --btn-x-bg-color:                             #{$x};
+  --btn-x-hover-bg-color:                       #{$x-hover};
+  --btn-x-border-color:                         #{$x};
+  --btn-x-hover-border-color:                   #{$x-hover};
+
   --btn-linkedin-color:                         #{$white};
   --btn-linkedin-hover-color:                   var(--btn-linkedin-color);
   --btn-linkedin-bg-color:                      #{$linkedin};
@@ -338,6 +345,14 @@
     --btn-hover-bg-color: var(--btn-twitter-hover-bg-color);
     --btn-border-color: var(--btn-twitter-border-color);
     --btn-hover-border-color: var(--btn-twitter-hover-border-color);
+  }
+  &.a-button--x {
+    --btn-color: var(--btn-x-color);
+    --btn-hover-color: var(--btn-x-hover-color);
+    --btn-bg-color: var(--btn-x-bg-color);
+    --btn-hover-bg-color: var(--btn-x-hover-bg-color);
+    --btn-border-color: var(--btn-x-border-color);
+    --btn-hover-border-color: var(--btn-x-hover-border-color);
   }
 
   &.a-button--linkedin {

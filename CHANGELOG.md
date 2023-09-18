@@ -4,6 +4,14 @@
 ## Unreleased
 
 
+### Added
+- Added x social button (note: Twitter is deprecated, but still exists)
+- Added icons for earth, info, overview and newspaper
+
+### Fixed
+- Fixed an unwanted bottom margin when a flyout was nested in an .a-form div
+
+
 ## [6.4.1] - 2023-09-12
 
 ### Fixed
