@@ -3,8 +3,18 @@
  * -------------------------------------------------------------------
  */
 
-.a-form .a-input:not(:last-child) {
-  margin-bottom: var(--SPACER);
+.a-form {
+  .a-input:not(:last-child) {
+    margin-bottom: var(--SPACER);
+  }
+
+  .m-flyout {
+    margin-bottom: var(--SPACER);
+
+    .a-input {
+      margin-bottom: 0;
+    }
+  }
 }
 
 /**
