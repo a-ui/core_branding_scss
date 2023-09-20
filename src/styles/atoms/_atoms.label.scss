@@ -39,6 +39,7 @@
 .a-label {
   background-color: var(--label-bg-color);
   border: var(--BORDER-WIDTH) solid var(--label-border-color);
+  border-radius: var(--BORDER-RADIUS);
   color: var(--label-color);
   display: inline-block;
   font-size: var(--label-font-size);

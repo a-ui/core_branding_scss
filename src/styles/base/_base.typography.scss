@@ -11,8 +11,8 @@
 body {
   color: var(--TEXT-COLOR);
   font-family: var(--FONT-FAMILY-BASE);
-  font-size: rem($font-size-base);
-  line-height: $line-height-base;
+  font-size: var(--FONT-SIZE-BASE);
+  line-height: var(--LINE-HEIGHT-BASE);
 }
 
 ::selection {
@@ -36,44 +36,50 @@ h6,
 .h4,
 .h5,
 .h6 {
-  line-height: $line-height-headings;
+  line-height: var(--LINE-HEIGHT-HEADING);
   margin: 0;
 }
 
 h1,
 .h1 {
   font-family: var(--FONT-FAMILY-HEADINGS);
-  font-size: rem($font-size-h1);
+  font-size: var(--FONT-SIZE-H1);
+  font-weight: var(--FONT-WEIGHT-H1);
 }
 
 h2,
 .h2 {
   font-family: var(--FONT-FAMILY-HEADINGS);
-  font-size: rem($font-size-h2);
+  font-size: var(--FONT-SIZE-H2);
+  font-weight: var(--FONT-WEIGHT-H2);
 }
 
 h3,
 .h3 {
   font-family: var(--FONT-FAMILY-HEADINGS);
-  font-size: rem($font-size-h3);
+  font-size: var(--FONT-SIZE-H3);
+  font-weight: var(--FONT-WEIGHT-H3);
 }
 
 h4,
 .h4 {
   font-family: var(--FONT-FAMILY-BASE);
-  font-size: rem($font-size-h4);
+  font-size: var(--FONT-SIZE-H4);
+  font-weight: var(--FONT-WEIGHT-H4);
 }
 
 h5,
 .h5 {
   font-family: var(--FONT-FAMILY-BASE);
-  font-size: rem($font-size-h5);
+  font-size: var(--FONT-SIZE-H5);
+  font-weight: var(--FONT-WEIGHT-H5);
 }
 
 h6,
 .h6 {
   font-family: var(--FONT-FAMILY-BASE);
-  font-size: rem($font-size-h6);
+  font-size: var(--FONT-SIZE-H6);
+  font-weight: var(--FONT-WEIGHT-H6);
 }
 
 /**
@@ -83,8 +89,8 @@ h6,
 
 p,
 .paragraph {
-  font-size: rem($font-size-base);
-  line-height: $line-height-paragraph;
+  font-size: var(--FONT-SIZE-BASE);
+  line-height: var(--LINE-HEIGHT-PARAGRAPH);
   margin: 0;
 }
 
@@ -96,8 +102,8 @@ p,
 ul,
 ol,
 dl {
-  font-size: rem($font-size-base);
-  line-height: $line-height-paragraph;
+  font-size: var(--FONT-SIZE-BASE);
+  line-height: var(--LINE-HEIGHT-PARAGRAPH);
   margin: 0;
 }
 
@@ -120,7 +126,7 @@ blockquote {
     color: var(--THEME2-400);
     display: inline-block;
     font-style: normal;
-    line-height: $line-height-headings;
+    line-height: var(--LINE-HEIGHT-HEADING);
 
     &:before {
       content: '— ';

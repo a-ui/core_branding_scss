@@ -211,7 +211,7 @@
       &:hover,
       &:active,
       &:hover {
-        background-color: var(--BG-COLOR-LIGHT);
+        background-color: var(--BG-COLOR);
         color: var(--TEXT-COLOR-LIGHT);
       }
 
@@ -350,7 +350,7 @@
 
   > li {
     font-weight: var(--FONT-WEIGHT-BOLD);
-    line-height: $line-height-paragraph;
+    line-height: var(--LINE-HEIGHT-PARAGRAPH);
     text-align: center;
 
     > a,

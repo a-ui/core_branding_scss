@@ -10,12 +10,12 @@
   --shared-avatar-size-l:                  var(--SPACER-XXL); // 60px
 
   // Copyright
-  --shared-copyright-color:                #{$white};
+  --shared-copyright-color:                var(--TEXT-COLOR-INVERTED);
   --shared-copyright-height:               var(--SPACER-L);
 
   // Header
   --shared-header-height:                  var(--SPACER-XL);
 
   // Slideshow
-  --shared-slideshow-footer-color-light:   #{$white};
+  --shared-slideshow-footer-color-light:   var(--TEXT-COLOR-INVERTED);
 }

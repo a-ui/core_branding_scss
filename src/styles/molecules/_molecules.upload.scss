@@ -14,7 +14,7 @@
   --upload-focus-border-color:      var(--THEME1-100);
 
   --upload-file-color:              var(--TEXT-COLOR);
-  --upload-file-bg-color:           var(--BG-COLOR-LIGHT);
+  --upload-file-bg-color:           var(--BG-COLOR);
   --upload-file-danger-color:       var(--STATE-DANGER);
 }
 
@@ -59,6 +59,7 @@
   align-items: center;
   background-color: var(--upload-bg-color);
   border: calc(var(--BORDER-WIDTH) * 2) dashed var(--upload-border-color);
+  border-radius: var(--BORDER-RADIUS);
   color: var(--upload-color);
   cursor: pointer;
   display: flex;
@@ -122,8 +123,9 @@
 
   > li {
     background-color: var(--upload-file-bg-color);
+    border-radius: var(--BORDER-RADIUS);
     color: var(--upload-file-color);
-    line-height: $line-height-paragraph;
+    line-height: var(--LINE-HEIGHT-PARAGRAPH);
     min-height: var(--SPACER-L);
     padding: var(--SPACER-XXS) var(--SPACER-XL) var(--SPACER-XXS) var(--SPACER-XL);
     position: relative;

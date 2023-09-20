@@ -6,13 +6,13 @@
 .m-datepicker {
   --datepicker-text-color:           var(--TEXT-COLOR);
   --datepicker-text-color-light:     var(--TEXT-COLOR-LIGHT);
-  --datepicker-text-color-xlight:    var(--TEXT-COLOR-XLIGHT);
+  --datepicker-text-color-xlight:    var(--TEXT-COLOR-INVERTED);
 
   --datepicker-bg-color:             #{$white};
-  --datepicker-bg-color-dark:        var(--BG-COLOR-LIGHT);
+  --datepicker-bg-color-dark:        var(--BG-COLOR);
 
   --datepicker-border-color:         var(--BORDER-COLOR);
-  --datepicker-border-color-light:   #{$gray-200};
+  --datepicker-border-color-light:   var(--BORDER-COLOR-LIGHT);
 
   --datepicker-highlight-color:      var(--THEME1-100);
   --datepicker-active-color:         var(--THEME1-600);
@@ -25,6 +25,7 @@
 
 .m-datepicker {
   background-color: var(--datepicker-bg-color);
+  border-radius: var(--BORDER-RADIUS);
   max-width: calc(var(--SPACER) * 14);
   opacity: 0;
   transform: translateY(calc(var(--SPACER-XL) * -1));
@@ -50,6 +51,8 @@
 
 .m-datepicker__nav {
   border: var(--BORDER-WIDTH) solid var(--datepicker-border-color);
+  border-top-left-radius: var(--BORDER-RADIUS);
+  border-top-right-radius: var(--BORDER-RADIUS);
   display: flex;
   height: var(--SPACER-XL);
   justify-content: space-between;
@@ -103,8 +106,11 @@
 
 .m-datepicker__grid {
   border-bottom: var(--BORDER-WIDTH) solid var(--datepicker-border-color);
+  border-bottom-left-radius: var(--BORDER-RADIUS);
+  border-bottom-right-radius: var(--BORDER-RADIUS);
   border-left: var(--BORDER-WIDTH) solid var(--datepicker-border-color);
   border-right: var(--BORDER-WIDTH) solid var(--datepicker-border-color);
+  overflow: hidden;
 }
 
 .m-datepicker__grid-head {
@@ -217,8 +223,11 @@
 
 .m-datepicker__list {
   border-bottom: var(--BORDER-WIDTH) solid var(--datepicker-border-color);
+  border-bottom-left-radius: var(--BORDER-RADIUS);
+  border-bottom-right-radius: var(--BORDER-RADIUS);
   border-left: var(--BORDER-WIDTH) solid var(--datepicker-border-color);
   border-right: var(--BORDER-WIDTH) solid var(--datepicker-border-color);
+  overflow: hidden;
 }
 
 .m-datepicker__list-body {
@@ -304,4 +313,8 @@
 .m-datepicker--left {
   left: 0;
   right: auto;
+}
+
+.m-datepicker--headroom {
+  margin-bottom: 15rem;
 }

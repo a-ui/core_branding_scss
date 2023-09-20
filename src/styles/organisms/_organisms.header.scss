@@ -58,6 +58,11 @@
 
 .o-header__button {
   border-left: var(--BORDER-WIDTH) solid var(--header-border);
+
+  &,
+  .a-avatar {
+    border-radius: 0;
+  }
 }
 
 .o-header__button-skip {

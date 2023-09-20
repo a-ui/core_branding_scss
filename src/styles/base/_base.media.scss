@@ -17,8 +17,8 @@ figure {
 }
 
 figcaption {
-  font-size: rem($font-size-base);
-  line-height: $line-height-paragraph;
+  font-size: var(--FONT-SIZE-BASE);
+  line-height: var(--LINE-HEIGHT-PARAGRAPH);
   padding: var(--SPACER-XS);
 
   @include at($screen-sm) {

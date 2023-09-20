@@ -248,6 +248,14 @@
   --THEME2-300: var(--theme2-300, #df4661);
   --THEME2-200: var(--theme2-200, #ffb1bb);
   --THEME2-100: var(--theme2-100, #f5dadf);
+  --INFO-800: var(--info-800, var(--THEME1-800));
+  --INFO-700: var(--info-700, var(--THEME1-700));
+  --INFO-600: var(--info-600, var(--THEME1-600));
+  --INFO-500: var(--info-500, var(--THEME1-500));
+  --INFO-400: var(--info-400, var(--THEME1-400));
+  --INFO-300: var(--info-300, var(--THEME1-300));
+  --INFO-200: var(--info-200, var(--THEME1-200));
+  --INFO-100: var(--info-100, var(--THEME1-100));
   --SUCCESS-800: var(--success-800, #004721);
   --SUCCESS-700: var(--success-700, #006e33);
   --SUCCESS-600: var(--success-600, #4c8d2b);
@@ -278,13 +286,18 @@
    */
   --TEXT-COLOR: var(--text-color, #000);
   --TEXT-COLOR-LIGHT: var(--text-color-light, #6f6f6f);
-  --TEXT-COLOR-XLIGHT: var(--text-color-xlight, #fff);
-  --BG-COLOR: var(--bg-color, #d8d8d8);
-  --BG-COLOR-LIGHT: var(--bg-color-light, #f3f3f3);
+  --TEXT-COLOR-INVERTED: var(--text-color-inverted, #fff);
+  --TEXT-COLOR-XLIGHT: var(--text-color-xlight, var(--TEXT-COLOR-INVERTED));
+  --BG-COLOR: var(--bg-color, #f3f3f3);
+  --BG-COLOR-LIGHT: var(--bg-color-light, #fff);
+  --BG-COLOR-INVERTED: var(--bg-color-inverted, #424242);
   --BORDER-COLOR: var(--border-color, #949494);
+  --BORDER-COLOR-LIGHT: var(--border-color-light, #d8d8d8);
   --OVERLAY-COLOR: var(--overlay-color, rgba(0, 0, 0, 0.75));
   --BOX-SHADOW-COLOR: var(--box-shadow-color, rgba(20, 20, 20, 0.12));
-  --STATE-INFO: var(--state-info, var(--THEME1-600));
+  --LINK-COLOR: var(--link-color, var(--THEME1-600));
+  --LINK-HOVER-COLOR: var(--link-hover-color, var(--THEME1-700));
+  --STATE-INFO: var(--state-info, var(--INFO-600));
   --STATE-SUCCESS: var(--state-success, var(--SUCCESS-700));
   --STATE-WARNING: var(--state-warning, var(--WARNING-400));
   --STATE-DANGER: var(--state-danger, var(--DANGER-600));
@@ -336,19 +349,32 @@
   --FONT-WEIGHT-NORMAL: var(--font-weight-normal, 500);
   --FONT-WEIGHT-BOLD: var(--font-weight-bold, 700);
   --FONT-WEIGHT-EXTRA-BOLD: var(--font-weight-extra-bold, 800);
-  --FONT-WEIGHT-H1: var(--font-weight-h1, var(--FONT-WEIGHT-NORMAL));
-  --FONT-WEIGHT-H2: var(--font-weight-h2, var(--FONT-WEIGHT-NORMAL));
-  --FONT-WEIGHT-H3: var(--font-weight-h3, var(--FONT-WEIGHT-NORMAL));
-  --FONT-WEIGHT-H4: var(--font-weight-h4, var(--FONT-WEIGHT-NORMAL));
-  --FONT-WEIGHT-H5: var(--font-weight-h5, var(--FONT-WEIGHT-NORMAL));
-  --FONT-WEIGHT-H6: var(--font-weight-h6, var(--FONT-WEIGHT-NORMAL));
+  --FONT-WEIGHT-H1: var(--font-weight-h1, var(--FONT-WEIGHT-BOLD));
+  --FONT-WEIGHT-H2: var(--font-weight-h2, var(--FONT-WEIGHT-BOLD));
+  --FONT-WEIGHT-H3: var(--font-weight-h3, var(--FONT-WEIGHT-BOLD));
+  --FONT-WEIGHT-H4: var(--font-weight-h4, var(--FONT-WEIGHT-BOLD));
+  --FONT-WEIGHT-H5: var(--font-weight-h5, var(--FONT-WEIGHT-BOLD));
+  --FONT-WEIGHT-H6: var(--font-weight-h6, var(--FONT-WEIGHT-BOLD));
   /**
-   * LINKS
+   * FONT SiZES
    * -------------------------------------------------------------------
-   * Define text and hover color for each hyperlink
    */
-  --LINK-COLOR: var(--link-color, var(--THEME1-600));
-  --LINK-HOVER-COLOR: var(--link-hover-color, var(--THEME1-700));
+  --FONT-SIZE-BASE: var(--font-size-base, 16px);
+  --FONT-SIZE-SMALL: var(--font-size-small, 14px);
+  --FONT-SIZE-LARGE: var(--font-size-large, 18px);
+  --FONT-SIZE-H1: var(--font-size-h1, 36px);
+  --FONT-SIZE-H2: var(--font-size-h2, 28px);
+  --FONT-SIZE-H3: var(--font-size-h3, 23px);
+  --FONT-SIZE-H4: var(--font-size-h4, 21px);
+  --FONT-SIZE-H5: var(--font-size-h5, 19px);
+  --FONT-SIZE-H6: var(--font-size-h6, 17px);
+  /**
+   * LINE-HEIGHT
+   * -------------------------------------------------------------------
+   */
+  --LINE-HEIGHT-BASE: var(--line-height-base, 1);
+  --LINE-HEIGHT-HEADING: var(--line-height-heading, 1.1);
+  --LINE-HEIGHT-PARAGRAPH: var(--line-height-paragraph, 1.3);
   /**
    * BORDERS
    * -------------------------------------------------------------------
@@ -596,12 +622,12 @@
   padding: var(--SPACER);
 }
 .d-bgutility.d-u-bg-white {
-  box-shadow: 0 0 0 var(--BORDER-WIDTH) #d8d8d8 inset;
+  box-shadow: 0 0 0 var(--BORDER-WIDTH) var(--BORDER-COLOR-LIGHT) inset;
 }
 
 .d-spacing-utility {
   background: repeating-linear-gradient(45deg, #fff, #fff 10px, #f3f3f3 10px, #f3f3f3 20px);
-  box-shadow: 0 0 0 var(--BORDER-WIDTH) #d8d8d8 inset;
+  box-shadow: 0 0 0 var(--BORDER-WIDTH) var(--BORDER-COLOR-LIGHT) inset;
   display: inline-block;
   padding: var(--SPACER-3XS);
 }
@@ -757,7 +783,7 @@
 .hljs {
   display: inline !important;
   overflow-x: hidden !important;
-  padding: 0;
+  padding: 0 !important;
 }
 .hljs .hljs-attribute,
 .hljs .hljs-built_in,

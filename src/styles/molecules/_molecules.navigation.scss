@@ -7,7 +7,7 @@
 .m-nav-tabs {
   --nav-color:                 var(--TEXT-COLOR);
   --nav-bg-color:              transparent;
-  --nav-border-color:          #{$gray-200};
+  --nav-border-color:          var(--BORDER-COLOR-LIGHT);
 
   --nav-hover-color:           var(--THEME1-600);
   --nav-hover-bg-color:        var(--THEME1-100);

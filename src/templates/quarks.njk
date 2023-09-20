@@ -11,7 +11,7 @@
                 <p>You can treat this part of the package as the API of our styling library. Include it on top of your custom stylesheet in order to have access to all defined variables, mixins and functions.</p>
             </div>
             <div>
-                <pre class="a-pre a-pre--scrollable"><code class="scss">@import 'quarks';</code></pre>
+                <pre class="a-pre a-pre--scrollable"><code>@import 'quarks';</code></pre>
             </div>
         </div>
 
@@ -33,7 +33,7 @@
                 </div>
             </div>
             <div>
-                <pre class="a-pre a-pre--scrollable"><code class="scss">.css {
+                <pre class="a-pre a-pre--scrollable"><code>.css {
   @include clearfix;
 }</code></pre>
             </div>
@@ -46,7 +46,7 @@
                 </div>
             </div>
             <div>
-                <pre class="a-pre a-pre--scrollable"><code class="scss">.css {
+                <pre class="a-pre a-pre--scrollable"><code>.css {
   @include at($screen) {
     /* Anything bigger than $screen */
   }
@@ -73,7 +73,7 @@
                 <p>Convert pixels to rem</p>
             </div>
             <div>
-                <pre class="a-pre a-pre--scrollable"><code class="scss">.css {
+                <pre class="a-pre a-pre--scrollable"><code>.css {
   margin: rem(32px) / 16 * 1rem // margin: 2rem;
 }</code></pre>
             </div>
@@ -86,7 +86,7 @@
                 </div>
             </div>
             <div>
-                <pre class="a-pre a-pre--scrollable"><code class="scss">.css {
+                <pre class="a-pre a-pre--scrollable"><code>.css {
   z-index: layer('base'); // z-index: 1;
 }</code></pre>
             </div>
@@ -118,50 +118,64 @@
         <span class="d-file">quarks/quarks.properties</span>
         <div class="d">
             <div>
-                <p>An overview of all available <code>:root</code> CSS custom properties. Override these only if you are writing a custom theme based on core branding.</p>
+                <p>Starting with core branding v6 we make use of CSS custom properties. There's an important difference between using them in your stylesheet and overriding them, e.g. for your own custom theme:</p>
+                <h4 class="u-margin-top">Overriding core branding values</h4>
+                <p class="u-margin-top-xs">Here's an overview of all available <code>:root</code> CSS custom properties for creating a custom theme based on core branding.</p>
                 <div class="d-p__variables u-margin-bottom">
-                    <h4 class="u-margin-top">Theme colors</h4>
-                    <h5 class="u-margin-top-xs">Theme 1</h5>
+                    <h5 class="u-margin-top">Theme colors</h5>
+                    <h6 class="u-margin-top-xs">Theme 1</h6>
                     <p><code>--theme1-800</code>, <code>--theme1-700</code>, <code>--theme1-600</code>, <code>--theme1-500</code>, <code>--theme1-400</code>, <code>--theme1-300</code>, <code>--theme1-200</code>, <code>--theme1-100</code></p>
-                    <h5 class="u-margin-top-xs">Theme 2</h5>
+                    <h6 class="u-margin-top-xs">Theme 2</h6>
                     <p><code>--theme1-800</code>, <code>--theme1-700</code>, <code>--theme1-600</code>, <code>--theme1-500</code>, <code>--theme1-400</code>, <code>--theme1-300</code>, <code>--theme1-200</code>, <code>--theme1-100</code></p>
-                    <h5 class="u-margin-top-xs">Success</h5>
+                    <h6 class="u-margin-top-xs">Info</h6>
+                    <p><code>--info-800</code>, <code>--info-700</code>, <code>--info-600</code>, <code>--info-500</code>, <code>--info-400</code>, <code>--info-300</code>, <code>--info-200</code>, <code>--info-100</code></p>
+                    <h6 class="u-margin-top-xs">Success</h6>
                     <p><code>--success-800</code>, <code>--success-700</code>, <code>--success-600</code>, <code>--success-500</code>, <code>--success-400</code>, <code>--success-300</code>, <code>--success-200</code>, <code>--success-100</code></p>
-                    <h5 class="u-margin-top-xs">Warning</h5>
+                    <h6 class="u-margin-top-xs">Warning</h6>
                     <p><code>--warning-800</code>, <code>--warning-700</code>, <code>--warning-600</code>, <code>--warning-500</code>, <code>--warning-400</code>, <code>--warning-300</code>, <code>--warning-200</code>, <code>--warning-100</code></p>
-                    <h5 class="u-margin-top-xs">Danger</h5>
+                    <h6 class="u-margin-top-xs">Danger</h6>
                     <p><code>--danger-800</code>, <code>--danger-700</code>, <code>--danger-600</code>, <code>--danger-500</code>, <code>--danger-400</code>, <code>--danger-300</code>, <code>--danger-200</code>, <code>--danger-100</code></p>
 
-                    <h4 class="u-margin-top">UI colors</h4>
-                    <h5 class="u-margin-top-xs">State</h5>
+                    <h5 class="u-margin-top">UI colors</h5>
+                    <h6 class="u-margin-top-xs">State</h6>
                     <p><code>--state-info</code>, <code>--state-success</code>, <code>--state-warning</code>, <code>--state-danger</code>, <code>--state-disabled</code></p>
-                    <h5 class="u-margin-top-xs">Text</h5>
-                    <p><code>--text-color</code>, <code>--text-color-light</code>, <code>--text-color-xlight</code></p>
-                    <h5 class="u-margin-top-xs">Backgrounds</h5>
-                    <p><code>--bg-color</code>, <code>--bg-color-light</code></p>
-                    <h5 class="u-margin-top-xs">Hyperlinks</h5>
+                    <h6 class="u-margin-top-xs">Text</h6>
+                    <p><code>--text-color</code>, <code>--text-color-light</code>, <code>--text-color-inverted</code>, <code class="u-text-light">--text-color-xlight</code> <small>(deprecated)</small></p>
+                    <h6 class="u-margin-top-xs">Backgrounds</h6>
+                    <p><code>--bg-color</code>, <code>--bg-color-light</code>, <code>--bg-color-inverted</code></p>
+                    <h6 class="u-margin-top-xs">Hyperlinks</h6>
                     <p><code>--link-color</code>, <code>--link-hover-color</code></p>
-                    <h5 class="u-margin-top-xs">Misc</h5>
-                    <p><code>--border-color</code>, <code>--overlay-color</code>, <code>--box-shadow-color</code></p>
+                    <h6 class="u-margin-top-xs">Border</h6>
+                    <p><code>--border-color</code>, <code>--border-color-light</code></p>
+                    <h6 class="u-margin-top-xs">Misc</h6>
+                    <p><code>--overlay-color</code>, <code>--box-shadow-color</code></p>
 
-                    <h4 class="u-margin-top">Typography</h4>
-                    <h5 class="u-margin-top-xs">Font-families</h5>
+                    <h5 class="u-margin-top">Typography</h5>
+                    <h6 class="u-margin-top-xs">Font-families</h6>
                     <p><code>--font-family-base</code>, <code>--font-family-headings</code>, <code>--font-family-monospace</code></p>
-                    <h5 class="u-margin-top-xs">Font weights</h5>
+                    <h6 class="u-margin-top-xs">Font sizes</h6>
+                    <p><code>--font-weight-light</code>, <code>--font-weight-normal</code>, <code>--font-weight-bold</code>, <code>--font-weight-extra-bold</code>, <code>--font-weight-h1</code>, <code>--font-weight-h2</code>, <code>--font-weight-h3</code>, <code>--font-weight-h4</code>, <code>--font-weight-h5</code>, <code>--font-weight-h6</code></p><h6 class="u-margin-top-xs">Font weights</h6>
                     <p><code>--font-weight-light</code>, <code>--font-weight-normal</code>, <code>--font-weight-bold</code>, <code>--font-weight-extra-bold</code>, <code>--font-weight-h1</code>, <code>--font-weight-h2</code>, <code>--font-weight-h3</code>, <code>--font-weight-h4</code>, <code>--font-weight-h5</code>, <code>--font-weight-h6</code></p>
 
-                    <h4 class="u-margin-top">Layout</h4>
-                    <h5 class="u-margin-top-xs">Spacers</h5>
+                    <h5 class="u-margin-top">Layout</h5>
+                    <h6 class="u-margin-top-xs">Spacers</h6>
                     <p><code>--spacer</code>, <code>--spacer-3xl</code>, <code>--spacer-xxl</code>, <code>--spacer-xl</code>, <code>--spacer-l</code>, <code>--spacer-s</code>, <code>--spacer-xs</code>, <code>--spacer-xxs</code>, <code>--spacer-3xs</code></p>
-                    <h5 class="u-margin-top-xs">Breakpoints</h5>
+                    <h6 class="u-margin-top-xs">Breakpoints</h6>
                     <p><code>--screen-xs</code>, <code>--screen-xs-max</code>, <code>--screen-s</code>, <code>--screen-s-max</code>, <code>--screen-l</code>, <code>--screen-l-max</code>, <code>--screen-xl</code>, <code>--screen-xl-max</code>, <code>--screen-xxl</code></p>
-                    <h5 class="u-margin-top-xs">Border</h5>
+                    <h6 class="u-margin-top-xs">Border</h6>
                     <p><code>--border-radius</code>, <code>--border-width</code></p>
-                    <h5 class="u-margin-top-xs">Box-shadow</h5>
+                    <h6 class="u-margin-top-xs">Box-shadow</h6>
                     <p><code>--box-shadow</code>, <code>--box-shadow-bottom-left</code>, <code>--box-shadow-bottom-right</code>, <code>--box-shadow-top-left</code>, <code>--box-shadow-top-right</code></p>
-                    <h5 class="u-margin-top-xs">Animation</h5>
+                    <h6 class="u-margin-top-xs">Animation</h6>
                     <p><code>--animation-duration</code>, <code>--animation-easing</code>, <code>--animation-normal</code></p>
                 </div>
+                <h4 class="u-margin-top-l">Using custom CSS properties</h4>
+                <p class="u-margin-top-xs">Whether you are using an overridden value or not, always use the capitalized version of the aforementioned CSS custom properties.</p>
+                <pre class="u-margin-top-xs a-pre a-pre--scrollable"><code>.css {
+  background-color: var(--THEME1-600);
+  color: var(--TEXT-COLOR);
+  font-size: var(--FONT-SIZE-BASE);
+}</code></pre>
             </div>
         </div>
     </div>

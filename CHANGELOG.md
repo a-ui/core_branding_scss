@@ -7,9 +7,19 @@
 ### Added
 - Added x social button (note: Twitter is deprecated, but still exists)
 - Added icons for earth, info, overview and newspaper
+- Added more CSS custom properties to align our components more with their Figma counterpart: font size, line height, border, info color, … (deprecated `--TEXT-COLOR-XLIGHT`, but it still exists)
+- Added border radius support for more components
+- Added a class to add a large margin below a datepicker (e.g. when a datepicker is at the end of a form)
+
+### Changed
+- Changed the tint for `.u-bg-light`
 
 ### Fixed
 - Fixed an unwanted bottom margin when a flyout was nested in an .a-form div
+- Fixed a border radius issue for inputs with an addon
+
+### Removed
+- removed unused `$font-size-ratio` variable
 
 
 ## [6.4.1] - 2023-09-12

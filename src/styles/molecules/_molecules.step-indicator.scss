@@ -7,7 +7,7 @@
   --step-indicator-square-size:                           var(--SPACER);
 
   --step-indicator-square-color:                          var(--TEXT-COLOR-LIGHT);
-  --step-indicator-square-bg-color:                       var(--BG-COLOR-LIGHT);
+  --step-indicator-square-bg-color:                       var(--BG-COLOR);
   --step-indicator-square-hover-bg-color:                 var(--THEME1-100);
   --step-indicator-square-border-color:                   #{$gray-400};
 
@@ -163,6 +163,7 @@
     align-items: center;
     background-color: var(--step-indicator-square-bg-color);
     border: var(--BORDER-WIDTH) solid var(--step-indicator-square-border-color);
+    border-radius: var(--BORDER-RADIUS);
     color: var(--step-indicator-square-color);
     content: counter(steps);
     display: flex;

@@ -10,6 +10,7 @@
   vertical-align: middle;
 
   > .a-button {
+    border-radius: 0;
     z-index: layer('base');
 
     &:not(.has-icon) {
@@ -22,6 +23,16 @@
 
     &:focus {
       z-index: layer('top');
+    }
+
+    &:first-child {
+      border-bottom-left-radius: var(--BORDER-RADIUS);
+      border-top-left-radius: var(--BORDER-RADIUS);
+    }
+
+    &:last-child {
+      border-bottom-right-radius: var(--BORDER-RADIUS);
+      border-top-right-radius: var(--BORDER-RADIUS);
     }
   }
 
@@ -68,6 +79,20 @@
 
 .m-button-group--vertical {
   flex-direction: column;
+
+  > .a-button {
+    &:first-child {
+      border-bottom-left-radius: 0;
+      border-top-left-radius: var(--BORDER-RADIUS);
+      border-top-right-radius: var(--BORDER-RADIUS);
+    }
+
+    &:last-child {
+      border-bottom-left-radius: var(--BORDER-RADIUS);
+      border-bottom-right-radius: var(--BORDER-RADIUS);
+      border-top-right-radius: 0;
+    }
+  }
 
   > .a-button:not(.a-button--outlined) {
     border-right: none;

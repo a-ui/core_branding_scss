@@ -19,6 +19,7 @@
 .m-modal {
   background-color: var(--modal-bg-color);
   border: var(--BORDER-WIDTH) solid var(--modal-border-color);
+  border-radius: var(--BORDER-RADIUS);
   width: 100%;
 
   @include at($screen-xs) {

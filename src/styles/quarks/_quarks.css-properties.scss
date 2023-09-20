@@ -27,6 +27,15 @@
   --THEME2-200:              var(--theme2-200, #{$monza-200});
   --THEME2-100:              var(--theme2-100, #{$monza-100});
 
+  --INFO-800:                var(--info-800, var(--THEME1-800));
+  --INFO-700:                var(--info-700, var(--THEME1-700));
+  --INFO-600:                var(--info-600, var(--THEME1-600));
+  --INFO-500:                var(--info-500, var(--THEME1-500));
+  --INFO-400:                var(--info-400, var(--THEME1-400));
+  --INFO-300:                var(--info-300, var(--THEME1-300));
+  --INFO-200:                var(--info-200, var(--THEME1-200));
+  --INFO-100:                var(--info-100, var(--THEME1-100));
+
   --SUCCESS-800:             var(--success-800, #{$mantis-700});
   --SUCCESS-700:             var(--success-700, #{$mantis-600});
   --SUCCESS-600:             var(--success-600, #{$mantis-500});
@@ -61,14 +70,23 @@
 
   --TEXT-COLOR:              var(--text-color, #{$black});
   --TEXT-COLOR-LIGHT:        var(--text-color-light, #{$gray-400});
-  --TEXT-COLOR-XLIGHT:       var(--text-color-xlight, #{$white});
-  --BG-COLOR:                var(--bg-color, #{$gray-200});
-  --BG-COLOR-LIGHT:          var(--bg-color-light, #{$gray-100});
+  --TEXT-COLOR-INVERTED:     var(--text-color-inverted, #{$white});
+  --TEXT-COLOR-XLIGHT:       var(--text-color-xlight, var(--TEXT-COLOR-INVERTED)); // Deprecated
+
+  --BG-COLOR:                var(--bg-color, #{$gray-100});
+  --BG-COLOR-LIGHT:          var(--bg-color-light, #{$white});
+  --BG-COLOR-INVERTED:       var(--bg-color-inverted, #{$gray-500});
+
   --BORDER-COLOR:            var(--border-color, #{$gray-300});
+  --BORDER-COLOR-LIGHT:      var(--border-color-light, #{$gray-200});
+
   --OVERLAY-COLOR:           var(--overlay-color, #{rgba($black, .75)});
   --BOX-SHADOW-COLOR:        var(--box-shadow-color, #{rgba($gray-600, .12)});
 
-  --STATE-INFO:              var(--state-info, var(--THEME1-600));
+  --LINK-COLOR:              var(--link-color, var(--THEME1-600));
+  --LINK-HOVER-COLOR:        var(--link-hover-color, var(--THEME1-700));
+
+  --STATE-INFO:              var(--state-info, var(--INFO-600));
   --STATE-SUCCESS:           var(--state-success, var(--SUCCESS-700));
   --STATE-WARNING:           var(--state-warning, var(--WARNING-400));
   --STATE-DANGER:            var(--state-danger, var(--DANGER-600));
@@ -125,34 +143,50 @@
    * -------------------------------------------------------------------
    */
 
-  --FONT-WEIGHT-LIGHT:        var(--font-weight-light, 300);
-  --FONT-WEIGHT-NORMAL:       var(--font-weight-normal, 500);
-  --FONT-WEIGHT-BOLD:         var(--font-weight-bold, 700);
-  --FONT-WEIGHT-EXTRA-BOLD:   var(--font-weight-extra-bold, 800);
+  --FONT-WEIGHT-LIGHT:       var(--font-weight-light, 300);
+  --FONT-WEIGHT-NORMAL:      var(--font-weight-normal, 500);
+  --FONT-WEIGHT-BOLD:        var(--font-weight-bold, 700);
+  --FONT-WEIGHT-EXTRA-BOLD:  var(--font-weight-extra-bold, 800);
 
-  --FONT-WEIGHT-H1:           var(--font-weight-h1, var(--FONT-WEIGHT-NORMAL));
-  --FONT-WEIGHT-H2:           var(--font-weight-h2, var(--FONT-WEIGHT-NORMAL));
-  --FONT-WEIGHT-H3:           var(--font-weight-h3, var(--FONT-WEIGHT-NORMAL));
-  --FONT-WEIGHT-H4:           var(--font-weight-h4, var(--FONT-WEIGHT-NORMAL));
-  --FONT-WEIGHT-H5:           var(--font-weight-h5, var(--FONT-WEIGHT-NORMAL));
-  --FONT-WEIGHT-H6:           var(--font-weight-h6, var(--FONT-WEIGHT-NORMAL));
+  --FONT-WEIGHT-H1:          var(--font-weight-h1, var(--FONT-WEIGHT-BOLD));
+  --FONT-WEIGHT-H2:          var(--font-weight-h2, var(--FONT-WEIGHT-BOLD));
+  --FONT-WEIGHT-H3:          var(--font-weight-h3, var(--FONT-WEIGHT-BOLD));
+  --FONT-WEIGHT-H4:          var(--font-weight-h4, var(--FONT-WEIGHT-BOLD));
+  --FONT-WEIGHT-H5:          var(--font-weight-h5, var(--FONT-WEIGHT-BOLD));
+  --FONT-WEIGHT-H6:          var(--font-weight-h6, var(--FONT-WEIGHT-BOLD));
 
   /**
-   * LINKS
+   * FONT SiZES
    * -------------------------------------------------------------------
-   * Define text and hover color for each hyperlink
    */
 
-  --LINK-COLOR:              var(--link-color, var(--THEME1-600));
-  --LINK-HOVER-COLOR:        var(--link-hover-color, var(--THEME1-700));
+  --FONT-SIZE-BASE:          var(--font-size-base, #{$font-size-base});
+  --FONT-SIZE-SMALL:         var(--font-size-small, #{$font-size-sm});
+  --FONT-SIZE-LARGE:         var(--font-size-large, #{$font-size-lg});
+
+  --FONT-SIZE-H1:            var(--font-size-h1, #{$font-size-h1});
+  --FONT-SIZE-H2:            var(--font-size-h2, #{$font-size-h2});
+  --FONT-SIZE-H3:            var(--font-size-h3, #{$font-size-h3});
+  --FONT-SIZE-H4:            var(--font-size-h4, #{$font-size-h4});
+  --FONT-SIZE-H5:            var(--font-size-h5, #{$font-size-h5});
+  --FONT-SIZE-H6:            var(--font-size-h6, #{$font-size-h6});
+
+  /**
+   * LINE-HEIGHT
+   * -------------------------------------------------------------------
+   */
+
+  --LINE-HEIGHT-BASE:        var(--line-height-base, #{$line-height-base});
+  --LINE-HEIGHT-HEADING:     var(--line-height-heading, #{$line-height-headings});
+  --LINE-HEIGHT-PARAGRAPH:   var(--line-height-paragraph, #{$line-height-paragraph});
 
   /**
    * BORDERS
    * -------------------------------------------------------------------
    */
 
-  --BORDER-RADIUS:           var(--border-radius, 0);
-  --BORDER-WIDTH:            var(--border-width, 1px);
+  --BORDER-RADIUS:          var(--border-radius, 0);
+  --BORDER-WIDTH:           var(--border-width, 1px);
 
   /**
    * ANIMATIONS

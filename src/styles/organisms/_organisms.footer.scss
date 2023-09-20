@@ -24,6 +24,8 @@
   text-align: center;
 
   .o-footer__button {
+    border-radius: 0;
+
     @include at($screen-sm) {
       bottom: 0;
       position: absolute;
@@ -40,7 +42,7 @@
 .o-footer__label {
   color: var(--footer-color);
   font-size: rem($font-size-sm);
-  line-height: $line-height-paragraph;
+  line-height: var(--LINE-HEIGHT-PARAGRAPH);
   padding: 0 var(--SPACER-XS);
 
   @include to($screen-sm) {
