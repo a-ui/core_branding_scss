@@ -102,7 +102,7 @@
   --btn-outlined-disabled-hover-color:          var(--btn-outlined-disabled-color);
   --btn-outlined-disabled-bg-color:             #{$gray-100};
   --btn-outlined-disabled-hover-bg-color:       var(--btn-outlined-disabled-bg-color);
-  --btn-outlined-disabled-border-color:         #{$gray-200};
+  --btn-outlined-disabled-border-color:         var(--BORDER-COLOR-LIGHT);
   --btn-outlined-disabled-hover-border-color:   var(--btn-outlined-disabled-border-color);
 
   // Text buttons
@@ -346,6 +346,7 @@
     --btn-border-color: var(--btn-twitter-border-color);
     --btn-hover-border-color: var(--btn-twitter-hover-border-color);
   }
+
   &.a-button--x {
     --btn-color: var(--btn-x-color);
     --btn-hover-color: var(--btn-x-hover-color);

@@ -11,7 +11,7 @@
 
   --radio-checkbox-disabled-color:          var(--STATE-DISABLED);
   --radio-checkbox-disabled-bg-color:       #{$gray-100};
-  --radio-checkbox-disabled-border-color:   #{$gray-200};
+  --radio-checkbox-disabled-border-color:   var(--BORDER-COLOR-LIGHT);
 }
 
 /**

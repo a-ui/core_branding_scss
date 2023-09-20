@@ -11,7 +11,7 @@
   --list-item-active-color:      var(--TEXT-COLOR);
   --list-item-hover-bg-color:    var(--THEME1-100);
   --list-item-active-bg-color:   #{$gray-100};
-  --list-item-border-color:      #{$gray-200};
+  --list-item-border-color:      var(--BORDER-COLOR-LIGHT);
 }
 
 /**

@@ -17,7 +17,7 @@
 
   --input-disabled-color:          var(--STATE-DISABLED);
   --input-disabled-bg-color:       #{$gray-100};
-  --input-disabled-border-color:   #{$gray-200};
+  --input-disabled-border-color:   var(--BORDER-COLOR-LIGHT);
 
   --input-readonly-color:          var(--TEXT-COLOR);
   --input-readonly-bg-color:       #{$white};
@@ -70,8 +70,8 @@ textarea {
 
     background-color: var(--input-bg-color);
     border: var(--BORDER-WIDTH) solid var(--input-border-color);
-    color: var(--input-color);
     border-radius: var(--BORDER-RADIUS);
+    color: var(--input-color);
     line-height: normal;
     resize: vertical;
     transition: border-color var(--ANIMATION-NORMAL);
@@ -179,7 +179,6 @@ textarea {
 
 .a-input__label--inline {
   margin-right: var(--SPACER-XS);
-  margin-top: calc(#{$line-height-base * $font-size-base} - #{var(--BORDER-WIDTH)});
 }
 
 /**
@@ -275,22 +274,30 @@ textarea {
   &.has-addon-left {
     input,
     select {
+      border-bottom-left-radius: 0;
       border-left: none;
+      border-top-left-radius: 0;
     }
 
     .a-input__addon {
+      border-bottom-left-radius: var(--BORDER-RADIUS);
       border-left: var(--BORDER-WIDTH) solid var(--input-border-color);
+      border-top-left-radius: var(--BORDER-RADIUS);
       padding-left: var(--input-padding-horizontal);
     }
   }
 
   &.has-addon-right {
     input {
+      border-bottom-right-radius: 0;
       border-right: none;
+      border-top-right-radius: 0;
     }
 
     .a-input__addon {
+      border-bottom-right-radius: var(--BORDER-RADIUS);
       border-right: var(--BORDER-WIDTH) solid var(--input-border-color);
+      border-top-right-radius: var(--BORDER-RADIUS);
       padding-right: var(--input-padding-horizontal);
     }
   }

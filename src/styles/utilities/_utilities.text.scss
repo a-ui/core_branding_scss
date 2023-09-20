@@ -87,8 +87,9 @@
   color: var(--TEXT-COLOR-LIGHT);
 }
 
-.u-text-xlight {
-  color: var(--TEXT-COLOR-XLIGHT);
+.u-text-xlight,
+.u-text-inverted {
+  color: var(--TEXT-COLOR-INVERTED);
 }
 
 /**

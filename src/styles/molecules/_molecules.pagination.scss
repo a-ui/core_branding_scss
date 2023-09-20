@@ -4,7 +4,7 @@
  */
 
 .m-pagination {
-  --pagination-font-size:                 #{rem($font-size-base)};
+  --pagination-font-size:                 var(--FONT-SIZE-BASE);
   --pagination-size:                      var(--SPACER-XL);
   --pagination-padding:                   0 var(--SPACER);
 
@@ -79,6 +79,22 @@
 
     + li {
       margin-left: calc(var(--BORDER-WIDTH) * -1);
+    }
+
+    &:first-child {
+      &,
+      > a {
+        border-bottom-left-radius: var(--BORDER-RADIUS);
+        border-top-left-radius: var(--BORDER-RADIUS);
+      }
+    }
+
+    &:last-child {
+      &,
+      > a {
+        border-bottom-right-radius: var(--BORDER-RADIUS);
+        border-top-right-radius: var(--BORDER-RADIUS);
+      }
     }
   }
 

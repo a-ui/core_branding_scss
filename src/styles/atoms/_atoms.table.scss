@@ -7,10 +7,10 @@
 .a-table-scrollable-wrapper {
   --table-bg-color:                     #{$white};
   --table-border-color:                 var(--BORDER-COLOR);
-  --table-border-color-light:           #{$gray-200};
+  --table-border-color-light:           var(--BORDER-COLOR-LIGHT);
   --table-highlight-bg-color:           var(--THEME1-100);
   --table-highlight-border-color:       var(--THEME1-600);
-  --table-striped-bg-color:             var(--BG-COLOR-LIGHT);
+  --table-striped-bg-color:             var(--BG-COLOR);
 
   --table-sort-btn-color:               var(--TEXT-COLOR);
   --table-sort-btn-active-color:        var(--THEME1-600);

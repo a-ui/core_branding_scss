@@ -222,7 +222,7 @@
   padding: var(--SPACER);
 
   &.d-u-bg-white {
-    box-shadow: 0 0 0 var(--BORDER-WIDTH) $gray-200 inset;
+    box-shadow: 0 0 0 var(--BORDER-WIDTH) var(--BORDER-COLOR-LIGHT) inset;
   }
 }
 
@@ -235,7 +235,7 @@
       $gray-100 10px,
       $gray-100 20px
     );
-  box-shadow: 0 0 0 var(--BORDER-WIDTH) $gray-200 inset;
+  box-shadow: 0 0 0 var(--BORDER-WIDTH) var(--BORDER-COLOR-LIGHT) inset;
   display: inline-block;
   padding: var(--SPACER-3XS);
 
@@ -398,7 +398,7 @@
 .hljs {
   display: inline !important;
   overflow-x: hidden !important;
-  padding: 0;
+  padding: 0 !important;
 
   $fix-yellow: #aa5d00;
 
