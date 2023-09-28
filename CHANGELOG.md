@@ -4,6 +4,8 @@
 ## Unreleased
 
 
+## [6.5.0] - 2023-09-28
+
 ### Added
 - Added x social button (note: Twitter is deprecated, but still exists)
 - Added icons for earth, info, overview and newspaper
@@ -776,6 +778,7 @@
 - Initial release.
 
 
+[6.5.0]: https://github.com/a-ui/core_branding_scss/tree/v6.5.0
 [6.4.1]: https://github.com/a-ui/core_branding_scss/tree/v6.4.1
 [6.4.0]: https://github.com/a-ui/core_branding_scss/tree/v6.4.0
 [6.3.0]: https://github.com/a-ui/core_branding_scss/tree/v6.3.0
