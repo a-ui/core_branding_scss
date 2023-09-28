@@ -21,7 +21,7 @@
  */
 
 .o-menu {
-  background: $white;
+  background: var(--BG-COLOR-LIGHT);
   width: 100%;
   z-index: layer('pane');
 
@@ -117,7 +117,7 @@
 .o-menu > .o-menu__tabs-wrapper {
   align-content: space-between;
   align-items: center;
-  background: $white;
+  background: var(--BG-COLOR-LIGHT);
   border-top: var(--BORDER-WIDTH) solid var(--navigation-menu-border-color);
   display: flex;
   position: relative;
@@ -275,7 +275,7 @@
   }
 
   .o-menu__submenu-content-wrapper {
-    background: $white;
+    background: var(--BG-COLOR-LIGHT);
     display: none;
     max-height: 0;
     overflow: hidden;
@@ -356,7 +356,7 @@
     > a,
     > button {
       align-items: center;
-      background: $white;
+      background: var(--BG-COLOR-LIGHT);
       border: none;
       border-bottom: var(--BORDER-WIDTH) solid var(--navigation-menu-border-color);
       color: inherit;
@@ -370,7 +370,7 @@
 
       &:hover,
       &:active {
-        background-color: $gray-100;
+        background-color: var(--BG-COLOR);
       }
 
       > .ai {
@@ -401,7 +401,7 @@
 }
 
 .o-menu > .o-menu__navigation-pane {
-  background: $white;
+  background: var(--BG-COLOR-LIGHT);
   max-height: calc(100vh - var(--navigation-menu-mobile-height));
   position: absolute;
   top: 0;
@@ -420,7 +420,7 @@
   }
 
   .o-navigation-pane__wrapper {
-    background: $white;
+    background: var(--BG-COLOR-LIGHT);
     box-shadow: 0 -.75rem 0 var(--BOX-SHADOW-COLOR);
     margin-bottom: calc(var(--BORDER-WIDTH) * -1);
     max-height: calc(100vh - var(--shared-header-height) - var(--navigation-menu-mobile-height));
@@ -443,7 +443,7 @@
   }
 
   .o-menu__slide-in-submenu {
-    background: $white;
+    background: var(--BG-COLOR-LIGHT);
     bottom: 0;
     height: 0;
     left: 0;

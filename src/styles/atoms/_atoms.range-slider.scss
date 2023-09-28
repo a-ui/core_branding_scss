@@ -54,6 +54,7 @@
   position: absolute;
   top: 50%;
   transform: translate(-50%, -50%);
+  z-index: layer('top');
 
   &:before {
     background-color: var(--range-slider-handle-bg-color);

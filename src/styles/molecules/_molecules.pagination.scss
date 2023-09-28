@@ -10,7 +10,7 @@
 
   --pagination-color:                     var(--THEME1-600);
   --pagination-hover-color:               var(--THEME1-600);
-  --pagination-active-color:              #{$white};
+  --pagination-active-color:              var(--TEXT-COLOR-INVERTED);
   --pagination-bg-color:                  transparent;
   --pagination-hover-bg-color:            var(--THEME1-100);
   --pagination-active-bg-color:           var(--THEME1-600);
@@ -18,9 +18,9 @@
   --pagination-hover-border:              var(--THEME1-700);
   --pagination-active-border:             var(--THEME1-700);
 
-  --pagination-disabled-color:            #{$gray-400};
-  --pagination-disabled-bg-color:         #{$gray-100};
-  --pagination-disabled-border-color:     #{$gray-100};
+  --pagination-disabled-color:            var(--STATE-DISABLED);
+  --pagination-disabled-bg-color:         var(--BG-COLOR);
+  --pagination-disabled-border-color:     var(--BG-COLOR);
 }
 
 /**

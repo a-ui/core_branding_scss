@@ -4,7 +4,7 @@
  */
 
 .m-flyout {
-  --flyout-bg-color:         #{$white};
+  --flyout-bg-color:         var(--BG-COLOR-LIGHT);
   --flyout-border-color:     var(--BORDER-COLOR);
   --flyout-max-width:        24rem;
   --flyout-max-width-s:      16rem;

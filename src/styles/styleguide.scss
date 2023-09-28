@@ -230,10 +230,10 @@
   background:
     repeating-linear-gradient(
       45deg,
-      $white,
-      $white 10px,
-      $gray-100 10px,
-      $gray-100 20px
+      var(--BG-COLOR-LIGHT),
+      var(--BG-COLOR-LIGHT) 10px,
+      var(--BG-COLOR) 10px,
+      var(--BG-COLOR) 20px
     );
   box-shadow: 0 0 0 var(--BORDER-WIDTH) var(--BORDER-COLOR-LIGHT) inset;
   display: inline-block;

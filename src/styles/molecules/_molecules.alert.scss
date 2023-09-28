@@ -5,7 +5,7 @@
 
 .m-alert {
   --alert-color:                  var(--STATE-INFO);
-  --alert-bg-color:               #{$white};
+  --alert-bg-color:               var(--BG-COLOR-LIGHT);
   --alert-border-color:           var(--alert-color);
 
   --alert-success-color:          var(--STATE-SUCCESS);

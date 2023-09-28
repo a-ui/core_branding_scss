@@ -13,51 +13,51 @@
 
 .a-button {
   // Contained button
-  --btn-color:                                  #{$white};
+  --btn-color:                                  var(--TEXT-COLOR-INVERTED);
   --btn-hover-color:                            var(--btn-color);
   --btn-bg-color:                               var(--THEME1-600);
   --btn-hover-bg-color:                         var(--THEME1-700);
   --btn-border-color:                           var(--btn-bg-color);
   --btn-hover-border-color:                     var(--btn-hover-bg-color);
 
-  --btn-neutral-color:                          #{$white};
+  --btn-neutral-color:                          var(--TEXT-COLOR-INVERTED);
   --btn-neutral-hover-color:                    var(--btn-neutral-color);
   --btn-neutral-bg-color:                       #{$gray-400};
   --btn-neutral-hover-bg-color:                 #{$gray-500};
   --btn-neutral-border-color:                   var(--btn-neutral-bg-color);
   --btn-neutral-hover-border-color:             var(--btn-neutral-hover-bg-color);
 
-  --btn-secondary-color:                        #{$white};
+  --btn-secondary-color:                        var(--TEXT-COLOR-INVERTED);
   --btn-secondary-hover-color:                  var(--btn-secondary-color);
   --btn-secondary-bg-color:                     var(--THEME2-400);
   --btn-secondary-hover-bg-color:               var(--THEME2-500);
   --btn-secondary-border-color:                 var(--btn-secondary-bg-color);
   --btn-secondary-hover-border-color:           var(--btn-secondary-hover-bg-color);
 
-  --btn-success-color:                          #{$white};
+  --btn-success-color:                          var(--TEXT-COLOR-INVERTED);
   --btn-success-hover-color:                    var(--btn-success-color);
   --btn-success-bg-color:                       var(--SUCCESS-700);
   --btn-success-hover-bg-color:                 var(--SUCCESS-800);
   --btn-success-border-color:                   var(--btn-success-bg-color);
   --btn-success-hover-border-color:             var(--btn-success-hover-bg-color);
 
-  --btn-warning-color:                          #{$white};
+  --btn-warning-color:                          var(--TEXT-COLOR-INVERTED);
   --btn-warning-hover-color:                    var(--btn-warning-color);
   --btn-warning-bg-color:                       var(--WARNING-400);
   --btn-warning-hover-bg-color:                 var(--WARNING-500);
   --btn-warning-border-color:                   var(--btn-warning-bg-color);
   --btn-warning-hover-border-color:             var(--btn-warning-hover-bg-color);
 
-  --btn-danger-color:                           #{$white};
+  --btn-danger-color:                           var(--TEXT-COLOR-INVERTED);
   --btn-danger-hover-color:                     var(--btn-danger-color);
   --btn-danger-bg-color:                        var(--DANGER-600);
   --btn-danger-hover-bg-color:                  var(--DANGER-700);
   --btn-danger-border-color:                    var(--btn-danger-bg-color);
   --btn-danger-hover-border-color:              var(--btn-danger-hover-bg-color);
 
-  --btn-disabled-color:                         #{$gray-400};
+  --btn-disabled-color:                         var(--STATE-DISABLED);
   --btn-disabled-hover-color:                   var(--btn-disabled-color);
-  --btn-disabled-bg-color:                      #{$gray-100};
+  --btn-disabled-bg-color:                      var(--BG-COLOR);
   --btn-disabled-hover-bg-color:                var(--btn-disabled-bg-color);
   --btn-disabled-border-color:                  var(--btn-disabled-bg-color);
   --btn-disabled-hover-border-color:            var(--btn-disabled-bg-color);
@@ -73,7 +73,7 @@
   --btn-outlined-neutral-color:                 #{$gray-400};
   --btn-outlined-neutral-hover-color:           var(--btn-outlined-neutral-color);
   --btn-outlined-neutral-bg-color:              transparent;
-  --btn-outlined-neutral-hover-bg-color:        #{$gray-100};
+  --btn-outlined-neutral-hover-bg-color:        var(--BG-COLOR);
   --btn-outlined-neutral-border-color:          var(--btn-outlined-neutral-color);
   --btn-outlined-neutral-hover-border-color:    var(--btn-outlined-neutral-color);
 
@@ -98,9 +98,9 @@
   --btn-outlined-danger-border-color:           var(--btn-outlined-danger-color);
   --btn-outlined-danger-hover-border-color:     var(--btn-outlined-danger-color);
 
-  --btn-outlined-disabled-color:                #{$gray-400};
+  --btn-outlined-disabled-color:                var(--STATE-DISABLED);
   --btn-outlined-disabled-hover-color:          var(--btn-outlined-disabled-color);
-  --btn-outlined-disabled-bg-color:             #{$gray-100};
+  --btn-outlined-disabled-bg-color:             var(--BG-COLOR);
   --btn-outlined-disabled-hover-bg-color:       var(--btn-outlined-disabled-bg-color);
   --btn-outlined-disabled-border-color:         var(--BORDER-COLOR-LIGHT);
   --btn-outlined-disabled-hover-border-color:   var(--btn-outlined-disabled-border-color);
@@ -116,7 +116,7 @@
   --btn-text-neutral-color:                     #{$gray-400};
   --btn-text-neutral-hover-color:               var(--btn-text-neutral-color);
   --btn-text-neutral-bg-color:                  transparent;
-  --btn-text-neutral-hover-bg-color:            #{$gray-100};
+  --btn-text-neutral-hover-bg-color:            var(--BG-COLOR);
   --btn-text-neutral-border-color:              transparent;
   --btn-text-neutral-hover-border-color:        transparent;
 
@@ -141,71 +141,71 @@
   --btn-text-danger-border-color:               transparent;
   --btn-text-danger-hover-border-color:         transparent;
 
-  --btn-text-disabled-color:                    #{$gray-400};
+  --btn-text-disabled-color:                    var(--STATE-DISABLED);
   --btn-text-disabled-hover-color:              var(--btn-text-disabled-color);
-  --btn-text-disabled-bg-color:                 #{$gray-100};
+  --btn-text-disabled-bg-color:                 var(--BG-COLOR);
   --btn-text-disabled-hover-bg-color:           var(--btn-text-disabled-bg-color);
   --btn-text-disabled-border-color:             var(--btn-text-disabled-bg-color);
   --btn-text-disabled-hover-border-color:       var(--btn-text-disabled-bg-color);
 
   // Social buttons
-  --btn-twitter-color:                          #{$white};
+  --btn-twitter-color:                          var(--TEXT-COLOR-INVERTED);
   --btn-twitter-hover-color:                    var(--btn-twitter-color);
   --btn-twitter-bg-color:                       #{$twitter};
   --btn-twitter-hover-bg-color:                 #{$twitter-hover};
   --btn-twitter-border-color:                   #{$twitter};
   --btn-twitter-hover-border-color:             #{$twitter-hover};
 
-  --btn-x-color:                                #{$white};
+  --btn-x-color:                                var(--TEXT-COLOR-INVERTED);
   --btn-x-hover-color:                          var(--btn-x-color);
   --btn-x-bg-color:                             #{$x};
   --btn-x-hover-bg-color:                       #{$x-hover};
   --btn-x-border-color:                         #{$x};
   --btn-x-hover-border-color:                   #{$x-hover};
 
-  --btn-linkedin-color:                         #{$white};
+  --btn-linkedin-color:                         var(--TEXT-COLOR-INVERTED);
   --btn-linkedin-hover-color:                   var(--btn-linkedin-color);
   --btn-linkedin-bg-color:                      #{$linkedin};
   --btn-linkedin-hover-bg-color:                #{$linkedin-hover};
   --btn-linkedin-border-color:                  #{$linkedin};
   --btn-linkedin-hover-border-color:            #{$linkedin-hover};
 
-  --btn-facebook-color:                         #{$white};
+  --btn-facebook-color:                         var(--TEXT-COLOR-INVERTED);
   --btn-facebook-hover-color:                   var(--btn-facebook-color);
   --btn-facebook-bg-color:                      #{$facebook};
   --btn-facebook-hover-bg-color:                #{$facebook-hover};
   --btn-facebook-border-color:                  #{$facebook};
   --btn-facebook-hover-border-color:            #{$facebook-hover};
 
-  --btn-instagram-color:                        #{$white};
+  --btn-instagram-color:                        var(--TEXT-COLOR-INVERTED);
   --btn-instagram-hover-color:                  var(--btn-instagram-color);
   --btn-instagram-bg-color:                     #{$instagram};
   --btn-instagram-hover-bg-color:               #{$instagram-hover};
   --btn-instagram-border-color:                 #{$instagram};
   --btn-instagram-hover-border-color:           #{$instagram-hover};
 
-  --btn-snapchat-color:                         #{$black};
+  --btn-snapchat-color:                         var(--TEXT-COLOR);
   --btn-snapchat-hover-color:                   var(--btn-snapchat-color);
   --btn-snapchat-bg-color:                      #{$snapchat};
   --btn-snapchat-hover-bg-color:                #{$snapchat-hover};
   --btn-snapchat-border-color:                  #{$snapchat};
   --btn-snapchat-hover-border-color:            #{$snapchat-hover};
 
-  --btn-tiktok-color:                         #{$black};
+  --btn-tiktok-color:                         var(--TEXT-COLOR);
   --btn-tiktok-hover-color:                   var(--btn-tiktok-color);
   --btn-tiktok-bg-color:                      #{$tiktok};
   --btn-tiktok-hover-bg-color:                #{$tiktok-hover};
   --btn-tiktok-border-color:                  #{$tiktok};
   --btn-tiktok-hover-border-color:            #{$tiktok-hover};
 
-  --btn-social-color:                           #{$black};
+  --btn-social-color:                           var(--TEXT-COLOR);
   --btn-social-hover-color:                     var(--THEME1-600);
   --btn-social-bg-color:                        transparent;
   --btn-social-hover-bg-color:                  transparent;
   --btn-social-border-color:                    transparent;
   --btn-social-hover-border-color:              transparent;
 
-  --btn-social-negative-color:                  #{$white};
+  --btn-social-negative-color:                  var(--TEXT-COLOR-INVERTED);
   --btn-social-negative-hover-color:            var(--THEME1-100);
   --btn-social-negative-bg-color:               transparent;
   --btn-social-negative-hover-bg-color:         transparent;

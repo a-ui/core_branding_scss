@@ -9,9 +9,9 @@
   --badge-size:              var(--SPACER);
   --badge-padding:           0 var(--SPACER-3XS);
 
-  --badge-color:             #{$white};
-  --badge-bg-color:          #{$gray-400};
-  --badge-border-color:      #{$gray-400};
+  --badge-color:             var(--TEXT-COLOR-INVERTED);
+  --badge-bg-color:          var(--TEXT-COLOR-LIGHT);
+  --badge-border-color:      var(--TEXT-COLOR-LIGHT);
 }
 
 /**
@@ -42,19 +42,19 @@
   color: var(--badge-color);
 
   &.a-badge--outlined {
-    --badge-color:            #{$gray-400};
+    --badge-color:            var(--TEXT-COLOR-LIGHT);
     --badge-bg-color:         transparent;
-    --badge-border-color:     #{$gray-300};
+    --badge-border-color:     var(--BORDER-COLOR);
   }
 
   &.a-badge--transparent {
-    --badge-color:            #{$gray-400};
-    --badge-bg-color:         #{$gray-100};
-    --badge-border-color:     #{$gray-100};
+    --badge-color:            var(--TEXT-COLOR-LIGHT);
+    --badge-bg-color:         var(--BG-COLOR);
+    --badge-border-color:     var(--BG-COLOR);
   }
 
   &.a-badge--primary {
-    --badge-color:            #{$white};
+    --badge-color:            var(--TEXT-COLOR-INVERTED);
     --badge-bg-color:         var(--THEME1-600);
     --badge-border-color:     var(--THEME1-600);
 
@@ -81,15 +81,15 @@
   .a-badge {
     &,
     &.a-badge--primary {
-      --badge-color:             #{$white};
-      --badge-bg-color:          #{$gray-400};
-      --badge-border-color:      #{$gray-400};
+      --badge-color:             var(--TEXT-COLOR-INVERTED);
+      --badge-bg-color:          var(--TEXT-COLOR-LIGHT);
+      --badge-border-color:      var(--TEXT-COLOR-LIGHT);
 
       &.a-badge--outlined,
       &.a-badge--transparent {
-        --badge-color:            #{$gray-400};
+        --badge-color:            var(--TEXT-COLOR-LIGHT);
         --badge-bg-color:         transparent;
-        --badge-border-color:     #{$gray-300};
+        --badge-border-color:     var(--BORDER-COLOR);
       }
     }
   }

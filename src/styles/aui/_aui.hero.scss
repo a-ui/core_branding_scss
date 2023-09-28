@@ -5,7 +5,7 @@
 
 .o-hero {
   align-items: center;
-  background: $gray-100;
+  background: var(--BG-COLOR);
   display: flex;
   height: calc(var(--SPACER) * 8);
 

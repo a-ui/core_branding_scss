@@ -407,10 +407,10 @@
   --shared-avatar-size-s: var(--SPACER-L);
   --shared-avatar-size: var(--SPACER-XL);
   --shared-avatar-size-l: var(--SPACER-XXL);
-  --shared-copyright-color: #fff;
+  --shared-copyright-color: var(--TEXT-COLOR-INVERTED);
   --shared-copyright-height: var(--SPACER-L);
   --shared-header-height: var(--SPACER-XL);
-  --shared-slideshow-footer-color-light: #fff;
+  --shared-slideshow-footer-color-light: var(--TEXT-COLOR-INVERTED);
 }
 
 /**
@@ -626,7 +626,7 @@
 }
 
 .d-spacing-utility {
-  background: repeating-linear-gradient(45deg, #fff, #fff 10px, #f3f3f3 10px, #f3f3f3 20px);
+  background: repeating-linear-gradient(45deg, var(--BG-COLOR-LIGHT), var(--BG-COLOR-LIGHT) 10px, var(--BG-COLOR) 10px, var(--BG-COLOR) 20px);
   box-shadow: 0 0 0 var(--BORDER-WIDTH) var(--BORDER-COLOR-LIGHT) inset;
   display: inline-block;
   padding: var(--SPACER-3XS);

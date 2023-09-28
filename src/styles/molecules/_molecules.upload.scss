@@ -5,11 +5,11 @@
 
 .m-upload {
   --upload-color:                   var(--TEXT-COLOR);
-  --upload-bg-color:                #{$white};
+  --upload-bg-color:                var(--BG-COLOR-LIGHT);
   --upload-hover-bg-color:          var(--THEME1-100);
   --upload-border-color:            var(--THEME1-600);
   --upload-disabled-color:          var(--STATE-DISABLED);
-  --upload-disabled-bg-color:       #{$gray-100};
+  --upload-disabled-bg-color:       var(--BG-COLOR);
   --upload-disabled-border-color:   var(--upload-disabled-color);
   --upload-focus-border-color:      var(--THEME1-100);
 

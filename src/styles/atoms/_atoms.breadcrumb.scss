@@ -4,7 +4,7 @@
  */
 
 .a-breadcrumb {
-  --breadcrumb-arrow-color:   #{$gray-300};
+  --breadcrumb-arrow-color:   var(--BORDER-COLOR);
 }
 
 /**

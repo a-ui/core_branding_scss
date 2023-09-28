@@ -41,7 +41,7 @@
     }
 
     &.active {
-      background-color: $gray-100;
+      background-color: var(--BG-COLOR);
     }
   }
 }
@@ -77,8 +77,23 @@
   }
 
   &__search {
-    background: $white;
+    background: var(--BG-COLOR-LIGHT);
     height: 100%;
     margin: var(--SPACER-3XS);
+  }
+}
+
+/**
+ * AUI ANIMATION
+ * -------------------------------------------------------------------
+ */
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
   }
 }

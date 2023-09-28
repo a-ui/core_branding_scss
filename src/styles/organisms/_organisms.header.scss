@@ -6,7 +6,7 @@
 
 .o-header {
   --header-height:     var(--shared-header-height);
-  --header-bg-color:   #{$white};
+  --header-bg-color:   var(--BG-COLOR-LIGHT);
   --header-border:     var(--BORDER-COLOR);
 }
 

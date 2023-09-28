@@ -1,11 +1,21 @@
 /**
+ * CARD VARIABLES
+ * -------------------------------------------------------------------
+ */
+
+.m-card {
+  --card-bg-color: var(--BG-COLOR-LIGHT);
+  --card-border-color: var(--BORDER-COLOR);
+}
+
+/**
  * CARD
  * -------------------------------------------------------------------
  */
 
 .m-card {
-  background-color: $white;
-  border: var(--BORDER-WIDTH) solid var(--BORDER-COLOR);
+  background-color: var(--card-bg-color);
+  border: var(--BORDER-WIDTH) solid var(--card-border-color);
 }
 
 /**
