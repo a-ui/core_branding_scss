@@ -5,7 +5,7 @@
 
 .o-footer {
   --footer-bg:      #{$black};
-  --footer-color:   #{$white};
+  --footer-color:   var(--BG-COLOR-LIGHT);
 }
 
 /**

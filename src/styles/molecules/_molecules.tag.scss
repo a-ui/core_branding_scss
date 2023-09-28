@@ -6,8 +6,8 @@
 .m-tag {
   --tag-height:         var(--SPACER-L);
   --tag-color:          #{$gray-500};
-  --tag-bg-color:       #{$white};
-  --tag-border-color:   #{$gray-400};
+  --tag-bg-color:       var(--BG-COLOR-LIGHT);
+  --tag-border-color:   var(--BORDER-COLOR);
 }
 
 /**
@@ -32,7 +32,7 @@
 
 button.m-tag {
   --tag-color: var(--THEME1-600);
-  --tag-bg-color: #{$white};
+  --tag-bg-color: var(--BG-COLOR-LIGHT);
   --tag-border-color: var(--THEME1-600);
 
   cursor: pointer;
@@ -46,7 +46,7 @@ button.m-tag {
   }
 
   &[aria-pressed='true'] {
-    --tag-color: #{$white};
+    --tag-color: var(--TEXT-COLOR-INVERTED);
     --tag-bg-color: var(--THEME1-600);
     --tag-border-color: var(--THEME1-600);
 
@@ -117,6 +117,6 @@ button.m-tag {
   &:active,
   &:focus {
     --tag-color: var(--TEXT-COLOR);
-    --tag-bg-color: #{$gray-100};
+    --tag-bg-color: var(--BG-COLOR);
   }
 }

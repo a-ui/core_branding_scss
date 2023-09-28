@@ -7,7 +7,7 @@ pre,
 code,
 kbd {
   --pre-color:               var(--TEXT-COLOR);
-  --pre-bg:                  #{$gray-100};
+  --pre-bg:                  var(--BG-COLOR);
   --pre-font-size:           1rem;
   --pre-padding:             var(--SPACER-XS);
 
@@ -16,7 +16,7 @@ kbd {
   --code-font-size:          .875rem;
   --code-padding:            calc(var(--SPACER) / 12) var(--SPACER-3XS);
 
-  --kbd-color:               #{$white};
+  --kbd-color:               var(--TEXT-COLOR-INVERTED);
   --kbd-bg:                  #{$gray-400};
   --kbd-font-size:          .875rem;
   --kbd-padding:             var(--code-padding);

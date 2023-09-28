@@ -4,9 +4,9 @@
  */
 
 .a-avatar {
-  --avatar-color:                    #{$gray-400};
-  --avatar-bg-color:                 #{$white};
-  --avatar-hover-bg-color:           #{$gray-100};
+  --avatar-color:                    var(--TEXT-COLOR-LIGHT);
+  --avatar-bg-color:                 var(--BG-COLOR-LIGHT);
+  --avatar-hover-bg-color:           var(--BG-COLOR);
 
   --avatar-primary-color:            var(--THEME1-600);
   --avatar-primary-hover-color:      var(--THEME1-700);

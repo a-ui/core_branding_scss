@@ -6,7 +6,7 @@
 .m-accordion {
   --accordion-header-color:                var(--TEXT-COLOR);
   --accordion-header-hover-color:          var(--THEME1-600);
-  --accordion-header-bg-color:             #{$white};
+  --accordion-header-bg-color:             var(--BG-COLOR-LIGHT);
   --accordion-header-hover-bg-color:       var(--THEME1-100);
   --accordion-header-border-color:         var(--BORDER-COLOR);
   --accordion-header-hover-border-color:   var(--THEME1-600);
@@ -25,7 +25,7 @@
 
 .m-accordion:not(.m-accordion--open) {
   .m-accordion__tab[aria-expanded='true'] .m-accordion__header {
-    --accordion-header-bg-color: #{$gray-100};
+    --accordion-header-bg-color: var(--BG-COLOR);
 
     &:hover,
     &:active,

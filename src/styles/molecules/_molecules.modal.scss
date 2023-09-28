@@ -4,7 +4,7 @@
  */
 
 .m-modal {
-  --modal-bg-color:       #{$white};
+  --modal-bg-color:       var(--BG-COLOR-LIGHT);
   --modal-border-color:   var(--BORDER-COLOR);
 
   --modal-width:          calc(var(--SPACER) * 17);

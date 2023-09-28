@@ -5,7 +5,7 @@
 
 .m-search-filter {
   &__label {
-    background: $white;
+    background: var(--BG-COLOR-LIGHT);
     border: var(--BORDER-WIDTH) solid var(--BORDER-COLOR);
     cursor: pointer;
     display: flex;
@@ -33,20 +33,20 @@
     &.m-search-filter__label--active {
       background-color: var(--TEXT-COLOR);
       border-color: var(--TEXT-COLOR);
-      color: $white;
+      color: var(--TEXT-COLOR-INVERTED);
 
       > .ai {
-        color: $white;
+        color: var(--TEXT-COLOR-INVERTED);
       }
     }
 
     &.m-search-filter__label--error {
       background-color: var(--TEXT-COLOR);
       border-color: var(--TEXT-COLOR);
-      color: $white;
+      color: var(--TEXT-COLOR-INVERTED);
 
       > .ai {
-        color: $white;
+        color: var(--TEXT-COLOR-INVERTED);
       }
     }
   }
@@ -103,7 +103,7 @@
     }
 
     &:hover {
-      background-color: $gray-100;
+      background-color: var(--BG-COLOR);
     }
   }
 

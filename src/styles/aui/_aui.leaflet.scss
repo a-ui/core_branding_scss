@@ -4,7 +4,7 @@
  */
 
 .o-leaflet {
-  border: var(--BORDER-WIDTH) solid $gray-300;
+  border: var(--BORDER-WIDTH) solid var(--BORDER-COLOR);
   display: flex;
   height: rem(1px);
   min-height: rem(600px);
@@ -26,12 +26,12 @@
   }
 
   &__content {
-    background-color: $white;
+    background-color: var(--BG-COLOR-LIGHT);
     overflow: auto;
     width: 0;
 
     &.has-content {
-      border-right: solid var(--BORDER-WIDTH) $gray-300;
+      border-right: solid var(--BORDER-WIDTH) var(--BORDER-COLOR);
       padding: var(--SPACER-S);
       width: rem(300px);
     }
@@ -106,7 +106,7 @@
     z-index: layer('overlay');
 
     .o-leaflet__content {
-      border: var(--BORDER-WIDTH) solid $gray-300;
+      border: var(--BORDER-WIDTH) solid var(--BORDER-COLOR);
       box-shadow: .75rem .75rem 0 var(--BOX-SHADOW-COLOR);
       left: var(--SPACER-S);
       max-height: calc(100% - #{rem(160px)});
@@ -133,7 +133,7 @@
   position: relative;
 
   &:after {
-    background-color: $white;
+    background-color: var(--BG-COLOR-LIGHT);
     bottom: -1px;
     content: '';
     height: 1px;

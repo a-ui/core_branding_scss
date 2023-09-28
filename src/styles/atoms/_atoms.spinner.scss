@@ -4,7 +4,7 @@
  */
 
 .a-spinner {
-  --spinner-color:              #{$gray-300};
+  --spinner-color:              var(--BORDER-COLOR);
   --spinner-size:               2rem;
   --spinner-thickness:          .1875rem;
   --spinner-text-color:         var(--TEXT-COLOR-LIGHT);

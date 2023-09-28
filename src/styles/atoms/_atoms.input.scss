@@ -11,16 +11,16 @@
 
 .a-input {
   --input-color:                   var(--TEXT-COLOR);
-  --input-bg-color:                #{$white};
+  --input-bg-color:                var(--BG-COLOR-LIGHT);
   --input-border-color:            var(--BORDER-COLOR);
   --input-placeholder-color:       #{$gray-400};
 
   --input-disabled-color:          var(--STATE-DISABLED);
-  --input-disabled-bg-color:       #{$gray-100};
+  --input-disabled-bg-color:       var(--BG-COLOR);
   --input-disabled-border-color:   var(--BORDER-COLOR-LIGHT);
 
   --input-readonly-color:          var(--TEXT-COLOR);
-  --input-readonly-bg-color:       #{$white};
+  --input-readonly-bg-color:       var(--BG-COLOR-LIGHT);
   --input-readonly-border-color:   var(--BORDER-COLOR);
 
   --input-icon-color:              #{$gray-400};

@@ -7,7 +7,7 @@
 .m-overlay {
   --overlay-bg-color:             var(--OVERLAY-COLOR);
   --overlay-button-font-size:     #{rem($icon-size-lg)};
-  --overlay-button-color:         #{$white};
+  --overlay-button-color:         var(--TEXT-COLOR-INVERTED);
   --overlay-button-hover-color:   #{$gray-200};
 }
 

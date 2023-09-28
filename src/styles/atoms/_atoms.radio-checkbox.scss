@@ -5,12 +5,12 @@
 
 .a-input__checkbox,
 .a-input__radio {
-  --radio-checkbox-color:                   #{$white};
+  --radio-checkbox-color:                   var(--TEXT-COLOR-INVERTED);
   --radio-checkbox-bg-color:                var(--THEME1-600);
   --radio-checkbox-border-color:            var(--BORDER-COLOR);
 
   --radio-checkbox-disabled-color:          var(--STATE-DISABLED);
-  --radio-checkbox-disabled-bg-color:       #{$gray-100};
+  --radio-checkbox-disabled-bg-color:       var(--BG-COLOR);
   --radio-checkbox-disabled-border-color:   var(--BORDER-COLOR-LIGHT);
 }
 
@@ -190,7 +190,7 @@
 
   &:checked {
     + label:before {
-      background: $white;
+      background: var(--BG-COLOR-LIGHT);
       box-shadow: 0 0 0 rem(6px) var(--radio-checkbox-bg-color) inset;
     }
 

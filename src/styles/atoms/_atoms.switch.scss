@@ -12,19 +12,19 @@
 
   --switch-label-font-size:                            1rem;
   --switch-label-color:                                var(--TEXT-COLOR);
-  --switch-label-disabled-color:                       #{$gray-300};
+  --switch-label-disabled-color:                       var(--BORDER-COLOR);
 
-  --switch-bg-color:                                   #{$gray-300};
+  --switch-bg-color:                                   var(--BORDER-COLOR);
   --switch-border-color:                               var(--switch-bg-color);
-  --switch-handle-bg-color:                            #{$white};
+  --switch-handle-bg-color:                            var(--BG-COLOR-LIGHT);
 
   --switch-active-bg-color:                            var(--THEME1-600);
   --switch-active-border-color:                        var(--switch-active-bg-color);
-  --switch-handle-active-bg-color:                     #{$white};
+  --switch-handle-active-bg-color:                     var(--BG-COLOR-LIGHT);
 
-  --switch-disabled-bg-color:                          #{$gray-200};
+  --switch-disabled-bg-color:                          var(--BORDER-COLOR-LIGHT);
   --switch-disabled-border-color:                      var(--switch-disabled-bg-color);
-  --switch-handle-disabled-bg-color:                   #{$white};
+  --switch-handle-disabled-bg-color:                   var(--BG-COLOR-LIGHT);
 }
 
 /**
