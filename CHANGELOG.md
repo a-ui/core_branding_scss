@@ -4,6 +4,15 @@
 ## Unreleased
 
 
+## [6.6.0] - 2023-11-28
+
+### Added
+- Added a clock icon
+
+### Fixed
+- Fixed a rendering issue in the pagination component when a border-radius different than 0 is used
+
+
 ## [6.5.0] - 2023-09-28
 
 ### Added
