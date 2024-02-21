@@ -81,6 +81,7 @@
  * SOCIAL BRAND COLOR PALETTE
  * -------------------------------------------------------------------
  * Collection of social branding colors
+ * Also see https://mdigi.tools/darken-color/
  */
 /**
  * GLOBAL VARIABLES
@@ -107,6 +108,7 @@
  * SOCIAL BRAND COLOR PALETTE
  * -------------------------------------------------------------------
  * Collection of social branding colors
+ * Also see https://mdigi.tools/darken-color/
  */
 /**
  * FUNCTIONS
@@ -1545,6 +1547,7 @@ a:hover .a-avatar.a-avatar--primary, a:active .a-avatar.a-avatar--primary, a:foc
  * -------------------------------------------------------------------
  */
 .a-button {
+  --btn-border-radius: var(--BORDER-RADIUS);
   --btn-height: var(--SPACER-XL);
   --btn-padding: 0 var(--SPACER);
   --btn-font-weight: var(--FONT-WEIGHT-BOLD);
@@ -1670,9 +1673,9 @@ a:hover .a-avatar.a-avatar--primary, a:active .a-avatar.a-avatar--primary, a:foc
   --btn-twitter-color: var(--TEXT-COLOR-INVERTED);
   --btn-twitter-hover-color: var(--btn-twitter-color);
   --btn-twitter-bg-color: #00aced;
-  --btn-twitter-hover-bg-color: #007fad;
+  --btn-twitter-hover-bg-color: #00aced;
   --btn-twitter-border-color: #00aced;
-  --btn-twitter-hover-border-color: #007fad;
+  --btn-twitter-hover-border-color: #00aced;
   --btn-x-color: var(--TEXT-COLOR-INVERTED);
   --btn-x-hover-color: var(--btn-x-color);
   --btn-x-bg-color: #000;
@@ -1682,33 +1685,39 @@ a:hover .a-avatar.a-avatar--primary, a:active .a-avatar.a-avatar--primary, a:foc
   --btn-linkedin-color: var(--TEXT-COLOR-INVERTED);
   --btn-linkedin-hover-color: var(--btn-linkedin-color);
   --btn-linkedin-bg-color: #0077b5;
-  --btn-linkedin-hover-bg-color: #00517d;
+  --btn-linkedin-hover-bg-color: #005988;
   --btn-linkedin-border-color: #0077b5;
-  --btn-linkedin-hover-border-color: #00517d;
+  --btn-linkedin-hover-border-color: #005988;
   --btn-facebook-color: var(--TEXT-COLOR-INVERTED);
   --btn-facebook-hover-color: var(--btn-facebook-color);
   --btn-facebook-bg-color: #1877f2;
-  --btn-facebook-hover-bg-color: #0a52b0;
+  --btn-facebook-hover-bg-color: #0b58bd;
   --btn-facebook-border-color: #1877f2;
-  --btn-facebook-hover-border-color: #0a52b0;
+  --btn-facebook-hover-border-color: #0b58bd;
   --btn-instagram-color: var(--TEXT-COLOR-INVERTED);
   --btn-instagram-hover-color: var(--btn-instagram-color);
   --btn-instagram-bg-color: #ff0069;
-  --btn-instagram-hover-bg-color: #b8004d;
+  --btn-instagram-hover-bg-color: #bf004f;
   --btn-instagram-border-color: #ff0069;
-  --btn-instagram-hover-border-color: #b8004d;
+  --btn-instagram-hover-border-color: #bf004f;
   --btn-snapchat-color: var(--TEXT-COLOR);
   --btn-snapchat-hover-color: var(--btn-snapchat-color);
   --btn-snapchat-bg-color: #fffc00;
-  --btn-snapchat-hover-bg-color: #c4c100;
+  --btn-snapchat-hover-bg-color: #bfbd00;
   --btn-snapchat-border-color: #fffc00;
-  --btn-snapchat-hover-border-color: #c4c100;
+  --btn-snapchat-hover-border-color: #bfbd00;
   --btn-tiktok-color: var(--TEXT-COLOR);
   --btn-tiktok-hover-color: var(--btn-tiktok-color);
   --btn-tiktok-bg-color: #25f4ee;
-  --btn-tiktok-hover-bg-color: #08bbb5;
+  --btn-tiktok-hover-bg-color: #0ac9c3;
   --btn-tiktok-border-color: #25f4ee;
-  --btn-tiktok-hover-border-color: #08bbb5;
+  --btn-tiktok-hover-border-color: #0ac9c3;
+  --btn-youtube-color: var(--TEXT-COLOR-INVERTED);
+  --btn-youtube-hover-color: var(--btn-youtube-color);
+  --btn-youtube-bg-color: #f00;
+  --btn-youtube-hover-bg-color: #bf0000;
+  --btn-youtube-border-color: #f00;
+  --btn-youtube-hover-border-color: #bf0000;
   --btn-social-color: var(--TEXT-COLOR);
   --btn-social-hover-color: var(--THEME1-600);
   --btn-social-bg-color: transparent;
@@ -1730,7 +1739,7 @@ a:hover .a-avatar.a-avatar--primary, a:active .a-avatar.a-avatar--primary, a:foc
 .a-button {
   align-items: center;
   border: none;
-  border-radius: var(--BORDER-RADIUS);
+  border-radius: var(--btn-border-radius);
   cursor: pointer;
   display: flex;
   font-size: var(--btn-font-size);
@@ -1887,6 +1896,14 @@ a:hover .a-avatar.a-avatar--primary, a:active .a-avatar.a-avatar--primary, a:foc
   --btn-hover-bg-color: var(--btn-tiktok-hover-bg-color);
   --btn-border-color: var(--btn-tiktok-border-color);
   --btn-hover-border-color: var(--btn-tiktok-hover-border-color);
+}
+.a-button.has-icon.a-button--youtube {
+  --btn-color: var(--btn-youtube-color);
+  --btn-hover-color: var(--btn-youtube-hover-color);
+  --btn-bg-color: var(--btn-youtube-bg-color);
+  --btn-hover-bg-color: var(--btn-youtube-hover-bg-color);
+  --btn-border-color: var(--btn-youtube-border-color);
+  --btn-hover-border-color: var(--btn-youtube-hover-border-color);
 }
 .a-button.has-icon.a-button--social {
   --btn-color: var(--btn-social-color);
@@ -2544,26 +2561,26 @@ textarea {
  * -------------------------------------------------------------------
  */
 .a-input.has-icon-left .a-input__wrapper > .ai, .a-input.has-icon-right .a-input__wrapper > .ai {
+  align-items: center;
   color: var(--input-icon-color);
+  display: flex;
   font-size: var(--input-icon-size);
+  height: 100%;
   pointer-events: none;
   position: absolute;
+  right: 0;
   text-align: center;
   top: 50%;
   transform: translateY(-50%);
   -webkit-user-select: none;
      -moz-user-select: none;
           user-select: none;
+  width: 3rem;
 }
 .a-input.has-icon-left .a-input__wrapper > .ai.is-clickable, .a-input.has-icon-right .a-input__wrapper > .ai.is-clickable {
-  align-items: center;
   cursor: pointer;
-  display: flex;
-  height: 100%;
   pointer-events: auto;
-  right: 0;
   transition: color var(--ANIMATION-NORMAL);
-  width: 3rem;
 }
 .a-input.has-icon-left .a-input__wrapper > .ai.is-clickable:hover, .a-input.has-icon-right .a-input__wrapper > .ai.is-clickable:hover {
   color: var(--input-icon-hover-color);
@@ -5273,6 +5290,9 @@ a.a-page-indicator__item:focus:before {
   color: var(--pagination-disabled-color);
   cursor: not-allowed;
 }
+.m-pagination > li:has(a.is-disabled) {
+  box-shadow: 0 0 0 var(--BORDER-WIDTH) var(--pagination-disabled-border) inset;
+}
 .m-pagination > li + li {
   margin-left: calc(var(--BORDER-WIDTH) * -1);
 }
@@ -5644,6 +5664,10 @@ button.m-tag[aria-pressed=true]:hover, button.m-tag[aria-pressed=true]:active, b
 }
 .m-upload__dropzone:active, .m-upload__dropzone:hover, .m-upload__dropzone:focus {
   background-color: var(--upload-hover-bg-color);
+}
+
+.m-upload__button {
+  position: relative;
 }
 
 .m-upload__input {
