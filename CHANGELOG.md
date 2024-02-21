@@ -4,6 +4,18 @@
 ## Unreleased
 
 
+## [6.6.0] - 2023-11-28
+
+### Added
+- Added a clock icon
+- Added a social button variant for YouTube with an accompanying color
+- Improved the ability to override the button border radius
+
+### Fixed
+- Fixed a rendering issue in the pagination component when a border-radius different than 0 is used
+- Fixed an issue where an upload button would completely take over the available screen space
+
+
 ## [6.5.0] - 2023-09-28
 
 ### Added

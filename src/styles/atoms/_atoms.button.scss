@@ -4,6 +4,7 @@
  */
 
 .a-button {
+  --btn-border-radius:                          var(--BORDER-RADIUS);
   --btn-height:                                 var(--SPACER-XL);
   --btn-padding:                                0 var(--SPACER);
   --btn-font-weight:                            var(--FONT-WEIGHT-BOLD);
@@ -191,12 +192,19 @@
   --btn-snapchat-border-color:                  #{$snapchat};
   --btn-snapchat-hover-border-color:            #{$snapchat-hover};
 
-  --btn-tiktok-color:                         var(--TEXT-COLOR);
-  --btn-tiktok-hover-color:                   var(--btn-tiktok-color);
-  --btn-tiktok-bg-color:                      #{$tiktok};
-  --btn-tiktok-hover-bg-color:                #{$tiktok-hover};
-  --btn-tiktok-border-color:                  #{$tiktok};
-  --btn-tiktok-hover-border-color:            #{$tiktok-hover};
+  --btn-tiktok-color:                           var(--TEXT-COLOR);
+  --btn-tiktok-hover-color:                     var(--btn-tiktok-color);
+  --btn-tiktok-bg-color:                        #{$tiktok};
+  --btn-tiktok-hover-bg-color:                  #{$tiktok-hover};
+  --btn-tiktok-border-color:                    #{$tiktok};
+  --btn-tiktok-hover-border-color:              #{$tiktok-hover};
+
+  --btn-youtube-color:                          var(--TEXT-COLOR-INVERTED);
+  --btn-youtube-hover-color:                    var(--btn-youtube-color);
+  --btn-youtube-bg-color:                       #{$youtube};
+  --btn-youtube-hover-bg-color:                 #{$youtube-hover};
+  --btn-youtube-border-color:                   #{$youtube};
+  --btn-youtube-hover-border-color:             #{$youtube-hover};
 
   --btn-social-color:                           var(--TEXT-COLOR);
   --btn-social-hover-color:                     var(--THEME1-600);
@@ -221,7 +229,7 @@
 %a-button {
   align-items: center;
   border: none;
-  border-radius: var(--BORDER-RADIUS);
+  border-radius: var(--btn-border-radius);
   cursor: pointer;
   display: flex;
   font-size: var(--btn-font-size);
@@ -399,6 +407,15 @@
     --btn-hover-bg-color: var(--btn-tiktok-hover-bg-color);
     --btn-border-color: var(--btn-tiktok-border-color);
     --btn-hover-border-color: var(--btn-tiktok-hover-border-color);
+  }
+
+  &.a-button--youtube {
+    --btn-color: var(--btn-youtube-color);
+    --btn-hover-color: var(--btn-youtube-hover-color);
+    --btn-bg-color: var(--btn-youtube-bg-color);
+    --btn-hover-bg-color: var(--btn-youtube-hover-bg-color);
+    --btn-border-color: var(--btn-youtube-border-color);
+    --btn-hover-border-color: var(--btn-youtube-hover-border-color);
   }
 
   &.a-button--social {

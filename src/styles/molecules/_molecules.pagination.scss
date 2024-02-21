@@ -77,6 +77,10 @@
       }
     }
 
+    &:has(a.is-disabled) {
+      box-shadow: 0 0 0 var(--BORDER-WIDTH) var(--pagination-disabled-border) inset;
+    }
+
     + li {
       margin-left: calc(var(--BORDER-WIDTH) * -1);
     }
