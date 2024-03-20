@@ -19,11 +19,7 @@
   li {
     display: block;
     float: left;
-    margin-bottom: var(--SPACER-XS);
-
-    @include at($screen-xs) {
-      margin-bottom: 0;
-    }
+    margin-bottom: 0;
 
     &:not(:last-child):after {
       background: var(--breadcrumb-arrow-color);
