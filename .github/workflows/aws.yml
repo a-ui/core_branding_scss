@@ -35,6 +35,7 @@ jobs:
         uses: actions/download-artifact@v4
         with:
           name: dist
+          path: dist
       - name: Uploading to Amazon S3
         uses: jakejarvis/s3-sync-action@master
         env:
