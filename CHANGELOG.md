@@ -2,6 +2,12 @@
 
 ## Unreleased
 
+## [6.6.1] - 2024-03-20
+
+### Changed
+
+- Removed an unwanted bottom margin on breadcrumbs
+
 ## [6.6.0] - 2024-02-21
 
 ### Added
@@ -895,6 +901,8 @@
 
 - Initial release.
 
+[6.6.1]: https://github.com/a-ui/core_branding_scss/tree/v6.6.1
+[6.6.0]: https://github.com/a-ui/core_branding_scss/tree/v6.6.0
 [6.5.0]: https://github.com/a-ui/core_branding_scss/tree/v6.5.0
 [6.4.1]: https://github.com/a-ui/core_branding_scss/tree/v6.4.1
 [6.4.0]: https://github.com/a-ui/core_branding_scss/tree/v6.4.0
