@@ -43,7 +43,7 @@
 
   &.a-badge--outlined {
     --badge-color:            var(--TEXT-COLOR-LIGHT);
-    --badge-bg-color:         transparent;
+    --badge-bg-color:         var(--BG-COLOR-LIGHT);
     --badge-border-color:     var(--BORDER-COLOR);
   }
 
@@ -60,7 +60,7 @@
 
     &.a-badge--outlined {
       --badge-color:          var(--THEME1-600);
-      --badge-bg-color:       transparent;
+      --badge-bg-color:       var(--BG-COLOR-LIGHT);
       --badge-border-color:   var(--THEME1-600);
     }
 

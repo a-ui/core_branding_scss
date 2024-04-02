@@ -9,15 +9,12 @@
   --alert-border-color:           var(--alert-color);
 
   --alert-success-color:          var(--STATE-SUCCESS);
-  --alert-success-bg-color:       var(--alert-bg-color);
   --alert-success-border-color:   var(--alert-success-color);
 
   --alert-warning-color:          var(--STATE-WARNING);
-  --alert-warning-bg-color:       var(--alert-bg-color);
   --alert-warning-border-color:   var(--alert-warning-color);
 
   --alert-danger-color:           var(--STATE-DANGER);
-  --alert-danger-bg-color:        var(--alert-bg-color);
   --alert-danger-border-color:    var(--alert-danger-color);
 
   --alert-padding:                var(--SPACER);
@@ -86,19 +83,16 @@
 .m-alert {
   &.m-alert--success {
     --alert-color: var(--alert-success-color);
-    --alert-bg-color: var(--alert-success-bg-color);
     --alert-border-color: var(--alert-success-border-color);
   }
 
   &.m-alert--warning {
     --alert-color: var(--alert-warning-color);
-    --alert-bg-color: var(--alert-warning-bg-color);
     --alert-border-color: var(--alert-warning-border-color);
   }
 
   &.m-alert--danger {
     --alert-color: var(--alert-danger-color);
-    --alert-bg-color: var(--alert-danger-bg-color);
     --alert-border-color: var(--alert-danger-border-color);
   }
 }

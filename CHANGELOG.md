@@ -2,6 +2,22 @@
 
 ## Unreleased
 
+### Fixed
+
+- Fixed an incorrect placement of addons in input fields
+
+### Changed
+
+- Improved button padding for cases where the label is spread across multiple lines
+- Improved padding of input fields with addons
+- Improved placement of addon in smaller and larger sizes of input fields
+- Improved background color of the pagination component
+- Improved background color of outlined and text button
+- Improved background color of outlined badge
+- Improved background color of alerts
+- Improved background color of tables
+- Made the delete button of the upload component more accessible
+
 ## [6.6.1] - 2024-03-20
 
 ### Changed

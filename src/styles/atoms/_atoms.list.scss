@@ -7,6 +7,7 @@
 .a-checkbox-list,
 .a-avatar-list {
   --list-item-color:             var(--TEXT-COLOR);
+  --list-item-bg-color:          var(--BG-COLOR-LIGHT);
   --list-item-hover-color:       var(--THEME1-600);
   --list-item-active-color:      var(--TEXT-COLOR);
   --list-item-hover-bg-color:    var(--THEME1-100);
@@ -72,6 +73,7 @@
   }
 
   a.a-list__content {
+    background-color: var(--list-item-bg-color);
     color: var(--list-item-color);
     text-decoration: none;
     transition-duration: var(--ANIMATION-DURATION);
@@ -156,6 +158,7 @@
     }
 
     .a-checkbox-list__checkbox {
+      background-color: var(--list-item-bg-color);
       border-top: var(--BORDER-WIDTH) solid var(--list-item-border-color);
       padding-left: var(--SPACER-S);
       transition: background-color var(--ANIMATION-NORMAL);
@@ -272,6 +275,7 @@
 }
 
 a.a-avatar-list__item-container {
+  background-color: var(--list-item-bg-color);
   text-decoration: none;
 }
 
