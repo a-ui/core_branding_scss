@@ -147,6 +147,16 @@
   }
 
   .m-upload__delete {
+    &.a-button {
+      --btn-hover-color: var(--TEXT-COLOR);
+      --btn-bg-color: transparent;
+
+      &.a-button--danger {
+        --btn-hover-color: var(--DANGER-700);
+        --btn-hover-bg-color: transparent;
+      }
+    }
+
     position: absolute;
     right: 0;
     top: 0;
