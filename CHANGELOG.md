@@ -2,6 +2,8 @@
 
 ## Unreleased
 
+## [6.6.2] - 2024-04-03
+
 ### Fixed
 
 - Fixed an incorrect placement of addons in input fields
@@ -917,6 +919,7 @@
 
 - Initial release.
 
+[6.6.2]: https://github.com/a-ui/core_branding_scss/tree/v6.6.2
 [6.6.1]: https://github.com/a-ui/core_branding_scss/tree/v6.6.1
 [6.6.0]: https://github.com/a-ui/core_branding_scss/tree/v6.6.0
 [6.5.0]: https://github.com/a-ui/core_branding_scss/tree/v6.5.0
