@@ -1523,6 +1523,7 @@ a:hover .a-avatar.a-avatar--primary, a:active .a-avatar.a-avatar--primary, a:foc
 .a-breadcrumb li {
   display: block;
   float: left;
+  line-height: 1.5;
   margin-bottom: 0;
 }
 .a-breadcrumb li:not(:last-child):after {
