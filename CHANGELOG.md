@@ -2,6 +2,10 @@
 
 ## Unreleased
 
+### Fixed
+
+- Fixed the breadcrumb's line-height
+
 ## [6.6.2] - 2024-04-03
 
 ### Fixed
