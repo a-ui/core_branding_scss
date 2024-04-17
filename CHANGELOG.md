@@ -2,6 +2,8 @@
 
 ## Unreleased
 
+## [6.6.3] - 2024-04-17
+
 ### Fixed
 
 - Fixed the breadcrumb's line-height
@@ -923,6 +925,7 @@
 
 - Initial release.
 
+[6.6.3]: https://github.com/a-ui/core_branding_scss/tree/v6.6.3
 [6.6.2]: https://github.com/a-ui/core_branding_scss/tree/v6.6.2
 [6.6.1]: https://github.com/a-ui/core_branding_scss/tree/v6.6.1
 [6.6.0]: https://github.com/a-ui/core_branding_scss/tree/v6.6.0
