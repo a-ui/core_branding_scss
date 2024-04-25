@@ -2,6 +2,8 @@
 
 ## Unreleased
 
+## [6.6.4] - 2024-04-25
+
 ### Fixed
 
 - Fixed a case where the copyright label would 'disappear'
