@@ -2,6 +2,10 @@
 
 ## Unreleased
 
+### Fixed
+
+- Fixed a case where the copyright label would 'disappear'
+
 ## [6.6.3] - 2024-04-17
 
 ### Fixed
@@ -925,6 +929,7 @@
 
 - Initial release.
 
+[6.6.4]: https://github.com/a-ui/core_branding_scss/tree/v6.6.4
 [6.6.3]: https://github.com/a-ui/core_branding_scss/tree/v6.6.3
 [6.6.2]: https://github.com/a-ui/core_branding_scss/tree/v6.6.2
 [6.6.1]: https://github.com/a-ui/core_branding_scss/tree/v6.6.1
