@@ -2293,21 +2293,24 @@ kbd kbd {
 .a-copyright {
   background-color: var(--copyright-bg-color);
   color: var(--copyright-color);
-  display: inline-block;
+  display: flex;
   font-size: 1rem;
   height: var(--copyright-height);
   transition: transform var(--ANIMATION-NORMAL);
+  max-width: 100%;
+}
+
+a.a-copyright {
+  text-decoration: none;
+}
+a.a-copyright:hover .a-copyright__label, a.a-copyright:active .a-copyright__label, a.a-copyright:focus .a-copyright__label {
+  text-decoration: underline;
 }
 
 /**
  * COPYRIGHT ELEMENTS
  * -------------------------------------------------------------------
  */
-.a-copyright__sign,
-.a-copyright__label {
-  float: left;
-}
-
 .a-copyright__sign {
   align-items: center;
   display: flex;
@@ -2318,9 +2321,14 @@ kbd kbd {
 }
 
 .a-copyright__label {
+  flex: 1;
   font-weight: var(--FONT-WEIGHT-BOLD);
   line-height: var(--copyright-height);
   margin-right: var(--SPACER-XS);
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 
 /**
