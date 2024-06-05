@@ -6,8 +6,9 @@
 .o-leaflet {
   border: var(--BORDER-WIDTH) solid var(--BORDER-COLOR);
   display: flex;
-  height: rem(1px);
-  min-height: rem(600px);
+  height: rem(600px);
+  max-height: 80vh;
+  min-height: rem(200px);
   width: 100%;
 
   &__wrapper {
