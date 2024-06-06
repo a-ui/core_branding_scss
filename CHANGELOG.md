@@ -2,6 +2,12 @@
 
 ## Unreleased
 
+## [6.6.5] - 2024-06-05
+
+### Fixed
+
+- Fixed a case where the height of the map component would not adjust properly
+
 ## [6.6.4] - 2024-04-25
 
 ### Fixed
@@ -931,6 +937,7 @@
 
 - Initial release.
 
+[6.6.5]: https://github.com/a-ui/core_branding_scss/tree/v6.6.5
 [6.6.4]: https://github.com/a-ui/core_branding_scss/tree/v6.6.4
 [6.6.3]: https://github.com/a-ui/core_branding_scss/tree/v6.6.3
 [6.6.2]: https://github.com/a-ui/core_branding_scss/tree/v6.6.2
