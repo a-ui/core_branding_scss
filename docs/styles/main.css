@@ -6590,8 +6590,9 @@ button.m-tag[aria-pressed=true]:hover, button.m-tag[aria-pressed=true]:active, b
 .o-leaflet {
   border: var(--BORDER-WIDTH) solid var(--BORDER-COLOR);
   display: flex;
-  height: 0.0625rem;
-  min-height: 37.5rem;
+  height: 37.5rem;
+  max-height: 80vh;
+  min-height: 12.5rem;
   width: 100%;
 }
 .o-leaflet__wrapper {
