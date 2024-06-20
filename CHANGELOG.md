@@ -2,6 +2,13 @@
 
 ## Unreleased
 
+## [6.6.6] - 2024-06-20
+
+### Fixed
+
+- Fixed a border issue with lists in lists
+- Fixed a wrapping issue with multiple-word labels in tab navigation
+
 ## [6.6.5] - 2024-06-06
 
 ### Fixed
@@ -937,6 +944,7 @@
 
 - Initial release.
 
+[6.6.6]: https://github.com/a-ui/core_branding_scss/tree/v6.6.6
 [6.6.5]: https://github.com/a-ui/core_branding_scss/tree/v6.6.5
 [6.6.4]: https://github.com/a-ui/core_branding_scss/tree/v6.6.4
 [6.6.3]: https://github.com/a-ui/core_branding_scss/tree/v6.6.3

@@ -197,6 +197,7 @@
         padding: var(--SPACER-3XS) var(--SPACER-S);
         text-decoration: none;
         transition: color var(--ANIMATION-NORMAL);
+        white-space: nowrap;
 
         > .ai {
           display: inline-block;
