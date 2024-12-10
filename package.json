@@ -37,7 +37,7 @@
     "cssnano": "^5.1.15",
     "del": "^5.1.0",
     "glob": "^7.2.3",
-    "gulp": "^4.0.2",
+    "gulp": "^5.0.0",
     "gulp-header-license": "^1.0.12",
     "gulp-nunjucks": "^5.1.0",
     "gulp-postcss": "^9.0.1",
