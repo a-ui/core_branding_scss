@@ -5,7 +5,7 @@
 // - https://www.npmjs.com/package/merge-stream
 
 var gulp = require('gulp');
-var merge = require('merge-stream');
+var merge = require('ordered-read-streams');
 
 gulp.task('copy', function() {
 
