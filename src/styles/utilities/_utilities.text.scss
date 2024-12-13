@@ -1,3 +1,6 @@
+@use '../quarks' as *;
+@use '../shared/shared.placeholders' as *;
+
 /**
  * TEXT HELPERS
  * -------------------------------------------------------------------
@@ -96,12 +99,6 @@
  * TEXT OVERFLOW CLASSES
  * -------------------------------------------------------------------
  */
-
-%u-text-truncate {
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-}
 
 .u-text-truncate {
   @extend %u-text-truncate;

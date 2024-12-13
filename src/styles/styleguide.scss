@@ -1,14 +1,13 @@
-@charset 'utf-8';
-
 /**
  * CORE BRANDING API
  * -------------------------------------------------------------------
  */
 
 @use 'sass:math';
+@use 'sass:color';
 
 /* stylelint-disable-next-line no-invalid-position-at-import-rule */
-@import 'quarks';
+@use 'quarks' as *;
 
 /**
  * CUSTOM STYLING FOR STYLEGUIDE
@@ -411,6 +410,6 @@
   .hljs-number,
   .hljs-params,
   .hljs-type {
-    color: mix($fix-yellow, $black, 95%) !important;
+    color: color.mix($fix-yellow, $black, 95%) !important;
   }
 }

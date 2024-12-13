@@ -1,3 +1,5 @@
+@use '../shared/shared.placeholders' as *;
+
 /**
  * LIST VARIABLES
  * -------------------------------------------------------------------
@@ -24,24 +26,6 @@
  * STANDARD LIST
  * -------------------------------------------------------------------
  */
-
-%a-list {
-  padding-left: var(--SPACER-S);
-
-  .a-list__content {
-    display: inline-flex;
-    padding: var(--SPACER-XXS) 0;
-  }
-
-  .a-list__text {
-    flex-grow: 1;
-  }
-
-  .a-list__text + .ai,
-  .ai + .a-list__text {
-    margin-left: var(--SPACER-XS);
-  }
-}
 
 .a-list {
   @extend %a-list;

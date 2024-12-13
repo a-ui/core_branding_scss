@@ -3,9 +3,8 @@
  * -------------------------------------------------------------------
  * Leave here for renderer
  */
-@import 'quarks.colors';
-@import 'quarks.functions';
-@import 'quarks.mixins';
+@use 'sass:color';
+@use 'quarks.colors' as *;
 
 /**
  * THEME COLORS
@@ -69,7 +68,7 @@ $background-color-light:  $gray-100 !default;
 $border-color:            $gray-400 !default;
 $border-color-light:      $gray-300 !default;
 
-$selection-color:         mix($brand-primary, $white, 20%) !default;
+$selection-color:         color.mix($brand-primary, $white, 20%) !default;
 
 /**
  * SPACERS

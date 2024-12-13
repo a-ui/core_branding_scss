@@ -1,9 +1,7 @@
-@charset 'utf-8';
-
 /**
  * SUN ANTWERPEN
  * -------------------------------------------------------------------
  */
 
-@import 'quarks';
-@import 'base/base.fonts.sun-antwerpen';
+@use 'quarks';
+@use 'base/base.fonts.sun-antwerpen';

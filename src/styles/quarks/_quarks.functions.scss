@@ -1,4 +1,7 @@
+@use 'sass:map';
 @use 'sass:math';
+@use 'sass:meta';
+@use 'quarks.variables' as *;
 
 /**
  * FUNCTIONS
@@ -12,7 +15,7 @@
  */
 
 @function strip-unit($number) {
-  @if type-of($number) == 'number' and not unitless($number) {
+  @if meta.type-of($number) == 'number' and not math.is-unitless($number) {
     @return math.div($number, $number * 0 + 1);
     // @return $number / ($number * 0 + 1);
   }
@@ -52,9 +55,9 @@
  */
 
 @function layer($layer) {
-  @if not map-has-key($z-indexes, $layer) {
+  @if not map.has-key($z-indexes, $layer) {
     @warn 'De laag `#{$layer}` zit niet in de $z-indexes map.';
   }
 
-  @return map-get($z-indexes, $layer);
+  @return map.get($z-indexes, $layer);
 }
