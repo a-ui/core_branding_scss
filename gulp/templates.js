@@ -1,10 +1,6 @@
 // -------------------------------------------------------------------
 // :: TEMPLATES
 // -------------------------------------------------------------------
-// - https://www.npmjs.org/package/gulp-nunjucks
-// - https://www.npmjs.com/package/gulp-rename
-// - https://www.npmjs.com/package/list-selectors
-// - https://www.npmjs.com/package/sass-vars-to-js
 
 var gulp = require('gulp');
 var glob = require('glob');

@@ -1,7 +1,6 @@
 // -------------------------------------------------------------------
 // :: WATCH
 // -------------------------------------------------------------------
-// - https://www.npmjs.com/package/browser-sync
 
 var gulp = require('gulp');
 var browserSync = require('browser-sync').create();

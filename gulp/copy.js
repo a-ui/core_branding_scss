@@ -1,8 +1,6 @@
 // -------------------------------------------------------------------
 // :: COPY
 // -------------------------------------------------------------------
-// - https://www.npmjs.org/package/gulp-rename
-// - https://www.npmjs.com/package/merge-stream
 
 var gulp = require('gulp');
 var merge = require('ordered-read-streams');
