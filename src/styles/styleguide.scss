@@ -3,11 +3,9 @@
  * -------------------------------------------------------------------
  */
 
+@use 'quarks' as *;
 @use 'sass:math';
 @use 'sass:color';
-
-/* stylelint-disable-next-line no-invalid-position-at-import-rule */
-@use 'quarks' as *;
 
 /**
  * CUSTOM STYLING FOR STYLEGUIDE

@@ -11,7 +11,7 @@ require('./gulp/watch');
 var gulp = require('gulp');
 
 // Start a development server
-gulp.task('server', gulp.series('clean:tmp', gulp.parallel('icon-sprite', 'sass', 'render-templates', 'stylelint'), 'watch'));
+gulp.task('server', gulp.series('clean:tmp', gulp.parallel('icon-sprite', 'sass', 'render-templates'), 'watch'));
 
 // Create a build
 gulp.task('build', gulp.series('clean:dist', gulp.parallel('icon-sprite', 'sass:dist'), 'add-license', 'copy', 'replace:dist'));

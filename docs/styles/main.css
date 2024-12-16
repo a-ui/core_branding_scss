@@ -1,6 +1,6 @@
 @charset "UTF-8";
 /**
- * CORE BRANDING STYLES
+ * ANTWERP CORE BRANDING
  * -------------------------------------------------------------------
  */
 /**
@@ -3306,7 +3306,7 @@ a.a-page-indicator__item:focus:before {
   position: absolute;
   top: 50%;
   transform: translate(-50%, -50%);
-  z-index: layer("top");
+  z-index: 2;
 }
 .a-range-slider__handle:before {
   background-color: var(--range-slider-handle-bg-color);
@@ -4135,16 +4135,16 @@ a.a-page-indicator__item:focus:before {
 }
 .m-button-group > .a-button {
   border-radius: 0;
-  z-index: layer("base");
+  z-index: 1;
 }
 .m-button-group > .a-button:not(.has-icon) {
   width: auto;
 }
 .m-button-group > .a-button:disabled {
-  z-index: layer("auto");
+  z-index: 0;
 }
 .m-button-group > .a-button:focus {
-  z-index: layer("top");
+  z-index: 2;
 }
 .m-button-group > .a-button:first-child {
   border-bottom-left-radius: var(--BORDER-RADIUS);
@@ -4181,7 +4181,7 @@ a.a-page-indicator__item:focus:before {
   margin-right: 0;
 }
 .m-button-group > .a-button--outlined:not(:disabled):hover, .m-button-group > .a-button--outlined:not(:disabled):active, .m-button-group > .a-button--outlined:not(:disabled):focus {
-  z-index: layer("base");
+  z-index: 1;
 }
 
 .m-button-group--vertical {
@@ -4452,7 +4452,7 @@ a.a-page-indicator__item:focus:before {
   border-color: var(--datepicker-highlight-color);
 }
 .m-datepicker__grid-body button:focus {
-  z-index: layer("base");
+  z-index: 1;
 }
 .m-datepicker__grid-body button.is-current {
   border-color: var(--datepicker-border-color);
@@ -4561,7 +4561,7 @@ a.a-page-indicator__item:focus:before {
   position: absolute;
   right: 0;
   top: 100%;
-  z-index: layer("datepicker");
+  z-index: 3;
 }
 
 .m-datepicker--left {
@@ -5196,7 +5196,7 @@ a.a-page-indicator__item:focus:before {
   position: relative;
   text-align: center;
   width: var(--pagination-size);
-  z-index: layer("base");
+  z-index: 1;
 }
 .m-pagination > li > a {
   color: var(--pagination-color);
@@ -5244,10 +5244,10 @@ a.a-page-indicator__item:focus:before {
   width: auto;
 }
 .m-pagination .m-pagination__next {
-  z-index: layer("auto");
+  z-index: 0;
 }
 .m-pagination .m-pagination__prev + .m-pagination__next {
-  z-index: layer("base");
+  z-index: 1;
 }
 
 /**
@@ -5884,7 +5884,7 @@ button.m-tag[aria-pressed=true]:hover, button.m-tag[aria-pressed=true]:active, b
   opacity: 0;
   position: absolute;
   transform: translateY(calc(var(--header-height) * -1));
-  z-index: layer("header");
+  z-index: 9;
 }
 .o-header__button-skip:focus {
   cursor: pointer;

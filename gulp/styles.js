@@ -11,7 +11,6 @@ var autoprefixer = require("autoprefixer");
 var cssnano = require("cssnano");
 var rename = require('gulp-rename');
 var replace = require('gulp-replace');
-var stylelint = require('gulp-stylelint');
 var browserSync = require('browser-sync');
 
 var cssNano = [
@@ -63,17 +62,6 @@ gulp.task('sass:dist', function () {
         .pipe(postcss(cssNano))
         .pipe(sourcemaps.write("./", sourcemapOptions))
         .pipe(gulp.dest('dist'));
-});
-
-gulp.task('stylelint', function () {
-    return gulp
-        .src('src/styles/**/*.scss')
-        .pipe(stylelint({
-            failAfterError: false,
-            reporters: [
-                { formatter: 'verbose', console: false },
-            ]
-        }));
 });
 
 gulp.task('add-license', () => {
