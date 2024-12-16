@@ -4,7 +4,6 @@
 
 var gulp = require('gulp');
 var fs = require('fs');
-
 var replace = require('gulp-replace');
 
 gulp.task('cdn', function (callback) {

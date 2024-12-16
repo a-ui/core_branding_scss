@@ -39,22 +39,21 @@
     "glob": "^7.2.3",
     "gulp": "^5.0.0",
     "gulp-nunjucks": "^5.1.0",
-    "gulp-postcss": "^9.0.1",
+    "gulp-postcss": "^10.0.0",
     "gulp-rename": "^1.4.0",
     "gulp-replace": "^1.1.4",
     "gulp-sass": "^5.1.0",
     "gulp-sourcemaps": "^2.6.5",
     "gulp-stylelint": "^13.0.0",
     "gulp-svg-sprite": "^2.0.3",
-    "list-selectors": "^2.0.1",
     "ordered-read-streams": "^2.0.0",
     "postcss": "^8.4.49",
+    "postcss-selector-parser": "^7.0.0",
     "sass": "^1.82.0",
     "sass-export": "^2.1.2",
     "stylelint": "^13.13.1",
     "stylelint-config-recommended": "^5.0.0",
     "stylelint-config-standard": "^22.0.0",
-    "stylelint-scss": "^3.21.0",
-    "yargs": "^13.3.2"
+    "stylelint-scss": "^3.21.0"
   }
 }

@@ -2,18 +2,17 @@
 // :: SASS
 // -------------------------------------------------------------------
 
-var gulp = require('gulp'),
-    fs = require('fs');
-
-var sass = require('gulp-sass')(require('sass')),
-    sourcemaps = require('gulp-sourcemaps'),
-    postcss = require("gulp-postcss"),
-    autoprefixer = require("autoprefixer"),
-    cssnano = require("cssnano"),
-    rename = require('gulp-rename'),
-    replace = require('gulp-replace'),
-    stylelint = require('gulp-stylelint'),
-    browserSync = require('browser-sync');
+var gulp = require('gulp');
+var fs = require('fs');
+var sass = require('gulp-sass')(require('sass'));
+var sourcemaps = require('gulp-sourcemaps');
+var postcss = require("gulp-postcss");
+var autoprefixer = require("autoprefixer");
+var cssnano = require("cssnano");
+var rename = require('gulp-rename');
+var replace = require('gulp-replace');
+var stylelint = require('gulp-stylelint');
+var browserSync = require('browser-sync');
 
 var cssNano = [
     cssnano({
