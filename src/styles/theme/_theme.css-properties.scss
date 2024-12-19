@@ -1,69 +1,58 @@
 @use 'quarks' as *;
 
 :root {
-  /**
-   * GLOBAL CSS PROPERTIES
-   * -------------------------------------------------------------------
-   */
+  --BRAND-1: var(--brand-1, #{$endeavour-400});
+  --BRAND-1-TINT: var(--brand-1-tint, #{$endeavour-500});
+  --BRAND-1-CONTRAST: var(--brand-1-contrast, #{$white});
+  --BRAND-1-ALT: var(--brand-1-alt, #{$white});
+  --BRAND-1-ALT-TINT: var(--brand-1-alt-tint, #{$endeavour-050});
+  --BRAND-1-ALT-CONTRAST: var(--brand-1-alt-contrast, #{$black});
 
-  /**
-   * THEME COLORS
-   * -------------------------------------------------------------------
-   */
+  --BRAND-2: var(--brand-2, #{$monza-400});
+  --BRAND-2-TINT: var(--brand-2-tint, #{$monza-500});
+  --BRAND-2-CONTRAST: var(--brand-2-contrast, #{$white});
+  --BRAND-2-ALT: var(--brand-2-alt, #{$white});
+  --BRAND-2-ALT-TINT: var(--brand-2-alt-tint, #{$monza-100});
+  --BRAND-2-ALT-CONTRAST: var(--brand-2-alt-contrast, #{$black});
 
-  --THEME1-800:              var(--theme1-800, #{$endeavour-600});
-  --THEME1-700:              var(--theme1-700, #{$endeavour-500});
-  --THEME1-600:              var(--theme1-600, #{$endeavour-400});
-  --THEME1-500:              var(--theme1-500, #{$endeavour-300});
-  --THEME1-400:              var(--theme1-400, #{$endeavour-200});
-  --THEME1-300:              var(--theme1-300, #{$endeavour-100});
-  --THEME1-200:              var(--theme1-200, #{$endeavour-075});
-  --THEME1-100:              var(--theme1-100, #{$endeavour-050});
+  --BRAND-3: var(--brand-3, #{$endeavour-400});
+  --BRAND-3-TINT: var(--brand-3-tint, #{$endeavour-500});
+  --BRAND-3-CONTRAST: var(--brand-3-contrast, #{$white});
+  --BRAND-3-ALT: var(--brand-3-alt, #{$white});
+  --BRAND-3-ALT-TINT: var(--brand-3-alt-tint, #{$endeavour-050});
+  --BRAND-3-ALT-CONTRAST: var(--brand-3-alt-contrast, #{$black});
 
-  --THEME2-800:              var(--theme2-800,);
-  --THEME2-700:              var(--theme2-700,);
-  --THEME2-600:              var(--theme2-600, #{$monza-600});
-  --THEME2-500:              var(--theme2-500, #{$monza-500});
-  --THEME2-400:              var(--theme2-400, #{$monza-400});
-  --THEME2-300:              var(--theme2-300, #{$monza-300});
-  --THEME2-200:              var(--theme2-200, #{$monza-200});
-  --THEME2-100:              var(--theme2-100, #{$monza-100});
+  --STATE-INFO: var(--state-info, #{$endeavour-400});
+  --STATE-INFO-TINT: var(--state-info-tint, #{$endeavour-500});
+  --STATE-INFO-CONTRAST: var(--state-info-contrast, #{$white});
+  --STATE-INFO-ALT: var(--state-info-alt, #{$white});
+  --STATE-INFO-ALT-TINT: var(--state-info-alt-tint, #{$endeavour-050});
+  --STATE-INFO-ALT-CONTRAST: var(--state-info-alt-contrast, #{$black});
 
-  --INFO-800:                var(--info-800, var(--THEME1-800));
-  --INFO-700:                var(--info-700, var(--THEME1-700));
-  --INFO-600:                var(--info-600, var(--THEME1-600));
-  --INFO-500:                var(--info-500, var(--THEME1-500));
-  --INFO-400:                var(--info-400, var(--THEME1-400));
-  --INFO-300:                var(--info-300, var(--THEME1-300));
-  --INFO-200:                var(--info-200, var(--THEME1-200));
-  --INFO-100:                var(--info-100, var(--THEME1-100));
+  --STATE-SUCCESS: var(--state-success, #{$mantis-600});
+  --STATE-SUCCESS-TINT: var(--state-success-tint, #{$mantis-700});
+  --STATE-SUCCESS-CONTRAST: var(--state-success-contrast, #{$white});
+  --STATE-SUCCESS-ALT: var(--state-success-alt, #{$white});
+  --STATE-SUCCESS-ALT-TINT: var(--state-success-alt-tint, #{$mantis-050});
+  --STATE-SUCCESS-ALT-CONTRAST: var(--state-success-alt-contrast, #{$black});
 
-  --SUCCESS-800:             var(--success-800, #{$mantis-700});
-  --SUCCESS-700:             var(--success-700, #{$mantis-600});
-  --SUCCESS-600:             var(--success-600, #{$mantis-500});
-  --SUCCESS-500:             var(--success-500, #{$mantis-400});
-  --SUCCESS-400:             var(--success-400, #{$mantis-300});
-  --SUCCESS-300:             var(--success-300, #{$mantis-200});
-  --SUCCESS-200:             var(--success-200, #{$mantis-100});
-  --SUCCESS-100:             var(--success-100, #{$mantis-050});
+  --STATE-WARNING: var(--state-warning, #{$burnt-orange-400});
+  --STATE-WARNING-TINT: var(--state-warning-tint, #{$burnt-orange-500});
+  --STATE-WARNING-CONTRAST: var(--state-warning-contrast, #{$white});
+  --STATE-WARNING-ALT: var(--state-warning-alt, #{$white});
+  --STATE-WARNING-ALT-TINT: var(--state-warning-alt-tint, #{$burnt-orange-050});
+  --STATE-WARNING-ALT-CONTRAST: var(--state-warning-alt-contrast, #{$black});
 
-  --WARNING-800:             var(--warning-800,);
-  --WARNING-700:             var(--warning-700,);
-  --WARNING-600:             var(--warning-600,);
-  --WARNING-500:             var(--warning-500, #{$burnt-orange-500});
-  --WARNING-400:             var(--warning-400, #{$burnt-orange-400});
-  --WARNING-300:             var(--warning-300,);
-  --WARNING-200:             var(--warning-200,);
-  --WARNING-100:             var(--warning-100, #{$burnt-orange-050});
+  --STATE-DANGER: var(--state-danger, #{$cinnabar-500});
+  --STATE-DANGER-TINT: var(--state-danger-tint, #{$cinnabar-600});
+  --STATE-DANGER-CONTRAST: var(--state-danger-contrast, #{$white});
+  --STATE-DANGER-ALT: var(--state-danger-alt, #{$white});
+  --STATE-DANGER-ALT-TINT: var(--state-danger-alt-tint, #{$cinnabar-050});
+  --STATE-DANGER-ALT-CONTRAST: var(--state-danger-alt-contrast, #{$black});
 
-  --DANGER-800:              var(--danger-800,);
-  --DANGER-700:              var(--danger-700, #{$cinnabar-600});
-  --DANGER-600:              var(--danger-600, #{$cinnabar-500});
-  --DANGER-500:              var(--danger-500, #{$cinnabar-400});
-  --DANGER-400:              var(--danger-400, #{$cinnabar-300});
-  --DANGER-300:              var(--danger-300, #{$cinnabar-200});
-  --DANGER-200:              var(--danger-200, #{$cinnabar-100});
-  --DANGER-100:              var(--danger-100, #{$cinnabar-050});
+  --STATE-DISABLED: var(--state-disabled, #{$gray-100});
+  --STATE-DISABLED-TINT: var(--state-disabled-tint, #{$gray-200});
+  --STATE-DISABLED-CONTRAST: var(--state-disabled-contrast, #{$gray-400});
 
   /**
    * UI COLORS
@@ -85,13 +74,9 @@
   --OVERLAY-COLOR:           var(--overlay-color, #{rgba($black, .75)});
   --BOX-SHADOW-COLOR:        var(--box-shadow-color, #{rgba($gray-600, .12)});
 
-  --LINK-COLOR:              var(--link-color, var(--THEME1-600));
-  --LINK-HOVER-COLOR:        var(--link-hover-color, var(--THEME1-700));
+  --LINK-COLOR:              var(--link-color, var(--BRAND-1));
+  --LINK-HOVER-COLOR:        var(--link-hover-color, var(--BRAND-1-TINT));
 
-  --STATE-INFO:              var(--state-info, var(--INFO-600));
-  --STATE-SUCCESS:           var(--state-success, var(--SUCCESS-700));
-  --STATE-WARNING:           var(--state-warning, var(--WARNING-400));
-  --STATE-DANGER:            var(--state-danger, var(--DANGER-600));
   --STATE-DISABLED:          var(--state-disabled, #{$gray-400});
 
   /**

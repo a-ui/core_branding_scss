@@ -7,11 +7,11 @@
 
 .m-accordion {
   --accordion-header-color:                var(--TEXT-COLOR);
-  --accordion-header-hover-color:          var(--THEME1-600);
+  --accordion-header-hover-color:          var(--BRAND-1);
   --accordion-header-bg-color:             var(--BG-COLOR-LIGHT);
-  --accordion-header-hover-bg-color:       var(--THEME1-100);
+  --accordion-header-hover-bg-color:       var(--BRAND-1-ALT-TINT);
   --accordion-header-border-color:         var(--BORDER-COLOR);
-  --accordion-header-hover-border-color:   var(--THEME1-600);
+  --accordion-header-hover-border-color:   var(--BRAND-1);
 
   --accordion-content-bg-color:            var(--accordion-header-bg-color);
   --accordion-content-border-color:        var(--accordion-header-border-color);

@@ -10,16 +10,16 @@
   --table-bg-color:                     var(--BG-COLOR-LIGHT);
   --table-border-color:                 var(--BORDER-COLOR);
   --table-border-color-light:           var(--BORDER-COLOR-LIGHT);
-  --table-highlight-bg-color:           var(--THEME1-100);
-  --table-highlight-border-color:       var(--THEME1-600);
+  --table-highlight-bg-color:           var(--BRAND-1-ALT-TINT);
+  --table-highlight-border-color:       var(--BRAND-1);
   --table-striped-bg-color:             var(--BG-COLOR);
 
   --table-sort-btn-color:               var(--TEXT-COLOR);
-  --table-sort-btn-active-color:        var(--THEME1-600);
+  --table-sort-btn-active-color:        var(--BRAND-1);
   --table-sort-btn-bg-color:            var(--BG-COLOR-LIGHT);
-  --table-sort-btn-hover-bg-color:      var(--THEME1-100);
+  --table-sort-btn-hover-bg-color:      var(--BRAND-1-ALT-TINT);
   --table-sort-btn-icon-color:          #{$gray-300};
-  --table-sort-btn-icon-active-color:   var(--THEME1-600);
+  --table-sort-btn-icon-active-color:   var(--BRAND-1);
 }
 
 /**

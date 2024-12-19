@@ -57,19 +57,19 @@
 
   &.a-badge--primary {
     --badge-color:            var(--TEXT-COLOR-INVERTED);
-    --badge-bg-color:         var(--THEME1-600);
-    --badge-border-color:     var(--THEME1-600);
+    --badge-bg-color:         var(--BRAND-1);
+    --badge-border-color:     var(--BRAND-1);
 
     &.a-badge--outlined {
-      --badge-color:          var(--THEME1-600);
+      --badge-color:          var(--BRAND-1);
       --badge-bg-color:       var(--BG-COLOR-LIGHT);
-      --badge-border-color:   var(--THEME1-600);
+      --badge-border-color:   var(--BRAND-1);
     }
 
     &.a-badge--transparent {
-      --badge-color:          var(--THEME1-600);
-      --badge-bg-color:       var(--THEME1-100);
-      --badge-border-color:   var(--THEME1-100);
+      --badge-color:          var(--BRAND-1);
+      --badge-bg-color:       var(--BRAND-1-ALT-TINT);
+      --badge-border-color:   var(--BRAND-1-ALT-TINT);
     }
   }
 }

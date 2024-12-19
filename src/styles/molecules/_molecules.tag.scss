@@ -34,9 +34,9 @@
 }
 
 button.m-tag {
-  --tag-color: var(--THEME1-600);
+  --tag-color: var(--BRAND-1);
   --tag-bg-color: var(--BG-COLOR-LIGHT);
-  --tag-border-color: var(--THEME1-600);
+  --tag-border-color: var(--BRAND-1);
 
   cursor: pointer;
   margin: 0;
@@ -45,19 +45,19 @@ button.m-tag {
   &:hover,
   &:active,
   &:focus {
-    --tag-bg-color: var(--THEME1-100);
+    --tag-bg-color: var(--BRAND-1-ALT-TINT);
   }
 
   &[aria-pressed='true'] {
     --tag-color: var(--TEXT-COLOR-INVERTED);
-    --tag-bg-color: var(--THEME1-600);
-    --tag-border-color: var(--THEME1-600);
+    --tag-bg-color: var(--BRAND-1);
+    --tag-border-color: var(--BRAND-1);
 
     &:hover,
     &:active,
     &:focus {
-      --tag-bg-color: var(--THEME1-700);
-      --tag-border-color: var(--THEME1-700);
+      --tag-bg-color: var(--BRAND-1-TINT);
+      --tag-border-color: var(--BRAND-1-TINT);
     }
   }
 }

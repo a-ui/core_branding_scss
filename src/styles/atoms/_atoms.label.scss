@@ -16,11 +16,11 @@
   --label-bg-color:                 transparent;
   --label-border-color:             #{$gray-400};
 
-  --label-primary-color:            var(--THEME1-600);
+  --label-primary-color:            var(--BRAND-1);
   --label-primary-bg-color:         var(--label-bg-color);
   --label-primary-border-color:     var(--label-primary-color);
 
-  --label-success-color:            var(--SUCCESS-700);
+  --label-success-color:            var(--STATE-SUCCESS);
   --label-success-bg-color:         var(--label-bg-color);
   --label-success-border-color:     var(--label-success-color);
 
@@ -28,7 +28,7 @@
   --label-warning-bg-color:         var(--label-bg-color);
   --label-warning-border-color:     var(--label-warning-color);
 
-  --label-danger-color:            var(--DANGER-600);
+  --label-danger-color:            var(--STATE-DANGER);
   --label-danger-bg-color:         var(--label-bg-color);
   --label-danger-border-color:     var(--label-danger-color);
 }

@@ -143,7 +143,7 @@
   position: relative;
 
   &:before {
-    background-color: $brand-primary;
+    background-color: var(--BRAND-1);
     background-repeat: no-repeat;
     content: '';
     height: 1.25rem;
@@ -409,5 +409,10 @@
   .hljs-params,
   .hljs-type {
     color: color.mix($fix-yellow, $black, 95%) !important;
+  }
+
+  .hljs-section,
+  .hljs-title {
+    color: #007299;
   }
 }

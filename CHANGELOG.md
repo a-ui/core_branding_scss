@@ -2,6 +2,28 @@
 
 ## Unreleased
 
+## [7.0.0] - 202x-xx-xx
+
+### Added
+
+- Added the possibility for a third brand color
+
+### Changed
+
+- [BREAKING] Changed color naming to provide a better wat to build up themes
+  - Changed THEME to BRAND
+  - Changed gray to neutral
+- [BREAKING] Added better state colors
+- Optimized font loading by only offering woff2 format which should be enough for all modern browsers
+- Tweaked design of the avatar
+- Tweaked design of the range slider
+
+### Fixed
+
+### Removed
+
+- [BREAKING] Removed all Twitter related components
+
 ## [6.6.6] - 2024-06-20
 
 ### Fixed

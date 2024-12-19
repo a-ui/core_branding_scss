@@ -346,7 +346,7 @@
             <div>
                 <p>Correctly handle z-indexes</p>
                 <div class="m-alert m-alert d-alert">
-                    <p>For all options, see below <a href="#quarks-variables">in the variables section</a>.</p>
+                    <p>All z-index options: 'overlay': 10, 'header': 9, 'statusbar': 8, 'pane': 7, 'pane-overlay': 6, 'tooltip': 5, 'flyout': 4, 'datepicker': 3, 'top': 2, 'base': 1, 'auto': 0, 'cellar': -1.</p>
                 </div>
             </div>
             <div>
@@ -871,24 +871,14 @@
                             <code>$white</code> <strong>#fff</strong></small>
                         </li>
                     
-                        <li class="d-twitter">
-                            <span class="d-color" style="background: #00aced" aria-hidden="true"></span>
-                            <code>$twitter</code> <strong>#00aced</strong></small>
-                        </li>
-                    
-                        <li class="d-twitter-hover">
-                            <span class="d-color" style="background: #00aced" aria-hidden="true"></span>
-                            <code>$twitter-hover</code> <strong>#00aced</strong></small>
-                        </li>
-                    
                         <li class="d-x">
                             <span class="d-color" style="background: #000" aria-hidden="true"></span>
                             <code>$x</code> <strong>#000</strong></small>
                         </li>
                     
                         <li class="d-x-hover">
-                            <span class="d-color" style="background: #000" aria-hidden="true"></span>
-                            <code>$x-hover</code> <strong>#000</strong></small>
+                            <span class="d-color" style="background: #404040" aria-hidden="true"></span>
+                            <code>$x-hover</code> <strong>#404040</strong></small>
                         </li>
                     
                         <li class="d-linkedin">
@@ -1016,7 +1006,7 @@
                 <h4 class="u-margin-top-l">Using custom CSS properties</h4>
                 <p class="u-margin-top-xs">Whether you are using an overridden value or not, always use the capitalized version of the aforementioned CSS custom properties.</p>
                 <pre class="u-margin-top-xs a-pre a-pre--scrollable"><code>.css {
-  background-color: var(--THEME1-600);
+  background-color: var(--BRAND-1);
   color: var(--TEXT-COLOR);
   font-size: var(--FONT-SIZE-BASE);
 }</code></pre>
@@ -4858,7 +4848,8 @@
                 <div class="u-margin-right-xs">
                     <a href="javascript:void(0);">
                         <div class="a-avatar a-avatar--s">
-                            <span class="a-avatar__icon" aria-label="avatarTitle" role="img">
+                            <span class="u-screen-reader-only">avatarTitle</span>
+                            <span class="a-avatar__icon" role="img">
                                 <span class="ai" aria-hidden="true"><svg><use href="./images/ai.svg#ai-single-neutral"></svg></span>
                             </span>
                         </div>
@@ -4868,7 +4859,8 @@
                 <div class="u-margin-right-xs">
                     <a href="javascript:void(0);">
                         <div class="a-avatar">
-                            <span class="a-avatar__icon" aria-label="avatarTitle" role="img">
+                            <span class="u-screen-reader-only">avatarTitle</span>
+                            <span class="a-avatar__icon" role="img">
                                 <span class="ai" aria-hidden="true"><svg><use href="./images/ai.svg#ai-single-neutral"></svg></span>
                             </span>
                         </div>
@@ -4877,7 +4869,8 @@
 
                 <a href="javascript:void(0);">
                     <div class="a-avatar a-avatar--l">
-                        <span class="a-avatar__icon" aria-label="avatarTitle" role="img">
+                        <span class="u-screen-reader-only">avatarTitle</span>
+                        <span class="a-avatar__icon" role="img">
                             <span class="ai" aria-hidden="true"><svg><use href="./images/ai.svg#ai-single-neutral"></svg></span>
                         </span>
                     </div>
@@ -4887,6 +4880,7 @@
             <div>
                 <pre class="a-pre a-pre--scrollable"><code>&lt;a href="#"&gt;
   &lt;div class="a-avatar"&gt;
+    &lt;span class="u-screen-reader-only"&gt;avatarTitle&lt;/span&gt;
     &lt;span class="a-avatar__icon" aria-label="avatarTitle" role="img"&gt;
       &lt;span class="ai" aria-hidden="true"&gt;&lt;svg&gt;&lt;use href="https://cdn.antwerpen.be/core_branding_scss/6.6.6/assets/images/ai.svg#ai-single-neutral" /&gt;&lt;/svg&gt;&lt;/span&gt;
     &lt;/span&gt;
@@ -4968,7 +4962,8 @@
                 <div class="u-margin-right-xs">
                     <a href="javascript:void(0);">
                         <div class="a-avatar a-avatar--rounded">
-                            <span class="a-avatar__icon" aria-label="avatarTitle" role="img">
+                            <span class="u-screen-reader-only">avatarTitle</span>
+                            <span class="a-avatar__icon" role="img">
                                 <span class="ai" aria-hidden="true"><svg><use href="./images/ai.svg#ai-single-neutral"></svg></span>
                             </span>
                         </div>
@@ -9743,7 +9738,7 @@
             <div>
                 <div class="m-card">
                     <div class="m-card__image">
-                        <img src="https://source.unsplash.com/collection/54002680/1000x500" alt="Card image.">
+                        <img src="https://picsum.photos/id/223/1000/500" alt="Card image.">
                     </div>
                     <div class="m-card__body">
                         <h4 id="card-title" class="h5 u-margin-bottom-xs">Aeneis</h4>
@@ -9760,7 +9755,7 @@
             <div>
                 <pre class="a-pre a-pre--scrollable"><code>&lt;div class="m-card"&gt;
   &lt;div class="m-card__image"&gt;
-    &lt;img src="https://source.unsplash.com/collection/54002680/1000x500" alt="Card image."&gt;
+    &lt;img src="https://picsum.photos/id/223/1000/500" alt="Card image."&gt;
   &lt;/div&gt;
   &lt;div class="m-card__body"&gt;
     &lt;h4 id="card-title" class="h5 u-margin-bottom-xs"&gt;Aeneis&lt;/h4&gt;
@@ -10602,19 +10597,19 @@
         <div class="d">
             <div>
                 <figure class="m-image">
-                    <img src="https://source.unsplash.com/collection/54002680/1000x500" alt="Figure image.">
+                    <img src="https://picsum.photos/id/223/1000/500" alt="Figure image.">
                 </figure>
             </div>
             <div>
                 <pre class="a-pre a-pre--scrollable"><code>&lt;figure class="m-image"&gt;
-  &lt;img src="https://source.unsplash.com/collection/54002680/1000x500" alt="Figure image."&gt;
+  &lt;img src="https://picsum.photos/id/223/1000/500" alt="Figure image."&gt;
 &lt;/figure&gt;</code></pre>
             </div>
         </div>
         <div class="d">
             <div>
                 <figure class="m-image">
-                    <img src="https://source.unsplash.com/collection/54002680/1000x500" alt="Figure image.">
+                    <img src="https://picsum.photos/id/223/1000/500" alt="Figure image.">
                     <a href="javascript:void(0);" class="m-image__copyright a-copyright">
                         <span class="a-copyright__sign">©</span>
                         <span class="a-copyright__label">Unsplash</span>
@@ -10623,7 +10618,7 @@
             </div>
             <div>
                 <pre class="a-pre a-pre--scrollable"><code>&lt;figure class="m-image"&gt;
-  &lt;img src="https://source.unsplash.com/collection/54002680/1000x500" alt="Figure image."&gt;
+  &lt;img src="https://picsum.photos/id/223/1000/500" alt="Figure image."&gt;
   &lt;a href="#" class="m-image__copyright a-copyright"&gt;
     &lt;span class="a-copyright__sign"&gt;&copy;&lt;/span&gt;
     &lt;span class="a-copyright__label"&gt;Unsplash&lt;/span&gt;
@@ -11554,7 +11549,7 @@
                             <figure class="o-slideshow__slide is-active">
                                 <div class="o-slideshow__image">
                                     <div class="m-image">
-                                        <img src="https://source.unsplash.com/collection/54002680/1000x500" alt="Slideshow image 1.">
+                                        <img src="https://picsum.photos/id/223/1000/500" alt="Slideshow image 1.">
                                         <a href="javascript:void(0);" class="m-image__copyright a-copyright">
                                             <div class="a-copyright__sign">©</div>
                                             <span class="a-copyright__label">Unsplash</span>
@@ -11565,7 +11560,7 @@
                             <figure class="o-slideshow__slide">
                                 <div class="o-slideshow__image">
                                     <div class="m-image">
-                                        <img src="https://source.unsplash.com/collection/54002680/1000x500" alt="Slideshow image 2.">
+                                        <img src="https://picsum.photos/id/223/1000/500" alt="Slideshow image 2.">
                                         <a href="javascript:void(0);" class="m-image__copyright a-copyright">
                                             <div class="a-copyright__sign">©</div>
                                             <span class="a-copyright__label">Unsplash</span>
@@ -11576,7 +11571,7 @@
                             <figure class="o-slideshow__slide">
                                 <div class="o-slideshow__image">
                                     <div class="m-image">
-                                        <img src="https://source.unsplash.com/collection/54002680/1000x500" alt="Slideshow image 3.">
+                                        <img src="https://picsum.photos/id/223/1000/500" alt="Slideshow image 3.">
                                         <a href="javascript:void(0);" class="m-image__copyright a-copyright">
                                             <div class="a-copyright__sign">©</div>
                                             <span class="a-copyright__label">Unsplash</span>
@@ -11607,7 +11602,7 @@
       &lt;figure class="o-slideshow__slide is-active"&gt;
         &lt;div class="o-slideshow__image"&gt;
           &lt;div class="m-image"&gt;
-            &lt;img src="https://source.unsplash.com/collection/54002680/1000x500" alt="Slideshow image 1."&gt;
+            &lt;img src="https://picsum.photos/id/223/1000/500" alt="Slideshow image 1."&gt;
             &lt;a href="#" class="m-image__copyright a-copyright"&gt;
               &lt;div class="a-copyright__sign"&gt;©&lt;/div&gt;
               &lt;span class="a-copyright__label"&gt;Unsplash&lt;/span&gt;
@@ -11618,7 +11613,7 @@
       &lt;figure class="o-slideshow__slide"&gt;
         &lt;div class="o-slideshow__image"&gt;
           &lt;div class="m-image"&gt;
-            &lt;img src="https://source.unsplash.com/collection/54002680/1000x500" alt="Slideshow image 2."&gt;
+            &lt;img src="https://picsum.photos/id/223/1000/500" alt="Slideshow image 2."&gt;
             &lt;a href="#" class="m-image__copyright a-copyright"&gt;
               &lt;div class="a-copyright__sign"&gt;©&lt;/div&gt;
               &lt;span class="a-copyright__label"&gt;Unsplash&lt;/span&gt;
@@ -11629,7 +11624,7 @@
       &lt;figure class="o-slideshow__slide"&gt;
         &lt;div class="o-slideshow__image"&gt;
           &lt;div class="m-image"&gt;
-            &lt;img src="https://source.unsplash.com/collection/54002680/1000x500" alt="Slideshow image 3."&gt;
+            &lt;img src="https://picsum.photos/id/223/1000/500" alt="Slideshow image 3."&gt;
             &lt;a href="#" class="m-image__copyright a-copyright"&gt;
               &lt;div class="a-copyright__sign"&gt;©&lt;/div&gt;
               &lt;span class="a-copyright__label"&gt;Unsplash&lt;/span&gt;
@@ -11670,7 +11665,7 @@
                                         <figure class="o-slideshow__slide is-active">
                                             <div class="o-slideshow__image">
                                                 <div class="m-image">
-                                                    <img src="https://source.unsplash.com/collection/54002680/1900x950" alt="Slideshow image 1.">
+                                                    <img src="https://picsum.photos/id/223/1900/950" alt="Slideshow image 1.">
                                                     <a href="javascript:void(0);" class="m-image__copyright a-copyright">
                                                         <span class="a-copyright__sign">©</span>
                                                         <span class="a-copyright__label">Unsplash</span>
@@ -11681,7 +11676,7 @@
                                         <figure class="o-slideshow__slide">
                                             <div class="o-slideshow__image">
                                                 <div class="m-image">
-                                                    <img src="https://source.unsplash.com/collection/54002680/1000x500" alt="Slideshow image 2.">
+                                                    <img src="https://picsum.photos/id/223/1000/500" alt="Slideshow image 2.">
                                                     <a href="javascript:void(0);" class="m-image__copyright a-copyright">
                                                         <span class="a-copyright__sign">©</span>
                                                         <span class="a-copyright__label">Unsplash</span>
@@ -11692,7 +11687,7 @@
                                         <figure class="o-slideshow__slide">
                                             <div class="o-slideshow__image">
                                                 <div class="m-image">
-                                                    <img src="https://source.unsplash.com/collection/54002680/1000x500"
+                                                    <img src="https://picsum.photos/id/223/1000/500"
                                                             alt="Slideshow image 3.">
                                                     <a href="javascript:void(0);" class="m-image__copyright a-copyright">
                                                         <span class="a-copyright__sign">©</span>
@@ -11729,7 +11724,7 @@
         &lt;figure class="o-slideshow__slide is-active"&gt;
           &lt;div class="o-slideshow__image"&gt;
             &lt;div class="m-image"&gt;
-              &lt;img src="https://source.unsplash.com/collection/54002680/1000x500" alt="Slideshow image 1."&gt;
+              &lt;img src="https://picsum.photos/id/223/1000/500" alt="Slideshow image 1."&gt;
               &lt;a href="#" class="m-image__copyright a-copyright"&gt;
                 &lt;div class="a-copyright__sign"&gt;©&lt;/div&gt;
                 &lt;span class="a-copyright__label"&gt;Unsplash&lt;/span&gt;
@@ -11740,7 +11735,7 @@
         &lt;figure class="o-slideshow__slide"&gt;
           &lt;div class="o-slideshow__image"&gt;
             &lt;div class="m-image"&gt;
-              &lt;img src="https://source.unsplash.com/collection/54002680/1000x500" alt="Slideshow image 2."&gt;
+              &lt;img src="https://picsum.photos/id/223/1000/500" alt="Slideshow image 2."&gt;
               &lt;a href="#" class="m-image__copyright a-copyright"&gt;
                 &lt;div class="a-copyright__sign"&gt;©&lt;/div&gt;
                 &lt;span class="a-copyright__label"&gt;Unsplash&lt;/span&gt;
@@ -11751,7 +11746,7 @@
         &lt;figure class="o-slideshow__slide"&gt;
           &lt;div class="o-slideshow__image"&gt;
             &lt;div class="m-image"&gt;
-              &lt;img src="https://source.unsplash.com/collection/54002680/1000x500" alt="Slideshow image 3."&gt;
+              &lt;img src="https://picsum.photos/id/223/1000/500" alt="Slideshow image 3."&gt;
               &lt;a href="#" class="m-image__copyright a-copyright"&gt;
                 &lt;div class="a-copyright__sign"&gt;©&lt;/div&gt;
                 &lt;span class="a-copyright__label"&gt;Unsplash&lt;/span&gt;

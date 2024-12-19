@@ -46,14 +46,6 @@ $state-danger:            $danger-500 !default;
 $state-disabled:          $gray-400 !default;
 
 /**
- * DEPRECATED THEME COLORS
- * -------------------------------------------------------------------
- */
-
-$brand-primary:           $theme1-400 !default;
-$brand-secondary:         $monza-400 !default;
-
-/**
  * OTHER THEME COLORS
  * -------------------------------------------------------------------
  */
@@ -68,7 +60,7 @@ $background-color-light:  $gray-100 !default;
 $border-color:            $gray-400 !default;
 $border-color-light:      $gray-300 !default;
 
-$selection-color:         color.mix($brand-primary, $white, 20%) !default;
+$selection-color:         color.mix($endeavour-400, $white, 20%) !default;
 
 /**
  * SPACERS

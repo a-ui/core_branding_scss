@@ -65,13 +65,10 @@
  * -------------------------------------------------------------------
  * Collection of social branding colors
  * Also see https://mdigi.tools/darken-color/
+ * We used 25%
  */
 /**
  * THEME COLORS
- * -------------------------------------------------------------------
- */
-/**
- * DEPRECATED THEME COLORS
  * -------------------------------------------------------------------
  */
 /**
@@ -291,7 +288,7 @@
   position: relative;
 }
 .m-alert--wcag:before {
-  background-color: #0057b7;
+  background-color: var(--BRAND-1);
   background-repeat: no-repeat;
   content: "";
   height: 1.25rem;
@@ -535,4 +532,8 @@
 .hljs .hljs-params,
 .hljs .hljs-type {
   color: rgb(161.5, 88.35, 0) !important;
+}
+.hljs .hljs-section,
+.hljs .hljs-title {
+  color: #007299;
 }

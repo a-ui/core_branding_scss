@@ -75,13 +75,10 @@
  * -------------------------------------------------------------------
  * Collection of social branding colors
  * Also see https://mdigi.tools/darken-color/
+ * We used 25%
  */
 /**
  * THEME COLORS
- * -------------------------------------------------------------------
- */
-/**
- * DEPRECATED THEME COLORS
  * -------------------------------------------------------------------
  */
 /**
@@ -164,62 +161,51 @@
  * Leave here for renderer
  */
 :root {
-  /**
-   * GLOBAL CSS PROPERTIES
-   * -------------------------------------------------------------------
-   */
-  /**
-   * THEME COLORS
-   * -------------------------------------------------------------------
-   */
-  --THEME1-800: var(--theme1-800, #002855);
-  --THEME1-700: var(--theme1-700, #003865);
-  --THEME1-600: var(--theme1-600, #0057b7);
-  --THEME1-500: var(--theme1-500, #009cde);
-  --THEME1-400: var(--theme1-400, #41b6e6);
-  --THEME1-300: var(--theme1-300, #99d6ea);
-  --THEME1-200: var(--theme1-200, #96b5e4);
-  --THEME1-100: var(--theme1-100, #e0ebf6);
-  --THEME2-800: var(--theme2-800,);
-  --THEME2-700: var(--theme2-700,);
-  --THEME2-600: var(--theme2-600, #7c2629);
-  --THEME2-500: var(--theme2-500, #862633);
-  --THEME2-400: var(--theme2-400, #cf0039);
-  --THEME2-300: var(--theme2-300, #df4661);
-  --THEME2-200: var(--theme2-200, #ffb1bb);
-  --THEME2-100: var(--theme2-100, #f5dadf);
-  --INFO-800: var(--info-800, var(--THEME1-800));
-  --INFO-700: var(--info-700, var(--THEME1-700));
-  --INFO-600: var(--info-600, var(--THEME1-600));
-  --INFO-500: var(--info-500, var(--THEME1-500));
-  --INFO-400: var(--info-400, var(--THEME1-400));
-  --INFO-300: var(--info-300, var(--THEME1-300));
-  --INFO-200: var(--info-200, var(--THEME1-200));
-  --INFO-100: var(--info-100, var(--THEME1-100));
-  --SUCCESS-800: var(--success-800, #004721);
-  --SUCCESS-700: var(--success-700, #006e33);
-  --SUCCESS-600: var(--success-600, #4c8d2b);
-  --SUCCESS-500: var(--success-500, #6cc24a);
-  --SUCCESS-400: var(--success-400, #97d700);
-  --SUCCESS-300: var(--success-300, #bce194);
-  --SUCCESS-200: var(--success-200, #d0debb);
-  --SUCCESS-100: var(--success-100, #edf8e9);
-  --WARNING-800: var(--warning-800,);
-  --WARNING-700: var(--warning-700,);
-  --WARNING-600: var(--warning-600,);
-  --WARNING-500: var(--warning-500, #8f3400);
-  --WARNING-400: var(--warning-400, #ce4c00);
-  --WARNING-300: var(--warning-300,);
-  --WARNING-200: var(--warning-200,);
-  --WARNING-100: var(--warning-100, #ffe4d6);
-  --DANGER-800: var(--danger-800,);
-  --DANGER-700: var(--danger-700, #7c2629);
-  --DANGER-600: var(--danger-600, #af272f);
-  --DANGER-500: var(--danger-500, #e03c31);
-  --DANGER-400: var(--danger-400, #e56a54);
-  --DANGER-300: var(--danger-300, #e6baa8);
-  --DANGER-200: var(--danger-200, #f3cfb3);
-  --DANGER-100: var(--danger-100, #fbe8e6);
+  --BRAND-1: var(--brand-1, #0057b7);
+  --BRAND-1-TINT: var(--brand-1-tint, #003865);
+  --BRAND-1-CONTRAST: var(--brand-1-contrast, #fff);
+  --BRAND-1-ALT: var(--brand-1-alt, #fff);
+  --BRAND-1-ALT-TINT: var(--brand-1-alt-tint, #e0ebf6);
+  --BRAND-1-ALT-CONTRAST: var(--brand-1-alt-contrast, #000);
+  --BRAND-2: var(--brand-2, #cf0039);
+  --BRAND-2-TINT: var(--brand-2-tint, #862633);
+  --BRAND-2-CONTRAST: var(--brand-2-contrast, #fff);
+  --BRAND-2-ALT: var(--brand-2-alt, #fff);
+  --BRAND-2-ALT-TINT: var(--brand-2-alt-tint, #f5dadf);
+  --BRAND-2-ALT-CONTRAST: var(--brand-2-alt-contrast, #000);
+  --BRAND-3: var(--brand-3, #0057b7);
+  --BRAND-3-TINT: var(--brand-3-tint, #003865);
+  --BRAND-3-CONTRAST: var(--brand-3-contrast, #fff);
+  --BRAND-3-ALT: var(--brand-3-alt, #fff);
+  --BRAND-3-ALT-TINT: var(--brand-3-alt-tint, #e0ebf6);
+  --BRAND-3-ALT-CONTRAST: var(--brand-3-alt-contrast, #000);
+  --STATE-INFO: var(--state-info, #0057b7);
+  --STATE-INFO-TINT: var(--state-info-tint, #003865);
+  --STATE-INFO-CONTRAST: var(--state-info-contrast, #fff);
+  --STATE-INFO-ALT: var(--state-info-alt, #fff);
+  --STATE-INFO-ALT-TINT: var(--state-info-alt-tint, #e0ebf6);
+  --STATE-INFO-ALT-CONTRAST: var(--state-info-alt-contrast, #000);
+  --STATE-SUCCESS: var(--state-success, #006e33);
+  --STATE-SUCCESS-TINT: var(--state-success-tint, #004721);
+  --STATE-SUCCESS-CONTRAST: var(--state-success-contrast, #fff);
+  --STATE-SUCCESS-ALT: var(--state-success-alt, #fff);
+  --STATE-SUCCESS-ALT-TINT: var(--state-success-alt-tint, #edf8e9);
+  --STATE-SUCCESS-ALT-CONTRAST: var(--state-success-alt-contrast, #000);
+  --STATE-WARNING: var(--state-warning, #ce4c00);
+  --STATE-WARNING-TINT: var(--state-warning-tint, #8f3400);
+  --STATE-WARNING-CONTRAST: var(--state-warning-contrast, #fff);
+  --STATE-WARNING-ALT: var(--state-warning-alt, #fff);
+  --STATE-WARNING-ALT-TINT: var(--state-warning-alt-tint, #ffe4d6);
+  --STATE-WARNING-ALT-CONTRAST: var(--state-warning-alt-contrast, #000);
+  --STATE-DANGER: var(--state-danger, #af272f);
+  --STATE-DANGER-TINT: var(--state-danger-tint, #7c2629);
+  --STATE-DANGER-CONTRAST: var(--state-danger-contrast, #fff);
+  --STATE-DANGER-ALT: var(--state-danger-alt, #fff);
+  --STATE-DANGER-ALT-TINT: var(--state-danger-alt-tint, #fbe8e6);
+  --STATE-DANGER-ALT-CONTRAST: var(--state-danger-alt-contrast, #000);
+  --STATE-DISABLED: var(--state-disabled, #f3f3f3);
+  --STATE-DISABLED-TINT: var(--state-disabled-tint, #d8d8d8);
+  --STATE-DISABLED-CONTRAST: var(--state-disabled-contrast, #6f6f6f);
   /**
    * UI COLORS
    * -------------------------------------------------------------------
@@ -235,12 +221,8 @@
   --BORDER-COLOR-LIGHT: var(--border-color-light, #d8d8d8);
   --OVERLAY-COLOR: var(--overlay-color, rgba(0, 0, 0, 0.75));
   --BOX-SHADOW-COLOR: var(--box-shadow-color, rgba(20, 20, 20, 0.12));
-  --LINK-COLOR: var(--link-color, var(--THEME1-600));
-  --LINK-HOVER-COLOR: var(--link-hover-color, var(--THEME1-700));
-  --STATE-INFO: var(--state-info, var(--INFO-600));
-  --STATE-SUCCESS: var(--state-success, var(--SUCCESS-700));
-  --STATE-WARNING: var(--state-warning, var(--WARNING-400));
-  --STATE-DANGER: var(--state-danger, var(--DANGER-600));
+  --LINK-COLOR: var(--link-color, var(--BRAND-1));
+  --LINK-HOVER-COLOR: var(--link-hover-color, var(--BRAND-1-TINT));
   --STATE-DISABLED: var(--state-disabled, #6f6f6f);
   /**
    * SPACERS
@@ -368,42 +350,42 @@
   font-family: "Antwerpen Small";
   font-style: normal;
   font-weight: 500;
-  src: url("../fonts/AntwerpenSmallCaps-Regular.woff") format("woff"), url("../fonts/AntwerpenSmallCaps-Regular.woff2") format("woff2");
+  src: url("../fonts/AntwerpenSmallCaps-Regular.woff2") format("woff2");
 }
 @font-face {
   font-display: swap;
   font-family: "Antwerpen Small";
   font-style: normal;
   font-weight: 700;
-  src: url("../fonts/AntwerpenSmallCaps-Regular.woff") format("woff"), url("../fonts/AntwerpenSmallCaps-Regular.woff2") format("woff2");
+  src: url("../fonts/AntwerpenSmallCaps-Regular.woff2") format("woff2");
 }
 @font-face {
   font-display: swap;
   font-family: "Antwerpen Regular";
   font-style: normal;
   font-weight: 500;
-  src: url("../fonts/Antwerpen-Regular.woff") format("woff"), url("../fonts/Antwerpen-Regular.woff2") format("woff2");
+  src: url("../fonts/Antwerpen-Regular.woff2") format("woff2");
 }
 @font-face {
   font-display: swap;
   font-family: "Antwerpen Regular";
   font-style: normal;
   font-weight: 700;
-  src: url("../fonts/Antwerpen-Regular.woff") format("woff"), url("../fonts/Antwerpen-Regular.woff2") format("woff2");
+  src: url("../fonts/Antwerpen-Regular.woff2") format("woff2");
 }
 @font-face {
   font-display: swap;
   font-family: "Antwerpen Tall";
   font-style: normal;
   font-weight: 500;
-  src: url("../fonts/AntwerpenTall-Tall.woff") format("woff"), url("../fonts/AntwerpenTall-Tall.woff2") format("woff2");
+  src: url("../fonts/AntwerpenTall-Tall.woff2") format("woff2");
 }
 @font-face {
   font-display: swap;
   font-family: "Antwerpen Tall";
   font-style: normal;
   font-weight: 700;
-  src: url("../fonts/AntwerpenTall-Tall.woff") format("woff"), url("../fonts/AntwerpenTall-Tall.woff2") format("woff2");
+  src: url("../fonts/AntwerpenTall-Tall.woff2") format("woff2");
 }
 /**
  * SUN ANTWERPEN FONT
@@ -414,56 +396,56 @@
   font-family: "Sun Antwerpen";
   font-style: normal;
   font-weight: 300;
-  src: url("../fonts/SunAntwerpen_300.woff") format("woff"), url("../fonts/SunAntwerpen_300.woff2") format("woff2");
+  src: url("../fonts/SunAntwerpen_300.woff2") format("woff2");
 }
 @font-face {
   font-display: swap;
   font-family: "Sun Antwerpen";
   font-style: italic;
   font-weight: 300;
-  src: url("../fonts/SunAntwerpen_300_italic.woff") format("woff"), url("../fonts/SunAntwerpen_300_italic.woff2") format("woff2");
+  src: url("../fonts/SunAntwerpen_300_italic.woff2") format("woff2");
 }
 @font-face {
   font-display: swap;
   font-family: "Sun Antwerpen";
   font-style: normal;
   font-weight: 500;
-  src: url("../fonts/SunAntwerpen_500.woff") format("woff"), url("../fonts/SunAntwerpen_500.woff2") format("woff2");
+  src: url("../fonts/SunAntwerpen_500.woff2") format("woff2");
 }
 @font-face {
   font-display: swap;
   font-family: "Sun Antwerpen";
   font-style: italic;
   font-weight: 500;
-  src: url("../fonts/SunAntwerpen_500_italic.woff") format("woff"), url("../fonts/SunAntwerpen_500_italic.woff2") format("woff2");
+  src: url("../fonts/SunAntwerpen_500_italic.woff2") format("woff2");
 }
 @font-face {
   font-display: swap;
   font-family: "Sun Antwerpen";
   font-style: normal;
   font-weight: 700;
-  src: url("../fonts/SunAntwerpen_700.woff") format("woff"), url("../fonts/SunAntwerpen_700.woff2") format("woff2");
+  src: url("../fonts/SunAntwerpen_700.woff2") format("woff2");
 }
 @font-face {
   font-display: swap;
   font-family: "Sun Antwerpen";
   font-style: italic;
   font-weight: 700;
-  src: url("../fonts/SunAntwerpen_700_italic.woff") format("woff"), url("../fonts/SunAntwerpen_700_italic.woff2") format("woff2");
+  src: url("../fonts/SunAntwerpen_700_italic.woff2") format("woff2");
 }
 @font-face {
   font-display: swap;
   font-family: "Sun Antwerpen";
   font-style: normal;
   font-weight: 800;
-  src: url("../fonts/SunAntwerpen_800.woff") format("woff"), url("../fonts/SunAntwerpen_800.woff2") format("woff2");
+  src: url("../fonts/SunAntwerpen_800.woff2") format("woff2");
 }
 @font-face {
   font-display: swap;
   font-family: "Sun Antwerpen";
   font-style: italic;
   font-weight: 800;
-  src: url("../fonts/SunAntwerpen_800_italic.woff") format("woff"), url("../fonts/SunAntwerpen_800_italic.woff2") format("woff2");
+  src: url("../fonts/SunAntwerpen_800_italic.woff2") format("woff2");
 }
 /**
  * ICONS
@@ -703,7 +685,7 @@ blockquote p {
   font-family: var(--FONT-FAMILY-HEADINGS);
 }
 blockquote cite {
-  color: var(--THEME2-400);
+  color: var(--BRAND-2);
   display: inline-block;
   font-style: normal;
   line-height: var(--LINE-HEIGHT-HEADING);
@@ -727,7 +709,7 @@ small,
  * -------------------------------------------------------------------
  */
 mark {
-  background-color: var(--THEME1-600);
+  background-color: var(--BRAND-1);
   color: var(--TEXT-COLOR-INVERTED);
   padding: 0 0.125rem;
 }
@@ -775,11 +757,11 @@ a:hover, a:active, a:focus {
 }
 
 .u-bg-primary {
-  background-color: var(--THEME1-600);
+  background-color: var(--BRAND-1);
 }
 
 .u-bg-secondary {
-  background-color: var(--THEME2-400);
+  background-color: var(--BRAND-2);
 }
 
 .u-bg-success {
@@ -1205,11 +1187,11 @@ a:hover, a:active, a:focus {
  * -------------------------------------------------------------------
  */
 .u-text-primary {
-  color: var(--THEME1-600);
+  color: var(--BRAND-1);
 }
 
 .u-text-secondary {
-  color: var(--THEME2-400);
+  color: var(--BRAND-2);
 }
 
 .u-text-success {
@@ -1257,10 +1239,10 @@ a:hover, a:active, a:focus {
   --avatar-color: var(--TEXT-COLOR-LIGHT);
   --avatar-bg-color: var(--BG-COLOR-LIGHT);
   --avatar-hover-bg-color: var(--BG-COLOR);
-  --avatar-primary-color: var(--THEME1-600);
-  --avatar-primary-hover-color: var(--THEME1-700);
-  --avatar-primary-bg-color: var(--THEME1-100);
-  --avatar-primary-hover-bg-color: var(--THEME1-200);
+  --avatar-primary-color: var(--BRAND-1);
+  --avatar-primary-hover-color: var(--BRAND-1-TINT);
+  --avatar-primary-bg-color: var(--BRAND-1-ALT);
+  --avatar-primary-hover-bg-color: var(--BRAND-1-ALT-TINT);
   --avatar-size-s: var(--shared-avatar-size-s);
   --avatar-icon-size-s: 1rem;
   --avatar-size: var(--shared-avatar-size);
@@ -1285,7 +1267,7 @@ a:hover, a:active, a:focus {
   position: relative;
   text-align: center;
   text-decoration: none;
-  transition: background-color var(--ANIMATION-NORMAL);
+  transition: background-color var(--ANIMATION-NORMAL), color var(--ANIMATION-NORMAL);
   width: var(--avatar-size);
 }
 .a-avatar img {
@@ -1418,18 +1400,18 @@ a:hover .a-avatar.a-avatar--primary, a:active .a-avatar.a-avatar--primary, a:foc
 }
 .a-badge.a-badge--primary {
   --badge-color: var(--TEXT-COLOR-INVERTED);
-  --badge-bg-color: var(--THEME1-600);
-  --badge-border-color: var(--THEME1-600);
+  --badge-bg-color: var(--BRAND-1);
+  --badge-border-color: var(--BRAND-1);
 }
 .a-badge.a-badge--primary.a-badge--outlined {
-  --badge-color: var(--THEME1-600);
+  --badge-color: var(--BRAND-1);
   --badge-bg-color: var(--BG-COLOR-LIGHT);
-  --badge-border-color: var(--THEME1-600);
+  --badge-border-color: var(--BRAND-1);
 }
 .a-badge.a-badge--primary.a-badge--transparent {
-  --badge-color: var(--THEME1-600);
-  --badge-bg-color: var(--THEME1-100);
-  --badge-border-color: var(--THEME1-100);
+  --badge-color: var(--BRAND-1);
+  --badge-bg-color: var(--BRAND-1-ALT-TINT);
+  --badge-border-color: var(--BRAND-1-ALT-TINT);
 }
 
 /**
@@ -1498,8 +1480,8 @@ a:hover .a-avatar.a-avatar--primary, a:active .a-avatar.a-avatar--primary, a:foc
 .a-button {
   --btn-color: var(--TEXT-COLOR-INVERTED);
   --btn-hover-color: var(--btn-color);
-  --btn-bg-color: var(--THEME1-600);
-  --btn-hover-bg-color: var(--THEME1-700);
+  --btn-bg-color: var(--BRAND-1);
+  --btn-hover-bg-color: var(--BRAND-1-TINT);
   --btn-border-color: var(--btn-bg-color);
   --btn-hover-border-color: var(--btn-hover-bg-color);
   --btn-neutral-color: var(--TEXT-COLOR-INVERTED);
@@ -1510,26 +1492,26 @@ a:hover .a-avatar.a-avatar--primary, a:active .a-avatar.a-avatar--primary, a:foc
   --btn-neutral-hover-border-color: var(--btn-neutral-hover-bg-color);
   --btn-secondary-color: var(--TEXT-COLOR-INVERTED);
   --btn-secondary-hover-color: var(--btn-secondary-color);
-  --btn-secondary-bg-color: var(--THEME2-400);
-  --btn-secondary-hover-bg-color: var(--THEME2-500);
+  --btn-secondary-bg-color: var(--BRAND-2);
+  --btn-secondary-hover-bg-color: var(--BRAND-2-TINT);
   --btn-secondary-border-color: var(--btn-secondary-bg-color);
   --btn-secondary-hover-border-color: var(--btn-secondary-hover-bg-color);
   --btn-success-color: var(--TEXT-COLOR-INVERTED);
   --btn-success-hover-color: var(--btn-success-color);
-  --btn-success-bg-color: var(--SUCCESS-700);
-  --btn-success-hover-bg-color: var(--SUCCESS-800);
+  --btn-success-bg-color: var(--STATE-SUCCESS);
+  --btn-success-hover-bg-color: var(--STATE-SUCCESS-TINT);
   --btn-success-border-color: var(--btn-success-bg-color);
   --btn-success-hover-border-color: var(--btn-success-hover-bg-color);
   --btn-warning-color: var(--TEXT-COLOR-INVERTED);
   --btn-warning-hover-color: var(--btn-warning-color);
-  --btn-warning-bg-color: var(--WARNING-400);
-  --btn-warning-hover-bg-color: var(--WARNING-500);
+  --btn-warning-bg-color: var(--STATE-WARNING);
+  --btn-warning-hover-bg-color: var(--STATE-WARNING-TINT);
   --btn-warning-border-color: var(--btn-warning-bg-color);
   --btn-warning-hover-border-color: var(--btn-warning-hover-bg-color);
   --btn-danger-color: var(--TEXT-COLOR-INVERTED);
   --btn-danger-hover-color: var(--btn-danger-color);
-  --btn-danger-bg-color: var(--DANGER-600);
-  --btn-danger-hover-bg-color: var(--DANGER-700);
+  --btn-danger-bg-color: var(--STATE-DANGER);
+  --btn-danger-hover-bg-color: var(--STATE-DANGER-TINT);
   --btn-danger-border-color: var(--btn-danger-bg-color);
   --btn-danger-hover-border-color: var(--btn-danger-hover-bg-color);
   --btn-disabled-color: var(--STATE-DISABLED);
@@ -1538,10 +1520,10 @@ a:hover .a-avatar.a-avatar--primary, a:active .a-avatar.a-avatar--primary, a:foc
   --btn-disabled-hover-bg-color: var(--btn-disabled-bg-color);
   --btn-disabled-border-color: var(--btn-disabled-bg-color);
   --btn-disabled-hover-border-color: var(--btn-disabled-bg-color);
-  --btn-outlined-color: var(--THEME1-600);
+  --btn-outlined-color: var(--BRAND-1);
   --btn-outlined-hover-color: var(--btn-outlined-color);
   --btn-outlined-bg-color: var(--BG-COLOR-LIGHT);
-  --btn-outlined-hover-bg-color: var(--THEME1-100);
+  --btn-outlined-hover-bg-color: var(--BRAND-1-ALT-TINT);
   --btn-outlined-border-color: var(--btn-outlined-color);
   --btn-outlined-hover-border-color: var(--btn-outlined-color);
   --btn-outlined-neutral-color: #6f6f6f;
@@ -1550,22 +1532,22 @@ a:hover .a-avatar.a-avatar--primary, a:active .a-avatar.a-avatar--primary, a:foc
   --btn-outlined-neutral-hover-bg-color: var(--BG-COLOR);
   --btn-outlined-neutral-border-color: var(--btn-outlined-neutral-color);
   --btn-outlined-neutral-hover-border-color: var(--btn-outlined-neutral-color);
-  --btn-outlined-success-color: var(--SUCCESS-700);
+  --btn-outlined-success-color: var(--STATE-SUCCESS);
   --btn-outlined-success-hover-color: var(--btn-outlined-success-color);
   --btn-outlined-success-bg-color: var(--BG-COLOR-LIGHT);
-  --btn-outlined-success-hover-bg-color: var(--SUCCESS-100);
+  --btn-outlined-success-hover-bg-color: var(--STATE-SUCCESS-ALT-TINT);
   --btn-outlined-success-border-color: var(--btn-outlined-success-color);
   --btn-outlined-success-hover-border-color: var(--btn-outlined-success-color);
-  --btn-outlined-warning-color: var(--WARNING-400);
+  --btn-outlined-warning-color: var(--STATE-WARNING);
   --btn-outlined-warning-hover-color: var(--btn-outlined-warning-color);
   --btn-outlined-warning-bg-color: var(--BG-COLOR-LIGHT);
-  --btn-outlined-warning-hover-bg-color: var(--WARNING-100);
+  --btn-outlined-warning-hover-bg-color: var(--STATE-WARNING-ALT-TINT);
   --btn-outlined-warning-border-color: var(--btn-outlined-warning-color);
   --btn-outlined-warning-hover-border-color: var(--btn-outlined-warning-border-color);
-  --btn-outlined-danger-color: var(--DANGER-600);
+  --btn-outlined-danger-color: var(--STATE-DANGER);
   --btn-outlined-danger-hover-color: var(--btn-outlined-danger-color);
   --btn-outlined-danger-bg-color: var(--BG-COLOR-LIGHT);
-  --btn-outlined-danger-hover-bg-color: var(--DANGER-100);
+  --btn-outlined-danger-hover-bg-color: var(--STATE-DANGER-ALT-TINT);
   --btn-outlined-danger-border-color: var(--btn-outlined-danger-color);
   --btn-outlined-danger-hover-border-color: var(--btn-outlined-danger-color);
   --btn-outlined-disabled-color: var(--STATE-DISABLED);
@@ -1574,10 +1556,10 @@ a:hover .a-avatar.a-avatar--primary, a:active .a-avatar.a-avatar--primary, a:foc
   --btn-outlined-disabled-hover-bg-color: var(--btn-outlined-disabled-bg-color);
   --btn-outlined-disabled-border-color: var(--BORDER-COLOR-LIGHT);
   --btn-outlined-disabled-hover-border-color: var(--btn-outlined-disabled-border-color);
-  --btn-text-color: var(--THEME1-600);
+  --btn-text-color: var(--BRAND-1);
   --btn-text-hover-color: var(--btn-text-color);
   --btn-text-bg-color: var(--BG-COLOR-LIGHT);
-  --btn-text-hover-bg-color: var(--THEME1-100);
+  --btn-text-hover-bg-color: var(--BRAND-1-ALT-TINT);
   --btn-text-border-color: transparent;
   --btn-text-hover-border-color: transparent;
   --btn-text-neutral-color: #6f6f6f;
@@ -1586,22 +1568,22 @@ a:hover .a-avatar.a-avatar--primary, a:active .a-avatar.a-avatar--primary, a:foc
   --btn-text-neutral-hover-bg-color: var(--BG-COLOR);
   --btn-text-neutral-border-color: transparent;
   --btn-text-neutral-hover-border-color: transparent;
-  --btn-text-success-color: var(--SUCCESS-700);
+  --btn-text-success-color: var(--STATE-SUCCESS);
   --btn-text-success-hover-color: var(--btn-text-success-color);
   --btn-text-success-bg-color: var(--BG-COLOR-LIGHT);
-  --btn-text-success-hover-bg-color: var(--SUCCESS-100);
+  --btn-text-success-hover-bg-color: var(--STATE-SUCCESS-ALT-TINT);
   --btn-text-success-border-color: transparent;
   --btn-text-success-hover-border-color: transparent;
-  --btn-text-warning-color: var(--WARNING-400);
+  --btn-text-warning-color: var(--STATE-WARNING);
   --btn-text-warning-hover-color: var(--btn-text-warning-color);
   --btn-text-warning-bg-color: var(--BG-COLOR-LIGHT);
-  --btn-text-warning-hover-bg-color: var(--WARNING-100);
+  --btn-text-warning-hover-bg-color: var(--STATE-WARNING-ALT-TINT);
   --btn-text-warning-border-color: transparent;
   --btn-text-warning-hover-border-color: transparent;
-  --btn-text-danger-color: var(--DANGER-600);
+  --btn-text-danger-color: var(--STATE-DANGER);
   --btn-text-danger-hover-color: var(--btn-text-danger-color);
   --btn-text-danger-bg-color: var(--BG-COLOR-LIGHT);
-  --btn-text-danger-hover-bg-color: var(--DANGER-100);
+  --btn-text-danger-hover-bg-color: var(--STATE-DANGER-ALT-TINT);
   --btn-text-danger-border-color: transparent;
   --btn-text-danger-hover-border-color: transparent;
   --btn-text-disabled-color: var(--STATE-DISABLED);
@@ -1610,18 +1592,12 @@ a:hover .a-avatar.a-avatar--primary, a:active .a-avatar.a-avatar--primary, a:foc
   --btn-text-disabled-hover-bg-color: var(--btn-text-disabled-bg-color);
   --btn-text-disabled-border-color: var(--btn-text-disabled-bg-color);
   --btn-text-disabled-hover-border-color: var(--btn-text-disabled-bg-color);
-  --btn-twitter-color: var(--TEXT-COLOR-INVERTED);
-  --btn-twitter-hover-color: var(--btn-twitter-color);
-  --btn-twitter-bg-color: #00aced;
-  --btn-twitter-hover-bg-color: #00aced;
-  --btn-twitter-border-color: #00aced;
-  --btn-twitter-hover-border-color: #00aced;
   --btn-x-color: var(--TEXT-COLOR-INVERTED);
   --btn-x-hover-color: var(--btn-x-color);
   --btn-x-bg-color: #000;
-  --btn-x-hover-bg-color: #000;
+  --btn-x-hover-bg-color: #404040;
   --btn-x-border-color: #000;
-  --btn-x-hover-border-color: #000;
+  --btn-x-hover-border-color: #404040;
   --btn-linkedin-color: var(--TEXT-COLOR-INVERTED);
   --btn-linkedin-hover-color: var(--btn-linkedin-color);
   --btn-linkedin-bg-color: #0077b5;
@@ -1659,13 +1635,13 @@ a:hover .a-avatar.a-avatar--primary, a:active .a-avatar.a-avatar--primary, a:foc
   --btn-youtube-border-color: #f00;
   --btn-youtube-hover-border-color: #bf0000;
   --btn-social-color: var(--TEXT-COLOR);
-  --btn-social-hover-color: var(--THEME1-600);
+  --btn-social-hover-color: var(--BRAND-1);
   --btn-social-bg-color: transparent;
   --btn-social-hover-bg-color: transparent;
   --btn-social-border-color: transparent;
   --btn-social-hover-border-color: transparent;
   --btn-social-negative-color: var(--TEXT-COLOR-INVERTED);
-  --btn-social-negative-hover-color: var(--THEME1-100);
+  --btn-social-negative-hover-color: var(--BRAND-1-ALT-TINT);
   --btn-social-negative-bg-color: transparent;
   --btn-social-negative-hover-bg-color: transparent;
   --btn-social-negative-border-color: transparent;
@@ -1781,14 +1757,6 @@ a:hover .a-avatar.a-avatar--primary, a:active .a-avatar.a-avatar--primary, a:foc
  * SOCIAL BUTTON COLORS
  * -------------------------------------------------------------------
  */
-.a-button.has-icon.a-button--twitter {
-  --btn-color: var(--btn-twitter-color);
-  --btn-hover-color: var(--btn-twitter-hover-color);
-  --btn-bg-color: var(--btn-twitter-bg-color);
-  --btn-hover-bg-color: var(--btn-twitter-hover-bg-color);
-  --btn-border-color: var(--btn-twitter-border-color);
-  --btn-hover-border-color: var(--btn-twitter-hover-border-color);
-}
 .a-button.has-icon.a-button--x {
   --btn-color: var(--btn-x-color);
   --btn-hover-color: var(--btn-x-hover-color);
@@ -2651,16 +2619,16 @@ textarea {
   --label-color: var(--TEXT-COLOR);
   --label-bg-color: transparent;
   --label-border-color: #6f6f6f;
-  --label-primary-color: var(--THEME1-600);
+  --label-primary-color: var(--BRAND-1);
   --label-primary-bg-color: var(--label-bg-color);
   --label-primary-border-color: var(--label-primary-color);
-  --label-success-color: var(--SUCCESS-700);
+  --label-success-color: var(--STATE-SUCCESS);
   --label-success-bg-color: var(--label-bg-color);
   --label-success-border-color: var(--label-success-color);
   --label-warning-color: #ce4c00;
   --label-warning-bg-color: var(--label-bg-color);
   --label-warning-border-color: var(--label-warning-color);
-  --label-danger-color: var(--DANGER-600);
+  --label-danger-color: var(--STATE-DANGER);
   --label-danger-bg-color: var(--label-bg-color);
   --label-danger-border-color: var(--label-danger-color);
 }
@@ -2736,9 +2704,9 @@ a:not([class^=a-button]).has-icon-right .ai {
 .a-avatar-list {
   --list-item-color: var(--TEXT-COLOR);
   --list-item-bg-color: var(--BG-COLOR-LIGHT);
-  --list-item-hover-color: var(--THEME1-600);
+  --list-item-hover-color: var(--BRAND-1);
   --list-item-active-color: var(--TEXT-COLOR);
-  --list-item-hover-bg-color: var(--THEME1-100);
+  --list-item-hover-bg-color: var(--BRAND-1-ALT-TINT);
   --list-item-active-bg-color: var(--BG-COLOR);
   --list-item-border-color: var(--BORDER-COLOR-LIGHT);
 }
@@ -2959,8 +2927,8 @@ a.a-avatar-list__item-container {
   --page-indicator-width: auto;
   --page-indicator-height: var(--SPACER-3XS);
   --page-indicator-spacing: .125rem;
-  --page-indicator-bg-color: var(--THEME1-100);
-  --page-indicator-active-bg-color: var(--THEME1-600);
+  --page-indicator-bg-color: var(--BRAND-1-ALT-TINT);
+  --page-indicator-active-bg-color: var(--BRAND-1);
 }
 
 /**
@@ -3045,8 +3013,8 @@ a.a-page-indicator__item:focus:before {
   --progress-height: var(--SPACER-3XS);
   --progress-label-size: .875rem;
   --progress-label-spacing: var(--SPACER-XXS);
-  --progress-bg-color: var(--THEME1-100);
-  --progress-bar-bg-color: var(--THEME1-600);
+  --progress-bg-color: var(--BRAND-1-ALT-TINT);
+  --progress-bar-bg-color: var(--BRAND-1);
 }
 
 /**
@@ -3093,7 +3061,7 @@ a.a-page-indicator__item:focus:before {
 .a-input__checkbox,
 .a-input__radio {
   --radio-checkbox-color: var(--TEXT-COLOR-INVERTED);
-  --radio-checkbox-bg-color: var(--THEME1-600);
+  --radio-checkbox-bg-color: var(--BRAND-1);
   --radio-checkbox-border-color: var(--BORDER-COLOR);
   --radio-checkbox-disabled-color: var(--STATE-DISABLED);
   --radio-checkbox-disabled-bg-color: var(--BG-COLOR);
@@ -3258,10 +3226,10 @@ a.a-page-indicator__item:focus:before {
  * -------------------------------------------------------------------
  */
 .a-range-slider {
-  --range-slider-bg-color: var(--THEME1-100);
-  --range-slider-bar-bg-color: var(--THEME1-600);
-  --range-slider-handle-bg-color: var(--THEME1-600);
-  --range-slider-tickmark-bg-color: var(--THEME1-300);
+  --range-slider-bg-color: var(--BRAND-1-ALT-TINT);
+  --range-slider-bar-bg-color: var(--BRAND-1);
+  --range-slider-handle-bg-color: var(--BRAND-1);
+  --range-slider-tickmark-bg-color: var(--BRAND-1);
 }
 
 /**
@@ -3437,7 +3405,7 @@ a.a-page-indicator__item:focus:before {
   --switch-bg-color: var(--BORDER-COLOR);
   --switch-border-color: var(--switch-bg-color);
   --switch-handle-bg-color: var(--BG-COLOR-LIGHT);
-  --switch-active-bg-color: var(--THEME1-600);
+  --switch-active-bg-color: var(--BRAND-1);
   --switch-active-border-color: var(--switch-active-bg-color);
   --switch-handle-active-bg-color: var(--BG-COLOR-LIGHT);
   --switch-disabled-bg-color: var(--BORDER-COLOR-LIGHT);
@@ -3548,15 +3516,15 @@ a.a-page-indicator__item:focus:before {
   --table-bg-color: var(--BG-COLOR-LIGHT);
   --table-border-color: var(--BORDER-COLOR);
   --table-border-color-light: var(--BORDER-COLOR-LIGHT);
-  --table-highlight-bg-color: var(--THEME1-100);
-  --table-highlight-border-color: var(--THEME1-600);
+  --table-highlight-bg-color: var(--BRAND-1-ALT-TINT);
+  --table-highlight-border-color: var(--BRAND-1);
   --table-striped-bg-color: var(--BG-COLOR);
   --table-sort-btn-color: var(--TEXT-COLOR);
-  --table-sort-btn-active-color: var(--THEME1-600);
+  --table-sort-btn-active-color: var(--BRAND-1);
   --table-sort-btn-bg-color: var(--BG-COLOR-LIGHT);
-  --table-sort-btn-hover-bg-color: var(--THEME1-100);
+  --table-sort-btn-hover-bg-color: var(--BRAND-1-ALT-TINT);
   --table-sort-btn-icon-color: #949494;
-  --table-sort-btn-icon-active-color: var(--THEME1-600);
+  --table-sort-btn-icon-active-color: var(--BRAND-1);
 }
 
 /**
@@ -3918,11 +3886,11 @@ a.a-page-indicator__item:focus:before {
  */
 .m-accordion {
   --accordion-header-color: var(--TEXT-COLOR);
-  --accordion-header-hover-color: var(--THEME1-600);
+  --accordion-header-hover-color: var(--BRAND-1);
   --accordion-header-bg-color: var(--BG-COLOR-LIGHT);
-  --accordion-header-hover-bg-color: var(--THEME1-100);
+  --accordion-header-hover-bg-color: var(--BRAND-1-ALT-TINT);
   --accordion-header-border-color: var(--BORDER-COLOR);
-  --accordion-header-hover-border-color: var(--THEME1-600);
+  --accordion-header-hover-border-color: var(--BRAND-1);
   --accordion-content-bg-color: var(--accordion-header-bg-color);
   --accordion-content-border-color: var(--accordion-header-border-color);
   --accordion-icon-color: var(--TEXT-COLOR-LIGHT);
@@ -4314,8 +4282,8 @@ a.a-page-indicator__item:focus:before {
   --datepicker-bg-color-dark: var(--BG-COLOR);
   --datepicker-border-color: var(--BORDER-COLOR);
   --datepicker-border-color-light: var(--BORDER-COLOR-LIGHT);
-  --datepicker-highlight-color: var(--THEME1-100);
-  --datepicker-active-color: var(--THEME1-600);
+  --datepicker-highlight-color: var(--BRAND-1-ALT-TINT);
+  --datepicker-active-color: var(--BRAND-1);
 }
 
 /**
@@ -4831,10 +4799,10 @@ a.a-page-indicator__item:focus:before {
   --nav-color: var(--TEXT-COLOR);
   --nav-bg-color: transparent;
   --nav-border-color: var(--BORDER-COLOR-LIGHT);
-  --nav-hover-color: var(--THEME1-600);
-  --nav-hover-bg-color: var(--THEME1-100);
-  --nav-active-color: var(--THEME1-600);
-  --nav-active-border-color: var(--THEME1-600);
+  --nav-hover-color: var(--BRAND-1);
+  --nav-hover-bg-color: var(--BRAND-1-ALT-TINT);
+  --nav-active-color: var(--BRAND-1);
+  --nav-active-border-color: var(--BRAND-1);
   --nav-disabled-color: var(--STATE-DISABLED);
 }
 
@@ -5165,15 +5133,15 @@ a.a-page-indicator__item:focus:before {
   --pagination-font-size: var(--FONT-SIZE-BASE);
   --pagination-size: var(--SPACER-XL);
   --pagination-padding: 0 var(--SPACER);
-  --pagination-color: var(--THEME1-600);
-  --pagination-hover-color: var(--THEME1-600);
+  --pagination-color: var(--BRAND-1);
+  --pagination-hover-color: var(--BRAND-1);
   --pagination-active-color: var(--TEXT-COLOR-INVERTED);
   --pagination-bg-color: var(--BG-COLOR-LIGHT);
-  --pagination-hover-bg-color: var(--THEME1-100);
-  --pagination-active-bg-color: var(--THEME1-600);
-  --pagination-border-color: var(--THEME1-600);
-  --pagination-hover-border: var(--THEME1-700);
-  --pagination-active-border: var(--THEME1-700);
+  --pagination-hover-bg-color: var(--BRAND-1-ALT-TINT);
+  --pagination-active-bg-color: var(--BRAND-1);
+  --pagination-border-color: var(--BRAND-1);
+  --pagination-hover-border: var(--BRAND-1-TINT);
+  --pagination-active-border: var(--BRAND-1-TINT);
   --pagination-disabled-color: var(--STATE-DISABLED);
   --pagination-disabled-bg-color: var(--BG-COLOR);
   --pagination-disabled-border-color: var(--BG-COLOR);
@@ -5267,23 +5235,23 @@ a.a-page-indicator__item:focus:before {
   --step-indicator-square-size: var(--SPACER);
   --step-indicator-square-color: var(--TEXT-COLOR-LIGHT);
   --step-indicator-square-bg-color: var(--BG-COLOR);
-  --step-indicator-square-hover-bg-color: var(--THEME1-100);
+  --step-indicator-square-hover-bg-color: var(--BRAND-1-ALT-TINT);
   --step-indicator-square-border-color: var(--BORDER-COLOR);
-  --step-indicator-square-active-color: var(--THEME1-600);
+  --step-indicator-square-active-color: var(--BRAND-1);
   --step-indicator-square-active-bg-color: var(--BG-COLOR-LIGHT);
-  --step-indicator-square-active-border-color: var(--THEME1-600);
+  --step-indicator-square-active-border-color: var(--BRAND-1);
   --step-indicator-square-completed-color: var(--TEXT-COLOR-INVERTED);
-  --step-indicator-square-completed-bg-color: var(--THEME1-600);
-  --step-indicator-square-completed-hover-bg-color: var(--THEME1-700);
-  --step-indicator-square-completed-border-color: var(--THEME1-600);
-  --step-indicator-square-completed-hover-border-color: var(--THEME1-700);
+  --step-indicator-square-completed-bg-color: var(--BRAND-1);
+  --step-indicator-square-completed-hover-bg-color: var(--BRAND-1-TINT);
+  --step-indicator-square-completed-border-color: var(--BRAND-1);
+  --step-indicator-square-completed-hover-border-color: var(--BRAND-1-TINT);
   --step-indicator-line-color: var(--step-indicator-square-border-color);
   --step-indicator-line-active-color: var(--step-indicator-square-border-color);
-  --step-indicator-line-completed-color: var(--THEME1-600);
+  --step-indicator-line-completed-color: var(--BRAND-1);
   --step-indicator-label-color: var(--TEXT-COLOR-LIGHT);
   --step-indicator-label-active-color: var(--TEXT-COLOR);
   --step-indicator-label-completed-color: var(--TEXT-COLOR);
-  --step-indicator-label-highlight-color: var(--THEME1-600);
+  --step-indicator-label-highlight-color: var(--BRAND-1);
 }
 
 /**
@@ -5459,24 +5427,24 @@ a.a-page-indicator__item:focus:before {
 }
 
 button.m-tag {
-  --tag-color: var(--THEME1-600);
+  --tag-color: var(--BRAND-1);
   --tag-bg-color: var(--BG-COLOR-LIGHT);
-  --tag-border-color: var(--THEME1-600);
+  --tag-border-color: var(--BRAND-1);
   cursor: pointer;
   margin: 0;
   padding: 0 0 0 var(--SPACER-XS);
 }
 button.m-tag:hover, button.m-tag:active, button.m-tag:focus {
-  --tag-bg-color: var(--THEME1-100);
+  --tag-bg-color: var(--BRAND-1-ALT-TINT);
 }
 button.m-tag[aria-pressed=true] {
   --tag-color: var(--TEXT-COLOR-INVERTED);
-  --tag-bg-color: var(--THEME1-600);
-  --tag-border-color: var(--THEME1-600);
+  --tag-bg-color: var(--BRAND-1);
+  --tag-border-color: var(--BRAND-1);
 }
 button.m-tag[aria-pressed=true]:hover, button.m-tag[aria-pressed=true]:active, button.m-tag[aria-pressed=true]:focus {
-  --tag-bg-color: var(--THEME1-700);
-  --tag-border-color: var(--THEME1-700);
+  --tag-bg-color: var(--BRAND-1-TINT);
+  --tag-border-color: var(--BRAND-1-TINT);
 }
 
 /**
@@ -5541,12 +5509,12 @@ button.m-tag[aria-pressed=true]:hover, button.m-tag[aria-pressed=true]:active, b
 .m-upload {
   --upload-color: var(--TEXT-COLOR);
   --upload-bg-color: var(--BG-COLOR-LIGHT);
-  --upload-hover-bg-color: var(--THEME1-100);
-  --upload-border-color: var(--THEME1-600);
+  --upload-hover-bg-color: var(--BRAND-1-ALT-TINT);
+  --upload-border-color: var(--BRAND-1);
   --upload-disabled-color: var(--STATE-DISABLED);
   --upload-disabled-bg-color: var(--BG-COLOR);
   --upload-disabled-border-color: var(--upload-disabled-color);
-  --upload-focus-border-color: var(--THEME1-100);
+  --upload-focus-border-color: var(--BRAND-1-ALT-TINT);
   --upload-file-color: var(--TEXT-COLOR);
   --upload-file-bg-color: var(--BG-COLOR);
   --upload-file-danger-color: var(--STATE-DANGER);
@@ -5670,7 +5638,7 @@ button.m-tag[aria-pressed=true]:hover, button.m-tag[aria-pressed=true]:active, b
   --btn-bg-color: transparent;
 }
 .m-upload__files .m-upload__delete.a-button.a-button--danger {
-  --btn-hover-color: var(--DANGER-700);
+  --btn-hover-color: var(--STATE-DANGER-TINT);
   --btn-hover-bg-color: transparent;
 }
 
