@@ -100,14 +100,14 @@
         <div class="d">
             <div>
                 <p>An overview of the complete color palette.</p>
-                <ul class="u-list-unstyled d-list d-list__colors">
+                {# <ul class="u-list-unstyled d-list d-list__colors">
                     {% for color in COLORS %}
                         <li class="d-{{ color.name | escape | replace('$', '') }}">
-                            <span class="d-color" style="background: {{ color.value }}" aria-hidden="true"></span>
-                            <code>{{ color.name }}</code> <strong>{{ color.value }}</strong></small>
+                            <span class="d-color" style="background: {{ color.compiledValue }}" aria-hidden="true"></span>
+                            <code>{{ color.name }}</code> <strong>{{ color.compiledValue }}</strong></small>
                         </li>
                     {% endfor %}
-                </ul>
+                </ul> #}
             </div>
         </div>
 

@@ -48,7 +48,6 @@
     "ordered-read-streams": "^2.0.0",
     "postcss": "^8.4.49",
     "postcss-selector-parser": "^7.0.0",
-    "sass": "^1.82.0",
-    "sass-export": "^2.1.2"
+    "sass": "^1.82.0"
   }
 }

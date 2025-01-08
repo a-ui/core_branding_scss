@@ -9,7 +9,7 @@ var postcss = require('postcss');
 var selectorParser = require('postcss-selector-parser');
 var nunjucks = require('gulp-nunjucks');
 var rename = require('gulp-rename');
-var exporter = require('sass-export').exporter;
+// var exporter = require('sass-export').exporter;
 
 gulp.task('render-templates', function () {
     return gulp.src(['src/**/index.njk'])
@@ -24,8 +24,9 @@ function getTemplateData(){
     };
 
     data.VERSION_INFO = JSON.parse(fs.readFileSync('package.json', 'utf8'));
-    data.COLORS = exporter({inputFiles: ['src/styles/quarks/_quarks.colors.scss'],includePaths: ['src/styles/quarks/']}).getArray();
-    data.VARIABLES = exporter({inputFiles: ['src/styles/quarks/_quarks.variables.scss'],includePaths: ['src/styles/quarks/']}).getArray();
+    // data.COLORS = exporter({inputFiles: ['src/styles/quarks/_quarks.colors.scss'],includePaths: ['src/styles/quarks/']}).getArray();
+    // data.VARIABLES = exporter({inputFiles: ['src/styles/quarks/_quarks.variables.scss'],includePaths: ['src/styles/quarks/']}).getArray();
+    // console.log(data);
 
     var icons = glob.sync("src/icons/*.svg");
 	for(var i in icons) {
