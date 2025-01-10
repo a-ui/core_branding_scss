@@ -115,7 +115,7 @@
       color: var(--radio-checkbox-color);
       content: '';
       display: inline-block;
-      font-size: $icon-size-sm;
+      font-size: var(--ICON-SIZE-BASE);
       height: var(--SPACER);
       left: 0;
       margin-left: calc(var(--SPACER) * -1);

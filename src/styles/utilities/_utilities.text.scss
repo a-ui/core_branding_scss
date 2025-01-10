@@ -74,6 +74,14 @@
   color: var(--BRAND-2);
 }
 
+.u-text-tertiary {
+  color: var(--BRAND-3);
+}
+
+.u-text-info {
+  color: var(--STATE-INFO);
+}
+
 .u-text-success {
   color: var(--STATE-SUCCESS);
 }
@@ -110,5 +118,5 @@
  */
 
 .u-text-readable {
-  max-width: $readable-content-width;
+  max-width: var(--READABLE-CONTENT-WIDTH);
 }

@@ -81,7 +81,7 @@
   }
 
   &__results-title {
-    font-size: $font-size-base;
+    font-size: var(--FONT-SIZE-BASE);
     margin: 0 var(--SPACER-XS);
   }
 

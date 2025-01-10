@@ -146,7 +146,7 @@
 }
 
 .leaflet-popup-content {
-  font-size: $font-size-sm;
+  font-size: var(--FONT-SIZE-SMALL);
   margin: var(--SPACER-XS) !important;
 }
 

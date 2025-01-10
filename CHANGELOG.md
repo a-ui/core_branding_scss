@@ -7,6 +7,9 @@
 ### Added
 
 - Added the possibility for a third brand color
+- Added info color to utility classes
+- Added info color to buttons
+- Added CSS variable for selection color
 
 ### Changed
 
@@ -16,6 +19,7 @@
 - [BREAKING] Added better state colors
 - Optimized font loading by only offering woff2 format which should be enough for all modern browsers
 - Tweaked design of the avatar
+- Tweaked design of the breadcrumb
 - Tweaked design of the range slider
 
 ### Fixed
@@ -23,6 +27,7 @@
 ### Removed
 
 - [BREAKING] Removed all Twitter related components
+- [BREAKING] Removed Sass variables except for colors, breakpoints and z-indexes
 
 ## [6.6.6] - 2024-06-20
 

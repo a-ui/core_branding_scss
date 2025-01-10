@@ -1,4 +1,5 @@
 @use '../quarks' as *;
+@use '../atoms/atoms.button';
 
 /**
  * OVERLAY VARIABLES
@@ -8,7 +9,6 @@
 
 .m-overlay {
   --overlay-bg-color:             var(--OVERLAY-COLOR);
-  --overlay-button-font-size:     #{rem($icon-size-lg)};
   --overlay-button-color:         var(--TEXT-COLOR-INVERTED);
   --overlay-button-hover-color:   #{$gray-200};
 }
@@ -42,23 +42,17 @@
  * -------------------------------------------------------------------
  */
 
-.m-overlay__button {
-  background: none;
-  border: none;
-  color: var(--overlay-button-color);
-  cursor: pointer;
-  font-size: var(--overlay-button-font-size);
-  padding: var(--SPACER-XS);
+.a-button.has-icon.m-overlay__button {
+  --btn-color:              var(--TEXT-COLOR-INVERTED);
+  --btn-hover-color:        var(--BG-COLOR);
+  --btn-bg-color:           transparent;
+  --btn-hover-bg-color:     var(--btn-bg-color);
+  --btn-border-color:       transparent;
+  --btn-hover-border-color: transparent;
+
   position: absolute;
   right: var(--SPACER-XS);
   top: var(--SPACER-XS);
-  transition: color var(--ANIMATION-NORMAL);
-
-  &:active,
-  &:hover,
-  &:focus {
-    color: var(--overlay-button-hover-color);
-  }
 }
 
 .m-overlay__inner {

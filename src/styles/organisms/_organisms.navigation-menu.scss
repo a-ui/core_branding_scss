@@ -226,16 +226,16 @@
       }
 
       .o-menu__icon {
-        font-size: rem($icon-size-base);
+        font-size: var(--ICON-SIZE-BASE);
         margin-bottom: var(--SPACER-XXS);
 
         &.o-menu__tab-icon {
-          width: rem($icon-size-lg);
+          width: var(--ICON-SIZE-LARGE);
         }
 
         &.o-menu__submenu-icon {
           display: none;
-          font-size: rem($font-size-base);
+          font-size: var(--FONT-SIZE-BASE);
           transition: transform var(--navigation-menu-animation-speed) ease;
 
           @include at($screen-sm) {

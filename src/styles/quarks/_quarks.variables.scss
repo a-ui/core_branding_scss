@@ -3,133 +3,25 @@
  * -------------------------------------------------------------------
  * Leave here for renderer
  */
-@use 'sass:color';
 @use 'quarks.colors' as *;
-
-/**
- * THEME COLORS
- * -------------------------------------------------------------------
- */
-
-$theme1-600:              $endeavour-600 !default;
-$theme1-500:              $endeavour-500 !default;
-$theme1-400:              $endeavour-400 !default;
-$theme1-300:              $endeavour-300 !default;
-$theme1-200:              $endeavour-200 !default;
-$theme1-100:              $endeavour-100 !default;
-
-$success-600:             $mantis-600 !default;
-$success-500:             $mantis-500 !default;
-$success-400:             $mantis-400 !default;
-$success-300:             $mantis-300 !default;
-$success-200:             $mantis-200 !default;
-$success-100:             $mantis-100 !default;
-
-$warning-600:             $supernova-600 !default;
-$warning-500:             $supernova-500 !default;
-$warning-400:             $supernova-400 !default;
-$warning-300:             $supernova-300 !default;
-$warning-200:             $supernova-200 !default;
-$warning-100:             $supernova-100 !default;
-
-$danger-600:              $cinnabar-600 !default;
-$danger-500:              $cinnabar-500 !default;
-$danger-400:              $cinnabar-400 !default;
-$danger-300:              $cinnabar-300 !default;
-$danger-200:              $cinnabar-200 !default;
-$danger-100:              $cinnabar-100 !default;
-
-$state-info:              $theme1-400 !default;
-$state-success:           $success-600 !default;
-$state-warning:           $warning-500 !default;
-$state-danger:            $danger-500 !default;
-$state-disabled:          $gray-400 !default;
-
-/**
- * OTHER THEME COLORS
- * -------------------------------------------------------------------
- */
-
-$text-color:              $gray-600 !default;
-$text-color-light:        $gray-400 !default;
-$text-color-xlight:       $white !default;
-
-$background-color:        $gray-100 !default;
-$background-color-light:  $gray-100 !default;
-
-$border-color:            $gray-400 !default;
-$border-color-light:      $gray-300 !default;
-
-$selection-color:         color.mix($endeavour-400, $white, 20%) !default;
-
-/**
- * SPACERS
- * -------------------------------------------------------------------
- */
-
-$spacer:                  1.5rem !default; // 24px
-
-$spacer-xx:               $spacer * 4 !default; // 96px
-$spacer-xl:               $spacer * 2.5 !default; // 60px
-$spacer-lg:               $spacer * 2 !default; // 48px
-$spacer-md:               $spacer * 1.5 !default; // 36px
-$spacer-sm:               $spacer * .75 !default; // 18px
-$spacer-xs:               $spacer * .5 !default; // 12px
 
 /**
  * BREAKPOINTS
  * -------------------------------------------------------------------
+ * CSS variables can't (yet) be used in media queries, so we need to define
+ * them here as SCSS variables so we can use them like that in media queries.
  */
 
 $screen-xs:               30rem !default; // 480px
 $screen-sm:               45rem !default; // 720px
 $screen-md:               62rem !default; // 992px
 $screen-lg:               75rem !default; // 1200px
-
-/**
- * $screen-xl =
- *    max-width of u-container
- *    + width of official logo * 2
- *    + space between logo and u-container * 2
- */
-$screen-xl: $screen-lg + $spacer-xx * 2 + $spacer * 2 !default; // 90rem - 1440px
+$screen-xl:               90rem !default; // 90rem - 1440px, $screen-xl = max-width of u-container + width of official logo * 2 + space between logo and u-container * 2
 
 $screen-xs-max:           44.9375rem !default; // 719px ($screen-sm - 1px)
 $screen-sm-max:           61.9375rem !default; // 991px ($screen-md - 1px)
 $screen-md-max:           74.9375rem !default; // 1199px ($screen-lg - 1px)
 $screen-lg-max:           89.9375rem !default; // 1439px ($screen-xl - 1px)
-
-/**
- * FONT SIZES
- * -------------------------------------------------------------------
- */
-
-$font-size-sm:            14px !default;
-$font-size-base:          16px !default;
-$font-size-lg:            18px !default;
-
-$font-size-h1:            36px !default;
-$font-size-h2:            28px !default;
-$font-size-h3:            23px !default;
-$font-size-h4:            21px !default;
-$font-size-h5:            19px !default;
-$font-size-h6:            17px !default;
-
-/**
- * LINE HEIGHTS
- * -------------------------------------------------------------------
- */
-
-$line-height-base:        1 !default;
-$line-height-paragraph:   1.3 !default;
-$line-height-headings:    1.1 !default;
-
-/**
- * OTHER TYPOGRAPHY
- * -------------------------------------------------------------------
- */
-
-$readable-content-width:  45rem !default;
 
 /**
  * Z-INDEXES
@@ -165,13 +57,3 @@ $z-indexes: (
   'auto':            0,
   'cellar':         -1
 );
-
-/**
- * ICON SIZES
- * -------------------------------------------------------------------
- */
-
-$icon-size-ti:            12px !default;
-$icon-size-sm:            16px !default;
-$icon-size-base:          22px !default;
-$icon-size-lg:            28px !default;

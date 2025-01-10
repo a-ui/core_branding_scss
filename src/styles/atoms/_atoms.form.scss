@@ -46,7 +46,7 @@ fieldset {
 legend {
   &:not(.a-input__label) {
     color: #{$gray-400};
-    font-size: #{rem($font-size-lg)};
+    font-size: var(--FONT-SIZE-LARGE);
     font-weight: var(--FONT-WEIGHT-BOLD);
     padding: 0 var(--SPACER-XXS) 0 0;
   }

@@ -10,8 +10,8 @@
   --btn-height:                                 var(--SPACER-XL);
   --btn-padding:                                var(--SPACER-XS) var(--SPACER);
   --btn-font-weight:                            var(--FONT-WEIGHT-BOLD);
-  --btn-font-size:                              1rem;
-  --btn-icon-size:                              1.25rem;
+  --btn-font-size:                              var(--FONT-SIZE-BASE);
+  --btn-icon-size:                              var(--ICON-SIZE-BASE);
 }
 
 .a-button {

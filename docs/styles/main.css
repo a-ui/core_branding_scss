@@ -221,8 +221,8 @@
   --BORDER-COLOR-LIGHT: var(--border-color-light, #d8d8d8);
   --OVERLAY-COLOR: var(--overlay-color, rgba(0, 0, 0, 0.75));
   --BOX-SHADOW-COLOR: var(--box-shadow-color, rgba(20, 20, 20, 0.12));
-  --LINK-COLOR: var(--link-color, var(--BRAND-1));
-  --LINK-HOVER-COLOR: var(--link-hover-color, var(--BRAND-1-TINT));
+  --LINK: var(--link-color, var(--BRAND-1));
+  --LINK-TINT: var(--link-hover-color, var(--BRAND-1-TINT));
   --STATE-DISABLED: var(--state-disabled, #6f6f6f);
   /**
    * SPACERS
@@ -730,13 +730,13 @@ hr {
  * -------------------------------------------------------------------
  */
 a {
-  color: var(--LINK-COLOR);
+  color: var(--LINK);
   -webkit-text-decoration-skip: ink;
           text-decoration-skip-ink: auto;
   transition: color var(--ANIMATION-NORMAL);
 }
 a:hover, a:active, a:focus {
-  color: var(--LINK-HOVER-COLOR);
+  color: var(--LINK-TINT);
   text-decoration: none;
 }
 
@@ -4251,7 +4251,7 @@ a.a-page-indicator__item:focus:before {
   color: var(--TEXT-COLOR);
 }
 .m-collapsible-list__item:not(.is-active) > a:hover, .m-collapsible-list__item:not(.is-active) > a:active, .m-collapsible-list__item:not(.is-active) > a:focus {
-  color: var(--LINK-HOVER-COLOR);
+  color: var(--LINK-TINT);
   text-decoration: underline;
 }
 .m-collapsible-list__item .ai {

@@ -18,7 +18,7 @@ body {
 }
 
 ::selection {
-  background-color: $selection-color;
+  background-color: var(--STATE-SELECTED);
 }
 
 /**
@@ -144,7 +144,7 @@ blockquote {
 small,
 .small {
   color: var(--TEXT-COLOR-LIGHT);
-  font-size: rem($font-size-sm);
+  font-size: var(--FONT-SIZE-SMALL);
 }
 
 /**
@@ -176,14 +176,14 @@ hr {
  */
 
 a {
-  color: var(--LINK-COLOR);
+  color: var(--LINK);
   text-decoration-skip-ink: auto;
   transition: color var(--ANIMATION-NORMAL);
 
   &:hover,
   &:active,
   &:focus {
-    color: var(--LINK-HOVER-COLOR);
+    color: var(--LINK-TINT);
     text-decoration: none;
   }
 }

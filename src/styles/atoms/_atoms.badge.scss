@@ -6,7 +6,7 @@
  */
 
 .a-badge {
-  --badge-font-size:         #{$font-size-sm};
+  --badge-font-size:         var(--FONT-SIZE-SMALL);
   --badge-font-weight:       var(--FONT-WEIGHT-BOLD);
   --badge-size:              var(--SPACER);
   --badge-padding:           0 var(--SPACER-3XS);
@@ -56,13 +56,13 @@
   }
 
   &.a-badge--primary {
-    --badge-color:            var(--TEXT-COLOR-INVERTED);
+    --badge-color:            var(--BRAND-1-ALT);
     --badge-bg-color:         var(--BRAND-1);
     --badge-border-color:     var(--BRAND-1);
 
     &.a-badge--outlined {
       --badge-color:          var(--BRAND-1);
-      --badge-bg-color:       var(--BG-COLOR-LIGHT);
+      --badge-bg-color:       var(--BRAND-1-ALT);
       --badge-border-color:   var(--BRAND-1);
     }
 
