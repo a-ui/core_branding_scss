@@ -11,7 +11,7 @@
   --upload-bg-color:                var(--BG-COLOR-LIGHT);
   --upload-hover-bg-color:          var(--BRAND-1-ALT-TINT);
   --upload-border-color:            var(--BRAND-1);
-  --upload-disabled-color:          var(--STATE-DISABLED);
+  --upload-disabled-color:          var(--STATE-DISABLED-CONTRAST);
   --upload-disabled-bg-color:       var(--BG-COLOR);
   --upload-disabled-border-color:   var(--upload-disabled-color);
   --upload-focus-border-color:      var(--BRAND-1-ALT-TINT);
@@ -108,13 +108,13 @@
   &:before {
     @include focus;
 
-    bottom: rem(-3px);
+    bottom: -1875rem;
     cursor: pointer;
-    left: rem(-3px);
+    left: -1875rem;
     position: absolute;
-    right: rem(-3px);
-    top: rem(-3px);
-    z-index: layer('cellar');
+    right: -1875rem;
+    top: -1875rem;
+    z-index: var(--Z-CELLAR);
   }
 }
 

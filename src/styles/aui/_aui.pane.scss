@@ -7,7 +7,7 @@
   background-color: var(--BG-COLOR-LIGHT);
   height: 100%;
   width: 20rem;
-  z-index: layer('pane');
+  z-index: var(--Z-PANE);
 
   &__content {
     height: 100%;

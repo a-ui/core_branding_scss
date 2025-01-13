@@ -2,7 +2,7 @@
 
 ## Unreleased
 
-## [7.0.0] - 202x-xx-xx
+## [7.0.0] - 2025-xx-xx
 
 ### Added
 
@@ -10,13 +10,17 @@
 - Added info color to utility classes
 - Added info color to buttons
 - Added CSS variable for selection color
+- Added CSS variables for z-index
+- Added more variants for existing colors to enhance accessibility across all components
 
 ### Changed
 
 - [BREAKING] Changed color naming to provide a better wat to build up themes
   - Changed THEME to BRAND
   - Changed gray to neutral
+  - Removed leading 0 for some colors
 - [BREAKING] Added better state colors
+- Tweaked some colors to better match their other variants
 - Optimized font loading by only offering woff2 format which should be enough for all modern browsers
 - Tweaked design of the avatar
 - Tweaked design of the breadcrumb
@@ -27,7 +31,8 @@
 ### Removed
 
 - [BREAKING] Removed all Twitter related components
-- [BREAKING] Removed Sass variables except for colors, breakpoints and z-indexes
+- [BREAKING] Removed Sass variables except for colors and breakpoints
+- [BREAKING] Removed Sass helper functions
 
 ## [6.6.6] - 2024-06-20
 
@@ -971,6 +976,7 @@
 
 - Initial release.
 
+[7.0.0]: https://github.com/a-ui/core_branding_scss/tree/v7.0.0
 [6.6.6]: https://github.com/a-ui/core_branding_scss/tree/v6.6.6
 [6.6.5]: https://github.com/a-ui/core_branding_scss/tree/v6.6.5
 [6.6.4]: https://github.com/a-ui/core_branding_scss/tree/v6.6.4

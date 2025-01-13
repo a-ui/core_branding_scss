@@ -10,7 +10,7 @@
 .m-overlay {
   --overlay-bg-color:             var(--OVERLAY-COLOR);
   --overlay-button-color:         var(--TEXT-COLOR-INVERTED);
-  --overlay-button-hover-color:   #{$gray-200};
+  --overlay-button-hover-color:   #{$neutral-200};
 }
 
 /**
@@ -28,7 +28,7 @@
   position: fixed;
   right: 0;
   top: 0;
-  z-index: layer('overlay');
+  z-index: var(--Z-OVERLAY);
 
   &.is-active {
     align-items: center;
@@ -73,5 +73,5 @@
 
 .m-overlay__pane {
   position: absolute;
-  z-index: layer('pane-overlay');
+  z-index: var(--Z-PANE-OVERLAY);
 }

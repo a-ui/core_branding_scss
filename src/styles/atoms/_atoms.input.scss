@@ -15,9 +15,9 @@
   --input-color:                   var(--TEXT-COLOR);
   --input-bg-color:                var(--BG-COLOR-LIGHT);
   --input-border-color:            var(--BORDER-COLOR);
-  --input-placeholder-color:       #{$gray-400};
+  --input-placeholder-color:       #{$neutral-400};
 
-  --input-disabled-color:          var(--STATE-DISABLED);
+  --input-disabled-color:          var(--STATE-DISABLED-CONTRAST);
   --input-disabled-bg-color:       var(--BG-COLOR);
   --input-disabled-border-color:   var(--BORDER-COLOR-LIGHT);
 
@@ -25,8 +25,8 @@
   --input-readonly-bg-color:       var(--BG-COLOR-LIGHT);
   --input-readonly-border-color:   var(--BORDER-COLOR);
 
-  --input-icon-color:              #{$gray-400};
-  --input-icon-hover-color:        #{$gray-600};
+  --input-icon-color:              #{$neutral-400};
+  --input-icon-hover-color:        #{$neutral-600};
   --input-icon-size:               1.25rem;
 
   --input-danger-border-color:     var(--STATE-DANGER);

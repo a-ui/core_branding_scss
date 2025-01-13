@@ -18,7 +18,7 @@
   --table-sort-btn-active-color:        var(--BRAND-1);
   --table-sort-btn-bg-color:            var(--BG-COLOR-LIGHT);
   --table-sort-btn-hover-bg-color:      var(--BRAND-1-ALT-TINT);
-  --table-sort-btn-icon-color:          #{$gray-300};
+  --table-sort-btn-icon-color:          #{$neutral-300};
   --table-sort-btn-icon-active-color:   var(--BRAND-1);
 }
 
@@ -57,7 +57,7 @@
       cursor: pointer;
 
       .small {
-        color: $gray-500;
+        color: $neutral-500;
       }
     }
 
@@ -242,7 +242,7 @@
         box-shadow: inset calc(var(--BORDER-WIDTH) * -1) 0 0 0 var(--table-border-color);
         left: 0;
         position: sticky;
-        z-index: layer('base');
+        z-index: var(--Z-BASE);
 
         &.is-collapsed {
           padding-right: 1px;

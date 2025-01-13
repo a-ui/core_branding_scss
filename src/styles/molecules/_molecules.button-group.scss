@@ -13,18 +13,18 @@
 
   > .a-button {
     border-radius: 0;
-    z-index: layer('base');
+    z-index: var(--Z-BASE);
 
     &:not(.has-icon) {
       width: auto;
     }
 
     &:disabled {
-      z-index: layer('auto');
+      z-index: var(--Z-AUTO);
     }
 
     &:focus {
-      z-index: layer('top');
+      z-index: var(--Z-TOP);
     }
 
     &:first-child {
@@ -74,7 +74,7 @@
     &:not(:disabled):hover,
     &:not(:disabled):active,
     &:not(:disabled):focus {
-      z-index: layer('base');
+      z-index: var(--Z-BASE);
     }
   }
 }

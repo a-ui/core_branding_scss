@@ -174,7 +174,7 @@
     }
 
     &:focus {
-      z-index: layer('base');
+      z-index: var(--Z-BASE);
     }
 
     &.is-current {
@@ -309,7 +309,7 @@
   position: absolute;
   right: 0;
   top: 100%;
-  z-index: layer('datepicker');
+  z-index: var(--Z-DATEPICKER);
 }
 
 .m-datepicker--left {

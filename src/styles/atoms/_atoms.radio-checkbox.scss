@@ -11,7 +11,7 @@
   --radio-checkbox-bg-color:                var(--BRAND-1);
   --radio-checkbox-border-color:            var(--BORDER-COLOR);
 
-  --radio-checkbox-disabled-color:          var(--STATE-DISABLED);
+  --radio-checkbox-disabled-color:          var(--STATE-DISABLED-CONTRAST);
   --radio-checkbox-disabled-bg-color:       var(--BG-COLOR);
   --radio-checkbox-disabled-border-color:   var(--BORDER-COLOR-LIGHT);
 }
@@ -58,7 +58,7 @@
     padding: 0;
     position: absolute;
     width: auto;
-    z-index: layer('base');
+    z-index: var(--Z-BASE);
 
     &:checked {
       + label:before {
@@ -193,13 +193,13 @@
   &:checked {
     + label:before {
       background: var(--BG-COLOR-LIGHT);
-      box-shadow: 0 0 0 rem(6px) var(--radio-checkbox-bg-color) inset;
+      box-shadow: 0 0 0 .375rem var(--radio-checkbox-bg-color) inset;
     }
 
     &:disabled {
       + label:before {
         background: var(--radio-checkbox-disabled-color);
-        box-shadow: 0 0 0 var(--BORDER-WIDTH) var(--radio-checkbox-disabled-border-color) inset, 0 0 0 rem(6px) var(--radio-checkbox-disabled-bg-color) inset;
+        box-shadow: 0 0 0 var(--BORDER-WIDTH) var(--radio-checkbox-disabled-border-color) inset, 0 0 0 .375rem var(--radio-checkbox-disabled-bg-color) inset;
       }
     }
   }

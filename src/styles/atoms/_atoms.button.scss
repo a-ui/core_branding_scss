@@ -25,8 +25,8 @@
 
   --btn-neutral-color:                          var(--TEXT-COLOR-INVERTED);
   --btn-neutral-hover-color:                    var(--btn-neutral-color);
-  --btn-neutral-bg-color:                       #{$gray-400};
-  --btn-neutral-hover-bg-color:                 #{$gray-500};
+  --btn-neutral-bg-color:                       #{$neutral-400};
+  --btn-neutral-hover-bg-color:                 #{$neutral-500};
   --btn-neutral-border-color:                   var(--btn-neutral-bg-color);
   --btn-neutral-hover-border-color:             var(--btn-neutral-hover-bg-color);
 
@@ -36,6 +36,13 @@
   --btn-secondary-hover-bg-color:               var(--BRAND-2-TINT);
   --btn-secondary-border-color:                 var(--btn-secondary-bg-color);
   --btn-secondary-hover-border-color:           var(--btn-secondary-hover-bg-color);
+
+  --btn-info-color:                             var(--TEXT-COLOR-INVERTED);
+  --btn-info-hover-color:                       var(--btn-info-color);
+  --btn-info-bg-color:                          var(--STATE-INFO);
+  --btn-info-hover-bg-color:                    var(--STATE-INFO-TINT);
+  --btn-info-border-color:                      var(--btn-info-bg-color);
+  --btn-info-hover-border-color:                var(--btn-info-hover-bg-color);
 
   --btn-success-color:                          var(--TEXT-COLOR-INVERTED);
   --btn-success-hover-color:                    var(--btn-success-color);
@@ -58,9 +65,9 @@
   --btn-danger-border-color:                    var(--btn-danger-bg-color);
   --btn-danger-hover-border-color:              var(--btn-danger-hover-bg-color);
 
-  --btn-disabled-color:                         var(--STATE-DISABLED);
+  --btn-disabled-color:                         var(--STATE-DISABLED-CONTRAST);
   --btn-disabled-hover-color:                   var(--btn-disabled-color);
-  --btn-disabled-bg-color:                      var(--BG-COLOR);
+  --btn-disabled-bg-color:                      var(--STATE-DISABLED);
   --btn-disabled-hover-bg-color:                var(--btn-disabled-bg-color);
   --btn-disabled-border-color:                  var(--btn-disabled-bg-color);
   --btn-disabled-hover-border-color:            var(--btn-disabled-bg-color);
@@ -73,12 +80,19 @@
   --btn-outlined-border-color:                  var(--btn-outlined-color);
   --btn-outlined-hover-border-color:            var(--btn-outlined-color);
 
-  --btn-outlined-neutral-color:                 #{$gray-400};
+  --btn-outlined-neutral-color:                 #{$neutral-400};
   --btn-outlined-neutral-hover-color:           var(--btn-outlined-neutral-color);
   --btn-outlined-neutral-bg-color:              var(--BG-COLOR-LIGHT);
   --btn-outlined-neutral-hover-bg-color:        var(--BG-COLOR);
   --btn-outlined-neutral-border-color:          var(--btn-outlined-neutral-color);
   --btn-outlined-neutral-hover-border-color:    var(--btn-outlined-neutral-color);
+
+  --btn-outlined-info-color:                    var(--STATE-INFO);
+  --btn-outlined-info-hover-color:              var(--btn-outlined-info-color);
+  --btn-outlined-info-bg-color:                 var(--BG-COLOR-LIGHT);
+  --btn-outlined-info-hover-bg-color:           var(--STATE-INFO-ALT-TINT);
+  --btn-outlined-info-border-color:             var(--btn-outlined-info-color);
+  --btn-outlined-info-hover-border-color:       var(--btn-outlined-info-color);
 
   --btn-outlined-success-color:                 var(--STATE-SUCCESS);
   --btn-outlined-success-hover-color:           var(--btn-outlined-success-color);
@@ -101,11 +115,11 @@
   --btn-outlined-danger-border-color:           var(--btn-outlined-danger-color);
   --btn-outlined-danger-hover-border-color:     var(--btn-outlined-danger-color);
 
-  --btn-outlined-disabled-color:                var(--STATE-DISABLED);
+  --btn-outlined-disabled-color:                var(--STATE-DISABLED-CONTRAST);
   --btn-outlined-disabled-hover-color:          var(--btn-outlined-disabled-color);
-  --btn-outlined-disabled-bg-color:             var(--BG-COLOR);
+  --btn-outlined-disabled-bg-color:             var(--STATE-DISABLED);
   --btn-outlined-disabled-hover-bg-color:       var(--btn-outlined-disabled-bg-color);
-  --btn-outlined-disabled-border-color:         var(--BORDER-COLOR-LIGHT);
+  --btn-outlined-disabled-border-color:         var(--STATE-DISABLED-TINT);
   --btn-outlined-disabled-hover-border-color:   var(--btn-outlined-disabled-border-color);
 
   // Text buttons
@@ -116,12 +130,19 @@
   --btn-text-border-color:                      transparent;
   --btn-text-hover-border-color:                transparent;
 
-  --btn-text-neutral-color:                     #{$gray-400};
+  --btn-text-neutral-color:                     #{$neutral-400};
   --btn-text-neutral-hover-color:               var(--btn-text-neutral-color);
   --btn-text-neutral-bg-color:                  var(--BG-COLOR-LIGHT);
   --btn-text-neutral-hover-bg-color:            var(--BG-COLOR);
   --btn-text-neutral-border-color:              transparent;
   --btn-text-neutral-hover-border-color:        transparent;
+
+  --btn-text-info-color:                        var(--STATE-INFO);
+  --btn-text-info-hover-color:                  var(--btn-text-info-color);
+  --btn-text-info-bg-color:                     var(--BG-COLOR-LIGHT);
+  --btn-text-info-hover-bg-color:               var(--STATE-INFO-ALT-TINT);
+  --btn-text-info-border-color:                 transparent;
+  --btn-text-info-hover-border-color:           transparent;
 
   --btn-text-success-color:                     var(--STATE-SUCCESS);
   --btn-text-success-hover-color:               var(--btn-text-success-color);
@@ -144,9 +165,9 @@
   --btn-text-danger-border-color:               transparent;
   --btn-text-danger-hover-border-color:         transparent;
 
-  --btn-text-disabled-color:                    var(--STATE-DISABLED);
+  --btn-text-disabled-color:                    var(--STATE-DISABLED-CONTRAST);
   --btn-text-disabled-hover-color:              var(--btn-text-disabled-color);
-  --btn-text-disabled-bg-color:                 var(--BG-COLOR);
+  --btn-text-disabled-bg-color:                 var(--STATE-DISABLED);
   --btn-text-disabled-hover-bg-color:           var(--btn-text-disabled-bg-color);
   --btn-text-disabled-border-color:             var(--btn-text-disabled-bg-color);
   --btn-text-disabled-hover-border-color:       var(--btn-text-disabled-bg-color);
@@ -294,6 +315,15 @@
     --btn-hover-bg-color: var(--btn-secondary-hover-bg-color);
     --btn-border-color: var(--btn-secondary-border-color);
     --btn-hover-border-color: var(--btn-secondary-hover-border-color);
+  }
+
+  &.a-button--info {
+    --btn-color: var(--btn-info-color);
+    --btn-hover-color: var(--btn-info-hover-color);
+    --btn-bg-color: var(--btn-info-bg-color);
+    --btn-hover-bg-color: var(--btn-info-hover-bg-color);
+    --btn-border-color: var(--btn-info-border-color);
+    --btn-hover-border-color: var(--btn-info-hover-border-color);
   }
 
   &.a-button--success {
@@ -445,6 +475,15 @@
     --btn-hover-border-color: var(--btn-outlined-neutral-hover-border-color);
   }
 
+  &.a-button--info {
+    --btn-color: var(--btn-outlined-info-color);
+    --btn-hover-color: var(--btn-outlined-info-hover-color);
+    --btn-bg-color: var(--btn-outlined-info-bg-color);
+    --btn-hover-bg-color: var(--btn-outlined-info-hover-bg-color);
+    --btn-border-color: var(--btn-outlined-info-border-color);
+    --btn-hover-border-color: var(--btn-outlined-info-hover-border-color);
+  }
+
   &.a-button--success {
     --btn-color: var(--btn-outlined-success-color);
     --btn-hover-color: var(--btn-outlined-success-hover-color);
@@ -502,6 +541,15 @@
     --btn-hover-bg-color: var(--btn-text-neutral-hover-bg-color);
     --btn-border-color: var(--btn-text-neutral-border-color);
     --btn-hover-border-color: var(--btn-text-neutral-hover-border-color);
+  }
+
+  &.a-button--info {
+    --btn-color: var(--btn-text-info-color);
+    --btn-hover-color: var(--btn-text-info-hover-color);
+    --btn-bg-color: var(--btn-text-info-bg-color);
+    --btn-hover-bg-color: var(--btn-text-info-hover-bg-color);
+    --btn-border-color: var(--btn-text-info-border-color);
+    --btn-hover-border-color: var(--btn-text-info-hover-border-color);
   }
 
   &.a-button--success {

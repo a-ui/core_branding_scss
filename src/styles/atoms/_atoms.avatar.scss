@@ -16,13 +16,13 @@
   --avatar-primary-hover-bg-color:   var(--BRAND-1-ALT-TINT);
 
   --avatar-size-s:                   var(--shared-avatar-size-s); // 36px
-  --avatar-icon-size-s:              1rem;
+  --avatar-icon-size-s:              var(--ICON-SIZE-SMALL);
 
   --avatar-size:                     var(--shared-avatar-size); // 48px
-  --avatar-icon-size:                1.25rem;
+  --avatar-icon-size:                var(--ICON-SIZE-BASE);
 
   --avatar-size-l:                   var(--shared-avatar-size-l); // 60px
-  --avatar-icon-size-l:              1.5rem;
+  --avatar-icon-size-l:              var(--ICON-SIZE-SMALL);
 }
 
 /**

@@ -12,48 +12,13 @@
  * them here as SCSS variables so we can use them like that in media queries.
  */
 
-$screen-xs:               30rem !default; // 480px
-$screen-sm:               45rem !default; // 720px
-$screen-md:               62rem !default; // 992px
-$screen-lg:               75rem !default; // 1200px
-$screen-xl:               90rem !default; // 90rem - 1440px, $screen-xl = max-width of u-container + width of official logo * 2 + space between logo and u-container * 2
+$screen-xs:     30rem !default; // 480px
+$screen-sm:     45rem !default; // 720px
+$screen-md:     62rem !default; // 992px
+$screen-lg:     75rem !default; // 1200px
+$screen-xl:     90rem !default; // 90rem - 1440px, $screen-xl = max-width of u-container + width of official logo * 2 + space between logo and u-container * 2
 
-$screen-xs-max:           44.9375rem !default; // 719px ($screen-sm - 1px)
-$screen-sm-max:           61.9375rem !default; // 991px ($screen-md - 1px)
-$screen-md-max:           74.9375rem !default; // 1199px ($screen-lg - 1px)
-$screen-lg-max:           89.9375rem !default; // 1439px ($screen-xl - 1px)
-
-/**
- * Z-INDEXES
- * -------------------------------------------------------------------
- * http://www.sitepoint.com/better-solution-managing-z-index-sass/
- *
- * Use like this:
- *   z-index: layer('overlay');
- *     where overlay is a list item of the default list "$z-indexes" (see below)
- *
- * The list is also upgradeable in that nesting is permitted, e.g.:
- * z-indexes: (
- *   'modal': (
- *     'back': 50,
- *     'front': 60
- *   ),
- *   'navigation': 40,
- *   ...
- * )
- */
-
-$z-indexes: (
-  'overlay':        10,
-  'header':          9,
-  'statusbar':       8,
-  'pane':            7,
-  'pane-overlay':    6,
-  'tooltip':         5,
-  'flyout':          4,
-  'datepicker':      3,
-  'top':             2,
-  'base':            1,
-  'auto':            0,
-  'cellar':         -1
-);
+$screen-xs-max: 44.9375rem !default; // 719px ($screen-sm - 1px)
+$screen-sm-max: 61.9375rem !default; // 991px ($screen-md - 1px)
+$screen-md-max: 74.9375rem !default; // 1199px ($screen-lg - 1px)
+$screen-lg-max: 89.9375rem !default; // 1439px ($screen-xl - 1px)

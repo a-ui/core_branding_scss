@@ -40,7 +40,7 @@
   transition: visibility 0s var(--ANIMATION-NORMAL), opacity var(--ANIMATION-NORMAL), transform var(--ANIMATION-NORMAL);
   visibility: hidden;
   width: var(--flyout-max-width-s);
-  z-index: layer('flyout');
+  z-index: var(--Z-FLYOUT);
 
   @include at($screen-sm) {
     width: var(--flyout-max-width);

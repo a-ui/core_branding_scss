@@ -127,7 +127,7 @@
 }
 
 .d-file {
-  color: $gray-400;
+  color: $neutral-400;
   display: inline-block;
   font-weight: bold;
   margin-top: calc(var(--SPACER-XS) / 6);
@@ -239,12 +239,12 @@
   strong {
     background-color: rgba($black, .6);
     display: inline-block;
-    padding: rem(1px) rem(4px) rem(2px);
+    padding: .0625rem .25rem .125rem;
   }
 }
 
 .d-u-text-xlight {
-  background-color: $gray-600;
+  background-color: $neutral-600;
   padding: var(--SPACER-3XS);
 }
 

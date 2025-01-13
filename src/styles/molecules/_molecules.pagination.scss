@@ -21,7 +21,7 @@
   --pagination-hover-border:              var(--BRAND-1-TINT);
   --pagination-active-border:             var(--BRAND-1-TINT);
 
-  --pagination-disabled-color:            var(--STATE-DISABLED);
+  --pagination-disabled-color:            var(--STATE-DISABLED-CONTRAST);
   --pagination-disabled-bg-color:         var(--BG-COLOR);
   --pagination-disabled-border-color:     var(--BG-COLOR);
 }
@@ -46,7 +46,7 @@
     position: relative;
     text-align: center;
     width: var(--pagination-size);
-    z-index: layer('base');
+    z-index: var(--Z-BASE);
 
     > a {
       color: var(--pagination-color);
@@ -111,11 +111,11 @@
   }
 
   .m-pagination__next {
-    z-index: layer('auto');
+    z-index: var(--Z-AUTO);
   }
 
   .m-pagination__prev + .m-pagination__next {
-    z-index: layer('base');
+    z-index: var(--Z-BASE);
   }
 }
 
