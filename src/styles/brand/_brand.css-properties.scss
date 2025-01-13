@@ -1,8 +1,6 @@
 @use 'quarks' as *;
 @use 'sass:color';
 
-@use 'brand.coc-bloc-2030';
-
 :root {
   --BRAND-1:                    var(--brand-1, #{$endeavour-400});
   --BRAND-1-TINT:               var(--brand-1-tint, #{$endeavour-500});
@@ -101,10 +99,11 @@
    * -------------------------------------------------------------------
    */
 
-  --SCREEN-XS:               var(--screen-xs, 30rem); // 480px
-  --SCREEN-S:                var(--screen-s, 45rem); // 720px
-  --SCREEN-L:                var(--screen-l, 62rem); // 992px
-  --SCREEN-XL:               var(--screen-xl, 75rem); // 1200px
+  --SCREEN-XS:               var(--screen-xs, #{$screen-xs}); // 480px
+  --SCREEN-S:                var(--screen-s, #{$screen-sm}); // 720px
+  --SCREEN-M:                var(--screen-l, #{$screen-md}); // 992px
+  --SCREEN-L:                var(--screen-xl, #{$screen-lg}); // 1200px
+  --SCREEN-XL:               var(--screen-xxl, #{$screen-xl}); // 1440px
 
   /**
    * --SCREEN-XXL =
@@ -112,12 +111,12 @@
    *    + width of official logo * 2
    *    + space between logo and u-container * 2
    */
-  --SCREEN-XS-MAX:           var(--screen-xs-max, 44.9375rem); // 719px (--SCREEN-S - 1px)
-  --SCREEN-S-MAX:            var(--screen-s-max, 61.9375rem); // 991px (--SCREEN-L - 1px)
-  --SCREEN-L-MAX:            var(--screen-l-max, 74.9375rem); // 1199px (--SCREEN-XL - 1px)
-  --SCREEN-XL-MAX:           var(--screen-xl-max, 89.9375rem); // 1439px (--SCREEN-XXL - 1px)
-  --SCREEN-XXL:              var(--screen-xxl, calc(var(--SCREEN-XL) + calc(var(--SPACER-3XL) * 2) + calc(var(--SPACER) * 2))); // 90rem - 1440px
-
+  --SCREEN-XXS-MAX:          var(--screen-xxs-max, #{$screen-xxs-max}); // 719px (--SCREEN-S - 1px)
+  --SCREEN-XS-MAX:           var(--screen-xs-max, #{$screen-xs-max}); // 719px (--SCREEN-S - 1px)
+  --SCREEN-S-MAX:            var(--screen-s-max, #{$screen-sm-max}); // 991px (--SCREEN-M - 1px)
+  --SCREEN-M-MAX:            var(--screen-l-max, #{$screen-md-max}); // 1199px (--SCREEN-L - 1px)
+  --SCREEN-L-MAX:            var(--screen-xl-max, #{$screen-lg-max}); // 1439px (--SCREEN-XL - 1px)
+  
   /**
    * FONT FAMILIES
    * -------------------------------------------------------------------

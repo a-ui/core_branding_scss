@@ -18,8 +18,8 @@
   --input-placeholder-color:       #{$neutral-400};
 
   --input-disabled-color:          var(--STATE-DISABLED-CONTRAST);
-  --input-disabled-bg-color:       var(--BG-COLOR);
-  --input-disabled-border-color:   var(--BORDER-COLOR-LIGHT);
+  --input-disabled-bg-color:       var(--STATE-DISABLED);
+  --input-disabled-border-color:   var(--STATE-DISABLED-TINT);
 
   --input-readonly-color:          var(--TEXT-COLOR);
   --input-readonly-bg-color:       var(--BG-COLOR-LIGHT);

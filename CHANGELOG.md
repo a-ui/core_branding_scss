@@ -22,11 +22,15 @@
 - [BREAKING] Added better state colors
 - Tweaked some colors to better match their other variants
 - Optimized font loading by only offering woff2 format which should be enough for all modern browsers
-- Tweaked design of the avatar
-- Tweaked design of the breadcrumb
-- Tweaked design of the range slider
+- Tweaked the design of the avatar
+- Tweaked the design of the breadcrumb
+- Tweaked the design of the pagination
+- Tweaked the design of the range slider
+- Tweaked the design of the upload
 
 ### Fixed
+
+- [BREAKING] Fixed breakpoint variables
 
 ### Removed
 

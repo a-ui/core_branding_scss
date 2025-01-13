@@ -12,8 +12,8 @@
   --radio-checkbox-border-color:            var(--BORDER-COLOR);
 
   --radio-checkbox-disabled-color:          var(--STATE-DISABLED-CONTRAST);
-  --radio-checkbox-disabled-bg-color:       var(--BG-COLOR);
-  --radio-checkbox-disabled-border-color:   var(--BORDER-COLOR-LIGHT);
+  --radio-checkbox-disabled-bg-color:       var(--STATE-DISABLED);
+  --radio-checkbox-disabled-border-color:   var(--STATE-DISABLED-TINT);
 }
 
 /**

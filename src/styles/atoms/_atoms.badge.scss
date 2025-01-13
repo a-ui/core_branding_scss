@@ -83,15 +83,23 @@
   .a-badge {
     &,
     &.a-badge--primary {
-      --badge-color:             var(--TEXT-COLOR-INVERTED);
-      --badge-bg-color:          var(--TEXT-COLOR-LIGHT);
-      --badge-border-color:      var(--TEXT-COLOR-LIGHT);
+      --badge-color:             var(--STATE-DISABLED);
+      --badge-bg-color:          var(--STATE-DISABLED-CONTRAST);
+      --badge-border-color:      var(--STATE-DISABLED-CONTRAST);
 
       &.a-badge--outlined,
       &.a-badge--transparent {
-        --badge-color:            var(--TEXT-COLOR-LIGHT);
-        --badge-bg-color:         transparent;
-        --badge-border-color:     var(--BORDER-COLOR);
+        --badge-color:             var(--STATE-DISABLED-CONTRAST);
+        --badge-bg-color:          var(--STATE-DISABLED);
+        
+      }
+
+      &.a-badge--outlined {
+        --badge-border-color:      var(--STATE-DISABLED-TINT);
+      }
+
+      &.a-badge--transparent {
+        --badge-border-color:      var(--STATE-DISABLED);
       }
     }
   }

@@ -18,6 +18,7 @@ $screen-md:     62rem !default; // 992px
 $screen-lg:     75rem !default; // 1200px
 $screen-xl:     90rem !default; // 90rem - 1440px, $screen-xl = max-width of u-container + width of official logo * 2 + space between logo and u-container * 2
 
+$screen-xxs-max: 29.9375rem !default; // 479px ($screen-xs - 1px)
 $screen-xs-max: 44.9375rem !default; // 719px ($screen-sm - 1px)
 $screen-sm-max: 61.9375rem !default; // 991px ($screen-md - 1px)
 $screen-md-max: 74.9375rem !default; // 1199px ($screen-lg - 1px)

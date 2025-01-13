@@ -22,8 +22,8 @@
   --pagination-active-border:             var(--BRAND-1-TINT);
 
   --pagination-disabled-color:            var(--STATE-DISABLED-CONTRAST);
-  --pagination-disabled-bg-color:         var(--BG-COLOR);
-  --pagination-disabled-border-color:     var(--BG-COLOR);
+  --pagination-disabled-bg-color:         var(--STATE-DISABLED);
+  --pagination-disabled-border-color:     var(--STATE-DISABLED-TINT);
 }
 
 /**
@@ -74,14 +74,14 @@
 
       &.is-disabled {
         background-color: var(--pagination-disabled-bg-color);
-        box-shadow: 0 0 0 var(--BORDER-WIDTH) var(--pagination-disabled-border) inset;
+        box-shadow: 0 0 0 var(--BORDER-WIDTH) var(--pagination-disabled-border-color) inset;
         color: var(--pagination-disabled-color);
         cursor: not-allowed;
       }
     }
 
     &:has(a.is-disabled) {
-      box-shadow: 0 0 0 var(--BORDER-WIDTH) var(--pagination-disabled-border) inset;
+      box-shadow: 0 0 0 var(--BORDER-WIDTH) var(--pagination-disabled-border-color) inset;
     }
 
     + li {
