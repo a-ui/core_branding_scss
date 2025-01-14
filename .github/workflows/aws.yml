@@ -24,6 +24,7 @@ jobs:
         with:
           name: dist
           path: dist
+          overwrite: true
   deploy:
     name: Deploy
     runs-on: ubuntu-latest
