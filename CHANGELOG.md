@@ -12,6 +12,7 @@
 - Added CSS variable for selection color
 - Added CSS variables for z-index
 - Added more variants for existing colors to enhance accessibility across all components
+- Added more variants for background and text utilities
 
 ### Changed
 

@@ -18,6 +18,7 @@ gulp.task('watch', function () {
     gulp.watch('src/**/*.njk', gulp.series('render-templates'));
     gulp.watch([
         '.tmp/**/*.css',
+        'src/scripts/**/*.js',
         '.tmp/**/*.html'
     ]).on('change', browserSync.reload);
 });

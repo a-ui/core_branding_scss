@@ -98,7 +98,10 @@
   color: var(--TEXT-COLOR-LIGHT);
 }
 
-.u-text-xlight,
+.u-text {
+  color: var(--TEXT-COLOR);
+}
+
 .u-text-inverted {
   color: var(--TEXT-COLOR-INVERTED);
 }

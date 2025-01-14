@@ -223,6 +223,24 @@
   }
 }
 
+.d-u-text {
+  &-primary {
+    background: var(--BRAND-1-CONTRAST);
+  }
+
+  &-secondary {
+    background: var(--BRAND-2-CONTRAST);
+  }
+
+  &-tertiary {
+    background: var(--BRAND-3-CONTRAST);
+  }
+
+  &-inverted {
+    background: var(--BG-COLOR-INVERTED);
+  }
+}
+
 .d-spacing-utility {
   background:
     repeating-linear-gradient(
@@ -241,11 +259,6 @@
     display: inline-block;
     padding: .0625rem .25rem .125rem;
   }
-}
-
-.d-u-text-xlight {
-  background-color: $neutral-600;
-  padding: var(--SPACER-3XS);
 }
 
 .d-avatars {

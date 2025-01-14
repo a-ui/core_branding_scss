@@ -10,15 +10,16 @@
   --table-bg-color:                     var(--BG-COLOR-LIGHT);
   --table-border-color:                 var(--BORDER-COLOR);
   --table-border-color-light:           var(--BORDER-COLOR-LIGHT);
+  --table-highlight-color:              var(--BRAND-1-ALT-CONTRAST);
   --table-highlight-bg-color:           var(--BRAND-1-ALT-TINT);
   --table-highlight-border-color:       var(--BRAND-1);
   --table-striped-bg-color:             var(--BG-COLOR);
 
   --table-sort-btn-color:               var(--TEXT-COLOR);
   --table-sort-btn-active-color:        var(--BRAND-1);
-  --table-sort-btn-bg-color:            var(--BG-COLOR-LIGHT);
+  --table-sort-btn-bg-color:            var(--BRAND-1-CONTRAST);
   --table-sort-btn-hover-bg-color:      var(--BRAND-1-ALT-TINT);
-  --table-sort-btn-icon-color:          #{$neutral-300};
+  --table-sort-btn-icon-color:          var(--BORDER-COLOR);
   --table-sort-btn-icon-active-color:   var(--BRAND-1);
 }
 
@@ -54,10 +55,11 @@
     &.is-clickable:hover,
     &.is-clickable:focus {
       background-color: var(--table-highlight-bg-color);
+      color: var(--table-highlight-color);
       cursor: pointer;
 
       .small {
-        color: $neutral-500;
+        color: $neutral-200;
       }
     }
 

@@ -7,44 +7,55 @@
 
 .u-bg {
   background-color: var(--BG-COLOR);
+  color: var(--TEXT-COLOR);
 }
 
-.u-bg-light {
-  background-color: var(--BG-COLOR);
+.u-bg-inverted {
+  background-color: var(--BG-COLOR-INVERTED);
+  color: var(--TEXT-COLOR-INVERTED);
 }
 
 .u-bg-primary {
   background-color: var(--BRAND-1);
+  color: var(--BRAND-1-CONTRAST);
 }
 
 .u-bg-secondary {
   background-color: var(--BRAND-2);
+  color: var(--BRAND-2-CONTRAST);
 }
 
 .u-bg-tertiary {
   background-color: var(--BRAND-3);
+  color: var(--BRAND-3-CONTRAST);
 }
 
 .u-bg-u-bg-info {
   background-color: var(--STATE-INFO);
+  color: var(--STATE-INFO-CONTRAST);
 }
 
 .u-bg-success {
   background-color: var(--STATE-SUCCESS);
+  color: var(--STATE-SUCCESS-CONTRAST);
 }
 
 .u-bg-warning {
   background-color: var(--STATE-WARNING);
+  color: var(--STATE-WARNING-CONTRAST);
 }
 
 .u-bg-danger {
   background-color: var(--STATE-DANGER);
+  color: var(--STATE-DANGER-CONTRAST);
 }
 
 .u-bg-white {
   background-color: $white;
+  color: $black;
 }
 
 .u-bg-black {
-  background-color: $neutral-600;
+  background-color: $black;
+  color: $white;
 }
