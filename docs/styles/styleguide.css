@@ -40,11 +40,6 @@
  * -------------------------------------------------------------------
  */
 /**
- * GLOBAL VARIABLES
- * -------------------------------------------------------------------
- * Leave here for renderer
- */
-/**
  * COLORS
  * -------------------------------------------------------------------
  * Collection of all available branding colors
@@ -68,87 +63,15 @@
  * We used 25%
  */
 /**
- * THEME COLORS
+ * GLOBAL VARIABLES
  * -------------------------------------------------------------------
- */
-/**
- * OTHER THEME COLORS
- * -------------------------------------------------------------------
- */
-/**
- * SPACERS
- * -------------------------------------------------------------------
+ * Leave here for renderer
  */
 /**
  * BREAKPOINTS
  * -------------------------------------------------------------------
- */
-/**
- * $screen-xl =
- *    max-width of u-container
- *    + width of official logo * 2
- *    + space between logo and u-container * 2
- */
-/**
- * FONT SIZES
- * -------------------------------------------------------------------
- */
-/**
- * LINE HEIGHTS
- * -------------------------------------------------------------------
- */
-/**
- * OTHER TYPOGRAPHY
- * -------------------------------------------------------------------
- */
-/**
- * Z-INDEXES
- * -------------------------------------------------------------------
- * http://www.sitepoint.com/better-solution-managing-z-index-sass/
- *
- * Use like this:
- *   z-index: layer('overlay');
- *     where overlay is a list item of the default list "$z-indexes" (see below)
- *
- * The list is also upgradeable in that nesting is permitted, e.g.:
- * z-indexes: (
- *   'modal': (
- *     'back': 50,
- *     'front': 60
- *   ),
- *   'navigation': 40,
- *   ...
- * )
- */
-/**
- * ICON SIZES
- * -------------------------------------------------------------------
- */
-/**
- * FUNCTIONS
- * -------------------------------------------------------------------
- * Collection of custom functions
- */
-/**
- * STRIP UNIT FROM VALUE
- * -------------------------------------------------------------------
- */
-/**
- * CONVERT PX TO REM
- * -------------------------------------------------------------------
- */
-/**
- * RAISE NUMBER TO CERTAIN POWER
- * -------------------------------------------------------------------
- */
-/**
- * HANDLING Z-INDEX LAYERS
- * -------------------------------------------------------------------
- */
-/**
- * GLOBAL VARIABLES
- * -------------------------------------------------------------------
- * Leave here for renderer
+ * CSS variables can't (yet) be used in media queries, so we need to define
+ * them here as SCSS variables so we can use them like that in media queries.
  */
 /**
  * CUSTOM STYLING FOR STYLEGUIDE
@@ -288,7 +211,7 @@
   position: relative;
 }
 .m-alert--wcag:before {
-  background-color: var(--BRAND-1);
+  background-color: var(--STATE-INFO);
   background-repeat: no-repeat;
   content: "";
   height: 1.25rem;
@@ -362,6 +285,19 @@
   box-shadow: 0 0 0 var(--BORDER-WIDTH) var(--BORDER-COLOR-LIGHT) inset;
 }
 
+.d-u-text-primary {
+  background: var(--BRAND-1-CONTRAST);
+}
+.d-u-text-secondary {
+  background: var(--BRAND-2-CONTRAST);
+}
+.d-u-text-tertiary {
+  background: var(--BRAND-3-CONTRAST);
+}
+.d-u-text-inverted {
+  background: var(--BG-COLOR-INVERTED);
+}
+
 .d-spacing-utility {
   background: repeating-linear-gradient(45deg, var(--BG-COLOR-LIGHT), var(--BG-COLOR-LIGHT) 10px, var(--BG-COLOR) 10px, var(--BG-COLOR) 20px);
   box-shadow: 0 0 0 var(--BORDER-WIDTH) var(--BORDER-COLOR-LIGHT) inset;
@@ -372,11 +308,6 @@
   background-color: rgba(0, 0, 0, 0.6);
   display: inline-block;
   padding: 0.0625rem 0.25rem 0.125rem;
-}
-
-.d-u-text-xlight {
-  background-color: #141414;
-  padding: var(--SPACER-3XS);
 }
 
 .d-avatars {
