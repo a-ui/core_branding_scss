@@ -18,12 +18,14 @@ jobs:
         run: npm ci
       - name: Build library
         run: npm run aws
+      - name: Verify dist directory
+        run: ls -la dist
       - name: Archive build
-        if: success()
         uses: actions/upload-artifact@v4
         with:
           name: dist
           path: dist
+          retention-days: 7
   deploy:
     name: Deploy
     runs-on: ubuntu-latest
