@@ -9,6 +9,7 @@
 .m-upload {
   --upload-color:                   var(--TEXT-COLOR);
   --upload-bg-color:                var(--BG-COLOR-LIGHT);
+  --upload-hover-color:             var(--BRAND-1);
   --upload-hover-bg-color:          var(--BRAND-1-ALT-TINT);
   --upload-border-color:            var(--BRAND-1);
   --upload-disabled-color:          var(--STATE-DISABLED-CONTRAST);
@@ -78,6 +79,7 @@
   &:hover,
   &:focus {
     background-color: var(--upload-hover-bg-color);
+    color: var(--upload-hover-color);
   }
 }
 

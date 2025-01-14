@@ -35,7 +35,7 @@
 
 button.m-tag {
   --tag-color: var(--BRAND-1);
-  --tag-bg-color: var(--BG-COLOR-LIGHT);
+  --tag-bg-color: var(--BRAND-1-CONTRAST);
   --tag-border-color: var(--BRAND-1);
 
   cursor: pointer;
@@ -49,7 +49,7 @@ button.m-tag {
   }
 
   &[aria-pressed='true'] {
-    --tag-color: var(--TEXT-COLOR-INVERTED);
+    --tag-color: var(--BRAND-1-CONTRAST);
     --tag-bg-color: var(--BRAND-1);
     --tag-border-color: var(--BRAND-1);
 

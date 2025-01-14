@@ -8,7 +8,6 @@
 .m-datepicker {
   --datepicker-text-color:           var(--TEXT-COLOR);
   --datepicker-text-color-light:     var(--TEXT-COLOR-LIGHT);
-  --datepicker-text-color-xlight:    var(--TEXT-COLOR-INVERTED);
 
   --datepicker-bg-color:             var(--BG-COLOR-LIGHT);
   --datepicker-bg-color-dark:        var(--BG-COLOR);
@@ -18,6 +17,7 @@
 
   --datepicker-highlight-color:      var(--BRAND-1-ALT-TINT);
   --datepicker-active-color:         var(--BRAND-1);
+  --datepicker-active-bg-color:      var(--BRAND-1-CONTRAST);
 }
 
 /**
@@ -183,7 +183,7 @@
 
     &.is-selected {
       background-color: var(--datepicker-active-color);
-      color: var(--datepicker-text-color-xlight);
+      color: var(--datepicker-active-bg-color);
       font-weight: var(--FONT-WEIGHT-BOLD);
     }
 
@@ -286,7 +286,7 @@
 
     &.is-selected {
       background-color: var(--datepicker-active-color);
-      color: var(--datepicker-text-color-xlight);
+      color: var(--datepicker-active-bg-color);
       font-weight: var(--FONT-WEIGHT-BOLD);
     }
   }
