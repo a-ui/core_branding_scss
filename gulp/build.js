@@ -13,10 +13,9 @@ gulp.task('cdn', function (callback) {
     fs.rename('dist/aws', 'dist/' + version, function (err) {
         if (err) {
             throw err;
-        } else {
-            console.log('\n----++++ https://cdn.antwerpen.be/core_branding_scss/' + version + '/main.min.css ++++----\n');
-            callback();
         }
+        console.log('\n----++++ https://cdn.antwerpen.be/core_branding_scss/' + version + '/main.min.css ++++----\n');
+        callback();
     });
 });
 

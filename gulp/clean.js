@@ -16,11 +16,3 @@ gulp.task('clean:dist', function () {
 gulp.task('clean:docs', function () {
     return del(['docs']);
 });
-
-gulp.task('clean:aws', function (cb) {
-    del([
-        'dist/*',
-        '!dist/aws'
-    ]);
-    return cb();
-});
