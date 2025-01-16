@@ -3,47 +3,34 @@
 // -------------------------------------------------------------------
 
 var gulp = require('gulp');
-var merge = require('ordered-read-streams');
 const fs = require('fs-extra');
 const path = require('path');
 
 gulp.task('copy', async function() {
-    const tasks = [
-        gulp.src('src/fonts/**/*')
-            .pipe(gulp.dest('dist/assets/fonts')),
-        gulp.src('src/icons/**/*')
-            .pipe(gulp.dest('dist/assets/icons')),
-        gulp.src(['src/styles/**/*', '!src/styles/**/styleguide.scss'])
-            .pipe(gulp.dest('dist/assets/styles')),
-        gulp.src('src/images/**/*')
-            .pipe(gulp.dest('dist/assets/images'))
+    const copyTasks = [
+        fs.copy('src/fonts', 'dist/assets/fonts'),
+        fs.copy('src/icons', 'dist/assets/icons'),
+        fs.copy('src/images', 'dist/assets/images'),
+        fs.copy('src/styles', 'dist/assets/styles', {
+            filter: (src) => !src.endsWith('styleguide.scss'),
+        }),
     ];
 
-    await Promise.all(tasks.map(streamToPromise));
+    await Promise.all(copyTasks);
 });
 
 gulp.task('copy:docs', async function() {
-    const tasks = [
-        gulp.src('.tmp/**/*.html')
-            .pipe(gulp.dest('docs')),
-        gulp.src('src/images/**/*')
-            .pipe(gulp.dest('docs/images')),
-        gulp.src('src/fonts/**/*')
-            .pipe(gulp.dest('docs/fonts')),
-        gulp.src('src/scripts/**/*')
-            .pipe(gulp.dest('docs/scripts'))
-    ]
+    const copyDocsTasks = [
+        fs.copy('.tmp', 'docs', {
+            filter: (src) => src.endsWith('.html'),
+        }),
+        fs.copy('src/images', 'docs/images'),
+        fs.copy('src/fonts', 'docs/fonts'),
+        fs.copy('src/scripts', 'docs/scripts'),
+    ];
 
-    await Promise.all(tasks.map(streamToPromise));
+    await Promise.all(copyDocsTasks);
 });
-
-// Helper function to convert streams to promises
-function streamToPromise(stream) {
-    return new Promise((resolve, reject) => {
-        stream.on('end', resolve);
-        stream.on('error', reject);
-    });
-}
 
 gulp.task('move:aws', async function() {
     const distPath = 'dist';

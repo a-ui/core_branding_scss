@@ -1,6 +1,6 @@
 {
   "name": "@a-ui/core",
-  "version": "7.0.0-beta.3",
+  "version": "7.0.0-beta.6",
   "description": "core_branding_scss",
   "repository": {
     "type": "git",
@@ -45,7 +45,6 @@
     "gulp-sass": "^5.1.0",
     "gulp-sourcemaps": "^2.6.5",
     "gulp-svg-sprite": "^2.0.3",
-    "ordered-read-streams": "^2.0.0",
     "postcss": "^8.4.49",
     "postcss-selector-parser": "^7.0.0",
     "sass": "^1.82.0"
