@@ -17,10 +17,10 @@
     font-weight: $_weight;
 
     @if $_local {
-      src: local($_name), url($_url + '.woff2') format('woff2');
+      src: local($_name), url($_url + '.woff') format('woff');
     }
     @else {
-      src: url($_url + '.woff2') format('woff2');
+      src: url($_url + '.woff') format('woff');
     }
   }
 }

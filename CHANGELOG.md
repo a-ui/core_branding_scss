@@ -35,9 +35,10 @@
 
 ### Removed
 
-- [BREAKING] Removed all Twitter related components
+- [BREAKING] Removed `.u-bg-light` in favor of `.u-bg`
 - [BREAKING] Removed Sass variables except for colors and breakpoints
 - [BREAKING] Removed Sass helper functions
+- [BREAKING] Removed all Twitter related components
 
 ## [6.6.6] - 2024-06-20
 

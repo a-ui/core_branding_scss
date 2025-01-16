@@ -301,42 +301,42 @@
   font-family: "Antwerpen Small";
   font-style: normal;
   font-weight: 500;
-  src: url("../fonts/AntwerpenSmallCaps-Regular.woff2") format("woff2");
+  src: url("../fonts/AntwerpenSmallCaps-Regular.woff") format("woff");
 }
 @font-face {
   font-display: swap;
   font-family: "Antwerpen Small";
   font-style: normal;
   font-weight: 700;
-  src: url("../fonts/AntwerpenSmallCaps-Regular.woff2") format("woff2");
+  src: url("../fonts/AntwerpenSmallCaps-Regular.woff") format("woff");
 }
 @font-face {
   font-display: swap;
   font-family: "Antwerpen Regular";
   font-style: normal;
   font-weight: 500;
-  src: url("../fonts/Antwerpen-Regular.woff2") format("woff2");
+  src: url("../fonts/Antwerpen-Regular.woff") format("woff");
 }
 @font-face {
   font-display: swap;
   font-family: "Antwerpen Regular";
   font-style: normal;
   font-weight: 700;
-  src: url("../fonts/Antwerpen-Regular.woff2") format("woff2");
+  src: url("../fonts/Antwerpen-Regular.woff") format("woff");
 }
 @font-face {
   font-display: swap;
   font-family: "Antwerpen Tall";
   font-style: normal;
   font-weight: 500;
-  src: url("../fonts/AntwerpenTall-Tall.woff2") format("woff2");
+  src: url("../fonts/AntwerpenTall-Tall.woff") format("woff");
 }
 @font-face {
   font-display: swap;
   font-family: "Antwerpen Tall";
   font-style: normal;
   font-weight: 700;
-  src: url("../fonts/AntwerpenTall-Tall.woff2") format("woff2");
+  src: url("../fonts/AntwerpenTall-Tall.woff") format("woff");
 }
 /**
  * SUN ANTWERPEN FONT
@@ -347,56 +347,56 @@
   font-family: "Sun Antwerpen";
   font-style: normal;
   font-weight: 300;
-  src: url("../fonts/SunAntwerpen_300.woff2") format("woff2");
+  src: url("../fonts/SunAntwerpen_300.woff") format("woff");
 }
 @font-face {
   font-display: swap;
   font-family: "Sun Antwerpen";
   font-style: italic;
   font-weight: 300;
-  src: url("../fonts/SunAntwerpen_300_italic.woff2") format("woff2");
+  src: url("../fonts/SunAntwerpen_300_italic.woff") format("woff");
 }
 @font-face {
   font-display: swap;
   font-family: "Sun Antwerpen";
   font-style: normal;
   font-weight: 500;
-  src: url("../fonts/SunAntwerpen_500.woff2") format("woff2");
+  src: url("../fonts/SunAntwerpen_500.woff") format("woff");
 }
 @font-face {
   font-display: swap;
   font-family: "Sun Antwerpen";
   font-style: italic;
   font-weight: 500;
-  src: url("../fonts/SunAntwerpen_500_italic.woff2") format("woff2");
+  src: url("../fonts/SunAntwerpen_500_italic.woff") format("woff");
 }
 @font-face {
   font-display: swap;
   font-family: "Sun Antwerpen";
   font-style: normal;
   font-weight: 700;
-  src: url("../fonts/SunAntwerpen_700.woff2") format("woff2");
+  src: url("../fonts/SunAntwerpen_700.woff") format("woff");
 }
 @font-face {
   font-display: swap;
   font-family: "Sun Antwerpen";
   font-style: italic;
   font-weight: 700;
-  src: url("../fonts/SunAntwerpen_700_italic.woff2") format("woff2");
+  src: url("../fonts/SunAntwerpen_700_italic.woff") format("woff");
 }
 @font-face {
   font-display: swap;
   font-family: "Sun Antwerpen";
   font-style: normal;
   font-weight: 800;
-  src: url("../fonts/SunAntwerpen_800.woff2") format("woff2");
+  src: url("../fonts/SunAntwerpen_800.woff") format("woff");
 }
 @font-face {
   font-display: swap;
   font-family: "Sun Antwerpen";
   font-style: italic;
   font-weight: 800;
-  src: url("../fonts/SunAntwerpen_800_italic.woff2") format("woff2");
+  src: url("../fonts/SunAntwerpen_800_italic.woff") format("woff");
 }
 /**
  * ICONS
@@ -3201,7 +3201,9 @@ a.a-page-indicator__item:focus:before {
   text-align: center;
   top: 0;
   transition-duration: var(--ANIMATION-DURATION);
-  transition-property: background-size;
+  transition-property: -webkit-mask-size;
+  transition-property: mask-size;
+  transition-property: mask-size, -webkit-mask-size;
   transition-timing-function: var(--ANIMATION-EASING);
   width: var(--SPACER);
 }
@@ -3210,23 +3212,31 @@ a.a-page-indicator__item:focus:before {
   border-radius: var(--BORDER-RADIUS);
 }
 .a-input__checkbox input[type=checkbox] + label:after {
-  background-position: center center;
-  background-repeat: no-repeat;
-  background-size: 0% 0%;
+  -webkit-mask-position: center center;
+          mask-position: center center;
+  -webkit-mask-repeat: no-repeat;
+          mask-repeat: no-repeat;
+  -webkit-mask-size: 0% 0%;
+          mask-size: 0% 0%;
 }
 
 .a-input__checkbox input[type=checkbox]:checked + label:after, .a-input__checkbox input[type=checkbox]:indeterminate + label:after {
-  background-size: 100% 100%;
+  -webkit-mask-position: center center;
+          mask-position: center center;
+  -webkit-mask-repeat: no-repeat;
+          mask-repeat: no-repeat;
+  -webkit-mask-size: 100% 100%;
+          mask-size: 100% 100%;
 }
 .a-input__checkbox input[type=checkbox]:checked + label:after {
   background-color: var(--radio-checkbox-color);
-  -webkit-mask: url("data:image/svg+xml;utf8,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 20 20%22><path fill=%22%23000000%22 d=%22M7.2,17c-0.2,0-0.3-0.1-0.4-0.2l-3.7-3.7C3,13,3,12.6,3.1,12.5s0.5-0.2,0.7,0l3.2,3.2l9-12.5c0.2-0.3,0.4-0.3,0.7-0.1c0.3,0.2,0.3,0.4,0.1,0.7l-9.4,13C7.4,16.9,7.3,17,7.2,17L7.2,17z%22/></svg>") no-repeat center center;
-          mask: url("data:image/svg+xml;utf8,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 20 20%22><path fill=%22%23000000%22 d=%22M7.2,17c-0.2,0-0.3-0.1-0.4-0.2l-3.7-3.7C3,13,3,12.6,3.1,12.5s0.5-0.2,0.7,0l3.2,3.2l9-12.5c0.2-0.3,0.4-0.3,0.7-0.1c0.3,0.2,0.3,0.4,0.1,0.7l-9.4,13C7.4,16.9,7.3,17,7.2,17L7.2,17z%22/></svg>") no-repeat center center;
+  -webkit-mask-image: url("data:image/svg+xml;utf8,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 20 20%22><path fill=%22%23000000%22 d=%22M7.2,17c-0.2,0-0.3-0.1-0.4-0.2l-3.7-3.7C3,13,3,12.6,3.1,12.5s0.5-0.2,0.7,0l3.2,3.2l9-12.5c0.2-0.3,0.4-0.3,0.7-0.1c0.3,0.2,0.3,0.4,0.1,0.7l-9.4,13C7.4,16.9,7.3,17,7.2,17L7.2,17z%22/></svg>");
+          mask-image: url("data:image/svg+xml;utf8,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 20 20%22><path fill=%22%23000000%22 d=%22M7.2,17c-0.2,0-0.3-0.1-0.4-0.2l-3.7-3.7C3,13,3,12.6,3.1,12.5s0.5-0.2,0.7,0l3.2,3.2l9-12.5c0.2-0.3,0.4-0.3,0.7-0.1c0.3,0.2,0.3,0.4,0.1,0.7l-9.4,13C7.4,16.9,7.3,17,7.2,17L7.2,17z%22/></svg>");
 }
 .a-input__checkbox input[type=checkbox]:checked:disabled + label:after {
   background-color: var(--radio-checkbox-disabled-color);
-  -webkit-mask: url("data:image/svg+xml;utf8,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 20 20%22><path fill=%22%23000000%22 d=%22M7.2,17c-0.2,0-0.3-0.1-0.4-0.2l-3.7-3.7C3,13,3,12.6,3.1,12.5s0.5-0.2,0.7,0l3.2,3.2l9-12.5c0.2-0.3,0.4-0.3,0.7-0.1c0.3,0.2,0.3,0.4,0.1,0.7l-9.4,13C7.4,16.9,7.3,17,7.2,17L7.2,17z%22/></svg>");
-          mask: url("data:image/svg+xml;utf8,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 20 20%22><path fill=%22%23000000%22 d=%22M7.2,17c-0.2,0-0.3-0.1-0.4-0.2l-3.7-3.7C3,13,3,12.6,3.1,12.5s0.5-0.2,0.7,0l3.2,3.2l9-12.5c0.2-0.3,0.4-0.3,0.7-0.1c0.3,0.2,0.3,0.4,0.1,0.7l-9.4,13C7.4,16.9,7.3,17,7.2,17L7.2,17z%22/></svg>");
+  -webkit-mask-image: url("data:image/svg+xml;utf8,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 20 20%22><path fill=%22%23000000%22 d=%22M7.2,17c-0.2,0-0.3-0.1-0.4-0.2l-3.7-3.7C3,13,3,12.6,3.1,12.5s0.5-0.2,0.7,0l3.2,3.2l9-12.5c0.2-0.3,0.4-0.3,0.7-0.1c0.3,0.2,0.3,0.4,0.1,0.7l-9.4,13C7.4,16.9,7.3,17,7.2,17L7.2,17z%22/></svg>");
+          mask-image: url("data:image/svg+xml;utf8,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 20 20%22><path fill=%22%23000000%22 d=%22M7.2,17c-0.2,0-0.3-0.1-0.4-0.2l-3.7-3.7C3,13,3,12.6,3.1,12.5s0.5-0.2,0.7,0l3.2,3.2l9-12.5c0.2-0.3,0.4-0.3,0.7-0.1c0.3,0.2,0.3,0.4,0.1,0.7l-9.4,13C7.4,16.9,7.3,17,7.2,17L7.2,17z%22/></svg>");
 }
 .a-input__checkbox input[type=checkbox]:indeterminate + label:before {
   background-color: var(--radio-checkbox-bg-color);
@@ -3234,13 +3244,13 @@ a.a-page-indicator__item:focus:before {
 }
 .a-input__checkbox input[type=checkbox]:indeterminate + label:after {
   background-color: var(--radio-checkbox-color);
-  -webkit-mask: url("data:image/svg+xml;utf8,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 20 20%22><path fill=%22%23000000%22 d=%22M16.5,10.5h-13C3.2,10.5,3,10.3,3,10s0.2-0.5,0.4-0.5h13.1c0.3,0,0.4,0.2,0.4,0.5S16.7,10.5,16.5,10.5z%22/></svg>");
-          mask: url("data:image/svg+xml;utf8,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 20 20%22><path fill=%22%23000000%22 d=%22M16.5,10.5h-13C3.2,10.5,3,10.3,3,10s0.2-0.5,0.4-0.5h13.1c0.3,0,0.4,0.2,0.4,0.5S16.7,10.5,16.5,10.5z%22/></svg>");
+  -webkit-mask-image: url("data:image/svg+xml;utf8,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 20 20%22><path fill=%22%23000000%22 d=%22M16.5,10.5h-13C3.2,10.5,3,10.3,3,10s0.2-0.5,0.4-0.5h13.1c0.3,0,0.4,0.2,0.4,0.5S16.7,10.5,16.5,10.5z%22/></svg>");
+          mask-image: url("data:image/svg+xml;utf8,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 20 20%22><path fill=%22%23000000%22 d=%22M16.5,10.5h-13C3.2,10.5,3,10.3,3,10s0.2-0.5,0.4-0.5h13.1c0.3,0,0.4,0.2,0.4,0.5S16.7,10.5,16.5,10.5z%22/></svg>");
 }
 .a-input__checkbox input[type=checkbox]:indeterminate:disabled + label:after {
   background-color: var(--radio-checkbox-disabled-bg-color);
-  -webkit-mask: url("data:image/svg+xml;utf8,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 20 20%22><path fill=%22%23000000%22 d=%22M16.5,10.5h-13C3.2,10.5,3,10.3,3,10s0.2-0.5,0.4-0.5h13.1c0.3,0,0.4,0.2,0.4,0.5S16.7,10.5,16.5,10.5z%22/></svg>");
-          mask: url("data:image/svg+xml;utf8,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 20 20%22><path fill=%22%23000000%22 d=%22M16.5,10.5h-13C3.2,10.5,3,10.3,3,10s0.2-0.5,0.4-0.5h13.1c0.3,0,0.4,0.2,0.4,0.5S16.7,10.5,16.5,10.5z%22/></svg>");
+  -webkit-mask-image: url("data:image/svg+xml;utf8,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 20 20%22><path fill=%22%23000000%22 d=%22M16.5,10.5h-13C3.2,10.5,3,10.3,3,10s0.2-0.5,0.4-0.5h13.1c0.3,0,0.4,0.2,0.4,0.5S16.7,10.5,16.5,10.5z%22/></svg>");
+          mask-image: url("data:image/svg+xml;utf8,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 20 20%22><path fill=%22%23000000%22 d=%22M16.5,10.5h-13C3.2,10.5,3,10.3,3,10s0.2-0.5,0.4-0.5h13.1c0.3,0,0.4,0.2,0.4,0.5S16.7,10.5,16.5,10.5z%22/></svg>");
   box-shadow: 0 0 0 var(--BORDER-WIDTH) var(--radio-checkbox-disabled-border-color) inset;
 }
 
