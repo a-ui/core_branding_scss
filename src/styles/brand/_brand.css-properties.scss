@@ -2,53 +2,53 @@
 @use 'sass:color';
 
 :root {
-  --BRAND-1:                    var(--brand-1, #{$endeavour-400});
-  --BRAND-1-TINT:               var(--brand-1-tint, #{$endeavour-500});
+  --BRAND-1:                    var(--brand-1, #{$endeavour-600});
+  --BRAND-1-TINT:               var(--brand-1-tint, #{$endeavour-700});
   --BRAND-1-CONTRAST:           var(--brand-1-contrast, #{$white});
   --BRAND-1-ALT:                var(--brand-1-alt, #{$white});
-  --BRAND-1-ALT-TINT:           var(--brand-1-alt-tint, #{$endeavour-50});
+  --BRAND-1-ALT-TINT:           var(--brand-1-alt-tint, #{$endeavour-100});
   --BRAND-1-ALT-CONTRAST:       var(--brand-1-alt-contrast, #{$black});
 
-  --BRAND-2:                    var(--brand-2, #{$monza-400});
-  --BRAND-2-TINT:               var(--brand-2-tint, #{$monza-500});
+  --BRAND-2:                    var(--brand-2, #{$monza-600});
+  --BRAND-2-TINT:               var(--brand-2-tint, #{$monza-700});
   --BRAND-2-CONTRAST:           var(--brand-2-contrast, #{$white});
   --BRAND-2-ALT:                var(--brand-2-alt, #{$white});
   --BRAND-2-ALT-TINT:           var(--brand-2-alt-tint, #{$monza-100});
   --BRAND-2-ALT-CONTRAST:       var(--brand-2-alt-contrast, #{$black});
 
-  --BRAND-3:                    var(--brand-3, #{$endeavour-400});
-  --BRAND-3-TINT:               var(--brand-3-tint, #{$endeavour-500});
+  --BRAND-3:                    var(--brand-3, #{$endeavour-600});
+  --BRAND-3-TINT:               var(--brand-3-tint, #{$endeavour-700});
   --BRAND-3-CONTRAST:           var(--brand-3-contrast, #{$white});
   --BRAND-3-ALT:                var(--brand-3-alt, #{$white});
-  --BRAND-3-ALT-TINT:           var(--brand-3-alt-tint, #{$endeavour-50});
+  --BRAND-3-ALT-TINT:           var(--brand-3-alt-tint, #{$endeavour-100});
   --BRAND-3-ALT-CONTRAST:       var(--brand-3-alt-contrast, #{$black});
 
-  --STATE-INFO:                 var(--state-info, #{$endeavour-400});
-  --STATE-INFO-TINT:            var(--state-info-tint, #{$endeavour-500});
+  --STATE-INFO:                 var(--state-info, #{$endeavour-600});
+  --STATE-INFO-TINT:            var(--state-info-tint, #{$endeavour-700});
   --STATE-INFO-CONTRAST:        var(--state-info-contrast, #{$white});
   --STATE-INFO-ALT:             var(--state-info-alt, #{$white});
-  --STATE-INFO-ALT-TINT:        var(--state-info-alt-tint, #{$endeavour-50});
+  --STATE-INFO-ALT-TINT:        var(--state-info-alt-tint, #{$endeavour-100});
   --STATE-INFO-ALT-CONTRAST:    var(--state-info-alt-contrast, #{$black});
 
-  --STATE-SUCCESS:              var(--state-success, #{$mantis-600});
-  --STATE-SUCCESS-TINT:         var(--state-success-tint, #{$mantis-700});
+  --STATE-SUCCESS:              var(--state-success, #{$mantis-700});
+  --STATE-SUCCESS-TINT:         var(--state-success-tint, #{$mantis-800});
   --STATE-SUCCESS-CONTRAST:     var(--state-success-contrast, #{$white});
   --STATE-SUCCESS-ALT:          var(--state-success-alt, #{$white});
-  --STATE-SUCCESS-ALT-TINT:     var(--state-success-alt-tint, #{$mantis-50});
+  --STATE-SUCCESS-ALT-TINT:     var(--state-success-alt-tint, #{$mantis-100});
   --STATE-SUCCESS-ALT-CONTRAST: var(--state-success-alt-contrast, #{$black});
 
-  --STATE-WARNING:              var(--state-warning, #{$burnt-orange-400});
-  --STATE-WARNING-TINT:         var(--state-warning-tint, #{$burnt-orange-500});
+  --STATE-WARNING:              var(--state-warning, #{$burnt-orange-600});
+  --STATE-WARNING-TINT:         var(--state-warning-tint, #{$burnt-orange-700});
   --STATE-WARNING-CONTRAST:     var(--state-warning-contrast, #{$white});
   --STATE-WARNING-ALT:          var(--state-warning-alt, #{$white});
-  --STATE-WARNING-ALT-TINT:     var(--state-warning-alt-tint, #{$burnt-orange-50});
+  --STATE-WARNING-ALT-TINT:     var(--state-warning-alt-tint, #{$burnt-orange-100});
   --STATE-WARNING-ALT-CONTRAST: var(--state-warning-alt-contrast, #{$black});
 
-  --STATE-DANGER:               var(--state-danger, #{$cinnabar-500});
-  --STATE-DANGER-TINT:          var(--state-danger-tint, #{$cinnabar-600});
+  --STATE-DANGER:               var(--state-danger, #{$cinnabar-700});
+  --STATE-DANGER-TINT:          var(--state-danger-tint, #{$cinnabar-800});
   --STATE-DANGER-CONTRAST:      var(--state-danger-contrast, #{$white});
   --STATE-DANGER-ALT:           var(--state-danger-alt, #{$white});
-  --STATE-DANGER-ALT-TINT:      var(--state-danger-alt-tint, #{$cinnabar-50});
+  --STATE-DANGER-ALT-TINT:      var(--state-danger-alt-tint, #{$cinnabar-100});
   --STATE-DANGER-ALT-CONTRAST:  var(--state-danger-alt-contrast, #{$black});
 
   --STATE-DISABLED:             var(--state-disabled, #{$neutral-100});
@@ -60,50 +60,54 @@
    * -------------------------------------------------------------------
    */
 
-  --TEXT-COLOR:                var(--text-color, #{$black});
-  --TEXT-COLOR-LIGHT:          var(--text-color-light, #{$neutral-400});
-  --TEXT-COLOR-INVERTED:       var(--text-color-inverted, #{$white});
+  --TEXT-COLOR:                 var(--text-color, #{$black});
+  --TEXT-COLOR-LIGHT:           var(--text-color-light, #{$neutral-400});
+  --TEXT-COLOR-INVERTED:        var(--text-color-inverted, #{$white});
 
-  --BG-COLOR:                  var(--bg-color, #{$neutral-100});
-  --BG-COLOR-LIGHT:            var(--bg-color-light, #{$white});
-  --BG-COLOR-INVERTED:         var(--bg-color-inverted, #{$neutral-500});
+  --BG-COLOR:                   var(--bg-color, #{$neutral-100});
+  --BG-COLOR-LIGHT:             var(--bg-color-light, #{$white});
+  --BG-COLOR-INVERTED:          var(--bg-color-inverted, #{$neutral-500});
 
-  --BORDER-COLOR:              var(--border-color, #{$neutral-300});
-  --BORDER-COLOR-LIGHT:        var(--border-color-light, #{$neutral-200});
+  --BORDER-COLOR:               var(--border-color, #{$neutral-300});
+  --BORDER-COLOR-LIGHT:         var(--border-color-light, #{$neutral-200});
 
-  --OVERLAY-COLOR:             var(--overlay-color, #{rgba($black, .75)});
-  --BOX-SHADOW-COLOR:          var(--box-shadow-color, #{rgba($neutral-600, .12)});
+  --OVERLAY-COLOR:              var(--overlay-color, #{rgba($black, .75)});
+  --BOX-SHADOW-COLOR:           var(--box-shadow-color, #{rgba($neutral-600, .12)});
 
-  --LINK:                      var(--link, #{$endeavour-400});
-  --LINK-TINT:                 var(--link-tint, #{$endeavour-500});
+  --LINK:                       var(--link, #{$endeavour-600});
+  --LINK-TINT:                  var(--link-tint, #{$endeavour-700});
+  --LINK-CONTRAST:              var(--link-contrast, #{$white});
+  --LINK-ALT:                   var(--link-alt, #{$white});
+  --LINK-ALT-TINT:              var(--link-alt-tint, #{$endeavour-100});
+  --LINK-ALT-CONTRAST:          var(--link-alt-contrast, #{$black});
 
-  --STATE-SELECTED:            var(--state-selected, #{color.mix($endeavour-400, $white, 20%)});
+  --STATE-SELECTED:             var(--state-selected, #{color.mix($endeavour-600, $white, 20%)});
 
   /**
    * SPACERS
    * -------------------------------------------------------------------
    */
 
-  --SPACER:                  var(--spacer, 1.5rem); // 24px;
-  --SPACER-3XL:              var(--spacer-3xl, 6rem); // var(--SPACER) * 4, 96px
-  --SPACER-XXL:              var(--spacer-xxl, 3.75rem); // var(--SPACER) * 2.5, 60px
-  --SPACER-XL:               var(--spacer-xl, 3rem); // calc(var(--SPACER) * 2),48px
-  --SPACER-L:                var(--spacer-l, 2.25rem); // calc(var(--SPACER) * 1.5), 36px
-  --SPACER-S:                var(--spacer-s, 1rem); // calc(var(--SPACER) / 1.5), 16px
-  --SPACER-XS:               var(--spacer-xs, .75rem); // calc(var(--SPACER) / 2), 12px
-  --SPACER-XXS:              var(--spacer-xxs, .5rem); // calc(var(--SPACER) / 3), 8px
-  --SPACER-3XS:              var(--spacer-3xs, .25rem); // calc(var(--SPACER) / 6), 4px
+  --SPACER:                     var(--spacer, 1.5rem); // 24px;
+  --SPACER-3XL:                 var(--spacer-3xl, 6rem); // var(--SPACER) * 4, 96px
+  --SPACER-XXL:                 var(--spacer-xxl, 3.75rem); // var(--SPACER) * 2.5, 60px
+  --SPACER-XL:                  var(--spacer-xl, 3rem); // calc(var(--SPACER) * 2), 48px
+  --SPACER-L:                   var(--spacer-l, 2.25rem); // calc(var(--SPACER) * 1.5), 36px
+  --SPACER-S:                   var(--spacer-s, 1rem); // calc(var(--SPACER) / 1.5), 16px
+  --SPACER-XS:                  var(--spacer-xs, .75rem); // calc(var(--SPACER) / 2), 12px
+  --SPACER-XXS:                 var(--spacer-xxs, .5rem); // calc(var(--SPACER) / 3), 8px
+  --SPACER-3XS:                 var(--spacer-3xs, .25rem); // calc(var(--SPACER) / 6), 4px
 
   /**
    * BREAKPOINTS
    * -------------------------------------------------------------------
    */
 
-  --SCREEN-XS:               var(--screen-xs, #{$screen-xs}); // 480px
-  --SCREEN-S:                var(--screen-s, #{$screen-sm}); // 720px
-  --SCREEN-M:                var(--screen-l, #{$screen-md}); // 992px
-  --SCREEN-L:                var(--screen-xl, #{$screen-lg}); // 1200px
-  --SCREEN-XL:               var(--screen-xxl, #{$screen-xl}); // 1440px
+  --SCREEN-XS:                  var(--screen-xs, #{$screen-xs}); // 480px
+  --SCREEN-S:                   var(--screen-s, #{$screen-sm}); // 720px
+  --SCREEN-M:                   var(--screen-l, #{$screen-md}); // 992px
+  --SCREEN-L:                   var(--screen-xl, #{$screen-lg}); // 1200px
+  --SCREEN-XL:                  var(--screen-xxl, #{$screen-xl}); // 1440px
 
   /**
    * --SCREEN-XXL =
@@ -111,122 +115,122 @@
    *    + width of official logo * 2
    *    + space between logo and u-container * 2
    */
-  --SCREEN-XXS-MAX:          var(--screen-xxs-max, #{$screen-xxs-max}); // 719px (--SCREEN-S - 1px)
-  --SCREEN-XS-MAX:           var(--screen-xs-max, #{$screen-xs-max}); // 719px (--SCREEN-S - 1px)
-  --SCREEN-S-MAX:            var(--screen-s-max, #{$screen-sm-max}); // 991px (--SCREEN-M - 1px)
-  --SCREEN-M-MAX:            var(--screen-l-max, #{$screen-md-max}); // 1199px (--SCREEN-L - 1px)
-  --SCREEN-L-MAX:            var(--screen-xl-max, #{$screen-lg-max}); // 1439px (--SCREEN-XL - 1px)
+  --SCREEN-XXS-MAX:             var(--screen-xxs-max, #{$screen-xxs-max}); // 719px (--SCREEN-S - 1px)
+  --SCREEN-XS-MAX:              var(--screen-xs-max, #{$screen-xs-max}); // 719px (--SCREEN-S - 1px)
+  --SCREEN-S-MAX:               var(--screen-s-max, #{$screen-sm-max}); // 991px (--SCREEN-M - 1px)
+  --SCREEN-M-MAX:               var(--screen-l-max, #{$screen-md-max}); // 1199px (--SCREEN-L - 1px)
+  --SCREEN-L-MAX:               var(--screen-xl-max, #{$screen-lg-max}); // 1439px (--SCREEN-XL - 1px)
   
   /**
    * FONT FAMILIES
    * -------------------------------------------------------------------
    */
 
-  --FONT-FAMILY-BASE:        var(--font-family-base, 'Sun Antwerpen', sans-serif);
-  --FONT-FAMILY-HEADINGS:    var(--font-family-headings, 'Antwerpen Regular', sans-serif);
-  --FONT-FAMILY-MONOSPACE:   var(--font-family-monospace, 'Menlo', 'Monaco', 'Consolas', 'Courier New', monospace);
+  --FONT-FAMILY-BASE:           var(--font-family-base, 'Sun Antwerpen', sans-serif);
+  --FONT-FAMILY-HEADINGS:       var(--font-family-headings, 'Antwerpen Regular', sans-serif);
+  --FONT-FAMILY-MONOSPACE:      var(--font-family-monospace, 'Menlo', 'Monaco', 'Consolas', 'Courier New', monospace);
 
   /**
    * FONT WEIGHTS
    * -------------------------------------------------------------------
    */
 
-  --FONT-WEIGHT-LIGHT:       var(--font-weight-light, 300);
-  --FONT-WEIGHT-NORMAL:      var(--font-weight-normal, 500);
-  --FONT-WEIGHT-BOLD:        var(--font-weight-bold, 700);
-  --FONT-WEIGHT-EXTRA-BOLD:  var(--font-weight-extra-bold, 800);
+  --FONT-WEIGHT-LIGHT:          var(--font-weight-light, 300);
+  --FONT-WEIGHT-NORMAL:         var(--font-weight-normal, 500);
+  --FONT-WEIGHT-BOLD:           var(--font-weight-bold, 700);
+  --FONT-WEIGHT-EXTRA-BOLD:     var(--font-weight-extra-bold, 800);
 
-  --FONT-WEIGHT-H1:          var(--font-weight-h1, var(--FONT-WEIGHT-BOLD));
-  --FONT-WEIGHT-H2:          var(--font-weight-h2, var(--FONT-WEIGHT-BOLD));
-  --FONT-WEIGHT-H3:          var(--font-weight-h3, var(--FONT-WEIGHT-BOLD));
-  --FONT-WEIGHT-H4:          var(--font-weight-h4, var(--FONT-WEIGHT-BOLD));
-  --FONT-WEIGHT-H5:          var(--font-weight-h5, var(--FONT-WEIGHT-BOLD));
-  --FONT-WEIGHT-H6:          var(--font-weight-h6, var(--FONT-WEIGHT-BOLD));
+  --FONT-WEIGHT-H1:             var(--font-weight-h1, var(--FONT-WEIGHT-BOLD));
+  --FONT-WEIGHT-H2:             var(--font-weight-h2, var(--FONT-WEIGHT-BOLD));
+  --FONT-WEIGHT-H3:             var(--font-weight-h3, var(--FONT-WEIGHT-BOLD));
+  --FONT-WEIGHT-H4:             var(--font-weight-h4, var(--FONT-WEIGHT-BOLD));
+  --FONT-WEIGHT-H5:             var(--font-weight-h5, var(--FONT-WEIGHT-BOLD));
+  --FONT-WEIGHT-H6:             var(--font-weight-h6, var(--FONT-WEIGHT-BOLD));
 
   /**
    * FONT SIZES
    * -------------------------------------------------------------------
    */
 
-  --FONT-SIZE-BASE:          var(--font-size-base, 1rem);
-  --FONT-SIZE-SMALL:         var(--font-size-small, .875rem);
-  --FONT-SIZE-LARGE:         var(--font-size-large, 1.125rem);
+  --FONT-SIZE-BASE:             var(--font-size-base, 1rem);
+  --FONT-SIZE-SMALL:            var(--font-size-small, .875rem);
+  --FONT-SIZE-LARGE:            var(--font-size-large, 1.125rem);
 
-  --FONT-SIZE-H1:            var(--font-size-h1, 2.25rem); // 36px
-  --FONT-SIZE-H2:            var(--font-size-h2, 1.65rem); // 28px
-  --FONT-SIZE-H3:            var(--font-size-h3, 1.4375rem); // 23px
-  --FONT-SIZE-H4:            var(--font-size-h4, 1.3125); // 21px
-  --FONT-SIZE-H5:            var(--font-size-h5, 1.1875); // 19px
-  --FONT-SIZE-H6:            var(--font-size-h6, 1.0625); // 17px
+  --FONT-SIZE-H1:               var(--font-size-h1, 2.25rem); // 36px
+  --FONT-SIZE-H2:               var(--font-size-h2, 1.65rem); // 28px
+  --FONT-SIZE-H3:               var(--font-size-h3, 1.4375rem); // 23px
+  --FONT-SIZE-H4:               var(--font-size-h4, 1.3125); // 21px
+  --FONT-SIZE-H5:               var(--font-size-h5, 1.1875); // 19px
+  --FONT-SIZE-H6:               var(--font-size-h6, 1.0625); // 17px
 
   /**
    * ICON SIZES
    * -------------------------------------------------------------------
    */
 
-  --ICON-SIZE-BASE:          var(--icon-size-base, 1.25rem); // 20px
-  --ICON-SIZE-SMALL:         var(--icon-size-small, 1rem); // 16px
-  --ICON-SIZE-LARGE:         var(--icon-size-large, 1.5rem); // 24px
+  --ICON-SIZE-BASE:             var(--icon-size-base, 1.25rem); // 20px
+  --ICON-SIZE-SMALL:            var(--icon-size-small, 1rem); // 16px
+  --ICON-SIZE-LARGE:            var(--icon-size-large, 1.5rem); // 24px
 
   /**
    * LINE-HEIGHT
    * -------------------------------------------------------------------
    */
 
-  --LINE-HEIGHT-BASE:        var(--line-height-base, 1);
-  --LINE-HEIGHT-HEADING:     var(--line-height-heading, 1.1);
-  --LINE-HEIGHT-PARAGRAPH:   var(--line-height-paragraph, 1.3);
+  --LINE-HEIGHT-BASE:           var(--line-height-base, 1);
+  --LINE-HEIGHT-HEADING:        var(--line-height-heading, 1.1);
+  --LINE-HEIGHT-PARAGRAPH:      var(--line-height-paragraph, 1.3);
 
   /**
    * BORDERS
    * -------------------------------------------------------------------
    */
 
-  --BORDER-RADIUS:          var(--border-radius, 0);
-  --BORDER-WIDTH:           var(--border-width, 1px);
+  --BORDER-RADIUS:              var(--border-radius, 0);
+  --BORDER-WIDTH:               var(--border-width, 1px);
 
   /**
    * ANIMATIONS
    * -------------------------------------------------------------------
    */
 
-  --ANIMATION-DURATION:      var(--animation-duration, 200ms);
-  --ANIMATION-EASING:        var(--animation-easing, ease-in-out);
-  --ANIMATION-NORMAL:        var(--animation-normal, var(--ANIMATION-DURATION) var(--ANIMATION-EASING));
+  --ANIMATION-DURATION:         var(--animation-duration, 200ms);
+  --ANIMATION-EASING:           var(--animation-easing, ease-in-out);
+  --ANIMATION-NORMAL:           var(--animation-normal, var(--ANIMATION-DURATION) var(--ANIMATION-EASING));
 
   /**
    * BOX SHADOWS
    * -------------------------------------------------------------------
    */
 
-  --BOX-SHADOW-BOTTOM-LEFT:  var(--box-shadow-bottom-left, calc(var(--SPACER) / -2) calc(var(--SPACER) / 2) 0 var(--BOX-SHADOW-COLOR));
-  --BOX-SHADOW-BOTTOM-RIGHT: var(--box-shadow-bottom-right, calc(var(--SPACER) / 2) calc(var(--SPACER) / 2) 0 var(--BOX-SHADOW-COLOR));
-  --BOX-SHADOW-TOP-LEFT:     var(--box-shadow-top-left, calc(var(--SPACER) / -2) calc(var(--SPACER) / -2) 0 var(--BOX-SHADOW-COLOR));
-  --BOX-SHADOW-TOP-RIGHT:    var(--box-shadow-top-right, calc(var(--SPACER) / 2) calc(var(--SPACER) / -2) 0 var(--BOX-SHADOW-COLOR));
-  --BOX-SHADOW:              var(--box-shadow, var(--BOX-SHADOW-BOTTOM-RIGHT));
+  --BOX-SHADOW-BOTTOM-LEFT:     var(--box-shadow-bottom-left, calc(var(--SPACER) / -2) calc(var(--SPACER) / 2) 0 var(--BOX-SHADOW-COLOR));
+  --BOX-SHADOW-BOTTOM-RIGHT:    var(--box-shadow-bottom-right, calc(var(--SPACER) / 2) calc(var(--SPACER) / 2) 0 var(--BOX-SHADOW-COLOR));
+  --BOX-SHADOW-TOP-LEFT:        var(--box-shadow-top-left, calc(var(--SPACER) / -2) calc(var(--SPACER) / -2) 0 var(--BOX-SHADOW-COLOR));
+  --BOX-SHADOW-TOP-RIGHT:       var(--box-shadow-top-right, calc(var(--SPACER) / 2) calc(var(--SPACER) / -2) 0 var(--BOX-SHADOW-COLOR));
+  --BOX-SHADOW:                 var(--box-shadow, var(--BOX-SHADOW-BOTTOM-RIGHT));
 
   /**
    * READABLE CONTENT
    * -------------------------------------------------------------------
    */
 
-  --READABLE-CONTENT-WIDTH:  45rem;
+  --READABLE-CONTENT-WIDTH:     var(--readable-content-width, 45rem);
 
   /**
    * Z-INDEXES
    * -------------------------------------------------------------------
    */
   
-  --Z-CELLAR: var(--z-cellar, -1);
-  --Z-AUTO: var(--z-auto, 0);
-  --Z-BASE: var(--z-base, 1);
-  --Z-TOP: var(--z-top, 2);
-  --Z-DATEPICKER: var(--z-datepicker, 3);
-  --Z-FLYOUT: var(--z-flyout, 4);
-  --Z-TOOLTIP: var(--z-tooltip, 5);
-  --Z-PANE-OVERLAY: var(--z-pane-overlay, 6);
-  --Z-PANE: var(--z-pane, 7);
-  --Z-STATUSBAR: var(--z-statusbar, 8);
-  --Z-HEADER: var(--z-header, 9);
-  --Z-OVERLAY: var(--z-overlay, 10);
+  --Z-CELLAR:                   var(--z-cellar, -1);
+  --Z-AUTO:                     var(--z-auto, 0);
+  --Z-BASE:                     var(--z-base, 1);
+  --Z-TOP:                      var(--z-top, 2);
+  --Z-DATEPICKER:               var(--z-datepicker, 3);
+  --Z-FLYOUT:                   var(--z-flyout, 4);
+  --Z-TOOLTIP:                  var(--z-tooltip, 5);
+  --Z-PANE-OVERLAY:             var(--z-pane-overlay, 6);
+  --Z-PANE:                     var(--z-pane, 7);
+  --Z-STATUSBAR:                var(--z-statusbar, 8);
+  --Z-HEADER:                   var(--z-header, 9);
+  --Z-OVERLAY:                  var(--z-overlay, 10);
 }

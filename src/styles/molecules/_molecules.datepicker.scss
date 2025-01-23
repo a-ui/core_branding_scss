@@ -6,7 +6,7 @@
  */
 
 .m-datepicker {
-  --datepicker-text-color:           var(--TEXT-COLOR);
+  --datepicker-text-color:           var(--LINK-ALT-CONTRAST);
   --datepicker-text-color-light:     var(--TEXT-COLOR-LIGHT);
 
   --datepicker-bg-color:             var(--BG-COLOR-LIGHT);
@@ -15,9 +15,9 @@
   --datepicker-border-color:         var(--BORDER-COLOR);
   --datepicker-border-color-light:   var(--BORDER-COLOR-LIGHT);
 
-  --datepicker-highlight-color:      var(--BRAND-1-ALT-TINT);
-  --datepicker-active-color:         var(--BRAND-1);
-  --datepicker-active-bg-color:      var(--BRAND-1-CONTRAST);
+  --datepicker-highlight-color:      var(--LINK-ALT-TINT);
+  --datepicker-active-color:         var(--LINK);
+  --datepicker-active-bg-color:      var(--LINK-CONTRAST);
 }
 
 /**

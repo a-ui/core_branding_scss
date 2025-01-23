@@ -16,10 +16,10 @@
 
 .a-button {
   // Contained button
-  --btn-color:                                  var(--BRAND-1-CONTRAST);
+  --btn-color:                                  var(--LINK-CONTRAST);
   --btn-hover-color:                            var(--btn-color);
-  --btn-bg-color:                               var(--BRAND-1);
-  --btn-hover-bg-color:                         var(--BRAND-1-TINT);
+  --btn-bg-color:                               var(--LINK);
+  --btn-hover-bg-color:                         var(--LINK-TINT);
   --btn-border-color:                           var(--btn-bg-color);
   --btn-hover-border-color:                     var(--btn-hover-bg-color);
 
@@ -73,10 +73,10 @@
   --btn-disabled-hover-border-color:            var(--btn-disabled-bg-color);
 
   // Outlined button
-  --btn-outlined-color:                         var(--BRAND-1);
+  --btn-outlined-color:                         var(--LINK);
   --btn-outlined-hover-color:                   var(--btn-outlined-color);
-  --btn-outlined-bg-color:                      var(--BRAND-1-ALT);
-  --btn-outlined-hover-bg-color:                var(--BRAND-1-ALT-TINT);
+  --btn-outlined-bg-color:                      var(--LINK-ALT);
+  --btn-outlined-hover-bg-color:                var(--LINK-ALT-TINT);
   --btn-outlined-border-color:                  var(--btn-outlined-color);
   --btn-outlined-hover-border-color:            var(--btn-outlined-color);
 
@@ -123,10 +123,10 @@
   --btn-outlined-disabled-hover-border-color:   var(--btn-outlined-disabled-border-color);
 
   // Text buttons
-  --btn-text-color:                             var(--BRAND-1);
+  --btn-text-color:                             var(--LINK);
   --btn-text-hover-color:                       var(--btn-text-color);
-  --btn-text-bg-color:                          var(--BRAND-1-ALT);
-  --btn-text-hover-bg-color:                    var(--BRAND-1-ALT-TINT);
+  --btn-text-bg-color:                          var(--LINK-ALT);
+  --btn-text-hover-bg-color:                    var(--LINK-ALT-TINT);
   --btn-text-border-color:                      transparent;
   --btn-text-hover-border-color:                transparent;
 
@@ -222,15 +222,15 @@
   --btn-youtube-border-color:                   #{$youtube};
   --btn-youtube-hover-border-color:             #{$youtube-hover};
 
-  --btn-social-color:                           var(--TEXT-COLOR);
-  --btn-social-hover-color:                     var(--BRAND-1);
+  --btn-social-color:                           var(--LINK-ALT-CONTRAST);
+  --btn-social-hover-color:                     var(--LINK);
   --btn-social-bg-color:                        transparent;
   --btn-social-hover-bg-color:                  transparent;
   --btn-social-border-color:                    transparent;
   --btn-social-hover-border-color:              transparent;
 
-  --btn-social-negative-color:                  var(--TEXT-COLOR-INVERTED);
-  --btn-social-negative-hover-color:            var(--BRAND-1-ALT-TINT);
+  --btn-social-negative-color:                  var(--LINK-CONTRAST);
+  --btn-social-negative-hover-color:            var(--LINK-ALT-TINT);
   --btn-social-negative-bg-color:               transparent;
   --btn-social-negative-hover-bg-color:         transparent;
   --btn-social-negative-border-color:           transparent;

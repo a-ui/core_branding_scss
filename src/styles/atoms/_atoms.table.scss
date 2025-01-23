@@ -10,17 +10,18 @@
   --table-bg-color:                     var(--BG-COLOR-LIGHT);
   --table-border-color:                 var(--BORDER-COLOR);
   --table-border-color-light:           var(--BORDER-COLOR-LIGHT);
-  --table-highlight-color:              var(--BRAND-1-ALT-CONTRAST);
-  --table-highlight-bg-color:           var(--BRAND-1-ALT-TINT);
-  --table-highlight-border-color:       var(--BRAND-1);
+  --table-highlight-color:              var(--LINK-ALT-CONTRAST);
+  --table-highlight-bg-color:           var(--LINK-ALT-TINT);
+  --table-highlight-border-color:       var(--LINK);
   --table-striped-bg-color:             var(--BG-COLOR);
+  --table-small-color:                  var(--BG-COLOR-INVERTED);
 
   --table-sort-btn-color:               var(--TEXT-COLOR);
-  --table-sort-btn-active-color:        var(--BRAND-1);
-  --table-sort-btn-bg-color:            var(--BRAND-1-CONTRAST);
-  --table-sort-btn-hover-bg-color:      var(--BRAND-1-ALT-TINT);
+  --table-sort-btn-active-color:        var(--LINK);
+  --table-sort-btn-bg-color:            var(--LINK-CONTRAST);
+  --table-sort-btn-hover-bg-color:      var(--LINK-ALT-TINT);
   --table-sort-btn-icon-color:          var(--BORDER-COLOR);
-  --table-sort-btn-icon-active-color:   var(--BRAND-1);
+  --table-sort-btn-icon-active-color:   var(--LINK);
 }
 
 /**
@@ -59,7 +60,7 @@
       cursor: pointer;
 
       .small {
-        color: $neutral-200;
+        color: var(--table-small-color);
       }
     }
 
@@ -156,7 +157,7 @@
     &:hover,
     &:focus {
       &:after {
-        background: var(--TEXT-COLOR-LIGHT);
+        background: var(--table-sort-btn-active-color);
         mask: url('data:image/svg+xml;utf8,<svg id=%22keyboard-arrow-up%22 viewBox=%220 0 17 17%22 xml:space=%22preserve%22 xmlns=%22http://www.w3.org/2000/svg%22><style>.st0{fill:none;stroke:%23000000;stroke-linecap:round;stroke-linejoin:round;}</style><g><path class=%22st0%22 d=%22M8.5,1.5v14%22/><path class=%22st0%22 d=%22M5.5,4.5l3-3l3,3%22/><path class=%22st0%22 d=%22M8.5,15.5%22/></g></svg>') no-repeat center center;
       }
     }

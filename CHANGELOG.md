@@ -19,7 +19,7 @@
 - [BREAKING] Changed color naming to provide a better wat to build up themes
   - Changed THEME to BRAND
   - Changed gray to neutral
-  - Removed leading 0 for some colors
+  - Realigned Sass color naming
 - [BREAKING] Added better state colors
 - Tweaked some colors to better match their other variants
 - Optimized font loading by only offering woff2 format which should be enough for all modern browsers

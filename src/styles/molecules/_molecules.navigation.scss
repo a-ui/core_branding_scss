@@ -8,16 +8,16 @@
 
 .m-nav-list,
 .m-nav-tabs {
-  --nav-color:                 var(--TEXT-COLOR);
+  --nav-color:                 var(--LINK-ALT-CONTRAST);
   --nav-bg-color:              transparent;
   --nav-border-color:          var(--BORDER-COLOR-LIGHT);
 
-  --nav-hover-color:           var(--BRAND-1);
-  --nav-hover-bg-color:        var(--BRAND-1-ALT-TINT);
+  --nav-hover-color:           var(--LINK);
+  --nav-hover-bg-color:        var(--LINK-ALT-TINT);
 
-  --nav-active-color:          var(--BRAND-1);
-  --nav-active-bg-color:       var(--BRAND-1-CONTRAST);
-  --nav-active-border-color:   var(--BRAND-1);
+  --nav-active-color:          var(--LINK);
+  --nav-active-bg-color:       var(--LINK-CONTRAST);
+  --nav-active-border-color:   var(--LINK);
 
   --nav-disabled-color:       var(--STATE-DISABLED-CONTRAST);
 }

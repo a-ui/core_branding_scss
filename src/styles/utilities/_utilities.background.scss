@@ -20,14 +20,29 @@
   color: var(--BRAND-1-CONTRAST);
 }
 
+.u-bg-primary-inverted {
+  background-color: var(--BRAND-1-ALT-TINT);
+  color: var(--BRAND-1-ALT-CONTRAST);
+}
+
 .u-bg-secondary {
   background-color: var(--BRAND-2);
   color: var(--BRAND-2-CONTRAST);
 }
 
+.u-bg-secondary-inverted {
+  background-color: var(--BRAND-2-ALT-TINT);
+  color: var(--BRAND-2-ALT-CONTRAST);
+}
+
 .u-bg-tertiary {
   background-color: var(--BRAND-3);
   color: var(--BRAND-3-CONTRAST);
+}
+
+.u-bg-tertiary-inverted {
+  background-color: var(--BRAND-3-ALT-TINT);
+  color: var(--BRAND-3-ALT-CONTRAST);
 }
 
 .u-bg-u-bg-info {

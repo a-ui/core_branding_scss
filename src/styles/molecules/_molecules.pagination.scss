@@ -11,15 +11,15 @@
   --pagination-size:                      var(--SPACER-XL);
   --pagination-padding:                   0 var(--SPACER);
 
-  --pagination-color:                     var(--BRAND-1);
-  --pagination-hover-color:               var(--BRAND-1);
-  --pagination-active-color:              var(--BRAND-1-CONTRAST);
-  --pagination-bg-color:                  var(--BRAND-1-CONTRAST);
-  --pagination-hover-bg-color:            var(--BRAND-1-ALT-TINT);
-  --pagination-active-bg-color:           var(--BRAND-1);
-  --pagination-border-color:              var(--BRAND-1);
-  --pagination-hover-border:              var(--BRAND-1-TINT);
-  --pagination-active-border:             var(--BRAND-1-TINT);
+  --pagination-color:                     var(--LINK);
+  --pagination-hover-color:               var(--LINK);
+  --pagination-active-color:              var(--LINK-CONTRAST);
+  --pagination-bg-color:                  var(--LINK-CONTRAST);
+  --pagination-hover-bg-color:            var(--LINK-ALT-TINT);
+  --pagination-active-bg-color:           var(--LINK);
+  --pagination-border-color:              var(--LINK);
+  --pagination-hover-border:              var(--LINK-TINT);
+  --pagination-active-border:             var(--LINK-TINT);
 
   --pagination-disabled-color:            var(--STATE-DISABLED-CONTRAST);
   --pagination-disabled-bg-color:         var(--STATE-DISABLED);

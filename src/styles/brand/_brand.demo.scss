@@ -25,6 +25,7 @@
 
   --link: #{$tropical-rain-forest-500};
   --link-tint: #{$tropical-rain-forest-600};
+  --link-alt-tint: #{$tropical-rain-forest-100};
 
   --state-selected: #{color.mix($tropical-rain-forest-500, $white, 20%)};
 }

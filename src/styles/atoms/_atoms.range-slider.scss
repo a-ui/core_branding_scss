@@ -6,10 +6,10 @@
  */
 
 .a-range-slider {
-  --range-slider-bg-color:            var(--BRAND-1-ALT-TINT);
-  --range-slider-bar-bg-color:        var(--BRAND-1);
-  --range-slider-handle-bg-color:     var(--BRAND-1);
-  --range-slider-tickmark-bg-color:   var(--BRAND-1);
+  --range-slider-bg-color:            var(--LINK-ALT-TINT);
+  --range-slider-bar-bg-color:        var(--LINK);
+  --range-slider-handle-bg-color:     var(--range-slider-bar-bg-color);
+  --range-slider-tickmark-bg-color:   var(--range-slider-bar-bg-color);
 }
 
 /**

@@ -121,60 +121,179 @@
                 <p>Starting with core branding v6 we make use of CSS custom properties. There's an important difference between using them in your stylesheet and overriding them, e.g. for your own custom theme:</p>
                 <h4 class="u-margin-top">Overriding core branding values</h4>
                 <p class="u-margin-top-xs">Here's an overview of all available <code>:root</code> CSS custom properties for creating a custom theme based on core branding.</p>
-                <div class="d-p__variables u-margin-bottom">
-                    <h5 class="u-margin-top">Theme colors</h5>
-                    <h6 class="u-margin-top-xs">Theme 1</h6>
-                    <p><code>--theme1-800</code>, <code>--theme1-700</code>, <code>--theme1-600</code>, <code>--theme1-500</code>, <code>--theme1-400</code>, <code>--theme1-300</code>, <code>--theme1-200</code>, <code>--theme1-100</code></p>
-                    <h6 class="u-margin-top-xs">Theme 2</h6>
-                    <p><code>--theme1-800</code>, <code>--theme1-700</code>, <code>--theme1-600</code>, <code>--theme1-500</code>, <code>--theme1-400</code>, <code>--theme1-300</code>, <code>--theme1-200</code>, <code>--theme1-100</code></p>
-                    <h6 class="u-margin-top-xs">Info</h6>
-                    <p><code>--info-800</code>, <code>--info-700</code>, <code>--info-600</code>, <code>--info-500</code>, <code>--info-400</code>, <code>--info-300</code>, <code>--info-200</code>, <code>--info-100</code></p>
-                    <h6 class="u-margin-top-xs">Success</h6>
-                    <p><code>--success-800</code>, <code>--success-700</code>, <code>--success-600</code>, <code>--success-500</code>, <code>--success-400</code>, <code>--success-300</code>, <code>--success-200</code>, <code>--success-100</code></p>
-                    <h6 class="u-margin-top-xs">Warning</h6>
-                    <p><code>--warning-800</code>, <code>--warning-700</code>, <code>--warning-600</code>, <code>--warning-500</code>, <code>--warning-400</code>, <code>--warning-300</code>, <code>--warning-200</code>, <code>--warning-100</code></p>
-                    <h6 class="u-margin-top-xs">Danger</h6>
-                    <p><code>--danger-800</code>, <code>--danger-700</code>, <code>--danger-600</code>, <code>--danger-500</code>, <code>--danger-400</code>, <code>--danger-300</code>, <code>--danger-200</code>, <code>--danger-100</code></p>
+                <div class="d-p__variables u-margin-top-xs u-margin-bottom">
+                    <pre class="a-pre a-pre--scrollable">@use '@a-ui/core/src/styles/quarks' as *;
+@use 'sass:color';
 
-                    <h5 class="u-margin-top">UI colors</h5>
-                    <h6 class="u-margin-top-xs">State</h6>
-                    <p><code>--state-info</code>, <code>--state-success</code>, <code>--state-warning</code>, <code>--state-danger</code>, <code>--state-disabled</code></p>
-                    <h6 class="u-margin-top-xs">Text</h6>
-                    <p><code>--text-color</code>, <code>--text-color-light</code>, <code>--text-color-inverted</code>, <code class="u-text-light">--text-color-xlight</code> <small>(deprecated)</small></p>
-                    <h6 class="u-margin-top-xs">Backgrounds</h6>
-                    <p><code>--bg-color</code>, <code>--bg-color-light</code>, <code>--bg-color-inverted</code></p>
-                    <h6 class="u-margin-top-xs">Hyperlinks</h6>
-                    <p><code>--link-color</code>, <code>--link-hover-color</code></p>
-                    <h6 class="u-margin-top-xs">Border</h6>
-                    <p><code>--border-color</code>, <code>--border-color-light</code></p>
-                    <h6 class="u-margin-top-xs">Misc</h6>
-                    <p><code>--overlay-color</code>, <code>--box-shadow-color</code></p>
+:root {
+    --brand-1: #{$endeavour-600};
+    --brand-1-tint: #{$endeavour-700};
+    --brand-1-contrast: #{$white};
+    --brand-1-alt: #{$white};
+    --brand-1-alt-tint: #{$endeavour-100};
+    --brand-1-alt-contrast: #{$black};
 
-                    <h5 class="u-margin-top">Typography</h5>
-                    <h6 class="u-margin-top-xs">Font-families</h6>
-                    <p><code>--font-family-base</code>, <code>--font-family-headings</code>, <code>--font-family-monospace</code></p>
-                    <h6 class="u-margin-top-xs">Font sizes</h6>
-                    <p><code>--font-weight-light</code>, <code>--font-weight-normal</code>, <code>--font-weight-bold</code>, <code>--font-weight-extra-bold</code>, <code>--font-weight-h1</code>, <code>--font-weight-h2</code>, <code>--font-weight-h3</code>, <code>--font-weight-h4</code>, <code>--font-weight-h5</code>, <code>--font-weight-h6</code></p><h6 class="u-margin-top-xs">Font weights</h6>
-                    <p><code>--font-weight-light</code>, <code>--font-weight-normal</code>, <code>--font-weight-bold</code>, <code>--font-weight-extra-bold</code>, <code>--font-weight-h1</code>, <code>--font-weight-h2</code>, <code>--font-weight-h3</code>, <code>--font-weight-h4</code>, <code>--font-weight-h5</code>, <code>--font-weight-h6</code></p>
+    --brand-2: #{$monza-600};
+    --brand-2-tint: #{$monza-700};
+    --brand-2-contrast: #{$white};
+    --brand-2-alt: #{$white};
+    --brand-2-alt-tint: #{$monza-100};
+    --brand-2-alt-contrast: #{$black};
 
-                    <h5 class="u-margin-top">Layout</h5>
-                    <h6 class="u-margin-top-xs">Spacers</h6>
-                    <p><code>--spacer</code>, <code>--spacer-3xl</code>, <code>--spacer-xxl</code>, <code>--spacer-xl</code>, <code>--spacer-l</code>, <code>--spacer-s</code>, <code>--spacer-xs</code>, <code>--spacer-xxs</code>, <code>--spacer-3xs</code></p>
-                    <h6 class="u-margin-top-xs">Breakpoints</h6>
-                    <p><code>--screen-xs</code>, <code>--screen-xs-max</code>, <code>--screen-s</code>, <code>--screen-s-max</code>, <code>--screen-l</code>, <code>--screen-l-max</code>, <code>--screen-xl</code>, <code>--screen-xl-max</code>, <code>--screen-xxl</code></p>
-                    <h6 class="u-margin-top-xs">Border</h6>
-                    <p><code>--border-radius</code>, <code>--border-width</code></p>
-                    <h6 class="u-margin-top-xs">Box-shadow</h6>
-                    <p><code>--box-shadow</code>, <code>--box-shadow-bottom-left</code>, <code>--box-shadow-bottom-right</code>, <code>--box-shadow-top-left</code>, <code>--box-shadow-top-right</code></p>
-                    <h6 class="u-margin-top-xs">Animation</h6>
-                    <p><code>--animation-duration</code>, <code>--animation-easing</code>, <code>--animation-normal</code></p>
-                </div>
+    --brand-3: #{$endeavour-600};
+    --brand-3-tint: #{$endeavour-700};
+    --brand-3-contrast: #{$white};
+    --brand-3-alt: #{$white};
+    --brand-3-alt-tint: #{$endeavour-100};
+    --brand-3-alt-contrast: #{$black};
+
+    --state-info: #{$endeavour-600};
+    --state-info-tint: #{$endeavour-700};
+    --state-info-contrast: #{$white};
+    --state-info-alt: #{$white};
+    --state-info-alt-tint: #{$endeavour-100};
+    --state-info-alt-contrast: #{$black};
+
+    --state-success: #{$mantis-700};
+    --state-success-tint: #{$mantis-800};
+    --state-success-contrast: #{$white};
+    --state-success-alt: #{$white};
+    --state-success-alt-tint: #{$mantis-100};
+    --state-success-alt-contrast: #{$black};
+
+    --state-warning: #{$burnt-orange-600};
+    --state-warning-tint: #{$burnt-orange-700};
+    --state-warning-contrast: #{$white};
+    --state-warning-alt: #{$white};
+    --state-warning-alt-tint: #{$burnt-orange-100};
+    --state-warning-alt-contrast: #{$black};
+
+    --state-danger: #{$cinnabar-700};
+    --state-danger-tint: #{$cinnabar-800};
+    --state-danger-contrast: #{$white};
+    --state-danger-alt: #{$white};
+    --state-danger-alt-tint: #{$cinnabar-100};
+    --state-danger-alt-contrast: #{$black};
+
+    --state-disabled: #{$neutral-100};
+    --state-disabled-tint: #{$neutral-200};
+    --state-disabled-contrast: #{$neutral-400};
+
+    --text-color: #{$black};
+    --text-color-light: #{$neutral-400};
+    --text-color-inverted: #{$white};
+
+    --bg-color: #{$neutral-100};
+    --bg-color-light: #{$white};
+    --bg-color-inverted: #{$neutral-500};
+
+    --border-color: #{$neutral-300};
+    --border-color-light: #{$neutral-200};
+
+    --overlay-color: #{rgba($black, .75)};
+    --box-shadow-color: #{rgba($neutral-600, .12)};
+
+    --link: #{$endeavour-600};
+    --link-tint: #{$endeavour-700};
+    --link-contrast: #{$white};
+    --link-alt: #{$white};
+    --link-alt-tint: #{$endeavour-100};
+    --link-alt-contrast: #{$black};
+
+    --state-selected: #{color.mix($endeavour-600, $white, 20%)};
+
+    --spacer: 1.5rem;
+    --spacer-3xl: 6rem;
+    --spacer-xxl: 3.75rem;
+    --spacer-xl: 3rem;
+    --spacer-l: 2.25rem;
+    --spacer-s: 1rem;
+    --spacer-xs: .75rem;
+    --spacer-xxs: .5rem;
+    --spacer-3xs: .25rem;
+
+    --screen-xs: #{$screen-xs};
+    --screen-s: #{$screen-sm};
+    --screen-l: #{$screen-md};
+    --screen-xl: #{$screen-lg};
+    --screen-xxl: #{$screen-xl};
+
+    --screen-xxs-max: #{$screen-xxs-max};
+    --screen-xs-max: #{$screen-xs-max};
+    --screen-s-max: #{$screen-sm-max};
+    --screen-l-max: #{$screen-md-max};
+    --screen-xl-max: #{$screen-lg-max};
+
+    --font-family-base: 'Sun Antwerpen', sans-serif;
+    --font-family-headings: 'Antwerpen Regular', sans-serif;
+    --font-family-monospace: 'Menlo', 'Monaco', 'Consolas', 'Courier New', monospace;
+
+    --font-weight-light: 300;
+    --font-weight-normal: 500;
+    --font-weight-bold: 700;
+    --font-weight-extra-bold: 800;
+
+    --font-weight-h1: var(--FONT-WEIGHT-BOLD);
+    --font-weight-h2: var(--FONT-WEIGHT-BOLD);
+    --font-weight-h3: var(--FONT-WEIGHT-BOLD);
+    --font-weight-h4: var(--FONT-WEIGHT-BOLD);
+    --font-weight-h5: var(--FONT-WEIGHT-BOLD);
+    --font-weight-h6: var(--FONT-WEIGHT-BOLD);
+
+    --font-size-base: 1rem;
+    --font-size-small: .875rem;
+    --font-size-large: 1.125rem;
+
+    --font-size-h1: 2.25rem;
+    --font-size-h2: 1.65rem;
+    --font-size-h3: 1.4375rem;
+    --font-size-h4: 1.3125;
+    --font-size-h5: 1.1875;
+    --font-size-h6: 1.0625;
+
+    --icon-size-base: 1.25rem;
+    --icon-size-small: 1rem;
+    --icon-size-large: 1.5rem;
+
+    --line-height-base: 1;
+    --line-height-heading: 1.1;
+    --line-height-paragraph: 1.3;
+
+    --border-radius: 0;
+    --border-width: 1px;
+
+    --animation-duration: 200ms;
+    --animation-easing: ease-in-out;
+    --animation-normal: var(--ANIMATION-DURATION) var(--ANIMATION-EASING);
+
+    --box-shadow-bottom-left: calc(var(--SPACER) / -2) calc(var(--SPACER) / 2) 0 var(--BOX-SHADOW-COLOR);
+    --box-shadow-bottom-right: calc(var(--SPACER) / 2) calc(var(--SPACER) / 2) 0 var(--BOX-SHADOW-COLOR);
+    --box-shadow-top-left: calc(var(--SPACER) / -2) calc(var(--SPACER) / -2) 0 var(--BOX-SHADOW-COLOR);
+    --box-shadow-top-right: calc(var(--SPACER) / 2) calc(var(--SPACER) / -2) 0 var(--BOX-SHADOW-COLOR);
+    --box-shadow: var(--BOX-SHADOW-BOTTOM-RIGHT);
+
+    --readable-content-width: 45rem;
+  
+    --z-cellar: -1;
+    --z-auto: 0;
+    --z-base: 1;
+    --z-top: 2;
+    --z-datepicker: 3;
+    --z-flyout: 4;
+    --z-tooltip: 5;
+    --z-pane-overlay: 6;
+    --z-pane: 7;
+    --z-statusbar: 8;
+    --z-header: 9;
+    --z-overlay: 10;
+}
+</pre>
                 <h4 class="u-margin-top-l">Using custom CSS properties</h4>
                 <p class="u-margin-top-xs">Whether you are using an overridden value or not, always use the capitalized version of the aforementioned CSS custom properties.</p>
                 <pre class="u-margin-top-xs a-pre a-pre--scrollable"><code>.css {
-  background-color: var(--BRAND-1);
-  color: var(--TEXT-COLOR);
-  font-size: var(--FONT-SIZE-BASE);
+    background-color: var(--BRAND-1);
+    color: var(--TEXT-COLOR);
+    font-size: var(--FONT-SIZE-BASE);
 }</code></pre>
             </div>
         </div>

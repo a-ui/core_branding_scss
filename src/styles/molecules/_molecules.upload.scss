@@ -7,15 +7,15 @@
  */
 
 .m-upload {
-  --upload-color:                   var(--TEXT-COLOR);
+  --upload-color:                   var(--LINK-ALT-CONTRAST);
   --upload-bg-color:                var(--BG-COLOR-LIGHT);
-  --upload-hover-color:             var(--BRAND-1);
-  --upload-hover-bg-color:          var(--BRAND-1-ALT-TINT);
-  --upload-border-color:            var(--BRAND-1);
+  --upload-hover-color:             var(--LINK);
+  --upload-hover-bg-color:          var(--LINK-ALT-TINT);
+  --upload-border-color:            var(--LINK);
   --upload-disabled-color:          var(--STATE-DISABLED-CONTRAST);
   --upload-disabled-bg-color:       var(--STATE-DISABLED);
   --upload-disabled-border-color:   var(--STATE-DISABLED-TINT);
-  --upload-focus-border-color:      var(--BRAND-1-ALT-TINT);
+  --upload-focus-border-color:      var(--LINK-ALT-TINT);
 
   --upload-file-color:              var(--TEXT-COLOR);
   --upload-file-bg-color:           var(--BG-COLOR);

@@ -56,20 +56,20 @@
   }
 
   &.a-badge--primary {
-    --badge-color:            var(--BRAND-1-ALT);
-    --badge-bg-color:         var(--BRAND-1);
-    --badge-border-color:     var(--BRAND-1);
+    --badge-color:            var(--LINK-ALT);
+    --badge-bg-color:         var(--LINK);
+    --badge-border-color:     var(--LINK);
 
     &.a-badge--outlined {
-      --badge-color:          var(--BRAND-1);
-      --badge-bg-color:       var(--BRAND-1-ALT);
-      --badge-border-color:   var(--BRAND-1);
+      --badge-color:          var(--LINK);
+      --badge-bg-color:       var(--LINK-ALT);
+      --badge-border-color:   var(--LINK);
     }
 
     &.a-badge--transparent {
-      --badge-color:          var(--BRAND-1);
-      --badge-bg-color:       var(--BRAND-1-ALT-TINT);
-      --badge-border-color:   var(--BRAND-1-ALT-TINT);
+      --badge-color:          var(--LINK);
+      --badge-bg-color:       var(--LINK-ALT-TINT);
+      --badge-border-color:   var(--LINK-ALT-TINT);
     }
   }
 }

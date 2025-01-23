@@ -8,7 +8,7 @@
 
 .m-tag {
   --tag-height:         var(--SPACER-L);
-  --tag-color:          #{$neutral-500};
+  --tag-color:          var(--BG-COLOR-INVERTED);
   --tag-bg-color:       var(--BG-COLOR-LIGHT);
   --tag-border-color:   var(--BORDER-COLOR);
 }
@@ -34,9 +34,9 @@
 }
 
 button.m-tag {
-  --tag-color: var(--BRAND-1);
-  --tag-bg-color: var(--BRAND-1-CONTRAST);
-  --tag-border-color: var(--BRAND-1);
+  --tag-color: var(--LINK);
+  --tag-bg-color: var(--LINK-CONTRAST);
+  --tag-border-color: var(--LINK);
 
   cursor: pointer;
   margin: 0;
@@ -45,19 +45,19 @@ button.m-tag {
   &:hover,
   &:active,
   &:focus {
-    --tag-bg-color: var(--BRAND-1-ALT-TINT);
+    --tag-bg-color: var(--LINK-ALT-TINT);
   }
 
   &[aria-pressed='true'] {
-    --tag-color: var(--BRAND-1-CONTRAST);
-    --tag-bg-color: var(--BRAND-1);
-    --tag-border-color: var(--BRAND-1);
+    --tag-color: var(--LINK-CONTRAST);
+    --tag-bg-color: var(--LINK);
+    --tag-border-color: var(--LINK);
 
     &:hover,
     &:active,
     &:focus {
-      --tag-bg-color: var(--BRAND-1-TINT);
-      --tag-border-color: var(--BRAND-1-TINT);
+      --tag-bg-color: var(--LINK-TINT);
+      --tag-border-color: var(--LINK-TINT);
     }
   }
 }

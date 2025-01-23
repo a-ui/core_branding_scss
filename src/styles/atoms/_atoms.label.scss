@@ -16,7 +16,7 @@
   --label-bg-color:                 transparent;
   --label-border-color:             #{$neutral-400};
 
-  --label-primary-color:            var(--BRAND-1);
+  --label-primary-color:            var(--LINK);
   --label-primary-bg-color:         var(--label-bg-color);
   --label-primary-border-color:     var(--label-primary-color);
 
@@ -24,7 +24,7 @@
   --label-success-bg-color:         var(--label-bg-color);
   --label-success-border-color:     var(--label-success-color);
 
-  --label-warning-color:            #{$burnt-orange-400};
+  --label-warning-color:            var(--STATE-WARNING);
   --label-warning-bg-color:         var(--label-bg-color);
   --label-warning-border-color:     var(--label-warning-color);
 
