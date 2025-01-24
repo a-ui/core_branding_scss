@@ -22,7 +22,7 @@ gulp.task('copy', async function() {
 gulp.task('copy:docs', async function() {
     const copyDocsTasks = [
         fs.copy('.tmp', 'docs', {
-            filter: (src) => src.endsWith('.html'),
+            filter: (src) => fs.lstatSync(src).isDirectory() || src.endsWith('.html'),
         }),
         fs.copy('src/images', 'docs/images'),
         fs.copy('src/fonts', 'docs/fonts'),
