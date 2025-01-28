@@ -214,9 +214,9 @@
   --FONT-SIZE-H1: var(--font-size-h1, 2.25rem);
   --FONT-SIZE-H2: var(--font-size-h2, 1.65rem);
   --FONT-SIZE-H3: var(--font-size-h3, 1.4375rem);
-  --FONT-SIZE-H4: var(--font-size-h4, 1.3125);
-  --FONT-SIZE-H5: var(--font-size-h5, 1.1875);
-  --FONT-SIZE-H6: var(--font-size-h6, 1.0625);
+  --FONT-SIZE-H4: var(--font-size-h4, 1.3125rem);
+  --FONT-SIZE-H5: var(--font-size-h5, 1.1875rem);
+  --FONT-SIZE-H6: var(--font-size-h6, 1.0625rem);
   /**
    * ICON SIZES
    * -------------------------------------------------------------------
@@ -2253,8 +2253,8 @@ kbd kbd {
   background-color: var(--copyright-bg-color);
   color: var(--copyright-color);
   display: flex;
-  font-size: 1rem;
-  height: var(--copyright-height);
+  font-size: var(--FONT-SIZE-BASE);
+  min-height: var(--copyright-height);
   transition: transform var(--ANIMATION-NORMAL);
   max-width: 100%;
 }
@@ -2271,23 +2271,18 @@ a.a-copyright:hover .a-copyright__label, a.a-copyright:active .a-copyright__labe
  * -------------------------------------------------------------------
  */
 .a-copyright__sign {
-  align-items: center;
   display: flex;
-  font-size: 1.125rem;
-  height: 100%;
+  font-size: var(--FONT-SIZE-LARGE);
   justify-content: center;
+  margin: 0.5625rem 0;
   width: var(--copyright-height);
 }
 
 .a-copyright__label {
   flex: 1;
   font-weight: var(--FONT-WEIGHT-BOLD);
-  line-height: var(--copyright-height);
-  margin-right: var(--SPACER-XS);
+  margin: 0.625rem var(--SPACER-XS) 0.625rem 0;
   min-width: 0;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
 }
 
 /**
@@ -4776,11 +4771,11 @@ a.a-page-indicator__item:focus:before {
   color: var(--image-copyright-color);
   position: absolute;
   right: 0;
-  transform: translateX(100%) translateX(var(--image-copyright-height));
+  transform: translateX(100%) translateX(var(--image-copyright-height)) translateY(calc(100% + var(--image-copyright-height)));
 }
 .m-image__copyright:hover, .m-image__copyright:active, .m-image__copyright:focus {
   color: var(--image-copyright-color);
-  transform: translateX(0);
+  transform: translate(0, 0);
 }
 
 /**
