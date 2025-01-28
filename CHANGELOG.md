@@ -25,6 +25,7 @@
 - Optimized font loading by only offering woff2 format which should be enough for all modern browsers
 - Tweaked the design of the avatar
 - Tweaked the design of the breadcrumb
+- Tweaked the copyright animation in an image
 - Tweaked the design of the pagination
 - Tweaked the design of the range slider
 - Tweaked the design of the upload

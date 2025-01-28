@@ -21,8 +21,8 @@
   background-color: var(--copyright-bg-color);
   color: var(--copyright-color);
   display: flex;
-  font-size: 1rem;
-  height: var(--copyright-height);
+  font-size: var(--FONT-SIZE-BASE);
+  min-height: var(--copyright-height);
   transition: transform var(--ANIMATION-NORMAL);
   max-width: 100%;
 }
@@ -45,21 +45,16 @@ a.a-copyright {
  */
 
 .a-copyright__sign {
-  align-items: center;
   display: flex;
-  font-size: 1.125rem;
-  height: 100%;
+  font-size: var(--FONT-SIZE-LARGE);
   justify-content: center;
+  margin: .5625rem 0;
   width: var(--copyright-height);
 }
 
 .a-copyright__label {
   flex: 1;
   font-weight: var(--FONT-WEIGHT-BOLD);
-  line-height: var(--copyright-height);
-  margin-right: var(--SPACER-XS);
+  margin: .625rem var(--SPACER-XS) .625rem 0;
   min-width: 0;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
 }
