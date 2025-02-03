@@ -20,7 +20,7 @@
 .a-copyright {
   background-color: var(--copyright-bg-color);
   color: var(--copyright-color);
-  display: flex;
+  display: inline-flex;
   font-size: var(--FONT-SIZE-BASE);
   min-height: var(--copyright-height);
   transition: transform var(--ANIMATION-NORMAL);

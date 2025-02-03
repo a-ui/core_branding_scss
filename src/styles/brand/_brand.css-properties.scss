@@ -74,12 +74,12 @@
   --OVERLAY-COLOR:              var(--overlay-color, #{rgba($black, .75)});
   --BOX-SHADOW-COLOR:           var(--box-shadow-color, #{rgba($neutral-600, .12)});
 
-  --LINK:                       var(--link, #{$endeavour-600});
-  --LINK-TINT:                  var(--link-tint, #{$endeavour-700});
-  --LINK-CONTRAST:              var(--link-contrast, #{$white});
-  --LINK-ALT:                   var(--link-alt, #{$white});
-  --LINK-ALT-TINT:              var(--link-alt-tint, #{$endeavour-100});
-  --LINK-ALT-CONTRAST:          var(--link-alt-contrast, #{$black});
+  --LINK:                       var(--link, var(--BRAND-1));
+  --LINK-TINT:                  var(--link-tint, var(--BRAND-1-TINT));
+  --LINK-CONTRAST:              var(--link-contrast, var(--BRAND-1-CONTRAST));
+  --LINK-ALT:                   var(--link-alt, var(--BRAND-1-ALT));
+  --LINK-ALT-TINT:              var(--link-alt-tint, var(--BRAND-1-ALT-TINT));
+  --LINK-ALT-CONTRAST:          var(--link-alt-contrast, var(--BRAND-1-ALT-CONTRAST));
 
   --STATE-SELECTED:             var(--state-selected, #{color.mix($endeavour-600, $white, 20%)});
 

@@ -143,12 +143,12 @@
   --BORDER-COLOR-LIGHT: var(--border-color-light, #d8d8d8);
   --OVERLAY-COLOR: var(--overlay-color, rgba(0, 0, 0, 0.75));
   --BOX-SHADOW-COLOR: var(--box-shadow-color, rgba(20, 20, 20, 0.12));
-  --LINK: var(--link, #0057b7);
-  --LINK-TINT: var(--link-tint, #003865);
-  --LINK-CONTRAST: var(--link-contrast, #fff);
-  --LINK-ALT: var(--link-alt, #fff);
-  --LINK-ALT-TINT: var(--link-alt-tint, #edf7ff);
-  --LINK-ALT-CONTRAST: var(--link-alt-contrast, #000);
+  --LINK: var(--link, var(--BRAND-1));
+  --LINK-TINT: var(--link-tint, var(--BRAND-1-TINT));
+  --LINK-CONTRAST: var(--link-contrast, var(--BRAND-1-CONTRAST));
+  --LINK-ALT: var(--link-alt, var(--BRAND-1-ALT));
+  --LINK-ALT-TINT: var(--link-alt-tint, var(--BRAND-1-ALT-TINT));
+  --LINK-ALT-CONTRAST: var(--link-alt-contrast, var(--BRAND-1-ALT-CONTRAST));
   --STATE-SELECTED: var(--state-selected, rgb(204, 221.4, 240.6));
   /**
    * SPACERS
@@ -2252,7 +2252,7 @@ kbd kbd {
 .a-copyright {
   background-color: var(--copyright-bg-color);
   color: var(--copyright-color);
-  display: flex;
+  display: inline-flex;
   font-size: var(--FONT-SIZE-BASE);
   min-height: var(--copyright-height);
   transition: transform var(--ANIMATION-NORMAL);
@@ -2661,7 +2661,7 @@ textarea {
   --label-color: var(--TEXT-COLOR);
   --label-bg-color: transparent;
   --label-border-color: #6f6f6f;
-  --label-primary-color: var(--LINK);
+  --label-primary-color: var(--BRAND-1);
   --label-primary-bg-color: var(--label-bg-color);
   --label-primary-border-color: var(--label-primary-color);
   --label-success-color: var(--STATE-SUCCESS);

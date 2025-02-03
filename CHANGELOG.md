@@ -23,6 +23,7 @@
 - [BREAKING] Added better state colors
 - Tweaked some colors to better match their other variants
 - Optimized font loading by only offering woff2 format which should be enough for all modern browsers
+- Improved the accessibility of the copyright component
 - Tweaked the design of the avatar
 - Tweaked the design of the breadcrumb
 - Tweaked the copyright animation in an image
