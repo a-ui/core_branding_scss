@@ -123,9 +123,9 @@
             <p class="u-margin-top u-margin-bottom-xs">You can also install everything with npm:</p>
             <pre class="a-pre a-pre--scrollable"><code>npm install @a-ui/core --save</code></pre>
             <p class="u-margin-top u-margin-bottom-xs">Then, you can import everything in your Sass setup (<code>main.min.css</code> also available):</p>
-            <pre class="a-pre a-pre--scrollable"><code>@import '~@a-ui/core/dist/main.css';</code></pre>
+            <pre class="a-pre a-pre--scrollable"><code>@import '@a-ui/core/dist/main.css';</code></pre>
             <p class="u-margin-top u-margin-bottom-xs">In order to extend our style kit you can make use of our Sass variables. Import them like this:</p>
-            <pre class="a-pre a-pre--scrollable"><code>@import '~@a-ui/core/dist/assets/styles/_quarks';</code></pre>
+            <pre class="a-pre a-pre--scrollable"><code>@use '@a-ui/core/src/styles/quarks' as *;</code></pre>
 
             <h3 class="h5 u-text-bold u-margin-top-xl">Advanced usage</h3>
             <p class="u-margin-top u-margin-bottom-xs">Sometimes you want to add functionality which requires more styling as defined in our kit. In order to help with this we provide some simple tools and the ability to import all the kit's Sass variables. See the <a href="#quarks">Quarks</a> section for more info.</p>
@@ -275,7 +275,7 @@
                 <p>You can treat this part of the package as the API of our styling library. Include it on top of your custom stylesheet in order to have access to all defined variables, mixins and functions.</p>
             </div>
             <div>
-                <pre class="a-pre a-pre--scrollable"><code>@import 'quarks';</code></pre>
+                <pre class="a-pre a-pre--scrollable"><code>@use '@a-ui/core/src/styles/quarks' as *;</code></pre>
             </div>
         </div>
 
@@ -545,11 +545,11 @@
     --z-overlay: 10;
 }
 </pre>
-                <h4 class="u-margin-top-l">Using custom CSS properties</h4>
+                <h4 class="u-margin-top-l">Using CSS variables</h4>
                 <p class="u-margin-top-xs">Whether you are using an overridden value or not, always use the capitalized version of the aforementioned CSS custom properties.</p>
                 <pre class="u-margin-top-xs a-pre a-pre--scrollable"><code>.css {
     background-color: var(--BRAND-1);
-    color: var(--TEXT-COLOR);
+    color: var(--BRAND-1-CONTRAST);
     font-size: var(--FONT-SIZE-BASE);
 }</code></pre>
             </div>

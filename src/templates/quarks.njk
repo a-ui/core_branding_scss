@@ -11,7 +11,7 @@
                 <p>You can treat this part of the package as the API of our styling library. Include it on top of your custom stylesheet in order to have access to all defined variables, mixins and functions.</p>
             </div>
             <div>
-                <pre class="a-pre a-pre--scrollable"><code>@import 'quarks';</code></pre>
+                <pre class="a-pre a-pre--scrollable"><code>@use '@a-ui/core/src/styles/quarks' as *;</code></pre>
             </div>
         </div>
 
@@ -288,11 +288,11 @@
     --z-overlay: 10;
 }
 </pre>
-                <h4 class="u-margin-top-l">Using custom CSS properties</h4>
+                <h4 class="u-margin-top-l">Using CSS variables</h4>
                 <p class="u-margin-top-xs">Whether you are using an overridden value or not, always use the capitalized version of the aforementioned CSS custom properties.</p>
                 <pre class="u-margin-top-xs a-pre a-pre--scrollable"><code>.css {
     background-color: var(--BRAND-1);
-    color: var(--TEXT-COLOR);
+    color: var(--BRAND-1-CONTRAST);
     font-size: var(--FONT-SIZE-BASE);
 }</code></pre>
             </div>
