@@ -1,3 +1,5 @@
+@use '../quarks' as *;
+
 /**
  * HEADER VARIABLES
  * -------------------------------------------------------------------
@@ -70,7 +72,7 @@
   opacity: 0;
   position: absolute;
   transform: translateY(calc(var(--header-height) * -1));
-  z-index: layer('header');
+  z-index: var(--Z-HEADER);
 
   &:focus {
     cursor: pointer;

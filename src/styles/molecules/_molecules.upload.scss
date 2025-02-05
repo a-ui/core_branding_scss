@@ -1,17 +1,21 @@
+@use '../quarks' as *;
+@use '../shared/shared.placeholders' as *;
+
 /**
  * UPLOAD VARIABLES
  * -------------------------------------------------------------------
  */
 
 .m-upload {
-  --upload-color:                   var(--TEXT-COLOR);
+  --upload-color:                   var(--LINK-ALT-CONTRAST);
   --upload-bg-color:                var(--BG-COLOR-LIGHT);
-  --upload-hover-bg-color:          var(--THEME1-100);
-  --upload-border-color:            var(--THEME1-600);
-  --upload-disabled-color:          var(--STATE-DISABLED);
-  --upload-disabled-bg-color:       var(--BG-COLOR);
-  --upload-disabled-border-color:   var(--upload-disabled-color);
-  --upload-focus-border-color:      var(--THEME1-100);
+  --upload-hover-color:             var(--LINK);
+  --upload-hover-bg-color:          var(--LINK-ALT-TINT);
+  --upload-border-color:            var(--LINK);
+  --upload-disabled-color:          var(--STATE-DISABLED-CONTRAST);
+  --upload-disabled-bg-color:       var(--STATE-DISABLED);
+  --upload-disabled-border-color:   var(--STATE-DISABLED-TINT);
+  --upload-focus-border-color:      var(--LINK-ALT-TINT);
 
   --upload-file-color:              var(--TEXT-COLOR);
   --upload-file-bg-color:           var(--BG-COLOR);
@@ -75,6 +79,7 @@
   &:hover,
   &:focus {
     background-color: var(--upload-hover-bg-color);
+    color: var(--upload-hover-color);
   }
 }
 
@@ -105,13 +110,13 @@
   &:before {
     @include focus;
 
-    bottom: rem(-3px);
+    bottom: -1875rem;
     cursor: pointer;
-    left: rem(-3px);
+    left: -1875rem;
     position: absolute;
-    right: rem(-3px);
-    top: rem(-3px);
-    z-index: layer('cellar');
+    right: -1875rem;
+    top: -1875rem;
+    z-index: var(--Z-CELLAR);
   }
 }
 
@@ -152,7 +157,7 @@
       --btn-bg-color: transparent;
 
       &.a-button--danger {
-        --btn-hover-color: var(--DANGER-700);
+        --btn-hover-color: var(--STATE-DANGER-TINT);
         --btn-hover-bg-color: transparent;
       }
     }

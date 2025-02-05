@@ -1,28 +1,17 @@
 // -------------------------------------------------------------------
 // :: SASS
 // -------------------------------------------------------------------
-// - https://www.npmjs.org/package/gulp-sass
-// - https://www.npmjs.com/package/gulp-sourcemaps
-// - https://www.npmjs.com/package/gulp-postcss
-// - https://www.npmjs.com/package/autoprefixer
-// - https://www.npmjs.com/package/cssnano
-// - https://www.npmjs.com/package/gulp-rename
-// - https://www.npmjs.com/package/gulp-css-url-adjuster
-// - https://www.npmjs.com/package/gulp-header-license
-// - https://www.npmjs.com/package/gulp-stylelint
 
-var gulp = require('gulp'),
-    fs = require('fs');
-
-var sass = require('gulp-sass')(require('sass')),
-    sourcemaps = require('gulp-sourcemaps'),
-    postcss = require("gulp-postcss"),
-    autoprefixer = require("autoprefixer"),
-    cssnano = require("cssnano"),
-    rename = require('gulp-rename'),
-    license = require('gulp-header-license'),
-    stylelint = require('gulp-stylelint'),
-    browserSync = require('browser-sync');
+var gulp = require('gulp');
+var fs = require('fs');
+var sass = require('gulp-sass')(require('sass'));
+var sourcemaps = require('gulp-sourcemaps');
+var postcss = require("gulp-postcss");
+var autoprefixer = require("autoprefixer");
+var cssnano = require("cssnano");
+var rename = require('gulp-rename');
+var replace = require('gulp-replace');
+var browserSync = require('browser-sync');
 
 var cssNano = [
     cssnano({
@@ -40,6 +29,7 @@ var autoPrefixer = [
 var sassOptions = {
     outputStyle: 'expanded',
     sourceComments: false,
+    silenceDeprecations: ['legacy-js-api'],
 }
 
 var sourcemapOptions = {
@@ -65,24 +55,18 @@ gulp.task('sass:dist', function () {
     return gulp.src(['src/styles/**/*.scss', '!src/styles/**/styleguide.scss'])
         .pipe(sass(sassOptions).on('error', sass.logError))
         .pipe(postcss(autoPrefixer))
-        .pipe(license('/*\n' + fs.readFileSync('LICENSE.md', 'utf8') + '*/'))
         .pipe(gulp.dest('dist'))
         .pipe(sourcemaps.init())
         .pipe(gulp.dest('./dist/'))
         .pipe(rename({ extname: '.min.css' }))
         .pipe(postcss(cssNano))
-        .pipe(license('/*\n' + fs.readFileSync('LICENSE.md', 'utf8') + '*/'))
         .pipe(sourcemaps.write("./", sourcemapOptions))
         .pipe(gulp.dest('dist'));
 });
 
-gulp.task('stylelint', function () {
-    return gulp
-        .src('src/styles/**/*.scss')
-        .pipe(stylelint({
-            failAfterError: false,
-            reporters: [
-                { formatter: 'verbose', console: true },
-            ]
-        }));
+gulp.task('add-license', () => {
+    const license = '/*\n' + fs.readFileSync('LICENSE.md', 'utf8') + '*/\n';
+    return gulp.src('dist/**/*.css')
+      .pipe(replace(/^/, license))
+      .pipe(gulp.dest('dist'));
 });

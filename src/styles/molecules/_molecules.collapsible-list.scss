@@ -1,3 +1,6 @@
+@use '../quarks' as *;
+@use '../shared/shared.placeholders' as *;
+
 /**
  * COLLAPSIBLE LIST
  * -------------------------------------------------------------------
@@ -29,7 +32,7 @@
       &:hover,
       &:active,
       &:focus {
-        color: var(--LINK-HOVER-COLOR);
+        color: var(--LINK-TINT);
         text-decoration: underline;
       }
     }

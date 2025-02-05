@@ -1,3 +1,6 @@
+@use '../quarks' as *;
+@use '../shared/shared.placeholders' as *;
+
 /**
  * NAVIGATION VARIABLES
  * -------------------------------------------------------------------
@@ -5,17 +8,18 @@
 
 .m-nav-list,
 .m-nav-tabs {
-  --nav-color:                 var(--TEXT-COLOR);
+  --nav-color:                 var(--LINK-ALT-CONTRAST);
   --nav-bg-color:              transparent;
   --nav-border-color:          var(--BORDER-COLOR-LIGHT);
 
-  --nav-hover-color:           var(--THEME1-600);
-  --nav-hover-bg-color:        var(--THEME1-100);
+  --nav-hover-color:           var(--LINK);
+  --nav-hover-bg-color:        var(--LINK-ALT-TINT);
 
-  --nav-active-color:          var(--THEME1-600);
-  --nav-active-border-color:   var(--THEME1-600);
+  --nav-active-color:          var(--LINK);
+  --nav-active-bg-color:       var(--LINK-CONTRAST);
+  --nav-active-border-color:   var(--LINK);
 
-  --nav-disabled-color:       var(--STATE-DISABLED);
+  --nav-disabled-color:       var(--STATE-DISABLED-CONTRAST);
 }
 
 /**

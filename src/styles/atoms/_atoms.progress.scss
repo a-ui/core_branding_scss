@@ -1,3 +1,5 @@
+@use '../quarks' as *;
+
 /**
  * PROGRESS VARIABLES
  * -------------------------------------------------------------------
@@ -7,8 +9,8 @@
   --progress-height:          var(--SPACER-3XS);
   --progress-label-size:      .875rem;
   --progress-label-spacing:   var(--SPACER-XXS);
-  --progress-bg-color:        var(--THEME1-100);
-  --progress-bar-bg-color:    var(--THEME1-600);
+  --progress-bg-color:        var(--LINK-ALT-TINT);
+  --progress-bar-bg-color:    var(--LINK);
 }
 
 /**

@@ -1,3 +1,6 @@
+@use '../quarks' as *;
+@use '../shared/shared.placeholders' as *;
+
 /**
  * TAG VARIABLES
  * -------------------------------------------------------------------
@@ -5,7 +8,7 @@
 
 .m-tag {
   --tag-height:         var(--SPACER-L);
-  --tag-color:          #{$gray-500};
+  --tag-color:          var(--BG-COLOR-INVERTED);
   --tag-bg-color:       var(--BG-COLOR-LIGHT);
   --tag-border-color:   var(--BORDER-COLOR);
 }
@@ -31,9 +34,9 @@
 }
 
 button.m-tag {
-  --tag-color: var(--THEME1-600);
-  --tag-bg-color: var(--BG-COLOR-LIGHT);
-  --tag-border-color: var(--THEME1-600);
+  --tag-color: var(--LINK);
+  --tag-bg-color: var(--LINK-CONTRAST);
+  --tag-border-color: var(--LINK);
 
   cursor: pointer;
   margin: 0;
@@ -42,19 +45,19 @@ button.m-tag {
   &:hover,
   &:active,
   &:focus {
-    --tag-bg-color: var(--THEME1-100);
+    --tag-bg-color: var(--LINK-ALT-TINT);
   }
 
   &[aria-pressed='true'] {
-    --tag-color: var(--TEXT-COLOR-INVERTED);
-    --tag-bg-color: var(--THEME1-600);
-    --tag-border-color: var(--THEME1-600);
+    --tag-color: var(--LINK-CONTRAST);
+    --tag-bg-color: var(--LINK);
+    --tag-border-color: var(--LINK);
 
     &:hover,
     &:active,
     &:focus {
-      --tag-bg-color: var(--THEME1-700);
-      --tag-border-color: var(--THEME1-700);
+      --tag-bg-color: var(--LINK-TINT);
+      --tag-border-color: var(--LINK-TINT);
     }
   }
 }

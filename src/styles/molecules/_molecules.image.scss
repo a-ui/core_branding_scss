@@ -1,3 +1,5 @@
+@use '../quarks' as *;
+
 /**
  * IMAGES
  * -------------------------------------------------------------------
@@ -40,12 +42,12 @@
   color: var(--image-copyright-color);
   position: absolute;
   right: 0;
-  transform: translateX(100%) translateX(var(--image-copyright-height));
+  transform: translateX(100%) translateX(var(--image-copyright-height)) translateY(calc(100% + var(--image-copyright-height)));
 
   &:hover,
   &:active,
   &:focus {
     color: var(--image-copyright-color);
-    transform: translateX(0);
+    transform: translate(0, 0);
   }
 }

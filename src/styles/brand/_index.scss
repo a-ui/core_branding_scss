@@ -1,7 +1,7 @@
 /**
- * FONTS
+ * THEME
  * -------------------------------------------------------------------
  */
 
-@import 'base.fonts.antwerpen';
-@import 'base.fonts.sun-antwerpen';
+@forward 'brand.css-properties';
+@forward 'brand.shared-properties';

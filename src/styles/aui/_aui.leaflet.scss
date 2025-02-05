@@ -6,9 +6,9 @@
 .o-leaflet {
   border: var(--BORDER-WIDTH) solid var(--BORDER-COLOR);
   display: flex;
-  height: rem(600px);
+  height: 37.5rem; //600px
   max-height: 80vh;
-  min-height: rem(200px);
+  min-height: 12.5rem; //200px
   width: 100%;
 
   &__wrapper {
@@ -23,7 +23,7 @@
     font-size: inherit;
     height: 100%;
     position: relative;
-    z-index: layer('base');
+    z-index: var(--Z-BASE);
   }
 
   &__content {
@@ -34,13 +34,13 @@
     &.has-content {
       border-right: solid var(--BORDER-WIDTH) var(--BORDER-COLOR);
       padding: var(--SPACER-S);
-      width: rem(300px);
+      width: 18.75rem; //300px
     }
   }
 
   &__controls {
     position: absolute;
-    z-index: layer('top');
+    z-index: var(--Z-TOP);
 
     &--bottom-left {
       bottom: var(--SPACER-S);
@@ -104,21 +104,21 @@
     position: fixed;
     right: 0;
     top: 0;
-    z-index: layer('overlay');
+    z-index: var(--Z-OVERLAY);
 
     .o-leaflet__content {
       border: var(--BORDER-WIDTH) solid var(--BORDER-COLOR);
       box-shadow: .75rem .75rem 0 var(--BOX-SHADOW-COLOR);
       left: var(--SPACER-S);
-      max-height: calc(100% - #{rem(160px)});
+      max-height: calc(100% - 10rem);
       position: absolute;
       top: var(--SPACER-S);
-      width: rem(350px);
-      z-index: layer('top');
+      width: 21.875rem; // 350px
+      z-index: var(--Z-TOP);
     }
 
     .o-leaflet__controls--top-left {
-      left: calc(#{rem(350px)} + 2 * var(--SPACER-XS));
+      left: calc(21.875rem + 2 * var(--SPACER-XS));
     }
   }
 }
@@ -128,7 +128,7 @@
  */
 
 .leaflet-popup-content-wrapper {
-  border: var(--BORDER-WIDTH) solid $gray-100 !important;
+  border: var(--BORDER-WIDTH) solid var(--BORDER-COLOR-LIGHT) !important;
   border-radius: 0 !important;
   box-shadow: var(--SPACER-XS) var(--SPACER-XS) 0 var(--BOX-SHADOW-COLOR) !important;
   position: relative;
@@ -146,7 +146,7 @@
 }
 
 .leaflet-popup-content {
-  font-size: $font-size-sm;
+  font-size: var(--FONT-SIZE-SMALL);
   margin: var(--SPACER-XS) !important;
 }
 
@@ -157,5 +157,5 @@
 .leaflet-popup-close-button {
   right: var(--SPACER-3XS) !important;
   top: var(--SPACER-3XS) !important;
-  z-index: layer('base');
+  z-index: var(--Z-BASE);
 }

@@ -1,3 +1,5 @@
+@use '../quarks' as *;
+
 /**
  * TOGGLE
  * -------------------------------------------------------------------
@@ -35,7 +37,7 @@
 
 .a-toggle__on,
 .a-toggle__off {
-  transition-property: background, color, transform;
+  transition-property: background, box-shadow, color, transform;
   width: 100%;
 }
 

@@ -1,14 +1,12 @@
-@charset 'utf-8';
-
 /**
- * CORE BRANDING STYLES
+ * ANTWERP CORE BRANDING
  * -------------------------------------------------------------------
  */
 
-@import 'quarks';
-@import 'base';
-@import 'utilities';
-@import 'atoms';
-@import 'molecules';
-@import 'organisms';
-@import 'aui';
+@use 'brand';
+@use 'base';
+@use 'utilities';
+@use 'atoms';
+@use 'molecules';
+@use 'organisms';
+@use 'aui';

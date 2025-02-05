@@ -1,7 +1,6 @@
 // -------------------------------------------------------------------
 // :: ICONFONT
 // -------------------------------------------------------------------
-// - https://www.npmjs.org/package/gulp-svg-sprite
 
 var gulp = require('gulp');
 var svgSprite = require('gulp-svg-sprite');

@@ -1,19 +1,15 @@
 // -------------------------------------------------------------------
 // :: TEMPLATES
 // -------------------------------------------------------------------
-// - https://www.npmjs.org/package/gulp-nunjucks
-// - https://www.npmjs.com/package/gulp-rename
-// - https://www.npmjs.com/package/list-selectors
-// - https://www.npmjs.com/package/sass-vars-to-js
 
 var gulp = require('gulp');
 var glob = require('glob');
 var fs = require('fs');
-
-var listSelectors = require('list-selectors'),
-    nunjucks = require('gulp-nunjucks'),
-    rename = require('gulp-rename'),
-    exporter = require('sass-export').exporter;
+var postcss = require('postcss');
+var selectorParser = require('postcss-selector-parser');
+var nunjucks = require('gulp-nunjucks');
+var rename = require('gulp-rename');
+// var exporter = require('sass-export').exporter;
 
 gulp.task('render-templates', function () {
     return gulp.src(['src/**/index.njk'])
@@ -28,8 +24,9 @@ function getTemplateData(){
     };
 
     data.VERSION_INFO = JSON.parse(fs.readFileSync('package.json', 'utf8'));
-    data.COLORS = exporter({inputFiles: ['src/styles/quarks/_quarks.colors.scss'],includePaths: ['src/styles/quarks/']}).getArray();
-    data.VARIABLES = exporter({inputFiles: ['src/styles/quarks/_quarks.variables.scss'],includePaths: ['src/styles/quarks/']}).getArray();
+    // data.COLORS = exporter({inputFiles: ['src/styles/quarks/_quarks.colors.scss'],includePaths: ['src/styles/quarks/']}).getArray();
+    // data.VARIABLES = exporter({inputFiles: ['src/styles/quarks/_quarks.variables.scss'],includePaths: ['src/styles/quarks/']}).getArray();
+    // console.log(data);
 
     var icons = glob.sync("src/icons/*.svg");
 	for(var i in icons) {
@@ -39,35 +36,46 @@ function getTemplateData(){
 		data.ICONS.push(filename);
 	}
 
-    listSelectors(['src/styles/utilities/_utilities.background.scss'],
-        { include: ['classes'] },
-        function(bgUtilities) {
-            for(var bgU in bgUtilities['classes']) {
-                bgUtilities['classes'][bgU] = bgUtilities['classes'][bgU].substring(1);
-            }
-            data.BGUTILITIES = bgUtilities['classes'];
-        }
-    );
+    extractClassSelectors('src/styles/utilities/_utilities.background.scss', (bgUtilities) => {
+        data.BGUTILITIES = bgUtilities.classes;
+    });
 
-    listSelectors(['src/styles/utilities/_utilities.spacing.scss'],
-        { include: ['classes'] },
-        function(spacingUtilities) {
-            for(var spU in spacingUtilities['classes']) {
-                spacingUtilities['classes'][spU] = spacingUtilities['classes'][spU].substring(1);
-            }
-            data.SPACINGUTILITIES = spacingUtilities['classes'];
-        }
-    );
+    extractClassSelectors('src/styles/utilities/_utilities.spacing.scss', (spUtilities) => {
+        data.SPACINGUTILITIES = spUtilities.classes;
+    });
 
-    listSelectors(['src/styles/utilities/_utilities.text.scss'],
-        { include: ['classes'] },
-        function(textUtilities) {
-            for(var txtU in textUtilities['classes']) {
-                textUtilities['classes'][txtU] = textUtilities['classes'][txtU].substring(1);
-            }
-            data.TEXTUTILITIES = textUtilities['classes'];
-        }
-    );
+    extractClassSelectors('src/styles/utilities/_utilities.text.scss', (textUtilities) => {
+        data.TEXTUTILITIES = textUtilities.classes;
+    });
 
     return data;
+}
+
+function extractClassSelectors(filePath, callback) {
+    const cssContent = fs.readFileSync(filePath, 'utf-8'); // CSS inlezen
+    
+    const classSelectors = [];
+
+    // PostCSS plugin om selectors te analyseren
+    const plugin = (root) => {
+        root.walkRules((rule) => {
+            // Verwerk elke selector met postcss-selector-parser
+            selectorParser((selectors) => {
+                selectors.walkClasses((classSelector) => {
+                    // Verwijder de "." en voeg toe aan de lijst
+                    classSelectors.push(classSelector.value);
+                });
+            }).processSync(rule.selector);
+        });
+    };
+
+    // Verwerk CSS met de PostCSS pipeline
+    postcss([plugin])
+        .process(cssContent, { from: filePath })
+        .then(() => {
+            callback({ classes: classSelectors });
+        })
+        .catch((err) => {
+            console.error(err);
+        });
 }

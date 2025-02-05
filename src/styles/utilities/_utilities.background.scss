@@ -1,3 +1,5 @@
+@use '../quarks' as *;
+
 /**
  * BACKGROUND COLOR CLASSES
  * -------------------------------------------------------------------
@@ -5,36 +7,70 @@
 
 .u-bg {
   background-color: var(--BG-COLOR);
+  color: var(--TEXT-COLOR);
 }
 
-.u-bg-light {
-  background-color: var(--BG-COLOR);
+.u-bg-inverted {
+  background-color: var(--BG-COLOR-INVERTED);
+  color: var(--TEXT-COLOR-INVERTED);
 }
 
 .u-bg-primary {
-  background-color: var(--THEME1-600);
+  background-color: var(--BRAND-1);
+  color: var(--BRAND-1-CONTRAST);
+}
+
+.u-bg-primary-inverted {
+  background-color: var(--BRAND-1-ALT-TINT);
+  color: var(--BRAND-1-ALT-CONTRAST);
 }
 
 .u-bg-secondary {
-  background-color: var(--THEME2-400);
+  background-color: var(--BRAND-2);
+  color: var(--BRAND-2-CONTRAST);
+}
+
+.u-bg-secondary-inverted {
+  background-color: var(--BRAND-2-ALT-TINT);
+  color: var(--BRAND-2-ALT-CONTRAST);
+}
+
+.u-bg-tertiary {
+  background-color: var(--BRAND-3);
+  color: var(--BRAND-3-CONTRAST);
+}
+
+.u-bg-tertiary-inverted {
+  background-color: var(--BRAND-3-ALT-TINT);
+  color: var(--BRAND-3-ALT-CONTRAST);
+}
+
+.u-bg-u-bg-info {
+  background-color: var(--STATE-INFO);
+  color: var(--STATE-INFO-CONTRAST);
 }
 
 .u-bg-success {
   background-color: var(--STATE-SUCCESS);
+  color: var(--STATE-SUCCESS-CONTRAST);
 }
 
 .u-bg-warning {
   background-color: var(--STATE-WARNING);
+  color: var(--STATE-WARNING-CONTRAST);
 }
 
 .u-bg-danger {
   background-color: var(--STATE-DANGER);
+  color: var(--STATE-DANGER-CONTRAST);
 }
 
 .u-bg-white {
   background-color: $white;
+  color: $black;
 }
 
 .u-bg-black {
-  background-color: $gray-600;
+  background-color: $black;
+  color: $white;
 }

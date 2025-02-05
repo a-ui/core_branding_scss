@@ -2,6 +2,47 @@
 
 ## Unreleased
 
+## [7.0.0] - 2025-02-05
+
+### Added
+
+- Added the possibility for a third brand color
+- Added info color to utility classes
+- Added info color to buttons
+- Added CSS variable for selection color
+- Added CSS variables for z-index
+- Added more variants for existing colors to enhance accessibility across all components
+- Added more variants for background and text utilities
+
+### Changed
+
+- [BREAKING] Changed color naming to provide a better wat to build up themes
+  - Changed THEME1 to BRAND-1
+  - Changed THEME2 to BRAND-2
+  - Changed gray to neutral
+  - Realigned Sass color naming
+- [BREAKING] Added better state colors
+- Tweaked some colors to better match their other variants
+- Optimized font loading by only offering woff2 format which should be enough for all modern browsers
+- Improved the accessibility of the copyright component
+- Tweaked the design of the avatar
+- Tweaked the design of the breadcrumb
+- Tweaked the copyright animation in an image
+- Tweaked the design of the pagination
+- Tweaked the design of the range slider
+- Tweaked the design of the upload
+
+### Fixed
+
+- [BREAKING] Fixed breakpoint variables
+
+### Removed
+
+- [BREAKING] Removed `.u-bg-light` in favor of `.u-bg`
+- [BREAKING] Removed Sass variables except for colors and breakpoints
+- [BREAKING] Removed Sass helper functions
+- [BREAKING] Removed all Twitter related components
+
 ## [6.6.6] - 2024-06-20
 
 ### Fixed
@@ -944,6 +985,7 @@
 
 - Initial release.
 
+[7.0.0]: https://github.com/a-ui/core_branding_scss/tree/v7.0.0
 [6.6.6]: https://github.com/a-ui/core_branding_scss/tree/v6.6.6
 [6.6.5]: https://github.com/a-ui/core_branding_scss/tree/v6.6.5
 [6.6.4]: https://github.com/a-ui/core_branding_scss/tree/v6.6.4

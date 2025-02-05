@@ -1,10 +1,12 @@
+@use '../quarks' as *;
+
 /**
  * BADGE VARIABLES
  * -------------------------------------------------------------------
  */
 
 .a-badge {
-  --badge-font-size:         #{$font-size-sm};
+  --badge-font-size:         var(--FONT-SIZE-SMALL);
   --badge-font-weight:       var(--FONT-WEIGHT-BOLD);
   --badge-size:              var(--SPACER);
   --badge-padding:           0 var(--SPACER-3XS);
@@ -54,20 +56,20 @@
   }
 
   &.a-badge--primary {
-    --badge-color:            var(--TEXT-COLOR-INVERTED);
-    --badge-bg-color:         var(--THEME1-600);
-    --badge-border-color:     var(--THEME1-600);
+    --badge-color:            var(--LINK-ALT);
+    --badge-bg-color:         var(--LINK);
+    --badge-border-color:     var(--LINK);
 
     &.a-badge--outlined {
-      --badge-color:          var(--THEME1-600);
-      --badge-bg-color:       var(--BG-COLOR-LIGHT);
-      --badge-border-color:   var(--THEME1-600);
+      --badge-color:          var(--LINK);
+      --badge-bg-color:       var(--LINK-ALT);
+      --badge-border-color:   var(--LINK);
     }
 
     &.a-badge--transparent {
-      --badge-color:          var(--THEME1-600);
-      --badge-bg-color:       var(--THEME1-100);
-      --badge-border-color:   var(--THEME1-100);
+      --badge-color:          var(--LINK);
+      --badge-bg-color:       var(--LINK-ALT-TINT);
+      --badge-border-color:   var(--LINK-ALT-TINT);
     }
   }
 }
@@ -81,15 +83,23 @@
   .a-badge {
     &,
     &.a-badge--primary {
-      --badge-color:             var(--TEXT-COLOR-INVERTED);
-      --badge-bg-color:          var(--TEXT-COLOR-LIGHT);
-      --badge-border-color:      var(--TEXT-COLOR-LIGHT);
+      --badge-color:             var(--STATE-DISABLED);
+      --badge-bg-color:          var(--STATE-DISABLED-CONTRAST);
+      --badge-border-color:      var(--STATE-DISABLED-CONTRAST);
 
       &.a-badge--outlined,
       &.a-badge--transparent {
-        --badge-color:            var(--TEXT-COLOR-LIGHT);
-        --badge-bg-color:         transparent;
-        --badge-border-color:     var(--BORDER-COLOR);
+        --badge-color:             var(--STATE-DISABLED-CONTRAST);
+        --badge-bg-color:          var(--STATE-DISABLED);
+        
+      }
+
+      &.a-badge--outlined {
+        --badge-border-color:      var(--STATE-DISABLED-TINT);
+      }
+
+      &.a-badge--transparent {
+        --badge-border-color:      var(--STATE-DISABLED);
       }
     }
   }

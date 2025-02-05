@@ -20,7 +20,7 @@
     }
 
     > .ai {
-      color: #{$gray-400};
+      color: var(--TEXT-COLOR-LIGHT);
       font-size: 1.25rem;
       height: var(--SPACER-XL);
       line-height: var(--SPACER-XL);
@@ -81,7 +81,7 @@
   }
 
   &__results-title {
-    font-size: $font-size-base;
+    font-size: var(--FONT-SIZE-BASE);
     margin: 0 var(--SPACER-XS);
   }
 

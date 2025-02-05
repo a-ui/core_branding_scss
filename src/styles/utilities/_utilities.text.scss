@@ -1,3 +1,6 @@
+@use '../quarks' as *;
+@use '../shared/shared.placeholders' as *;
+
 /**
  * TEXT HELPERS
  * -------------------------------------------------------------------
@@ -64,11 +67,19 @@
  */
 
 .u-text-primary {
-  color: var(--THEME1-600);
+  color: var(--BRAND-1);
 }
 
 .u-text-secondary {
-  color: var(--THEME2-400);
+  color: var(--BRAND-2);
+}
+
+.u-text-tertiary {
+  color: var(--BRAND-3);
+}
+
+.u-text-info {
+  color: var(--STATE-INFO);
 }
 
 .u-text-success {
@@ -87,7 +98,10 @@
   color: var(--TEXT-COLOR-LIGHT);
 }
 
-.u-text-xlight,
+.u-text {
+  color: var(--TEXT-COLOR);
+}
+
 .u-text-inverted {
   color: var(--TEXT-COLOR-INVERTED);
 }
@@ -96,12 +110,6 @@
  * TEXT OVERFLOW CLASSES
  * -------------------------------------------------------------------
  */
-
-%u-text-truncate {
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-}
 
 .u-text-truncate {
   @extend %u-text-truncate;
@@ -113,5 +121,5 @@
  */
 
 .u-text-readable {
-  max-width: $readable-content-width;
+  max-width: var(--READABLE-CONTENT-WIDTH);
 }

@@ -1,3 +1,6 @@
+@use '../quarks' as *;
+@use '../shared/shared.placeholders' as *;
+
 /**
  * NAVIGATION MENU VARIABLES
  * -------------------------------------------------------------------
@@ -23,7 +26,7 @@
 .o-menu {
   background: var(--BG-COLOR-LIGHT);
   width: 100%;
-  z-index: layer('pane');
+  z-index: var(--Z-PANE);
 
   @include at($screen-sm) {
     border-right: var(--BORDER-WIDTH) solid var(--navigation-menu-border-color);
@@ -122,7 +125,7 @@
   display: flex;
   position: relative;
   width: 100%;
-  z-index: layer('header');
+  z-index: var(--Z-HEADER);
 
   // Only display the first 2 items on a mobile screen
   // and ignore the last element, since it will show a 'more...' menu tab
@@ -148,7 +151,7 @@
     flex-direction: column;
     height: auto;
     width: auto;
-    z-index: layer('pane-overlay');
+    z-index: var(--Z-PANE-OVERLAY);
   }
 }
 
@@ -223,16 +226,16 @@
       }
 
       .o-menu__icon {
-        font-size: rem($icon-size-base);
+        font-size: var(--ICON-SIZE-BASE);
         margin-bottom: var(--SPACER-XXS);
 
         &.o-menu__tab-icon {
-          width: rem($icon-size-lg);
+          width: var(--ICON-SIZE-LARGE);
         }
 
         &.o-menu__submenu-icon {
           display: none;
-          font-size: rem($font-size-base);
+          font-size: var(--FONT-SIZE-BASE);
           transition: transform var(--navigation-menu-animation-speed) ease;
 
           @include at($screen-sm) {
@@ -407,7 +410,7 @@
   top: 0;
   transition: transform var(--navigation-menu-animation-speed) ease;
   width: 100%;
-  z-index: layer('header') - 1;
+  z-index: var(--Z-STATUSBAR);
 
   .o-navigation-pane__overlay {
     background: var(--OVERLAY-COLOR);

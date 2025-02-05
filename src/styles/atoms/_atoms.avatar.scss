@@ -1,3 +1,5 @@
+@use '../quarks' as *;
+
 /**
  * AVATAR VARIABLES
  * -------------------------------------------------------------------
@@ -8,19 +10,19 @@
   --avatar-bg-color:                 var(--BG-COLOR-LIGHT);
   --avatar-hover-bg-color:           var(--BG-COLOR);
 
-  --avatar-primary-color:            var(--THEME1-600);
-  --avatar-primary-hover-color:      var(--THEME1-700);
-  --avatar-primary-bg-color:         var(--THEME1-100);
-  --avatar-primary-hover-bg-color:   var(--THEME1-200);
+  --avatar-primary-color:            var(--LINK);
+  --avatar-primary-hover-color:      var(--LINK-TINT);
+  --avatar-primary-bg-color:         var(--LINK-ALT);
+  --avatar-primary-hover-bg-color:   var(--LINK-ALT-TINT);
 
   --avatar-size-s:                   var(--shared-avatar-size-s); // 36px
-  --avatar-icon-size-s:              1rem;
+  --avatar-icon-size-s:              var(--ICON-SIZE-SMALL);
 
   --avatar-size:                     var(--shared-avatar-size); // 48px
-  --avatar-icon-size:                1.25rem;
+  --avatar-icon-size:                var(--ICON-SIZE-BASE);
 
   --avatar-size-l:                   var(--shared-avatar-size-l); // 60px
-  --avatar-icon-size-l:              1.5rem;
+  --avatar-icon-size-l:              var(--ICON-SIZE-SMALL);
 }
 
 /**
@@ -40,7 +42,7 @@
   position: relative;
   text-align: center;
   text-decoration: none;
-  transition: background-color var(--ANIMATION-NORMAL);
+  transition: background-color var(--ANIMATION-NORMAL), color var(--ANIMATION-NORMAL);
   width: var(--avatar-size);
 
   img {
@@ -60,6 +62,7 @@
 
 a,
 .a-button {
+
   &:hover,
   &:active,
   &:focus {

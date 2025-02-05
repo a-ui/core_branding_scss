@@ -1,9 +1,7 @@
-@charset 'utf-8';
-
 /**
  * ANTWERPEN
  * -------------------------------------------------------------------
  */
 
-@import 'quarks';
-@import 'base/base.fonts.antwerpen';
+@use 'quarks';
+@use 'base/base.fonts.antwerpen';

@@ -1,3 +1,5 @@
+@use '../quarks' as *;
+
 /**
  * TOOLTIP VARIABLES
  * -------------------------------------------------------------------
@@ -7,10 +9,10 @@
   --tooltip-max-width:           13rem;
 
   --tooltip-color:               #{$white};
-  --tooltip-bg-color:            #{$gray-500};
+  --tooltip-bg-color:            #{$neutral-500};
 
-  --tooltip-inverted-color:      #{$gray-600};
-  --tooltip-inverted-bg-color:   #{$gray-200};
+  --tooltip-inverted-color:      #{$neutral-600};
+  --tooltip-inverted-bg-color:   #{$neutral-200};
 }
 
 /**

@@ -1,3 +1,5 @@
+@use '../quarks' as *;
+
 /**
  * SLIDESHOW VARIABLES
  * -------------------------------------------------------------------
@@ -6,7 +8,7 @@
 
 .o-slideshow {
   --slideshow-max-height:           37.5rem;
-  --slideshow-bg-color:             #{$gray-600};
+  --slideshow-bg-color:             #{$neutral-600};
   --slideshow-footer-color:         var(--TEXT-COLOR);
   --slideshow-footer-color-light:   var(--shared-slideshow-footer-color-light);
 }
@@ -28,6 +30,8 @@
 .o-slideshow__inner {
   max-height: inherit;
   position: relative;
+
+
 }
 
 .o-slideshow__slides {
@@ -64,6 +68,9 @@
 
 .o-slideshow__prev,
 .o-slideshow__next {
+  --btn-color: #{$white};
+  --btn-hover-color: #{$white};
+
   top: 50%;
   transform: translateY(-50%);
   z-index: 1;
@@ -88,6 +95,8 @@
   &:hover,
   &:active,
   &:focus {
+    --btn-hover-color: #{$neutral-100};
+
     background: transparent;
     box-shadow: none;
   }

@@ -1,3 +1,5 @@
+@use '../quarks' as *;
+
 /**
  * RADIO BUTTON & CHECKBOX VARIABLES
  * -------------------------------------------------------------------
@@ -5,13 +7,13 @@
 
 .a-input__checkbox,
 .a-input__radio {
-  --radio-checkbox-color:                   var(--TEXT-COLOR-INVERTED);
-  --radio-checkbox-bg-color:                var(--THEME1-600);
+  --radio-checkbox-color:                   var(--LINK-CONTRAST);
+  --radio-checkbox-bg-color:                var(--LINK);
   --radio-checkbox-border-color:            var(--BORDER-COLOR);
 
-  --radio-checkbox-disabled-color:          var(--STATE-DISABLED);
-  --radio-checkbox-disabled-bg-color:       var(--BG-COLOR);
-  --radio-checkbox-disabled-border-color:   var(--BORDER-COLOR-LIGHT);
+  --radio-checkbox-disabled-color:          var(--STATE-DISABLED-CONTRAST);
+  --radio-checkbox-disabled-bg-color:       var(--STATE-DISABLED);
+  --radio-checkbox-disabled-border-color:   var(--STATE-DISABLED-TINT);
 }
 
 /**
@@ -56,7 +58,7 @@
     padding: 0;
     position: absolute;
     width: auto;
-    z-index: layer('base');
+    z-index: var(--Z-BASE);
 
     &:checked {
       + label:before {
@@ -113,7 +115,7 @@
       color: var(--radio-checkbox-color);
       content: '';
       display: inline-block;
-      font-size: $icon-size-sm;
+      font-size: var(--ICON-SIZE-BASE);
       height: var(--SPACER);
       left: 0;
       margin-left: calc(var(--SPACER) * -1);
@@ -121,7 +123,7 @@
       text-align: center;
       top: 0;
       transition-duration: var(--ANIMATION-DURATION);
-      transition-property: background-size;
+      transition-property: mask-size;
       transition-timing-function: var(--ANIMATION-EASING);
       width: var(--SPACER);
     }
@@ -135,9 +137,9 @@
     }
 
     &:after {
-      background-position: center center;
-      background-repeat: no-repeat;
-      background-size: 0% 0%;
+      mask-position: center center;
+      mask-repeat: no-repeat;
+      mask-size: 0% 0%;
     }
   }
 }
@@ -146,18 +148,22 @@
   &:checked,
   &:indeterminate {
     + label:after {
-      background-size: 100% 100%;
+      mask-position: center center;
+      mask-repeat: no-repeat;
+      mask-size: 100% 100%;
     }
   }
 
   &:checked {
     + label:after {
-      background-image: url('data:image/svg+xml;utf8,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 20 20%22><path fill=%22%23ffffff%22 d=%22M7.2,17c-0.2,0-0.3-0.1-0.4-0.2l-3.7-3.7C3,13,3,12.6,3.1,12.5s0.5-0.2,0.7,0l3.2,3.2l9-12.5c0.2-0.3,0.4-0.3,0.7-0.1c0.3,0.2,0.3,0.4,0.1,0.7l-9.4,13C7.4,16.9,7.3,17,7.2,17L7.2,17z%22/></svg>');
+      background-color: var(--radio-checkbox-color);
+      mask-image: url('data:image/svg+xml;utf8,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 20 20%22><path fill=%22%23000000%22 d=%22M7.2,17c-0.2,0-0.3-0.1-0.4-0.2l-3.7-3.7C3,13,3,12.6,3.1,12.5s0.5-0.2,0.7,0l3.2,3.2l9-12.5c0.2-0.3,0.4-0.3,0.7-0.1c0.3,0.2,0.3,0.4,0.1,0.7l-9.4,13C7.4,16.9,7.3,17,7.2,17L7.2,17z%22/></svg>');
     }
 
     &:disabled {
       + label:after {
-        background-image: url('data:image/svg+xml;utf8,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 20 20%22><path fill=%22%236f6f6f%22 d=%22M7.2,17c-0.2,0-0.3-0.1-0.4-0.2l-3.7-3.7C3,13,3,12.6,3.1,12.5s0.5-0.2,0.7,0l3.2,3.2l9-12.5c0.2-0.3,0.4-0.3,0.7-0.1c0.3,0.2,0.3,0.4,0.1,0.7l-9.4,13C7.4,16.9,7.3,17,7.2,17L7.2,17z%22/></svg>');
+        background-color: var(--radio-checkbox-disabled-color);
+        mask-image: url('data:image/svg+xml;utf8,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 20 20%22><path fill=%22%23000000%22 d=%22M7.2,17c-0.2,0-0.3-0.1-0.4-0.2l-3.7-3.7C3,13,3,12.6,3.1,12.5s0.5-0.2,0.7,0l3.2,3.2l9-12.5c0.2-0.3,0.4-0.3,0.7-0.1c0.3,0.2,0.3,0.4,0.1,0.7l-9.4,13C7.4,16.9,7.3,17,7.2,17L7.2,17z%22/></svg>');
       }
     }
   }
@@ -169,13 +175,14 @@
     }
 
     + label:after {
-      background-image: url('data:image/svg+xml;utf8,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 20 20%22><path fill=%22%23ffffff%22 d=%22M16.5,10.5h-13C3.2,10.5,3,10.3,3,10s0.2-0.5,0.4-0.5h13.1c0.3,0,0.4,0.2,0.4,0.5S16.7,10.5,16.5,10.5z%22/></svg>');
+      background-color: var(--radio-checkbox-color);
+      mask-image: url('data:image/svg+xml;utf8,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 20 20%22><path fill=%22%23000000%22 d=%22M16.5,10.5h-13C3.2,10.5,3,10.3,3,10s0.2-0.5,0.4-0.5h13.1c0.3,0,0.4,0.2,0.4,0.5S16.7,10.5,16.5,10.5z%22/></svg>');
     }
 
     &:disabled {
       + label:after {
         background-color: var(--radio-checkbox-disabled-bg-color);
-        background-image: url('data:image/svg+xml;utf8,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 20 20%22><path fill=%22%236f6f6f%22 d=%22M16.5,10.5h-13C3.2,10.5,3,10.3,3,10s0.2-0.5,0.4-0.5h13.1c0.3,0,0.4,0.2,0.4,0.5S16.7,10.5,16.5,10.5z%22/></svg>');
+        mask-image: url('data:image/svg+xml;utf8,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 20 20%22><path fill=%22%23000000%22 d=%22M16.5,10.5h-13C3.2,10.5,3,10.3,3,10s0.2-0.5,0.4-0.5h13.1c0.3,0,0.4,0.2,0.4,0.5S16.7,10.5,16.5,10.5z%22/></svg>');
         box-shadow: 0 0 0 var(--BORDER-WIDTH) var(--radio-checkbox-disabled-border-color) inset;
       }
     }
@@ -191,13 +198,13 @@
   &:checked {
     + label:before {
       background: var(--BG-COLOR-LIGHT);
-      box-shadow: 0 0 0 rem(6px) var(--radio-checkbox-bg-color) inset;
+      box-shadow: 0 0 0 .375rem var(--radio-checkbox-bg-color) inset;
     }
 
     &:disabled {
       + label:before {
         background: var(--radio-checkbox-disabled-color);
-        box-shadow: 0 0 0 var(--BORDER-WIDTH) var(--radio-checkbox-disabled-border-color) inset, 0 0 0 rem(6px) var(--radio-checkbox-disabled-bg-color) inset;
+        box-shadow: 0 0 0 var(--BORDER-WIDTH) var(--radio-checkbox-disabled-border-color) inset, 0 0 0 .375rem var(--radio-checkbox-disabled-bg-color) inset;
       }
     }
   }

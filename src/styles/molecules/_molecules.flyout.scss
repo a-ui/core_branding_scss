@@ -1,3 +1,5 @@
+@use '../quarks' as *;
+
 /**
  * FLYOUT VARIABLES
  * -------------------------------------------------------------------
@@ -28,10 +30,6 @@
  */
 
 .m-flyout__content {
-  @include at($screen-sm) {
-    width: var(--flyout-max-width);
-  }
-
   background-color: var(--flyout-bg-color);
   border: var(--BORDER-WIDTH) solid var(--flyout-border-color);
   border-radius: var(--BORDER-RADIUS);
@@ -42,7 +40,11 @@
   transition: visibility 0s var(--ANIMATION-NORMAL), opacity var(--ANIMATION-NORMAL), transform var(--ANIMATION-NORMAL);
   visibility: hidden;
   width: var(--flyout-max-width-s);
-  z-index: layer('flyout');
+  z-index: var(--Z-FLYOUT);
+
+  @include at($screen-sm) {
+    width: var(--flyout-max-width);
+  }
 }
 
 /**

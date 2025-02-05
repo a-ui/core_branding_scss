@@ -1,3 +1,5 @@
+@use '../quarks' as *;
+
 /**
  * CODE VARIABLES
  * -------------------------------------------------------------------
@@ -17,7 +19,7 @@ kbd {
   --code-padding:            calc(var(--SPACER) / 12) var(--SPACER-3XS);
 
   --kbd-color:               var(--TEXT-COLOR-INVERTED);
-  --kbd-bg:                  #{$gray-400};
+  --kbd-bg:                  var(--TEXT-COLOR-LIGHT);
   --kbd-font-size:          .875rem;
   --kbd-padding:             var(--code-padding);
 }

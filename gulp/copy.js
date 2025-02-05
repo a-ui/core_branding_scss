@@ -1,49 +1,58 @@
 // -------------------------------------------------------------------
 // :: COPY
 // -------------------------------------------------------------------
-// - https://www.npmjs.org/package/gulp-rename
-// - https://www.npmjs.com/package/merge-stream
 
 var gulp = require('gulp');
-var merge = require('merge-stream');
+const fs = require('fs-extra');
+const path = require('path');
 
-gulp.task('copy', function() {
+gulp.task('copy', async function() {
+    const copyTasks = [
+        fs.copy('src/fonts', 'dist/assets/fonts'),
+        fs.copy('src/icons', 'dist/assets/icons'),
+        fs.copy('src/images', 'dist/assets/images'),
+        fs.copy('src/styles', 'dist/assets/styles', {
+            filter: (src) => !src.endsWith('styleguide.scss'),
+        }),
+    ];
 
-    var fontsStream = gulp.src('src/fonts/**/*')
-        .pipe(gulp.dest('dist/assets/fonts'));
-
-    var iconsStream = gulp.src('src/icons/**/*')
-        .pipe(gulp.dest('dist/assets/icons'));
-
-    var stylesStream = gulp.src(['src/styles/**/*', '!src/styles/**/styleguide.scss'])
-        .pipe(gulp.dest('dist/assets/styles'));
-
-    var imagesStream = gulp.src('src/images/**/*')
-        .pipe(gulp.dest('dist/assets/images'));
-
-    return merge(fontsStream, iconsStream, stylesStream, imagesStream);
-
+    await Promise.all(copyTasks);
 });
 
-gulp.task('copy:docs', function() {
+gulp.task('copy:docs', async function() {
+    const copyDocsTasks = [
+        fs.copy('.tmp', 'docs', {
+            filter: (src) => fs.lstatSync(src).isDirectory() || src.endsWith('.html'),
+        }),
+        fs.copy('src/images', 'docs/images'),
+        fs.copy('src/fonts', 'docs/fonts'),
+        fs.copy('src/scripts', 'docs/scripts'),
+    ];
 
-    var tmpStream = gulp.src('.tmp/**/*.html')
-        .pipe(gulp.dest('docs'));
-
-    var imagesStream = gulp.src('src/images/**/*')
-        .pipe(gulp.dest('docs/images'));
-
-    var fontsStream = gulp.src('src/fonts/**/*')
-        .pipe(gulp.dest('docs/fonts'));
-
-    var scriptsStream = gulp.src('src/scripts/**/*')
-        .pipe(gulp.dest('docs/scripts'));
-
-    return merge(tmpStream, imagesStream, fontsStream, scriptsStream);
-
+    await Promise.all(copyDocsTasks);
 });
 
-gulp.task('copy:aws', function() {
-    return gulp.src('dist/**/*')
-        .pipe(gulp.dest('dist/aws'));
+gulp.task('move:aws', async function() {
+    const distPath = 'dist';
+    const awsPath = path.join(distPath, 'aws');
+
+    try {
+        // Ensure 'aws' folder exists
+        await fs.ensureDir(awsPath);
+
+        // Read all files in the 'dist' folder
+        const files = await fs.readdir(distPath);
+
+        // Move files to 'aws', skipping the 'aws' folder itself
+        for (const file of files) {
+            const filePath = path.join(distPath, file);
+
+            if (file !== 'aws') {
+                const targetPath = path.join(awsPath, file);
+                await fs.move(filePath, targetPath);
+            }
+        }
+    } catch (error) {
+        console.error('Error during move:', error);
+    }
 });

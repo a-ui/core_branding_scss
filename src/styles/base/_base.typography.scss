@@ -1,3 +1,5 @@
+@use '../quarks' as *;
+
 /**
  * TYPOGRAPHY
  * -------------------------------------------------------------------
@@ -16,7 +18,7 @@ body {
 }
 
 ::selection {
-  background-color: $selection-color;
+  background-color: var(--STATE-SELECTED);
 }
 
 /**
@@ -123,7 +125,7 @@ blockquote {
   }
 
   cite {
-    color: var(--THEME2-400);
+    color: var(--BRAND-2);
     display: inline-block;
     font-style: normal;
     line-height: var(--LINE-HEIGHT-HEADING);
@@ -142,7 +144,7 @@ blockquote {
 small,
 .small {
   color: var(--TEXT-COLOR-LIGHT);
-  font-size: rem($font-size-sm);
+  font-size: var(--FONT-SIZE-SMALL);
 }
 
 /**
@@ -151,8 +153,8 @@ small,
  */
 
 mark {
-  background-color: var(--THEME1-600);
-  color: var(--TEXT-COLOR-INVERTED);
+  background-color: var(--BRAND-1);
+  color: var(--BRAND-1-CONTRAST);
   padding: 0 .125rem;
 }
 
@@ -174,14 +176,14 @@ hr {
  */
 
 a {
-  color: var(--LINK-COLOR);
+  color: var(--LINK);
   text-decoration-skip-ink: auto;
   transition: color var(--ANIMATION-NORMAL);
 
   &:hover,
   &:active,
   &:focus {
-    color: var(--LINK-HOVER-COLOR);
+    color: var(--LINK-TINT);
     text-decoration: none;
   }
 }

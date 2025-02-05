@@ -1,3 +1,6 @@
+@use '../quarks' as *;
+@use '../shared/shared.placeholders' as *;
+
 /**
  * STEP INDICATOR VARIABLES
  * -------------------------------------------------------------------
@@ -8,27 +11,27 @@
 
   --step-indicator-square-color:                          var(--TEXT-COLOR-LIGHT);
   --step-indicator-square-bg-color:                       var(--BG-COLOR);
-  --step-indicator-square-hover-bg-color:                 var(--THEME1-100);
+  --step-indicator-square-hover-bg-color:                 var(--LINK-ALT-TINT);
   --step-indicator-square-border-color:                   var(--BORDER-COLOR);
 
-  --step-indicator-square-active-color:                   var(--THEME1-600);
-  --step-indicator-square-active-bg-color:                var(--BG-COLOR-LIGHT);
-  --step-indicator-square-active-border-color:            var(--THEME1-600);
+  --step-indicator-square-active-color:                   var(--LINK);
+  --step-indicator-square-active-bg-color:                var(--LINK-CONTRAST);
+  --step-indicator-square-active-border-color:            var(--LINK);
 
-  --step-indicator-square-completed-color:                var(--TEXT-COLOR-INVERTED);
-  --step-indicator-square-completed-bg-color:             var(--THEME1-600);
-  --step-indicator-square-completed-hover-bg-color:       var(--THEME1-700);
-  --step-indicator-square-completed-border-color:         var(--THEME1-600);
-  --step-indicator-square-completed-hover-border-color:   var(--THEME1-700);
+  --step-indicator-square-completed-color:                var(--LINK-CONTRAST);
+  --step-indicator-square-completed-bg-color:             var(--LINK);
+  --step-indicator-square-completed-hover-bg-color:       var(--LINK-TINT);
+  --step-indicator-square-completed-border-color:         var(--LINK);
+  --step-indicator-square-completed-hover-border-color:   var(--LINK-TINT);
 
   --step-indicator-line-color:                            var(--step-indicator-square-border-color);
   --step-indicator-line-active-color:                     var(--step-indicator-square-border-color);
-  --step-indicator-line-completed-color:                  var(--THEME1-600);
+  --step-indicator-line-completed-color:                  var(--LINK);
 
   --step-indicator-label-color:                           var(--TEXT-COLOR-LIGHT);
   --step-indicator-label-active-color:                    var(--TEXT-COLOR);
   --step-indicator-label-completed-color:                 var(--TEXT-COLOR);
-  --step-indicator-label-highlight-color:                 var(--THEME1-600);
+  --step-indicator-label-highlight-color:                 var(--LINK);
 }
 
 /**

@@ -47,43 +47,6 @@
 }
 
 /**
- * TABLE BAR
- * -------------------------------------------------------------------
- */
-
-.a-table-bar {
-  background-color: $gray-200;
-  display: flex;
-  padding: var(--SPACER-XS);
-
-  &__filters {
-    flex: 1;
-    margin-right: var(--SPACER);
-    min-height: var(--SPACER-XXL);
-    overflow: hidden;
-
-    &-show-more {
-      margin: var(--SPACER-3XS);
-    }
-
-    &--open {
-      height: 100%;
-    }
-  }
-
-  &__item {
-    display: inline-block;
-    margin: var(--SPACER-3XS);
-  }
-
-  &__search {
-    background: var(--BG-COLOR-LIGHT);
-    height: 100%;
-    margin: var(--SPACER-3XS);
-  }
-}
-
-/**
  * AUI ANIMATION
  * -------------------------------------------------------------------
  */

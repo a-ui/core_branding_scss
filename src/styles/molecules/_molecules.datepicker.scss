@@ -1,12 +1,13 @@
+@use '../quarks' as *;
+
 /**
  * DATEPICKER
  * -------------------------------------------------------------------
  */
 
 .m-datepicker {
-  --datepicker-text-color:           var(--TEXT-COLOR);
+  --datepicker-text-color:           var(--LINK-ALT-CONTRAST);
   --datepicker-text-color-light:     var(--TEXT-COLOR-LIGHT);
-  --datepicker-text-color-xlight:    var(--TEXT-COLOR-INVERTED);
 
   --datepicker-bg-color:             var(--BG-COLOR-LIGHT);
   --datepicker-bg-color-dark:        var(--BG-COLOR);
@@ -14,8 +15,9 @@
   --datepicker-border-color:         var(--BORDER-COLOR);
   --datepicker-border-color-light:   var(--BORDER-COLOR-LIGHT);
 
-  --datepicker-highlight-color:      var(--THEME1-100);
-  --datepicker-active-color:         var(--THEME1-600);
+  --datepicker-highlight-color:      var(--LINK-ALT-TINT);
+  --datepicker-active-color:         var(--LINK);
+  --datepicker-active-bg-color:      var(--LINK-CONTRAST);
 }
 
 /**
@@ -172,7 +174,7 @@
     }
 
     &:focus {
-      z-index: layer('base');
+      z-index: var(--Z-BASE);
     }
 
     &.is-current {
@@ -181,7 +183,7 @@
 
     &.is-selected {
       background-color: var(--datepicker-active-color);
-      color: var(--datepicker-text-color-xlight);
+      color: var(--datepicker-active-bg-color);
       font-weight: var(--FONT-WEIGHT-BOLD);
     }
 
@@ -284,7 +286,7 @@
 
     &.is-selected {
       background-color: var(--datepicker-active-color);
-      color: var(--datepicker-text-color-xlight);
+      color: var(--datepicker-active-bg-color);
       font-weight: var(--FONT-WEIGHT-BOLD);
     }
   }
@@ -307,7 +309,7 @@
   position: absolute;
   right: 0;
   top: 100%;
-  z-index: layer('datepicker');
+  z-index: var(--Z-DATEPICKER);
 }
 
 .m-datepicker--left {

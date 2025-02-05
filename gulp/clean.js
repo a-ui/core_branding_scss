@@ -1,7 +1,6 @@
 // -------------------------------------------------------------------
 // :: CLEAN
 // -------------------------------------------------------------------
-// - https://www.npmjs.com/package/del
 
 var gulp = require('gulp');
 var del = require('del');
@@ -16,11 +15,4 @@ gulp.task('clean:dist', function () {
 
 gulp.task('clean:docs', function () {
     return del(['docs']);
-});
-
-gulp.task('clean:aws', function () {
-    return del([
-        'dist/*',
-        '!dist/aws'
-    ]);
 });

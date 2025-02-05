@@ -1,3 +1,6 @@
+@use '../quarks' as *;
+@use '../shared/shared.placeholders' as *;
+
 /**
  * LIST VARIABLES
  * -------------------------------------------------------------------
@@ -8,9 +11,9 @@
 .a-avatar-list {
   --list-item-color:             var(--TEXT-COLOR);
   --list-item-bg-color:          var(--BG-COLOR-LIGHT);
-  --list-item-hover-color:       var(--THEME1-600);
-  --list-item-active-color:      var(--TEXT-COLOR);
-  --list-item-hover-bg-color:    var(--THEME1-100);
+  --list-item-hover-color:       var(--LINK);
+  --list-item-active-color:      var(--LINK-ALT-CONTRAST);
+  --list-item-hover-bg-color:    var(--LINK-ALT-TINT);
   --list-item-active-bg-color:   var(--BG-COLOR);
   --list-item-border-color:      var(--BORDER-COLOR-LIGHT);
 }
@@ -24,24 +27,6 @@
  * STANDARD LIST
  * -------------------------------------------------------------------
  */
-
-%a-list {
-  padding-left: var(--SPACER-S);
-
-  .a-list__content {
-    display: inline-flex;
-    padding: var(--SPACER-XXS) 0;
-  }
-
-  .a-list__text {
-    flex-grow: 1;
-  }
-
-  .a-list__text + .ai,
-  .ai + .a-list__text {
-    margin-left: var(--SPACER-XS);
-  }
-}
 
 .a-list {
   @extend %a-list;
@@ -167,6 +152,7 @@
       &:active,
       &:focus {
         background-color: var(--list-item-hover-bg-color);
+        color: var(--list-item-hover-color);
       }
 
       .a-input__checkbox,

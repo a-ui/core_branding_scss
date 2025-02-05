@@ -1,3 +1,6 @@
+@use '../quarks' as *;
+@use '../shared/shared.placeholders' as *;
+
 /**
  * PAGINATION VARIABLES
  * -------------------------------------------------------------------
@@ -8,19 +11,19 @@
   --pagination-size:                      var(--SPACER-XL);
   --pagination-padding:                   0 var(--SPACER);
 
-  --pagination-color:                     var(--THEME1-600);
-  --pagination-hover-color:               var(--THEME1-600);
-  --pagination-active-color:              var(--TEXT-COLOR-INVERTED);
-  --pagination-bg-color:                  var(--BG-COLOR-LIGHT);
-  --pagination-hover-bg-color:            var(--THEME1-100);
-  --pagination-active-bg-color:           var(--THEME1-600);
-  --pagination-border-color:              var(--THEME1-600);
-  --pagination-hover-border:              var(--THEME1-700);
-  --pagination-active-border:             var(--THEME1-700);
+  --pagination-color:                     var(--LINK);
+  --pagination-hover-color:               var(--LINK);
+  --pagination-active-color:              var(--LINK-CONTRAST);
+  --pagination-bg-color:                  var(--LINK-CONTRAST);
+  --pagination-hover-bg-color:            var(--LINK-ALT-TINT);
+  --pagination-active-bg-color:           var(--LINK);
+  --pagination-border-color:              var(--LINK);
+  --pagination-hover-border:              var(--LINK-TINT);
+  --pagination-active-border:             var(--LINK-TINT);
 
-  --pagination-disabled-color:            var(--STATE-DISABLED);
-  --pagination-disabled-bg-color:         var(--BG-COLOR);
-  --pagination-disabled-border-color:     var(--BG-COLOR);
+  --pagination-disabled-color:            var(--STATE-DISABLED-CONTRAST);
+  --pagination-disabled-bg-color:         var(--STATE-DISABLED);
+  --pagination-disabled-border-color:     var(--STATE-DISABLED-TINT);
 }
 
 /**
@@ -43,7 +46,7 @@
     position: relative;
     text-align: center;
     width: var(--pagination-size);
-    z-index: layer('base');
+    z-index: var(--Z-BASE);
 
     > a {
       color: var(--pagination-color);
@@ -71,14 +74,14 @@
 
       &.is-disabled {
         background-color: var(--pagination-disabled-bg-color);
-        box-shadow: 0 0 0 var(--BORDER-WIDTH) var(--pagination-disabled-border) inset;
+        box-shadow: 0 0 0 var(--BORDER-WIDTH) var(--pagination-disabled-border-color) inset;
         color: var(--pagination-disabled-color);
         cursor: not-allowed;
       }
     }
 
     &:has(a.is-disabled) {
-      box-shadow: 0 0 0 var(--BORDER-WIDTH) var(--pagination-disabled-border) inset;
+      box-shadow: 0 0 0 var(--BORDER-WIDTH) var(--pagination-disabled-border-color) inset;
     }
 
     + li {
@@ -108,11 +111,11 @@
   }
 
   .m-pagination__next {
-    z-index: layer('auto');
+    z-index: var(--Z-AUTO);
   }
 
   .m-pagination__prev + .m-pagination__next {
-    z-index: layer('base');
+    z-index: var(--Z-BASE);
   }
 }
 

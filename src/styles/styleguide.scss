@@ -1,14 +1,11 @@
-@charset 'utf-8';
-
 /**
  * CORE BRANDING API
  * -------------------------------------------------------------------
  */
 
+@use 'quarks' as *;
 @use 'sass:math';
-
-/* stylelint-disable-next-line no-invalid-position-at-import-rule */
-@import 'quarks';
+@use 'sass:color';
 
 /**
  * CUSTOM STYLING FOR STYLEGUIDE
@@ -130,7 +127,7 @@
 }
 
 .d-file {
-  color: $gray-400;
+  color: $neutral-400;
   display: inline-block;
   font-weight: bold;
   margin-top: calc(var(--SPACER-XS) / 6);
@@ -146,7 +143,7 @@
   position: relative;
 
   &:before {
-    background-color: $brand-primary;
+    background-color: var(--STATE-INFO);
     background-repeat: no-repeat;
     content: '';
     height: 1.25rem;
@@ -226,6 +223,24 @@
   }
 }
 
+.d-u-text {
+  &-primary {
+    background: var(--BRAND-1-CONTRAST);
+  }
+
+  &-secondary {
+    background: var(--BRAND-2-CONTRAST);
+  }
+
+  &-tertiary {
+    background: var(--BRAND-3-CONTRAST);
+  }
+
+  &-inverted {
+    background: var(--BG-COLOR-INVERTED);
+  }
+}
+
 .d-spacing-utility {
   background:
     repeating-linear-gradient(
@@ -242,13 +257,8 @@
   strong {
     background-color: rgba($black, .6);
     display: inline-block;
-    padding: rem(1px) rem(4px) rem(2px);
+    padding: .0625rem .25rem .125rem;
   }
-}
-
-.d-u-text-xlight {
-  background-color: $gray-600;
-  padding: var(--SPACER-3XS);
 }
 
 .d-avatars {
@@ -411,6 +421,11 @@
   .hljs-number,
   .hljs-params,
   .hljs-type {
-    color: mix($fix-yellow, $black, 95%) !important;
+    color: color.mix($fix-yellow, $black, 95%) !important;
+  }
+
+  .hljs-section,
+  .hljs-title {
+    color: #007299;
   }
 }

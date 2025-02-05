@@ -1,3 +1,5 @@
+@use '../quarks' as *;
+
 /**
  * FOOTER VARIABLES
  * -------------------------------------------------------------------
@@ -41,7 +43,7 @@
 
 .o-footer__label {
   color: var(--footer-color);
-  font-size: rem($font-size-sm);
+  font-size: var(--FONT-SIZE-SMALL);
   line-height: var(--LINE-HEIGHT-PARAGRAPH);
   padding: 0 var(--SPACER-XS);
 

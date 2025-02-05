@@ -1,3 +1,5 @@
+@use '../quarks' as *;
+
 /**
  * LINKS
  * -------------------------------------------------------------------
@@ -11,7 +13,7 @@
 a:not([class^='a-button']) {
   &.has-icon-left .ai,
   &.has-icon-right .ai {
-    font-size: .875rem;
+    font-size: .875em;
     vertical-align: middle;
   }
 

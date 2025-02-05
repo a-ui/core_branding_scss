@@ -1,3 +1,5 @@
+@use '../quarks' as *;
+
 /**
  * ALERT VARIABLES
  * -------------------------------------------------------------------
@@ -47,7 +49,7 @@
 
 .m-alert__icon {
   float: left;
-  margin: calc(var(--SPACER-XS) / -3) $spacer-xs 0 0;
+  margin: calc(var(--SPACER-XS) / -3) var(--SPACER-XS) 0 0;
 
   .ai {
     font-size: 1.5rem;
