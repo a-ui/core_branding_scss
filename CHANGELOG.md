@@ -2,7 +2,7 @@
 
 ## Unreleased
 
-## [7.0.0] - 2025-xx-xx
+## [7.0.0] - 2025-02-05
 
 ### Added
 
@@ -17,7 +17,8 @@
 ### Changed
 
 - [BREAKING] Changed color naming to provide a better wat to build up themes
-  - Changed THEME to BRAND
+  - Changed THEME1 to BRAND-1
+  - Changed THEME2 to BRAND-2
   - Changed gray to neutral
   - Realigned Sass color naming
 - [BREAKING] Added better state colors
