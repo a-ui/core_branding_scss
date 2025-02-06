@@ -2,6 +2,15 @@
 
 ## Unreleased
 
+## [7.0.1] - 2025-02-06
+
+### Fixed
+
+- Fixed the misspelled "info" background utility class
+- Fixed a hard transition in the list component(s)
+- Fixed a hard transition in the upload component
+- Fixed wrongfully used internal paths
+
 ## [7.0.0] - 2025-02-05
 
 ### Added
@@ -985,6 +994,7 @@
 
 - Initial release.
 
+[7.0.1]: https://github.com/a-ui/core_branding_scss/tree/v7.0.1
 [7.0.0]: https://github.com/a-ui/core_branding_scss/tree/v7.0.0
 [6.6.6]: https://github.com/a-ui/core_branding_scss/tree/v6.6.6
 [6.6.5]: https://github.com/a-ui/core_branding_scss/tree/v6.6.5

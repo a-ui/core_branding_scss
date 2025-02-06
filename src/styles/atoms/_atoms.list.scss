@@ -61,9 +61,7 @@
     background-color: var(--list-item-bg-color);
     color: var(--list-item-color);
     text-decoration: none;
-    transition-duration: var(--ANIMATION-DURATION);
-    transition-property: background-color, color;
-    transition-timing-function: var(--ANIMATION-EASING);
+    transition: background-color var(--ANIMATION-NORMAL), color var(--ANIMATION-NORMAL);
 
     &:hover,
     &:active,
@@ -146,7 +144,7 @@
       background-color: var(--list-item-bg-color);
       border-top: var(--BORDER-WIDTH) solid var(--list-item-border-color);
       padding-left: var(--SPACER-S);
-      transition: background-color var(--ANIMATION-NORMAL);
+      transition: background-color var(--ANIMATION-NORMAL), color var(--ANIMATION-NORMAL);
 
       &:hover,
       &:active,
@@ -245,7 +243,7 @@
 
   &:not(.is-active) a.a-avatar-list__item-container {
     color: var(--list-item-color);
-    transition: background-color var(--ANIMATION-NORMAL);
+    transition: background-color var(--ANIMATION-NORMAL), color var(--ANIMATION-NORMAL);
 
     &:hover,
     &:active,
