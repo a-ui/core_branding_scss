@@ -743,7 +743,7 @@ a:hover, a:active, a:focus {
   color: var(--BRAND-3-ALT-CONTRAST);
 }
 
-.u-bg-u-bg-info {
+.u-bg-info {
   background-color: var(--STATE-INFO);
   color: var(--STATE-INFO-CONTRAST);
 }
@@ -2784,9 +2784,7 @@ a:not([class^=a-button]).has-icon-right .ai {
   background-color: var(--list-item-bg-color);
   color: var(--list-item-color);
   text-decoration: none;
-  transition-duration: var(--ANIMATION-DURATION);
-  transition-property: background-color, color;
-  transition-timing-function: var(--ANIMATION-EASING);
+  transition: background-color var(--ANIMATION-NORMAL), color var(--ANIMATION-NORMAL);
 }
 .a-list.a-list--lined a.a-list__content:hover, .a-list.a-list--lined a.a-list__content:active, .a-list.a-list--lined a.a-list__content:focus {
   background-color: var(--list-item-hover-bg-color);
@@ -2848,7 +2846,7 @@ a:not([class^=a-button]).has-icon-right .ai {
   background-color: var(--list-item-bg-color);
   border-top: var(--BORDER-WIDTH) solid var(--list-item-border-color);
   padding-left: var(--SPACER-S);
-  transition: background-color var(--ANIMATION-NORMAL);
+  transition: background-color var(--ANIMATION-NORMAL), color var(--ANIMATION-NORMAL);
 }
 .a-checkbox-list .a-checkbox-list__item .a-checkbox-list__checkbox:hover, .a-checkbox-list .a-checkbox-list__item .a-checkbox-list__checkbox:active, .a-checkbox-list .a-checkbox-list__item .a-checkbox-list__checkbox:focus {
   background-color: var(--list-item-hover-bg-color);
@@ -2921,7 +2919,7 @@ a:not([class^=a-button]).has-icon-right .ai {
 }
 .a-avatar-list__item:not(.is-active) a.a-avatar-list__item-container {
   color: var(--list-item-color);
-  transition: background-color var(--ANIMATION-NORMAL);
+  transition: background-color var(--ANIMATION-NORMAL), color var(--ANIMATION-NORMAL);
 }
 .a-avatar-list__item:not(.is-active) a.a-avatar-list__item-container:hover, .a-avatar-list__item:not(.is-active) a.a-avatar-list__item-container:active, .a-avatar-list__item:not(.is-active) a.a-avatar-list__item-container:focus {
   background-color: var(--list-item-hover-bg-color);
@@ -5620,7 +5618,7 @@ button.m-tag[aria-pressed=true]:hover, button.m-tag[aria-pressed=true]:active, b
   padding: var(--SPACER-L) var(--SPACER);
   position: relative;
   text-align: center;
-  transition: background var(--ANIMATION-NORMAL);
+  transition: background var(--ANIMATION-NORMAL), color var(--ANIMATION-NORMAL);
   width: 100%;
 }
 .m-upload__dropzone:active, .m-upload__dropzone:hover, .m-upload__dropzone:focus {
