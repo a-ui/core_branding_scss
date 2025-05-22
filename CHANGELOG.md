@@ -2,6 +2,12 @@
 
 ## Unreleased
 
+## [7.0.2] - 2025-05-22
+
+### Changed
+
+- Changed the default font-size for h2 to improve the general heading hierarchy
+
 ## [7.0.1] - 2025-02-06
 
 ### Fixed
@@ -994,6 +1000,7 @@
 
 - Initial release.
 
+[7.0.2]: https://github.com/a-ui/core_branding_scss/tree/v7.0.2
 [7.0.1]: https://github.com/a-ui/core_branding_scss/tree/v7.0.1
 [7.0.0]: https://github.com/a-ui/core_branding_scss/tree/v7.0.0
 [6.6.6]: https://github.com/a-ui/core_branding_scss/tree/v6.6.6
