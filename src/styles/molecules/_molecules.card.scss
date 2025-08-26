@@ -45,11 +45,15 @@
       object-fit: cover;
       width: 100%;
     }
+
+    + .m-card__body {
+      padding-top: 0;
+    }
   }
 
   &__body {
     grid-area: body;
-    padding: 0 var(--SPACER) var(--SPACER);
+    padding: var(--card-gap);
   }
 }
 
@@ -95,7 +99,7 @@
     grid-template-columns: 1fr 1fr;
 
     .m-card__body {
-      padding: var(--SPACER) var(--SPACER) var(--SPACER) 0;
+      padding-left: 0;
     }
   }
 
@@ -104,7 +108,7 @@
     grid-template-columns: 1fr 1fr;
 
     .m-card__body {
-      padding: var(--SPACER) 0 var(--SPACER) var(--SPACER);
+      padding-right: 0;
     }
   }
 
@@ -112,7 +116,7 @@
     &.m-card--image-left,
     &.m-card--image-right {
       .m-card__body {
-        padding: var(--SPACER);
+        padding: var(--card-gap);
       }
     }
   }
