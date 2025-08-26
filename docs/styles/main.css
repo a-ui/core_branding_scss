@@ -4380,6 +4380,7 @@ a.a-page-indicator__item:focus:before {
     grid-template-columns: 1fr 1fr;
   }
   .m-card--image-left .m-card__body {
+    padding: var(--card-gap);
     padding-left: 0;
   }
   .m-card--image-right {
@@ -4387,6 +4388,7 @@ a.a-page-indicator__item:focus:before {
     grid-template-columns: 1fr 1fr;
   }
   .m-card--image-right .m-card__body {
+    padding: var(--card-gap);
     padding-right: 0;
   }
   .m-card--extra-padding.m-card--image-left .m-card__body, .m-card--extra-padding.m-card--image-right .m-card__body {
