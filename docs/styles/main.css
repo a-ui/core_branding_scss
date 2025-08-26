@@ -1116,6 +1116,42 @@ a:hover, a:active, a:focus {
 }
 
 /**
+ * PADDING
+ * -------------------------------------------------------------------
+ */
+.u-padding-3xl {
+  padding: var(--SPACER-3XL) !important;
+}
+
+.u-padding-xl {
+  padding: var(--SPACER-XL) !important;
+}
+
+.u-padding-l {
+  padding: var(--SPACER-L) !important;
+}
+
+.u-padding {
+  padding: var(--SPACER) !important;
+}
+
+.u-padding-s {
+  padding: var(--SPACER-S) !important;
+}
+
+.u-padding-xs {
+  padding: var(--SPACER-XS) !important;
+}
+
+.u-padding-xxs {
+  padding: var(--SPACER-XXS) !important;
+}
+
+.u-no-padding {
+  padding: 0 !important;
+}
+
+/**
  * TEXT HELPERS
  * -------------------------------------------------------------------
  */
@@ -1994,7 +2030,7 @@ a:hover .a-avatar.a-avatar--primary, a:active .a-avatar.a-avatar--primary, a:foc
 }
 .a-button.a-button--l {
   --btn-height: var(--SPACER-XXL);
-  --btn-font-size: 1.125rem;
+  --btn-font-size: var(--FONT-SIZE-LARGE);
   --btn-padding: var(--SPACER-S) var(--SPACER);
   --btn-icon-size: 1.5rem;
 }
@@ -4267,6 +4303,8 @@ a.a-page-indicator__item:focus:before {
 .m-card {
   --card-bg-color: var(--BG-COLOR-LIGHT);
   --card-border-color: var(--BORDER-COLOR);
+  --card-gap: var(--SPACER);
+  --card-text-color: var(--TEXT-COLOR);
 }
 
 /**
@@ -4276,21 +4314,90 @@ a.a-page-indicator__item:focus:before {
 .m-card {
   background-color: var(--card-bg-color);
   border: var(--BORDER-WIDTH) solid var(--card-border-color);
+  color: var(--card-text-color);
+  display: grid;
+  gap: var(--card-gap);
+  grid-template-areas: "image" "body";
+  grid-template-columns: 1fr;
 }
 
 /**
  * CARD ELEMENTS
  * -------------------------------------------------------------------
  */
+.m-card__image {
+  align-self: stretch;
+  grid-area: image;
+}
 .m-card__image img {
   display: block;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
   width: 100%;
 }
-
 .m-card__body {
-  padding: var(--SPACER);
+  grid-area: body;
+  padding: 0 var(--SPACER) var(--SPACER);
 }
 
+/**
+ * CARD MODIFIERS
+ * -------------------------------------------------------------------
+ */
+.m-card--light-border {
+  --card-border-color: var(--BORDER-COLOR-LIGHT);
+}
+
+.m-card--no-border, .m-card--highlight {
+  border: none;
+}
+
+.m-card--highlight {
+  --card-bg-color: var(--BRAND-1);
+  --card-text-color: var(--BRAND-1-CONTRAST);
+}
+.m-card--highlight a,
+.m-card--highlight small,
+.m-card--highlight .small {
+  color: inherit;
+}
+
+/**
+ * CARD CONTAINER QUERIES
+ * -------------------------------------------------------------------
+ */
+.m-card__container {
+  container-type: inline-size;
+}
+
+@container (min-width: 45rem) {
+  .m-card--image-left {
+    grid-template-areas: "image body";
+    grid-template-columns: 1fr 1fr;
+  }
+  .m-card--image-left .m-card__body {
+    padding: var(--SPACER) var(--SPACER) var(--SPACER) 0;
+  }
+  .m-card--image-right {
+    grid-template-areas: "body image";
+    grid-template-columns: 1fr 1fr;
+  }
+  .m-card--image-right .m-card__body {
+    padding: var(--SPACER) 0 var(--SPACER) var(--SPACER);
+  }
+  .m-card--extra-padding.m-card--image-left .m-card__body, .m-card--extra-padding.m-card--image-right .m-card__body {
+    padding: var(--SPACER);
+  }
+}
+@container (min-width: 62rem) {
+  .m-card--image-left {
+    grid-template-columns: 1fr 2fr;
+  }
+  .m-card--image-right {
+    grid-template-columns: 2fr 1fr;
+  }
+}
 /**
  * COLLAPSIBLE LIST
  * -------------------------------------------------------------------
@@ -5738,8 +5845,7 @@ button.m-tag[aria-pressed=true]:hover, button.m-tag[aria-pressed=true]:active, b
 .o-article h1,
 .o-article h2,
 .o-article h3 {
-  -webkit-hyphens: auto;
-          hyphens: auto;
+  hyphens: auto;
 }
 .o-article h1 {
   margin: var(--article-h1-margin);
