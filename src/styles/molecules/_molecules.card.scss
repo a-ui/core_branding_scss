@@ -8,6 +8,8 @@
 .m-card {
   --card-bg-color: var(--BG-COLOR-LIGHT);
   --card-border-color: var(--BORDER-COLOR);
+  --card-gap: var(--SPACER);
+  --card-text-color: var(--TEXT-COLOR);
 }
 
 /**
@@ -18,6 +20,13 @@
 .m-card {
   background-color: var(--card-bg-color);
   border: var(--BORDER-WIDTH) solid var(--card-border-color);
+  color: var(--card-text-color);
+  display: grid;
+  gap: var(--card-gap);
+  grid-template-areas:
+    "image"
+    "body";
+  grid-template-columns: 1fr;
 }
 
 /**
@@ -25,11 +34,96 @@
  * -------------------------------------------------------------------
  */
 
-.m-card__image img {
-  display: block;
-  width: 100%;
+.m-card {
+  &__image {
+    align-self: stretch;
+    grid-area: image;
+
+    img {
+      display: block;
+      height: 100%;
+      object-fit: cover;
+      width: 100%;
+    }
+  }
+
+  &__body {
+    grid-area: body;
+    padding: 0 var(--SPACER) var(--SPACER);
+  }
 }
 
-.m-card__body {
-  padding: var(--SPACER);
+
+/**
+ * CARD MODIFIERS
+ * -------------------------------------------------------------------
+ */
+
+.m-card--light-border {
+  --card-border-color: var(--BORDER-COLOR-LIGHT);
+}
+
+.m-card--no-border {
+  border: none;
+}
+
+.m-card--highlight {
+  @extend .m-card--no-border;
+
+  --card-bg-color: var(--BRAND-1);
+  --card-text-color: var(--BRAND-1-CONTRAST);
+
+  a,
+  small,
+  .small {
+    color: inherit;
+  }
+}
+
+/**
+ * CARD CONTAINER QUERIES
+ * -------------------------------------------------------------------
+ */
+
+.m-card__container {
+  container-type: inline-size;
+}
+
+@container (min-width: #{$screen-sm}) {
+  .m-card--image-left {
+    grid-template-areas: "image body";
+    grid-template-columns: 1fr 1fr;
+
+    .m-card__body {
+      padding: var(--SPACER) var(--SPACER) var(--SPACER) 0;
+    }
+  }
+
+  .m-card--image-right {
+    grid-template-areas: "body image";
+    grid-template-columns: 1fr 1fr;
+
+    .m-card__body {
+      padding: var(--SPACER) 0 var(--SPACER) var(--SPACER);
+    }
+  }
+
+  .m-card--extra-padding {
+    &.m-card--image-left,
+    &.m-card--image-right {
+      .m-card__body {
+        padding: var(--SPACER);
+      }
+    }
+  }
+}
+
+@container (min-width: #{$screen-md}) {
+  .m-card--image-left {
+    grid-template-columns: 1fr 2fr;
+  }
+
+  .m-card--image-right {
+    grid-template-columns: 2fr 1fr;
+  }
 }

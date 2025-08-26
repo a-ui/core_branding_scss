@@ -603,7 +603,7 @@
 
   &.a-button--l {
     --btn-height: var(--SPACER-XXL);
-    --btn-font-size: 1.125rem;
+    --btn-font-size: var(--FONT-SIZE-LARGE);
     --btn-padding: var(--SPACER-S) var(--SPACER);
     --btn-icon-size: 1.5rem;
   }

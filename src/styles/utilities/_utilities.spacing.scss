@@ -188,3 +188,41 @@
 .u-no-margin-left {
   margin-left: 0 !important;
 }
+
+
+/**
+ * PADDING
+ * -------------------------------------------------------------------
+ */
+
+.u-padding-3xl {
+  padding: var(--SPACER-3XL) !important;
+}
+
+.u-padding-xl {
+  padding: var(--SPACER-XL) !important;
+}
+
+.u-padding-l {
+  padding: var(--SPACER-L) !important;
+}
+
+.u-padding {
+  padding: var(--SPACER) !important;
+}
+
+.u-padding-s {
+  padding: var(--SPACER-S) !important;
+}
+
+.u-padding-xs {
+  padding: var(--SPACER-XS) !important;
+}
+
+.u-padding-xxs {
+  padding: var(--SPACER-XXS) !important;
+}
+
+.u-no-padding {
+  padding: 0 !important;
+}

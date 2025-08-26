@@ -2,6 +2,17 @@
 
 ## Unreleased
 
+## [7.1.0] - 2025-08-26
+
+### Added
+
+- Added modifiers and container options for cards
+- Added utility classes for padding
+
+### Fixed
+
+- Fixed a hardcoded font-size for the large button variant
+
 ## [7.0.2] - 2025-05-22
 
 ### Changed
@@ -1000,6 +1011,7 @@
 
 - Initial release.
 
+[7.1.0]: https://github.com/a-ui/core_branding_scss/tree/v7.1.0
 [7.0.2]: https://github.com/a-ui/core_branding_scss/tree/v7.0.2
 [7.0.1]: https://github.com/a-ui/core_branding_scss/tree/v7.0.1
 [7.0.0]: https://github.com/a-ui/core_branding_scss/tree/v7.0.0
