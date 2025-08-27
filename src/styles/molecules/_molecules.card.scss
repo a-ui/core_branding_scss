@@ -80,7 +80,7 @@
   --card-bg-color: var(--BRAND-1);
   --card-text-color: var(--BRAND-1-CONTRAST);
 
-  a,
+  a:not(.a-button),
   small,
   .small {
     color: inherit;
