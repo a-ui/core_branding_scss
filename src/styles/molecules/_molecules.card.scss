@@ -127,9 +127,17 @@
 @container (min-width: #{$screen-md}) {
   .m-card--image-left {
     grid-template-columns: 1fr 2fr;
+
+    &.m-card--big-image {
+      grid-template-columns: 2fr 1fr;
+    }
   }
 
   .m-card--image-right {
     grid-template-columns: 2fr 1fr;
+
+    &.m-card--big-image {
+      grid-template-columns: 1fr 2fr;
+    }
   }
 }
