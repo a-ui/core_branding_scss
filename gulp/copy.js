@@ -20,10 +20,12 @@ gulp.task('copy', async function() {
 });
 
 gulp.task('copy:docs', async function() {
+    await fs.copy('.tmp', 'docs', {
+        filter: (src) => fs.lstatSync(src).isDirectory() || src.endsWith('.html'),
+        overwrite: true
+    });
+
     const copyDocsTasks = [
-        fs.copy('.tmp', 'docs', {
-            filter: (src) => fs.lstatSync(src).isDirectory() || src.endsWith('.html'),
-        }),
         fs.copy('src/images', 'docs/images'),
         fs.copy('src/fonts', 'docs/fonts'),
         fs.copy('src/scripts', 'docs/scripts'),
