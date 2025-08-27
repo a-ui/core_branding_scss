@@ -21,12 +21,15 @@
   background-color: var(--card-bg-color);
   border: var(--BORDER-WIDTH) solid var(--card-border-color);
   color: var(--card-text-color);
-  display: grid;
   gap: var(--card-gap);
   grid-template-areas:
     "image"
     "body";
   grid-template-columns: 1fr;
+
+  &:has(.m-card__image) {
+    display: grid;
+  }
 }
 
 /**
@@ -100,6 +103,9 @@
 
     .m-card__body {
       padding: var(--card-gap);
+    }
+
+    &:has(.m-card__image) .m-card__body {
       padding-left: 0;
     }
   }
@@ -110,6 +116,9 @@
 
     .m-card__body {
       padding: var(--card-gap);
+    }
+
+    &:has(.m-card__image) .m-card__body {
       padding-right: 0;
     }
   }
