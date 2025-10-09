@@ -40,6 +40,10 @@
     right: 0;
     top: 0;
   }
+
+  &:has(.m-alert__close) .m-alert__title {
+    padding-right: var(--SPACER-L);
+  }
 }
 
 /**

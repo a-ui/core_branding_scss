@@ -7,6 +7,7 @@
 ### Fixed
 
 - Fixed a weird behaving avatar in an avatar list item with too much text
+- Fixed the alert close button that was sometimes overlapping with the title
 
 ## [7.1.0] - 2025-09-02
 
