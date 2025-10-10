@@ -271,6 +271,7 @@ a.a-avatar-list__item-container {
 }
 
 .a-avatar-list__avatar {
+  flex-shrink: 0;
   margin-right: var(--SPACER-S);
 }
 

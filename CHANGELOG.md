@@ -2,6 +2,13 @@
 
 ## Unreleased
 
+## [7.1.1] - 2025-xx-xx
+
+### Fixed
+
+- Fixed a weird behaving avatar in an avatar list item with too much text
+- Fixed the alert close button that was sometimes overlapping with the title
+
 ## [7.1.0] - 2025-09-02
 
 ### Added
@@ -1011,6 +1018,7 @@
 
 - Initial release.
 
+[7.1.1]: https://github.com/a-ui/core_branding_scss/tree/v7.1.1
 [7.1.0]: https://github.com/a-ui/core_branding_scss/tree/v7.1.0
 [7.0.2]: https://github.com/a-ui/core_branding_scss/tree/v7.0.2
 [7.0.1]: https://github.com/a-ui/core_branding_scss/tree/v7.0.1
