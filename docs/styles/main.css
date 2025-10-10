@@ -2978,6 +2978,7 @@ a.a-avatar-list__item-container {
 }
 
 .a-avatar-list__avatar {
+  flex-shrink: 0;
   margin-right: var(--SPACER-S);
 }
 
@@ -4132,6 +4133,9 @@ a.a-page-indicator__item:focus:before {
   position: absolute;
   right: 0;
   top: 0;
+}
+.m-alert:has(.m-alert__close) .m-alert__title {
+  padding-right: var(--SPACER-L);
 }
 
 /**
