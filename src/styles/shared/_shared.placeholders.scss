@@ -1,3 +1,11 @@
+%u-screen-reader-only {
+  clip: rect(1px, 1px, 1px, 1px);
+  height: 1px;
+  overflow: hidden;
+  position: absolute !important;
+  width: 1px;
+}
+
 %u-list-reset {
   line-height: 1;
   list-style: none;

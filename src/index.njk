@@ -74,22 +74,23 @@
 </head>
 <body>
     <div role="banner">
-        <header class="o-header" aria-label="Header">
+        {% include "templates/allemaal-antwerpenaar.njk" %}
+        {# <header class="o-header" aria-label="Header">
             <a href="#main-content" class="a-button a-button--text a-button--neutral o-header__button-skip">Skip to main content</a>
             <a href="/" class="o-header__logo">
                 <img src="./images/a-logo.svg" alt="Homepage Antwerp branding styleguide.">
             </a>
         </header>
 
-        <div class="u-wrapper d-h1 u-bg-primary">
+        <div class="u-wrapper d-h1 u-bg">
             <div class="u-container">
                 <h1>Antwerp branding styleguide <small class="u-bg-secondary">v{{ VERSION_INFO.version }}</small></h1>
                 <p class="u-margin-top-xs">A collection of building blocks for your next Antwerp-based application.</p>
             </div>
-        </div>
+        </div> #}
     </div>
 
-    <div role="main" id="main-content">
+    {# <div role="main" id="main-content">
         <div class="d-intro">
             {% include "templates/intro.njk" %}
         </div>
@@ -129,7 +130,7 @@
                 {{ icon.render('arrow-up-1') }}
             </a>
         </footer>
-    </div>
+    </div> #}
 
     <script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@10.4.1/build/highlight.min.js"></script>
     <script>hljs.initHighlightingOnLoad();</script>

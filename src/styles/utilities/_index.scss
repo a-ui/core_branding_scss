@@ -3,8 +3,9 @@
  * -------------------------------------------------------------------
  */
 
+@forward 'utilities.a11y';
 @forward 'utilities.background';
-@forward 'utilities.layout';
+@forward 'utilities.grid';
 @forward 'utilities.list';
 @forward 'utilities.spacing';
 @forward 'utilities.text';

@@ -3,11 +3,10 @@
 /**
  * HEADER VARIABLES
  * -------------------------------------------------------------------
- * This component has shared variables with _organisms.navigation-menu.scss. You can find them in _quarks.css-properties.scss.
  */
 
 .o-header {
-  --header-height:     var(--shared-header-height);
+  --header-height:     var(--SPACER-XL);
   --header-bg-color:   var(--BG-COLOR-LIGHT);
   --header-border:     var(--BORDER-COLOR);
 }
@@ -82,11 +81,10 @@
 }
 
 .o-header__logo {
-  margin-top: var(--BORDER-WIDTH);
+  margin-top: var(--LOGO-OFFSET);
   position: absolute;
-  top: var(--header-height);
 
   img {
-    height: calc(var(--SPACER) * 3);
+    height: calc(var(--SPACER) * 4);
   }
 }

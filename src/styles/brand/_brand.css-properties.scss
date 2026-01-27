@@ -233,4 +233,13 @@
   --Z-STATUSBAR:                var(--z-statusbar, 8);
   --Z-HEADER:                   var(--z-header, 9);
   --Z-OVERLAY:                  var(--z-overlay, 10);
+
+/**
+  * Z-INDEXES
+  * -------------------------------------------------------------------
+  */
+
+  --LOGO-WIDTH:                 var(--logo-width, calc(7 * var(--SPACER))); // 168px
+  --LOGO-HEIGHT:                var(--logo-height, var(--SPACER-3XL)); // 96px
+  --LOGO-OFFSET:                var(--logo-offset, 0);
 }

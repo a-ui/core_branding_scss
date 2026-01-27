@@ -1,0 +1,47 @@
+<header class="o-header" aria-label="Header">
+    <div class="o-header__content-wrapper">
+        <div class="o-header__content">
+            <a href="#main-content" class="a-button a-button--text a-button--neutral o-header__button-skip">Ga direct naar de inhoud</a>
+            <a href="javascript:void(0);" class="o-header__logo">
+                <img src="./images/aa-logo.svg" alt="Antwerpen logo. Allemaal Antwerpenaar">
+            </a>
+        </div>
+        <div class="o-header__menu-items">
+            <button class="a-button a-button--text a-button--neutral o-header__button has-icon-left">
+                <span>
+                    {{ icon.render('earth-3') }}
+                </span>
+                <span class="u-screen-reader-only">Taal: </span>NL
+            </button>
+            <button class="a-button a-button--text a-button--neutral o-header__button has-icon-left">
+                <span>
+                    {{ icon.render('info') }}
+                </span>
+                Contact
+            </button>
+            <button class="a-button o-header__button has-avatar-with-inset">
+                <span class="a-avatar a-avatar">
+                    <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Avatar image.">
+                </span>
+                Anne Martens
+            </button>
+        </div>
+    </div>
+</header>
+
+<div class="o-hero u-bg">
+    <div class="u-container">
+        <div class="o-hero__aside">
+            <div class="a-input has-icon-right">
+                <label class="a-input__label u-screen-reader-only" for="search">Zoeken</label>
+                <div class="a-input__wrapper">
+                    <input type="search" name="search" id="search">
+                    {{ icon.render('search') }}
+                </div>
+            </div>
+        </div>
+        <div class="o-hero__content">
+            <h1>Welkom in Antwerpen</h1>
+        </div>
+    </div>
+</div>

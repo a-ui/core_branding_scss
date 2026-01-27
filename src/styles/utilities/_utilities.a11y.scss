@@ -1,0 +1,11 @@
+@use '../quarks' as *;
+@use '../shared/shared.placeholders' as *;
+
+/**
+ * ACCESSIBILITY CLASSES
+ * -------------------------------------------------------------------
+ */
+
+.u-screen-reader-only {
+  @extend %u-screen-reader-only;
+}

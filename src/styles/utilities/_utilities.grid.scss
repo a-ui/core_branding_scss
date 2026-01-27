@@ -1,0 +1,37 @@
+@use '../quarks' as *;
+@use '../shared/shared.placeholders' as *;
+
+/**
+ * THE GRID
+ * -------------------------------------------------------------------
+ */
+
+.u-container {
+  margin: 0 auto;
+  max-width: $screen-lg;
+  padding: 0 var(--SPACER);
+  width: 100%;
+}
+
+/**
+  * HEADER THINGIES
+  * -------------------------------------------------------------------
+  */
+
+.a-button {
+  &.o-header__button.has-avatar-with-inset {
+    @include to($screen-xs-max) {
+      font-size: 0;
+      padding: 0;
+      width: var(--SPACER-XL);
+    }
+  }
+  
+  &.o-header__button.has-icon-left {
+    @include to($screen-xxs-max) {
+      font-size: 0;
+      padding: 0;
+      width: var(--SPACER-XL);
+    }
+  }
+}

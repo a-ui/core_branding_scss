@@ -2,6 +2,23 @@
 
 ## Unreleased
 
+### Added
+
+- Added "Allemaal Antwerpenaar" logo
+
+### Changed
+
+- [BREAKING] Changed the header and logo behaviour
+- [BREAKING] Changed the value of $screen-xl and $screen-lg-max according to the new logo
+
+### Removed
+
+- [BREAKING] Removed the navigation menu component
+- [BREAKING] Removed viewport helpers
+- [BREAKING] Removed scroll helpers
+- [BREAKING] Removed horizontal and vertical layouts
+- [BREAKING] Removed clearfix class
+
 ## [7.1.1] - 2025-10-10
 
 ### Fixed
