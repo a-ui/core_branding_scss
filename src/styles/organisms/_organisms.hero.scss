@@ -22,22 +22,59 @@
       flex-direction: row-reverse;
       flex-wrap: wrap;
     }
+
+    @include at($screen-md) {
+      flex-wrap: nowrap;
+    }
   }
   
   &__aside {
+    display: flex;
+    flex-direction: column;
+    gap: var(--SPACER-XS);
+
     @include at($screen-xs) {
-      display: flex;
-      flex: 0 0 auto;
+      flex-direction: row;
+      flex-wrap: wrap;
       justify-content: flex-end;
+      margin-left: var(--LOGO-WIDTH);
       margin-top: calc(-1 * var(--SPACER-XL));
+    }
+
+    @include at($screen-sm) {
+      flex-wrap: nowrap;
+      margin-left: 0;
+    }
+
+    @include at($screen-xl) {
+      margin-top: 0;
     }
 
     .a-input {
       min-width: calc(#{$screen-xs} - var(--LOGO-WIDTH) - 2 * var(--SPACER));
+
+      @include at($screen-xs) {
+        max-width: calc(#{$screen-xs} - var(--LOGO-WIDTH) - 2 * var(--SPACER));
+      }
+    }
+  }
+
+  &__button {
+    align-self: flex-end;
+    flex-grow: 0;
+    margin-top: calc(-1 * var(--SPACER-XL));
+    width: auto;
+
+    @include at($screen-xs) {
+      align-self: flex-start;
+      margin-top: 0;
     }
   }
 
   &__content {
+    display: flex;
+    flex-direction: column;
     flex-grow: 1;
+    gap: var(--SPACER-XS);
   }
 }
