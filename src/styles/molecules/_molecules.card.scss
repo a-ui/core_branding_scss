@@ -29,6 +29,7 @@
 
   &:has(.m-card__image) {
     display: grid;
+    grid-template-rows: auto 1fr;
   }
 }
 
@@ -97,6 +98,10 @@
 }
 
 @container (min-width: #{$container-sm}) {
+  .m-card:has(.m-card__image) {
+    grid-template-rows: 1fr;
+  }
+  
   .m-card--image-left {
     grid-template-areas: "image body";
     grid-template-columns: 1fr 1fr;
