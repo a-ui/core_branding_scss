@@ -4331,6 +4331,7 @@ a.a-page-indicator__item:focus:before {
 }
 .m-card:has(.m-card__image) {
   display: grid;
+  grid-template-rows: auto 1fr;
 }
 
 /**
@@ -4387,6 +4388,9 @@ a.a-page-indicator__item:focus:before {
 }
 
 @container (min-width: 32.5rem) {
+  .m-card:has(.m-card__image) {
+    grid-template-rows: 1fr;
+  }
   .m-card--image-left {
     grid-template-areas: "image body";
     grid-template-columns: 1fr 1fr;
