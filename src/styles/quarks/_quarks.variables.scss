@@ -23,3 +23,16 @@ $screen-xs-max: 44.9375rem !default; // 719px ($screen-sm - 1px)
 $screen-sm-max: 61.9375rem !default; // 991px ($screen-md - 1px)
 $screen-md-max: 74.9375rem !default; // 1199px ($screen-lg - 1px)
 $screen-lg-max: 89.9375rem !default; // 1439px ($screen-xl - 1px)
+
+/**
+ * CONTAINER BREAKPOINTS
+ * -------------------------------------------------------------------
+ * CSS variables can't (yet) be used in media queries, so we need to define
+ * them here as SCSS variables so we can use them like that in media queries.
+ */
+
+$container-sm:     32.5rem !default; // 520px
+$container-md:     48rem !default; // 768px
+
+$container-xs-max: 32.4375rem !default; // 519px ($container-sm - 1px)
+$container-sm-max: 47.9375rem !default; // 767px ($container-md - 1px)

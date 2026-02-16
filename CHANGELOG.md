@@ -2,6 +2,16 @@
 
 ## Unreleased
 
+## [7.2.0] - 2026-xx-xx
+
+### Added
+
+- Added variables for container queries
+
+### Changed
+
+- Tweaked the container behaviour of cards
+
 ## [7.1.1] - 2025-10-10
 
 ### Fixed
@@ -1018,6 +1028,7 @@
 
 - Initial release.
 
+[7.2.0]: https://github.com/a-ui/core_branding_scss/tree/v7.2.0
 [7.1.1]: https://github.com/a-ui/core_branding_scss/tree/v7.1.1
 [7.1.0]: https://github.com/a-ui/core_branding_scss/tree/v7.1.0
 [7.0.2]: https://github.com/a-ui/core_branding_scss/tree/v7.0.2
