@@ -6,6 +6,7 @@
  */
 
 .o-hero {
+  // background: url('https://www.antwerpen.be/assets-proxy/853c03ef-1c9e-4e44-a3b4-095244acd2c1') no-repeat center center / cover;
   padding: var(--SPACER-XL) 0 0;
 
   @include at($screen-xl) {
@@ -51,7 +52,7 @@
     }
 
     .a-input {
-      min-width: calc(#{$screen-xs} - var(--LOGO-WIDTH) - 2 * var(--SPACER));
+      // min-width: calc(#{$screen-xs} - var(--LOGO-WIDTH) - 2 * var(--SPACER));
 
       @include at($screen-xs) {
         max-width: calc(#{$screen-xs} - var(--LOGO-WIDTH) - 2 * var(--SPACER));
@@ -76,5 +77,130 @@
     flex-direction: column;
     flex-grow: 1;
     gap: var(--SPACER-XS);
+  }
+}
+
+/* Cleanup */
+
+.mtn-o-doormat {
+  .ai-alarm-bell {
+    display: inline-block;
+    padding-right: var(--SPACER-XS);
+  }
+
+  &__top {
+    border: 1px solid var(--BORDER-COLOR-LIGHT);
+    padding: var(--SPACER) var(--SPACER);
+
+    &-text {
+      margin-right: var(--SPACER);
+    }
+  }
+
+  &__navigation {
+    padding-top: var(--SPACER-XL);
+    padding-bottom: var(--SPACER-XL);
+    background-color: var(--TEXT-COLOR);
+    color: var(--TEXT-COLOR-INVERTED);
+
+    .mtn-m-dmlist:not(:last-child),
+    .mtn-m-address:not(:last-child),
+    .mtn-m-html:not(:last-child) {
+      margin-bottom: var(--SPACER-L);
+    }
+  }
+}
+
+@include to($screen-xs-max) {
+  .mtn-o-doormat {
+    &__top-text {
+      margin-right: 0;
+    }
+
+    &__navigation {
+
+      .mtn-m-dmlist:last-child,
+      .mtn-m-address:last-child,
+      .mtn-m-html:not(:last-child) {
+        margin-bottom: var(--SPACER-L);
+      }
+    }
+  }
+}
+
+.mtn-m-dmlist {
+  a {
+    color: var(--TEXT-COLOR-INVERTED);
+    font-size: var(--FONT-SIZE-BASE);
+    text-decoration: underline;
+    &:active,
+    &:focus,
+    &:hover {
+      color: inherit;
+      text-decoration: none;
+    }
+  }
+  .a-list > li {
+    padding: 0;
+  }
+  &__ul {
+    &.a-list {
+      padding-left: 0;
+    }
+    &:not(:last-child) {
+      list-style: none;
+      margin-bottom: var(--SPACER-XXS);
+    }
+  }
+  a.mtn-m-dmlist__link {
+    display: inline-flex;
+    gap: var(--SPACER-S);
+    padding: var(--SPACER-XXS) 0;
+    text-decoration: none;
+
+    .ai {
+      align-self: baseline;
+      margin-top: 1px;
+    }
+
+    &:hover,
+    &:active,
+    &:focus {
+      text-decoration: underline;
+    }
+  }
+}
+
+.mtn-m-address {
+  font-style: normal;
+}
+
+.mtn-m-address__phone-info, .mtn-m-address__link {
+  position: relative;
+  top: -10px;
+}
+
+.mtn-m-address__link {
+  color: var(--TEXT-COLOR-INVERTED);
+  height: var(--SPACER-L);
+  line-height: var(--SPACER-L);
+  display: inline-block;
+}
+
+.mtn-m-html {
+  margin: calc(-1 * var(--SPACER)) 0 var(--SPACER-L);
+}
+
+.mtn-m-dmsocial {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  &__links {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: auto;
   }
 }

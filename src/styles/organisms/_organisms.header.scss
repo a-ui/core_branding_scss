@@ -85,6 +85,6 @@
   position: absolute;
 
   img {
-    height: calc(var(--SPACER) * 4);
+    height: var(--LOGO-HEIGHT);
   }
 }
