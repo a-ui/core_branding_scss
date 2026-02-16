@@ -83,6 +83,12 @@
  * CSS variables can't (yet) be used in media queries, so we need to define
  * them here as SCSS variables so we can use them like that in media queries.
  */
+/**
+ * CONTAINER BREAKPOINTS
+ * -------------------------------------------------------------------
+ * CSS variables can't (yet) be used in media queries, so we need to define
+ * them here as SCSS variables so we can use them like that in media queries.
+ */
 :root {
   --BRAND-1: var(--brand-1, #0057b7);
   --BRAND-1-TINT: var(--brand-1-tint, #003865);
@@ -235,7 +241,7 @@
    * BORDERS
    * -------------------------------------------------------------------
    */
-  --BORDER-RADIUS: var(--border-radius, 0);
+  --BORDER-RADIUS: var(--border-radius, 0px);
   --BORDER-WIDTH: var(--border-width, 1px);
   /**
    * ANIMATIONS
@@ -4380,7 +4386,7 @@ a.a-page-indicator__item:focus:before {
   container-type: inline-size;
 }
 
-@container (min-width: 45rem) {
+@container (min-width: 32.5rem) {
   .m-card--image-left {
     grid-template-areas: "image body";
     grid-template-columns: 1fr 1fr;
@@ -4405,14 +4411,14 @@ a.a-page-indicator__item:focus:before {
     padding: var(--card-gap);
   }
 }
-@container (min-width: 62rem) {
-  .m-card--image-left {
+@container (min-width: 48rem) {
+  .m-card--image-left.m-card--small-image {
     grid-template-columns: 1fr 2fr;
   }
   .m-card--image-left.m-card--big-image {
     grid-template-columns: 2fr 1fr;
   }
-  .m-card--image-right {
+  .m-card--image-right.m-card--small-image {
     grid-template-columns: 2fr 1fr;
   }
   .m-card--image-right.m-card--big-image {

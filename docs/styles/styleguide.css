@@ -74,6 +74,12 @@
  * them here as SCSS variables so we can use them like that in media queries.
  */
 /**
+ * CONTAINER BREAKPOINTS
+ * -------------------------------------------------------------------
+ * CSS variables can't (yet) be used in media queries, so we need to define
+ * them here as SCSS variables so we can use them like that in media queries.
+ */
+/**
  * CUSTOM STYLING FOR STYLEGUIDE
  * -------------------------------------------------------------------
  */
