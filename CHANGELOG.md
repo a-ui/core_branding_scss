@@ -12,6 +12,10 @@
 
 - Tweaked the container behaviour of cards
 
+### Removed
+
+- Removed Normalize in favor of our own optimized version
+
 ## [7.1.1] - 2025-10-10
 
 ### Fixed
