@@ -80,6 +80,12 @@
  * them here as SCSS variables so we can use them like that in media queries.
  */
 /**
+ * SCSS VARIABLES
+ * -------------------------------------------------------------------
+ * In order to stay compatible with older systems that don't support CSS variables,
+ * we define these variables here as SCSS variables.
+ */
+/**
  * CUSTOM STYLING FOR STYLEGUIDE
  * -------------------------------------------------------------------
  */

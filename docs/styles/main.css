@@ -84,6 +84,12 @@
  * CSS variables can't (yet) be used in media queries, so we need to define
  * them here as SCSS variables so we can use them like that in media queries.
  */
+/**
+ * SCSS VARIABLES
+ * -------------------------------------------------------------------
+ * In order to stay compatible with older systems that don't support CSS variables,
+ * we define these variables here as SCSS variables.
+ */
 :root {
   --BRAND-1: var(--brand-1, #0057b7);
   --BRAND-1-TINT: var(--brand-1-tint, #003865);
@@ -161,18 +167,18 @@
   --SPACER-XL: var(--spacer-xl, 3rem);
   --SPACER-L: var(--spacer-l, 2.25rem);
   --SPACER-S: var(--spacer-s, 1rem);
-  --SPACER-XS: var(--spacer-xs, .75rem);
-  --SPACER-XXS: var(--spacer-xxs, .5rem);
-  --SPACER-3XS: var(--spacer-3xs, .25rem);
+  --SPACER-XS: var(--spacer-xs, 0.75rem);
+  --SPACER-XXS: var(--spacer-xxs, 0.5rem);
+  --SPACER-3XS: var(--spacer-3xs, 0.25rem);
   /**
    * BREAKPOINTS
    * -------------------------------------------------------------------
    */
   --SCREEN-XS: var(--screen-xs, 30rem);
-  --SCREEN-S: var(--screen-s, 45rem);
-  --SCREEN-M: var(--screen-l, 62rem);
-  --SCREEN-L: var(--screen-xl, 75rem);
-  --SCREEN-XL: var(--screen-xxl, 90rem);
+  --SCREEN-SM: var(--screen-sm, 45rem);
+  --SCREEN-MD: var(--screen-md, 62rem);
+  --SCREEN-LG: var(--screen-xl, 75rem);
+  --SCREEN-XL: var(--screen-xl, 90rem);
   /**
    * --SCREEN-XXL =
    *    max-width of u-container
@@ -181,16 +187,16 @@
    */
   --SCREEN-XXS-MAX: var(--screen-xxs-max, 29.9375rem);
   --SCREEN-XS-MAX: var(--screen-xs-max, 44.9375rem);
-  --SCREEN-S-MAX: var(--screen-s-max, 61.9375rem);
-  --SCREEN-M-MAX: var(--screen-l-max, 74.9375rem);
-  --SCREEN-L-MAX: var(--screen-xl-max, 89.9375rem);
+  --SCREEN-SM-MAX: var(--screen-sm-max, 61.9375rem);
+  --SCREEN-MD-MAX: var(--screen-md-max, 74.9375rem);
+  --SCREEN-LG-MAX: var(--screen-xl-max, 89.9375rem);
   /**
    * FONT FAMILIES
    * -------------------------------------------------------------------
    */
-  --FONT-FAMILY-BASE: var(--font-family-base, "Sun Antwerpen", sans-serif);
-  --FONT-FAMILY-HEADINGS: var(--font-family-headings, "Antwerpen Regular", sans-serif);
-  --FONT-FAMILY-MONOSPACE: var(--font-family-monospace, "Menlo", "Monaco", "Consolas", "Courier New", monospace);
+  --FONT-FAMILY-BASE: var(--font-family-base, Sun Antwerpen, sans-serif);
+  --FONT-FAMILY-HEADINGS: var(--font-family-headings, Antwerpen Regular, sans-serif);
+  --FONT-FAMILY-MONOSPACE: var(--font-family-monospace, Menlo, Monaco, Consolas, Courier New, monospace);
   /**
    * FONT WEIGHTS
    * -------------------------------------------------------------------
@@ -210,7 +216,7 @@
    * -------------------------------------------------------------------
    */
   --FONT-SIZE-BASE: var(--font-size-base, 1rem);
-  --FONT-SIZE-SMALL: var(--font-size-small, .875rem);
+  --FONT-SIZE-SMALL: var(--font-size-small, 0.875rem);
   --FONT-SIZE-LARGE: var(--font-size-large, 1.125rem);
   --FONT-SIZE-H1: var(--font-size-h1, 2.25rem);
   --FONT-SIZE-H2: var(--font-size-h2, 1.8125rem);
