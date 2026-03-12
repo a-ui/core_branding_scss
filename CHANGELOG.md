@@ -7,6 +7,7 @@
 ### Added
 
 - Added variables for container queries
+- (Re-)added SCSS variables for compatibility with systems that don't support CSS variables
 
 ### Changed
 

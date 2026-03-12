@@ -4,6 +4,7 @@
  * Leave here for renderer
  */
 @use 'quarks.colors' as *;
+@use 'sass:color';
 
 /**
  * BREAKPOINTS
@@ -36,3 +37,151 @@ $container-md:     48rem !default; // 768px
 
 $container-xs-max: 32.4375rem !default; // 519px ($container-sm - 1px)
 $container-sm-max: 47.9375rem !default; // 767px ($container-md - 1px)
+
+/**
+ * SCSS VARIABLES
+ * -------------------------------------------------------------------
+ * In order to stay compatible with older systems that don't support CSS variables,
+ * we define these variables here as SCSS variables.
+ */
+
+$brand-1:                    $endeavour-600 !default;
+$brand-1-tint:               $endeavour-700 !default;
+$brand-1-contrast:           $white !default;
+$brand-1-alt:                $white !default;
+$brand-1-alt-tint:           $endeavour-100 !default;
+$brand-1-alt-contrast:       $black !default;
+
+$brand-2:                    $monza-600 !default;
+$brand-2-tint:               $monza-700 !default;
+$brand-2-contrast:           $white !default;
+$brand-2-alt:                $white !default;
+$brand-2-alt-tint:           $monza-100 !default;
+$brand-2-alt-contrast:       $black !default;
+
+$brand-3:                    $endeavour-600 !default;
+$brand-3-tint:               $endeavour-700 !default;
+$brand-3-contrast:           $white !default;
+$brand-3-alt:                $white !default;
+$brand-3-alt-tint:           $endeavour-100 !default;
+$brand-3-alt-contrast:       $black !default;
+
+$state-info:                 $endeavour-600 !default;
+$state-info-tint:            $endeavour-700 !default;
+$state-info-contrast:        $white !default;
+$state-info-alt:             $white !default;
+$state-info-alt-tint:        $endeavour-100 !default;
+$state-info-alt-contrast:    $black !default;
+
+$state-success:              $mantis-700 !default;
+$state-success-tint:         $mantis-800 !default;
+$state-success-contrast:     $white !default;
+$state-success-alt:          $white !default;
+$state-success-alt-tint:     $mantis-100 !default;
+$state-success-alt-contrast: $black !default;
+
+$state-warning:              $burnt-orange-600 !default;
+$state-warning-tint:         $burnt-orange-700 !default;
+$state-warning-contrast:     $white !default;
+$state-warning-alt:          $white !default;
+$state-warning-alt-tint:     $burnt-orange-100 !default;
+$state-warning-alt-contrast: $black !default;
+
+$state-danger:               $cinnabar-700 !default;
+$state-danger-tint:          $cinnabar-800 !default;
+$state-danger-contrast:      $white !default;
+$state-danger-alt:           $white !default;
+$state-danger-alt-tint:      $cinnabar-100 !default;
+$state-danger-alt-contrast:  $black !default;
+
+$state-disabled:             $neutral-100 !default;
+$state-disabled-tint:        $neutral-200 !default;
+$state-disabled-contrast:    $neutral-400 !default;
+
+// UI COLORS
+$text-color:                 $black !default;
+$text-color-light:           $neutral-400 !default;
+$text-color-inverted:        $white !default;
+
+$bg-color:                   $neutral-100 !default;
+$bg-color-light:             $white !default;
+$bg-color-inverted:          $neutral-500 !default;
+
+$border-color:               $neutral-300 !default;
+$border-color-light:         $neutral-200 !default;
+
+$overlay-color:              rgba($black, .75) !default;
+$box-shadow-color:           rgba($neutral-600, .12) !default;
+
+$state-selected:             color.mix($endeavour-600, $white, 20%) !default;
+
+// SPACERS
+$spacer:                     1.5rem !default;   // 24px
+$spacer-3xl:                 6rem !default;     // 96px
+$spacer-xxl:                 3.75rem !default;  // 60px
+$spacer-xl:                  3rem !default;     // 48px
+$spacer-l:                   2.25rem !default;  // 36px
+$spacer-s:                   1rem !default;     // 16px
+$spacer-xs:                  .75rem !default;   // 12px
+$spacer-xxs:                 .5rem !default;    // 8px
+$spacer-3xs:                 .25rem !default;   // 4px
+
+// FONT FAMILIES
+$font-family-base:           ('Sun Antwerpen', sans-serif) !default;
+$font-family-headings:       ('Antwerpen Regular', sans-serif) !default;
+$font-family-monospace:      ('Menlo', 'Monaco', 'Consolas', 'Courier New', monospace) !default;
+
+// FONT WEIGHTS
+$font-weight-light:          300 !default;
+$font-weight-normal:         500 !default;
+$font-weight-bold:           700 !default;
+$font-weight-extra-bold:     800 !default;
+
+// FONT SIZES
+$font-size-base:             1rem !default;
+$font-size-small:            .875rem !default;
+$font-size-large:            1.125rem !default;
+
+$font-size-h1:               2.25rem !default;    // 36px
+$font-size-h2:               1.8125rem !default;  // 30px
+$font-size-h3:               1.4375rem !default;  // 23px
+$font-size-h4:               1.3125rem !default;  // 21px
+$font-size-h5:               1.1875rem !default;  // 19px
+$font-size-h6:               1.0625rem !default;  // 17px
+
+// ICON SIZES
+$icon-size-base:             1.25rem !default;  // 20px
+$icon-size-small:            1rem !default;     // 16px
+$icon-size-large:            1.5rem !default;   // 24px
+
+// LINE-HEIGHT
+$line-height-base:           1 !default;
+$line-height-heading:        1.1 !default;
+$line-height-paragraph:      1.3 !default;
+
+// BORDERS
+$border-radius:              0px !default;
+$border-width:               1px !default;
+
+// ANIMATIONS
+$animation-duration:         200ms !default;
+$animation-easing:           ease-in-out !default;
+
+// READABLE CONTENT
+$readable-content-width:     45rem !default;
+
+// Z-INDEXES
+$z-indexes: (
+  'overlay':        10,
+  'header':          9,
+  'statusbar':       8,
+  'pane':            7,
+  'pane-overlay':    6,
+  'tooltip':         5,
+  'flyout':          4,
+  'datepicker':      3,
+  'top':             2,
+  'base':            1,
+  'auto':            0,
+  'cellar':         -1
+) !default;
