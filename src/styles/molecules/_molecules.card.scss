@@ -139,27 +139,26 @@
 }
 
 @container (min-width: #{$container-md}) {
-  .m-card--image-left,
-  .m-card--image-right {
-    grid-template-columns: 1fr 1fr 1fr;
-  }
-
   .m-card--image-left {
     &.m-card--small-image {
+      grid-template-columns: 1fr 1fr 1fr;
       grid-template-areas: "image body body";
     }
 
     &.m-card--big-image {
+      grid-template-columns: 1fr 1fr 1fr;
       grid-template-areas: "image image body";
     }
   }
 
   .m-card--image-right {
     &.m-card--small-image {
+      grid-template-columns: 1fr 1fr 1fr;
       grid-template-areas: "body body image";
     }
 
     &.m-card--big-image {
+      grid-template-columns: 1fr 1fr 1fr;
       grid-template-areas: "body image image";
     }
   }
