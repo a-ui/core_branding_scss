@@ -1455,11 +1455,22 @@
         <h4 class="u-margin-top-xl">Input icons and addons</h4>
         <div class="d">
             <div>
-                <div class="a-input has-icon-left">
+                <div class="a-input has-icon-left u-margin-bottom">
                     <label class="a-input__label" for="text-field-icon-left">Text field with left icon</label>
                     <div class="a-input__wrapper">
                         {{ icon.render('single-neutral') }}
                         <input type="text" name="text-field-icon-left" id="text-field-icon-left">
+                    </div>
+                </div>
+                <div class="a-input has-icon-left">
+                    <label class="a-input__label" for="text-field-spinner-left">Text field with left spinner</label>
+                    <div class="a-input__wrapper">
+                        <div class="a-spinner" role="alert">
+                            <span class="a-spinner__circle">
+                                <span class="u-screen-reader-only">Fetching data...</span>
+                            </span>
+                        </div>
+                        <input type="text" name="text-field-spinner-left" id="text-field-spinner-left">
                     </div>
                 </div>
             </div>
@@ -1471,15 +1482,37 @@
     &lt;input type="text" name="text-field-icon-left" id="text-field-icon-left" /&gt;
   &lt;/div&gt;
 &lt;/div&gt;</code></pre>
+                <pre class="a-pre a-pre--scrollable"><code>&lt;div class="a-input has-icon-left"&gt;
+  &lt;label class="a-input__label" for="text-field-spinner-left"&gt;Text field with left spinner&lt;/label&gt;
+  &lt;div class="a-input__wrapper"&gt;
+    &lt;div class="a-spinner" role="alert"&gt;
+        &lt;span class="a-spinner__circle"&gt;
+            &lt;span class="u-screen-reader-only"&gt;Fetching data...&lt;/span&gt;
+        &lt;/span&gt;
+    &lt;/div&gt;
+    &lt;input type="text" name="text-field-spinner-left" id="text-field-spinner-left" /&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre>
             </div>
         </div>
         <div class="d">
             <div>
-                <div class="a-input has-icon-right">
+                <div class="a-input has-icon-right u-margin-bottom">
                     <label class="a-input__label" for="text-field-icon-right">Text field with right icon</label>
                     <div class="a-input__wrapper">
                         <input type="text" name="text-field-icon-right" id="text-field-icon-right">
                         {{ icon.render('view-1') }}
+                    </div>
+                </div>
+                <div class="a-input has-icon-right">
+                    <label class="a-input__label" for="text-field-spinner-right">Text field with right spinner</label>
+                    <div class="a-input__wrapper">
+                        <input type="text" name="text-field-spinner-right" id="text-field-spinner-right">
+                        <div class="a-spinner" role="alert">
+                            <span class="a-spinner__circle">
+                                <span class="u-screen-reader-only">Fetching data...</span>
+                            </span>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -1489,6 +1522,17 @@
   &lt;div class="a-input__wrapper"&gt;
     &lt;input type="text" name="text-field-icon-right" id="text-field-icon-right" /&gt;
     {{ icon.code('view-1') }}
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+                <pre class="a-pre a-pre--scrollable"><code>&lt;div class="a-input has-icon-right"&gt;
+  &lt;label class="a-input__label" for="text-field-spinner-right"&gt;Text field with right spinner&lt;/label&gt;
+  &lt;div class="a-input__wrapper"&gt;
+    &lt;input type="text" name="text-field-spinner-right" id="text-field-spinner-right" /&gt;
+    &lt;div class="a-spinner" role="alert"&gt;
+        &lt;span class="a-spinner__circle"&gt;
+            &lt;span class="u-screen-reader-only"&gt;Fetching data...&lt;/span&gt;
+        &lt;/span&gt;
+    &lt;/div&gt;
   &lt;/div&gt;
 &lt;/div&gt;</code></pre>
             </div>
