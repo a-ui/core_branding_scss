@@ -116,30 +116,28 @@
 }
 
 /**
- * FLYOUT FIX AFTER FORM ELEMENT
+ * FLYOUT SPECIAL CASES
  * -------------------------------------------------------------------
  */
 
+/** Fix after form element */
 .a-input + .m-flyout__content {
   min-width: 100%;
   margin-top: calc(var(--BORDER-WIDTH) * -1);
   width: auto;
 }
 
-/**
- * DATEPICKER IN FLYOUT BORDER FIX
- * -------------------------------------------------------------------
- */
-
+/** Datepicker in flyout border fix */
 .m-flyout__content.m-datepicker {
   border: none;
 }
 
-/**
- * FLYOUT FOCUS OUTLINE FIX
- * -------------------------------------------------------------------
- */
-
+/** Flyout focus outline fix */
 .m-flyout:focus {
   outline: none;
+}
+
+/** Autocomplete flyout fix */
+.m-flyout.m-autocomplete {
+  display: block;
 }

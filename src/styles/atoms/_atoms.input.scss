@@ -198,31 +198,38 @@ textarea {
  */
 
 .a-input {
-  &.has-icon-left .a-input__wrapper > .ai,
-  &.has-icon-right .a-input__wrapper > .ai {
-    align-items: center;
-    color: var(--input-icon-color);
-    display: flex;
-    font-size: var(--input-icon-size);
-    height: 100%;
-    pointer-events: none;
-    position: absolute;
-    right: 0;
-    text-align: center;
-    top: 50%;
-    transform: translateY(-50%);
-    user-select: none;
-    width: var(--input-height);
+  &.has-icon-left .a-input__wrapper,
+  &.has-icon-right .a-input__wrapper {
+    > .ai,
+    .a-spinner {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+    }
 
-    &.is-clickable {
-      cursor: pointer;
-      pointer-events: auto;
-      transition: color var(--ANIMATION-NORMAL);
+    > .ai {
+      align-items: center;
+      color: var(--input-icon-color);
+      display: flex;
+      font-size: var(--input-icon-size);
+      height: 100%;
+      pointer-events: none;
+      right: 0;
+      text-align: center;
+      user-select: none;
+      width: var(--input-height);
 
-      &:hover {
-        color: var(--input-icon-hover-color);
+      &.is-clickable {
+        cursor: pointer;
+        pointer-events: auto;
+        transition: color var(--ANIMATION-NORMAL);
+
+        &:hover {
+          color: var(--input-icon-hover-color);
+        }
       }
     }
+    
   }
 
   &.has-icon-left .a-input__wrapper {
@@ -234,6 +241,10 @@ textarea {
     > .ai {
       left: 0;
     }
+
+    .a-spinner {
+      left: calc((var(--input-height) - var(--spinner-size)) / 2);
+    }
   }
 
   &.has-icon-right .a-input__wrapper {
@@ -244,6 +255,10 @@ textarea {
 
     > .ai {
       right: 0;
+    }
+    
+    .a-spinner {
+      right: calc((var(--input-height) - var(--spinner-size)) / 2);
     }
   }
 }

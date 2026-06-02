@@ -2,6 +2,15 @@
 
 ## Unreleased
 
+## [7.2.1] - 2026-06-02
+
+- Fixed forgotten code of a spinner in an input field
+- Fixed the autocomplete component not taking up all the space
+
+### Fixed
+
+- Fixed an issue where the autocomplete component was not taking up all the space
+
 ## [7.2.0] - 2026-03-30
 
 ### Added
