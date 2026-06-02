@@ -1584,8 +1584,8 @@ a:hover .a-avatar.a-avatar--primary, a:active .a-avatar.a-avatar--primary, a:foc
   display: inline-block;
   height: var(--ICON-SIZE-SMALL);
   margin: 0 var(--SPACER-XS);
-  -webkit-mask: url("data:image/svg+xml;utf8,<svg id=%22arrow-right-1%22 viewBox=%22-1 -1 17 17%22 xml:space=%22preserve%22 xmlns=%22http://www.w3.org/2000/svg%22><style>.bbst0{fill:none;stroke:%23ffffff;stroke-width:6.25%;stroke-linecap:round;stroke-linejoin:round}</style><path class=%22bbst0%22 d=%22M3.6 14.5l7.7-6.8c.1-.1.1-.3 0-.4L3.6.5%22/></svg>") no-repeat center center;
-          mask: url("data:image/svg+xml;utf8,<svg id=%22arrow-right-1%22 viewBox=%22-1 -1 17 17%22 xml:space=%22preserve%22 xmlns=%22http://www.w3.org/2000/svg%22><style>.bbst0{fill:none;stroke:%23ffffff;stroke-width:6.25%;stroke-linecap:round;stroke-linejoin:round}</style><path class=%22bbst0%22 d=%22M3.6 14.5l7.7-6.8c.1-.1.1-.3 0-.4L3.6.5%22/></svg>") no-repeat center center;
+  -webkit-mask: url("data:image/svg+xml;utf8,<svg id=%22arrow-right-1%22 viewBox=%22-1 -1 17 17%22 xml:space=%22preserve%22 xmlns=%22http://www.w3.org/2000/svg%22>\3c style>.bbst0{fill:none;stroke:%23ffffff;stroke-width:6.25%;stroke-linecap:round;stroke-linejoin:round}\3c /style><path class=%22bbst0%22 d=%22M3.6 14.5l7.7-6.8c.1-.1.1-.3 0-.4L3.6.5%22/></svg>") no-repeat center center;
+          mask: url("data:image/svg+xml;utf8,<svg id=%22arrow-right-1%22 viewBox=%22-1 -1 17 17%22 xml:space=%22preserve%22 xmlns=%22http://www.w3.org/2000/svg%22>\3c style>.bbst0{fill:none;stroke:%23ffffff;stroke-width:6.25%;stroke-linecap:round;stroke-linejoin:round}\3c /style><path class=%22bbst0%22 d=%22M3.6 14.5l7.7-6.8c.1-.1.1-.3 0-.4L3.6.5%22/></svg>") no-repeat center center;
   vertical-align: middle;
   width: var(--ICON-SIZE-SMALL);
 }
@@ -2640,6 +2640,13 @@ textarea {
  * INPUT WITH ICON LEFT OR RIGHT
  * -------------------------------------------------------------------
  */
+.a-input.has-icon-left .a-input__wrapper > .ai,
+.a-input.has-icon-left .a-input__wrapper .a-spinner, .a-input.has-icon-right .a-input__wrapper > .ai,
+.a-input.has-icon-right .a-input__wrapper .a-spinner {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
 .a-input.has-icon-left .a-input__wrapper > .ai, .a-input.has-icon-right .a-input__wrapper > .ai {
   align-items: center;
   color: var(--input-icon-color);
@@ -2647,11 +2654,8 @@ textarea {
   font-size: var(--input-icon-size);
   height: 100%;
   pointer-events: none;
-  position: absolute;
   right: 0;
   text-align: center;
-  top: 50%;
-  transform: translateY(-50%);
   -webkit-user-select: none;
      -moz-user-select: none;
           user-select: none;
@@ -2672,12 +2676,18 @@ textarea {
 .a-input.has-icon-left .a-input__wrapper > .ai {
   left: 0;
 }
+.a-input.has-icon-left .a-input__wrapper .a-spinner {
+  left: calc((var(--input-height) - var(--spinner-size)) / 2);
+}
 .a-input.has-icon-right .a-input__wrapper input,
 .a-input.has-icon-right .a-input__wrapper select {
   padding-right: var(--input-height);
 }
 .a-input.has-icon-right .a-input__wrapper > .ai {
   right: 0;
+}
+.a-input.has-icon-right .a-input__wrapper .a-spinner {
+  right: calc((var(--input-height) - var(--spinner-size)) / 2);
 }
 
 /**
@@ -3812,27 +3822,27 @@ a.a-page-indicator__item:focus:before {
   width: 1rem;
 }
 .a-table__sort-button.a-table__sort-button--unsorted:after {
-  -webkit-mask: url("data:image/svg+xml;utf8,<svg id=%22expanded-vertical-1%22 viewBox=%220 0 17 17%22 xml:space=%22preserve%22 xmlns=%22http://www.w3.org/2000/svg%22><style>.st0{fill:none;stroke:%23000000;stroke-linecap:round;stroke-linejoin:round;}</style><g><path class=%22st0%22 d=%22M8.5,1.5v14%22/><path class=%22st0%22 d=%22M5.5,4.5l3-3l3,3%22/><path class=%22st0%22 d=%22M5.5,12.5l3,3l3-3%22/></g></svg>") no-repeat center center;
-          mask: url("data:image/svg+xml;utf8,<svg id=%22expanded-vertical-1%22 viewBox=%220 0 17 17%22 xml:space=%22preserve%22 xmlns=%22http://www.w3.org/2000/svg%22><style>.st0{fill:none;stroke:%23000000;stroke-linecap:round;stroke-linejoin:round;}</style><g><path class=%22st0%22 d=%22M8.5,1.5v14%22/><path class=%22st0%22 d=%22M5.5,4.5l3-3l3,3%22/><path class=%22st0%22 d=%22M5.5,12.5l3,3l3-3%22/></g></svg>") no-repeat center center;
+  -webkit-mask: url("data:image/svg+xml;utf8,<svg id=%22expanded-vertical-1%22 viewBox=%220 0 17 17%22 xml:space=%22preserve%22 xmlns=%22http://www.w3.org/2000/svg%22>\3c style>.st0{fill:none;stroke:%23000000;stroke-linecap:round;stroke-linejoin:round;}\3c /style><g><path class=%22st0%22 d=%22M8.5,1.5v14%22/><path class=%22st0%22 d=%22M5.5,4.5l3-3l3,3%22/><path class=%22st0%22 d=%22M5.5,12.5l3,3l3-3%22/></g></svg>") no-repeat center center;
+          mask: url("data:image/svg+xml;utf8,<svg id=%22expanded-vertical-1%22 viewBox=%220 0 17 17%22 xml:space=%22preserve%22 xmlns=%22http://www.w3.org/2000/svg%22>\3c style>.st0{fill:none;stroke:%23000000;stroke-linecap:round;stroke-linejoin:round;}\3c /style><g><path class=%22st0%22 d=%22M8.5,1.5v14%22/><path class=%22st0%22 d=%22M5.5,4.5l3-3l3,3%22/><path class=%22st0%22 d=%22M5.5,12.5l3,3l3-3%22/></g></svg>") no-repeat center center;
 }
 .a-table__sort-button.a-table__sort-button--unsorted:hover:after, .a-table__sort-button.a-table__sort-button--unsorted:focus:after {
   background: var(--table-sort-btn-active-color);
-  -webkit-mask: url("data:image/svg+xml;utf8,<svg id=%22keyboard-arrow-up%22 viewBox=%220 0 17 17%22 xml:space=%22preserve%22 xmlns=%22http://www.w3.org/2000/svg%22><style>.st0{fill:none;stroke:%23000000;stroke-linecap:round;stroke-linejoin:round;}</style><g><path class=%22st0%22 d=%22M8.5,1.5v14%22/><path class=%22st0%22 d=%22M5.5,4.5l3-3l3,3%22/><path class=%22st0%22 d=%22M8.5,15.5%22/></g></svg>") no-repeat center center;
-          mask: url("data:image/svg+xml;utf8,<svg id=%22keyboard-arrow-up%22 viewBox=%220 0 17 17%22 xml:space=%22preserve%22 xmlns=%22http://www.w3.org/2000/svg%22><style>.st0{fill:none;stroke:%23000000;stroke-linecap:round;stroke-linejoin:round;}</style><g><path class=%22st0%22 d=%22M8.5,1.5v14%22/><path class=%22st0%22 d=%22M5.5,4.5l3-3l3,3%22/><path class=%22st0%22 d=%22M8.5,15.5%22/></g></svg>") no-repeat center center;
+  -webkit-mask: url("data:image/svg+xml;utf8,<svg id=%22keyboard-arrow-up%22 viewBox=%220 0 17 17%22 xml:space=%22preserve%22 xmlns=%22http://www.w3.org/2000/svg%22>\3c style>.st0{fill:none;stroke:%23000000;stroke-linecap:round;stroke-linejoin:round;}\3c /style><g><path class=%22st0%22 d=%22M8.5,1.5v14%22/><path class=%22st0%22 d=%22M5.5,4.5l3-3l3,3%22/><path class=%22st0%22 d=%22M8.5,15.5%22/></g></svg>") no-repeat center center;
+          mask: url("data:image/svg+xml;utf8,<svg id=%22keyboard-arrow-up%22 viewBox=%220 0 17 17%22 xml:space=%22preserve%22 xmlns=%22http://www.w3.org/2000/svg%22>\3c style>.st0{fill:none;stroke:%23000000;stroke-linecap:round;stroke-linejoin:round;}\3c /style><g><path class=%22st0%22 d=%22M8.5,1.5v14%22/><path class=%22st0%22 d=%22M5.5,4.5l3-3l3,3%22/><path class=%22st0%22 d=%22M8.5,15.5%22/></g></svg>") no-repeat center center;
 }
 .a-table__sort-button.a-table__sort-button--sorted-asc {
   --table-sort-btn-icon-color: var(--table-sort-btn-icon-active-color);
 }
 .a-table__sort-button.a-table__sort-button--sorted-asc:after {
-  -webkit-mask: url("data:image/svg+xml;utf8,<svg id=%22keyboard-arrow-up%22 viewBox=%220 0 17 17%22 xml:space=%22preserve%22 xmlns=%22http://www.w3.org/2000/svg%22><style>.st0{fill:none;stroke:%23000000;stroke-linecap:round;stroke-linejoin:round;}</style><g><path class=%22st0%22 d=%22M8.5,1.5v14%22/><path class=%22st0%22 d=%22M5.5,4.5l3-3l3,3%22/><path class=%22st0%22 d=%22M8.5,15.5%22/></g></svg>") no-repeat center center;
-          mask: url("data:image/svg+xml;utf8,<svg id=%22keyboard-arrow-up%22 viewBox=%220 0 17 17%22 xml:space=%22preserve%22 xmlns=%22http://www.w3.org/2000/svg%22><style>.st0{fill:none;stroke:%23000000;stroke-linecap:round;stroke-linejoin:round;}</style><g><path class=%22st0%22 d=%22M8.5,1.5v14%22/><path class=%22st0%22 d=%22M5.5,4.5l3-3l3,3%22/><path class=%22st0%22 d=%22M8.5,15.5%22/></g></svg>") no-repeat center center;
+  -webkit-mask: url("data:image/svg+xml;utf8,<svg id=%22keyboard-arrow-up%22 viewBox=%220 0 17 17%22 xml:space=%22preserve%22 xmlns=%22http://www.w3.org/2000/svg%22>\3c style>.st0{fill:none;stroke:%23000000;stroke-linecap:round;stroke-linejoin:round;}\3c /style><g><path class=%22st0%22 d=%22M8.5,1.5v14%22/><path class=%22st0%22 d=%22M5.5,4.5l3-3l3,3%22/><path class=%22st0%22 d=%22M8.5,15.5%22/></g></svg>") no-repeat center center;
+          mask: url("data:image/svg+xml;utf8,<svg id=%22keyboard-arrow-up%22 viewBox=%220 0 17 17%22 xml:space=%22preserve%22 xmlns=%22http://www.w3.org/2000/svg%22>\3c style>.st0{fill:none;stroke:%23000000;stroke-linecap:round;stroke-linejoin:round;}\3c /style><g><path class=%22st0%22 d=%22M8.5,1.5v14%22/><path class=%22st0%22 d=%22M5.5,4.5l3-3l3,3%22/><path class=%22st0%22 d=%22M8.5,15.5%22/></g></svg>") no-repeat center center;
 }
 .a-table__sort-button.a-table__sort-button--sorted-desc {
   --table-sort-btn-icon-color: var(--table-sort-btn-icon-active-color);
 }
 .a-table__sort-button.a-table__sort-button--sorted-desc:after {
-  -webkit-mask: url("data:image/svg+xml;utf8,<svg id=%22keyboard-arrow-down%22 viewBox=%220 0 17 17%22 xml:space=%22preserve%22 xmlns=%22http://www.w3.org/2000/svg%22><style>.st0{fill:none;stroke:%23000000;stroke-linecap:round;stroke-linejoin:round;}</style><g><path class=%22st0%22 d=%22M8.5,1.5v14%22/><path class=%22st0%22 d=%22M8.5,1.5%22/><path class=%22st0%22 d=%22M5.5,12.5l3,3l3-3%22/></g></svg>") no-repeat center center;
-          mask: url("data:image/svg+xml;utf8,<svg id=%22keyboard-arrow-down%22 viewBox=%220 0 17 17%22 xml:space=%22preserve%22 xmlns=%22http://www.w3.org/2000/svg%22><style>.st0{fill:none;stroke:%23000000;stroke-linecap:round;stroke-linejoin:round;}</style><g><path class=%22st0%22 d=%22M8.5,1.5v14%22/><path class=%22st0%22 d=%22M8.5,1.5%22/><path class=%22st0%22 d=%22M5.5,12.5l3,3l3-3%22/></g></svg>") no-repeat center center;
+  -webkit-mask: url("data:image/svg+xml;utf8,<svg id=%22keyboard-arrow-down%22 viewBox=%220 0 17 17%22 xml:space=%22preserve%22 xmlns=%22http://www.w3.org/2000/svg%22>\3c style>.st0{fill:none;stroke:%23000000;stroke-linecap:round;stroke-linejoin:round;}\3c /style><g><path class=%22st0%22 d=%22M8.5,1.5v14%22/><path class=%22st0%22 d=%22M8.5,1.5%22/><path class=%22st0%22 d=%22M5.5,12.5l3,3l3-3%22/></g></svg>") no-repeat center center;
+          mask: url("data:image/svg+xml;utf8,<svg id=%22keyboard-arrow-down%22 viewBox=%220 0 17 17%22 xml:space=%22preserve%22 xmlns=%22http://www.w3.org/2000/svg%22>\3c style>.st0{fill:none;stroke:%23000000;stroke-linecap:round;stroke-linejoin:round;}\3c /style><g><path class=%22st0%22 d=%22M8.5,1.5v14%22/><path class=%22st0%22 d=%22M8.5,1.5%22/><path class=%22st0%22 d=%22M5.5,12.5l3,3l3-3%22/></g></svg>") no-repeat center center;
 }
 
 /**
@@ -4106,8 +4116,8 @@ a.a-page-indicator__item:focus:before {
   font-weight: var(--FONT-WEIGHT-BOLD);
 }
 .m-accordion__tab .m-accordion__header[aria-expanded=true]:after {
-  -webkit-mask: url("data:image/svg+xml;utf8,<svg id=%22arrow-up-1%22 viewBox=%22-1 -1 17 17%22 xml:space=%22preserve%22 xmlns=%22http://www.w3.org/2000/svg%22><style>.bgst0{fill:none;stroke:%23ffffff;stroke-width:6.25%;stroke-linecap:round;stroke-linejoin:round}</style><path class=%22bgst0%22 d=%22M14.5 11.4L7.7 3.7c-.1-.1-.3-.1-.4 0L.5 11.4%22/></svg>") no-repeat center center;
-          mask: url("data:image/svg+xml;utf8,<svg id=%22arrow-up-1%22 viewBox=%22-1 -1 17 17%22 xml:space=%22preserve%22 xmlns=%22http://www.w3.org/2000/svg%22><style>.bgst0{fill:none;stroke:%23ffffff;stroke-width:6.25%;stroke-linecap:round;stroke-linejoin:round}</style><path class=%22bgst0%22 d=%22M14.5 11.4L7.7 3.7c-.1-.1-.3-.1-.4 0L.5 11.4%22/></svg>") no-repeat center center;
+  -webkit-mask: url("data:image/svg+xml;utf8,<svg id=%22arrow-up-1%22 viewBox=%22-1 -1 17 17%22 xml:space=%22preserve%22 xmlns=%22http://www.w3.org/2000/svg%22>\3c style>.bgst0{fill:none;stroke:%23ffffff;stroke-width:6.25%;stroke-linecap:round;stroke-linejoin:round}\3c /style><path class=%22bgst0%22 d=%22M14.5 11.4L7.7 3.7c-.1-.1-.3-.1-.4 0L.5 11.4%22/></svg>") no-repeat center center;
+          mask: url("data:image/svg+xml;utf8,<svg id=%22arrow-up-1%22 viewBox=%22-1 -1 17 17%22 xml:space=%22preserve%22 xmlns=%22http://www.w3.org/2000/svg%22>\3c style>.bgst0{fill:none;stroke:%23ffffff;stroke-width:6.25%;stroke-linecap:round;stroke-linejoin:round}\3c /style><path class=%22bgst0%22 d=%22M14.5 11.4L7.7 3.7c-.1-.1-.3-.1-.4 0L.5 11.4%22/></svg>") no-repeat center center;
 }
 .m-accordion__tab .m-accordion__header[aria-expanded=true]:hover, .m-accordion__tab .m-accordion__header[aria-expanded=true]:active, .m-accordion__tab .m-accordion__header[aria-expanded=true]:focus {
   --accordion-header-color: var(--accordion-header-hover-color);
@@ -4147,8 +4157,8 @@ a.a-page-indicator__item:focus:before {
   background: var(--accordion-icon-color);
   content: "";
   height: var(--ICON-SIZE-BASE);
-  -webkit-mask: url("data:image/svg+xml;utf8,<svg id=%22arrow-down-1%22 viewBox=%22-1 -1 17 17%22 xml:space=%22preserve%22 xmlns=%22http://www.w3.org/2000/svg%22><style>.azst0{fill:none;stroke:%23ffffff;stroke-width:6.25%;stroke-linecap:round;stroke-linejoin:round}</style><path class=%22azst0%22 d=%22M.5 3.6l6.8 7.7c.1.1.3.1.4 0l6.8-7.7%22/></svg>") no-repeat center center;
-          mask: url("data:image/svg+xml;utf8,<svg id=%22arrow-down-1%22 viewBox=%22-1 -1 17 17%22 xml:space=%22preserve%22 xmlns=%22http://www.w3.org/2000/svg%22><style>.azst0{fill:none;stroke:%23ffffff;stroke-width:6.25%;stroke-linecap:round;stroke-linejoin:round}</style><path class=%22azst0%22 d=%22M.5 3.6l6.8 7.7c.1.1.3.1.4 0l6.8-7.7%22/></svg>") no-repeat center center;
+  -webkit-mask: url("data:image/svg+xml;utf8,<svg id=%22arrow-down-1%22 viewBox=%22-1 -1 17 17%22 xml:space=%22preserve%22 xmlns=%22http://www.w3.org/2000/svg%22>\3c style>.azst0{fill:none;stroke:%23ffffff;stroke-width:6.25%;stroke-linecap:round;stroke-linejoin:round}\3c /style><path class=%22azst0%22 d=%22M.5 3.6l6.8 7.7c.1.1.3.1.4 0l6.8-7.7%22/></svg>") no-repeat center center;
+          mask: url("data:image/svg+xml;utf8,<svg id=%22arrow-down-1%22 viewBox=%22-1 -1 17 17%22 xml:space=%22preserve%22 xmlns=%22http://www.w3.org/2000/svg%22>\3c style>.azst0{fill:none;stroke:%23ffffff;stroke-width:6.25%;stroke-linecap:round;stroke-linejoin:round}\3c /style><path class=%22azst0%22 d=%22M.5 3.6l6.8 7.7c.1.1.3.1.4 0l6.8-7.7%22/></svg>") no-repeat center center;
   -webkit-mask-size: contain;
           mask-size: contain;
   position: absolute;
@@ -4928,29 +4938,29 @@ a.a-page-indicator__item:focus:before {
 }
 
 /**
- * FLYOUT FIX AFTER FORM ELEMENT
+ * FLYOUT SPECIAL CASES
  * -------------------------------------------------------------------
  */
+/** Fix after form element */
 .a-input + .m-flyout__content {
   min-width: 100%;
   margin-top: calc(var(--BORDER-WIDTH) * -1);
   width: auto;
 }
 
-/**
- * DATEPICKER IN FLYOUT BORDER FIX
- * -------------------------------------------------------------------
- */
+/** Datepicker in flyout border fix */
 .m-flyout__content.m-datepicker {
   border: none;
 }
 
-/**
- * FLYOUT FOCUS OUTLINE FIX
- * -------------------------------------------------------------------
- */
+/** Flyout focus outline fix */
 .m-flyout:focus {
   outline: none;
+}
+
+/** Autocomplete flyout fix */
+.m-flyout.m-autocomplete {
+  display: block;
 }
 
 /**
